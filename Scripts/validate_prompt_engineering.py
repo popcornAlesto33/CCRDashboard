@@ -764,6 +764,10 @@ def main():
     parser.add_argument("--random", action="store_true", help="Randomly sample calls instead of first N")
     parser.add_argument("--seed", type=int, default=42, help="Random seed for reproducibility")
     parser.add_argument("--output", default="", help="Save detailed results to JSON file")
+    parser.add_argument("--pipeline", default="v8", choices=["v8", "v9"],
+                        help="Pipeline mode: v8 (two-model) or v9 (field-decomposed)")
+    parser.add_argument("--v9-batch-size", type=int, default=2,
+                        help="Batch size for v9 field classifiers (default: 2)")
     args = parser.parse_args()
 
     # Load data
@@ -788,12 +792,78 @@ def main():
         raise RuntimeError("LLM_API_KEY not found in environment or .env")
     client = OpenAI(api_key=api_key, base_url=DEFAULT_LLM_BASE_URL, max_retries=3)
 
-    if args.single_model:
+    # Initialize optional debug variables
+    reasoning_debug = None  # v9 mode
+    reasoning = None  # two-model mode
+
+    if args.pipeline == "v9":
+        logger.info(f"Running v9 field-decomposed pipeline ({args.reasoning_model})")
+        from concurrent.futures import ThreadPoolExecutor, as_completed
+
+        # Phase 1: appointment_booked, treatment_type, client_type in parallel
+        logger.info("Phase 1: appointment_booked + treatment_type + client_type (parallel)...")
+
+        with ThreadPoolExecutor(max_workers=3) as phase1_pool:
+            appt_future = phase1_pool.submit(
+                run_v9_field_batch,
+                client, args.reasoning_model, calls,
+                V9_APPOINTMENT_BOOKED_PROMPT, args.v9_batch_size, "appointment_booked",
+            )
+            treatment_future = phase1_pool.submit(
+                run_v9_field_batch,
+                client, args.reasoning_model, calls,
+                V9_TREATMENT_TYPE_PROMPT, args.v9_batch_size, "treatment_type",
+            )
+            client_future = phase1_pool.submit(
+                run_v9_field_batch,
+                client, args.reasoning_model, calls,
+                V9_CLIENT_TYPE_PROMPT, args.v9_batch_size, "client_type",
+            )
+
+            appt_results = appt_future.result()
+            treatment_results = treatment_future.result()
+            client_results = client_future.result()
+
+        logger.info(f"Phase 1 complete: appt={len(appt_results)}, treatment={len(treatment_results)}, client={len(client_results)}")
+
+        # Phase 2: reason_not_booked (depends on appointment_booked)
+        logger.info("Phase 2: reason_not_booked (depends on appointment_booked)...")
+        reason_results = run_v9_reason_not_booked(
+            client, args.reasoning_model, calls, appt_results, args.v9_batch_size,
+        )
+        logger.info(f"Phase 2 complete: reason={len(reason_results)}")
+
+        # Phase 3: Python assembly
+        logger.info("Phase 3: Assembly...")
+        predictions = v9_assemble(calls, appt_results, reason_results, treatment_results, client_results)
+
+        mode = f"v9-field-decomposed ({args.reasoning_model})"
+
+        # Save reasoning for debugging
+        reasoning_debug = {
+            cid: {
+                "appointment_booked": appt_results.get(cid, {}),
+                "reason_not_booked": reason_results.get(cid, {}),
+                "treatment_type": treatment_results.get(cid, {}),
+                "client_type": client_results.get(cid, {}),
+            }
+            for cid in [c["id"] for c in calls]
+        }
+
+    elif args.single_model:
         logger.info(f"Running single-model validation with {args.classification_model}")
         results_list = run_single_model_batch(
             client, args.classification_model, calls, args.classification_batch_size
         )
         mode = f"single-model ({args.classification_model})"
+        predictions = {}
+        for item in results_list:
+            cid = item.get("call_id")
+            if cid:
+                if item.get("appointment_booked") == "Yes":
+                    item["reason_not_booked"] = None
+                predictions[str(cid)] = item
+
     else:
         logger.info(f"Running two-model validation: {args.reasoning_model} -> {args.classification_model}")
 
@@ -807,16 +877,15 @@ def main():
             client, args.classification_model, reasoning_items, args.classification_batch_size
         )
         mode = f"two-model ({args.reasoning_model} -> {args.classification_model})"
+        predictions = {}
+        for item in results_list:
+            cid = item.get("call_id")
+            if cid:
+                if item.get("appointment_booked") == "Yes":
+                    item["reason_not_booked"] = None
+                predictions[str(cid)] = item
 
-    # Index predictions by call_id
-    predictions = {}
-    for item in results_list:
-        cid = item.get("call_id")
-        if cid:
-            ab = item.get("appointment_booked", "")
-            if ab == "Yes":
-                item["reason_not_booked"] = None
-            predictions[str(cid)] = item
+    # ---- Shared results section (all pipeline modes) ----
 
     logger.info(f"Got {len(predictions)} predictions")
 
@@ -842,7 +911,9 @@ def main():
             },
             "predictions": predictions,
         }
-        if not args.single_model:
+        if reasoning_debug is not None:
+            output_data["field_reasoning"] = reasoning_debug
+        if reasoning is not None:
             output_data["reasoning"] = {cid: r for cid, r in reasoning.items() if cid in predictions}
 
         with open(args.output, "w") as f:
