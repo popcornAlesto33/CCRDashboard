@@ -36,6 +36,243 @@ DEFAULT_LLM_BASE_URL = os.getenv("LLM_BASE_URL", "https://generativelanguage.goo
 logging.basicConfig(level=logging.INFO, format="%(asctime)s - %(levelname)s - %(message)s")
 logger = logging.getLogger("validate")
 
+# ============================================================
+# V9 FIELD-SPECIFIC PROMPTS
+# ============================================================
+
+V9_APPOINTMENT_BOOKED_PROMPT = """You are a veterinary call transcript analyst. Your ONLY task is to determine whether an appointment was booked in this call.
+
+Read the transcript and determine: Did the caller book an appointment?
+
+## Answer: Yes, No, or Inconclusive
+
+**EVALUATION ORDER (follow these steps in sequence):**
+
+1. FIRST, check if YES:
+   - A specific date/time is confirmed
+   - At an emergency/walk-in clinic: agent tells caller to come in and caller agrees — even without a specific time
+   - Caller already has a confirmed appointment and is calling to adjust it (reschedule, cancellation list) — they already have a booking
+   - Agent says "we'll see you at [time]" and caller confirms
+
+2. SECOND, check if NO (the caller chose not to book, even if politely):
+   - Caller asks about pricing, gets info, and ends call without scheduling
+   - Caller is told the schedule is full and ends the call
+   - Caller says "I'll think about it" / "I'll call back" / "let me talk to my partner"
+   - Caller calls for advice only and never intended to book (medication questions, symptom questions)
+   - Caller gathers information (services, hours, pricing) and ends call without scheduling — this is a completed interaction, not a pending one
+   - The call ends naturally after the caller's question was answered, with no mention of scheduling
+
+3. ONLY IF NEITHER APPLIES, use INCONCLUSIVE:
+   - Inconclusive means the outcome depends on a future event that hasn't happened yet
+   - Call goes to voicemail or automated system
+   - Clinic will call back ("the doctor will review and we'll get back to you") — outcome depends on a future CLINIC action
+   - Inter-clinic consultation where no direct booking occurs
+   - The call is administrative (checking results, asking about records) — no appointment was the purpose
+
+If you can determine what the CALLER decided, it is not Inconclusive.
+
+## Output Format
+
+Return JSON:
+{
+  "reasoning": "Your step-by-step reasoning citing specific transcript quotes",
+  "answer": "Yes" | "No" | "Inconclusive"
+}
+
+Return JSON ONLY. No commentary outside the JSON.""".strip()
+
+V9_REASON_NOT_BOOKED_PROMPT = """You are a veterinary call transcript analyst. Your ONLY task is to determine why an appointment was NOT booked in this call.
+
+You are given:
+1. The raw transcript
+2. The appointment_booked decision (already determined): {appointment_booked}
+
+## Rules
+
+- If appointment_booked is "Yes": output null immediately. No reasoning needed.
+- If appointment_booked is "Inconclusive": output null. Exception: only populate if the transcript contains an explicit, clear barrier (e.g., "we're fully booked so you'll have to call back").
+- If appointment_booked is "No": determine the specific reason from the categories below.
+
+## Categories
+
+Choose the MOST SPECIFIC matching category:
+
+- "1. Caller Procrastination" — caller says "I'll think about it" / "I'll call back" with NO price discussion
+- "1a. Caller Procrastination - Price Objection / Shopping / Request for Quote" — pricing/cost discussed AT ANY POINT and caller doesn't book. If they asked "how much?" and didn't book, this is ALWAYS 1a
+- "1b. Caller Procrastination - Need to check with partner"
+- "1c. Caller Procrastination - Getting information for someone else" — caller explicitly on behalf of someone else, or inter-clinic call
+- "2. Scheduling Issue"
+- "2a. Scheduling Issue - Walk ins not available / no same day appt" — wants same-day/walk-in, told none available
+- "2b. Scheduling Issue - Full schedule" — wants upcoming appointment, schedule full for multiple days/weeks
+- "2c. Scheduling Issue - Not open / no availability on evenings"
+- "2d. Scheduling Issue - Not open / no availability on weekends"
+- "3. Service/treatment not offered"
+- "3a. Service/treatment not offered - Grooming"
+- "3b. Service/treatment not offered - Pet Adoption"
+- "3c. Service/treatment not offered - Exotics"
+- "3d. Service/treatment not offered - Farm / Large Animals"
+- "3e. Service/treatment not offered - Birds"
+- "3f. Service/treatment not offered - Reptiles"
+- "3g. Service/treatment not offered - Pocket Pets"
+- "4. Meant to call competitor hospital" — caller dialed the wrong clinic
+- "5. Meant to call low cost / free service provider"
+- "6. Emergency care not offered"
+- "7. File Transferred"
+- "8. Medication/food order"
+- "9. Client/appt query (non-medical)" — caller had a medical need but only made an administrative inquiry. ONLY for appointment_booked=No, never for Inconclusive.
+- "10. Missed call"
+- "11. No transcription"
+
+## Output Format
+
+Return JSON:
+{
+  "reasoning": "Your step-by-step reasoning citing specific transcript quotes",
+  "answer": "<exact category string>" | null
+}
+
+Return JSON ONLY. No commentary outside the JSON.""".strip()
+
+V9_TREATMENT_TYPE_PROMPT = """You are a veterinary call transcript analyst. Your ONLY task is to determine what veterinary service was discussed in this call.
+
+Read the transcript and classify the service into EXACTLY ONE of the categories listed below.
+
+## CRITICAL: Parent vs. Sub-Category
+
+When in doubt between a parent category and a sub-category, ALWAYS use the parent. Over-specification is the #1 error pattern.
+
+- Use the PARENT category when the transcript describes a general concern WITHOUT a specific intervention
+- Only use a SUB-CATEGORY when the transcript names or implies THE SPECIFIC INTERVENTION
+
+**NOT specific interventions (use PARENT):** "we'll take a look", "bring them in for an exam", "the doctor will check", "physical examination", "we'll see what's going on"
+
+**Specific interventions (required for sub-category):** "we'll run bloodwork", "we need to do X-rays", "start her on antibiotics", "dental cleaning scheduled", "allergy testing"
+
+In your reasoning, you MUST state: (a) the specific intervention mentioned, OR (b) "no specific intervention mentioned — using parent category."
+
+## Key Rules
+
+### Emergency vs. Urgent Care
+Classify by ACTUAL SERVICE, not hospital name:
+- Emergency & Critical Care: actual emergency intervention (trauma, poisoning, seizures, overnight hospitalization, directed to emergency clinic)
+- Urgent Care / Sick Pet: sick pet needing prompt attention but routine interaction (advice, medication questions, stable-patient triage) — even at an emergency hospital
+
+### Preventive Care: Parent vs. Sub
+- Parent: general wellness visits, new pet checkups, multiple preventive services discussed
+- Sub only when that service is the SOLE AND EXPLICIT purpose ("I need to get my dog his shots" = Vaccinations)
+
+### Wellness Screening vs. Diagnostic Lab
+- Routine bloodwork (annual, pre-op, wellness) = Preventive Care – Wellness Screening
+- Symptom-driven bloodwork (investigating a problem) = Diagnostic Services – Lab Testing
+
+### Dermatology
+Use only when PRIMARY reason is skin, coat, ear, or allergy issue. Do not use when skin/ear is secondary to a more urgent concern.
+
+### Retail
+- Refilling existing prescription = Retail – Prescriptions
+- New flea/tick/heartworm prevention plan = Preventive Care – Parasite Prevention
+
+### Dental
+- Dental cleanings and extractions = Surgical Services – Dental Care
+- Routine dental checkup as part of wellness = Preventive Care
+
+### "Other" — LAST RESORT
+Before using "Other", verify ALL of these:
+1. NOT about a sick pet, injury, or medical concern
+2. NOT about scheduling/rescheduling any appointment type
+3. NOT about medications, food, or prescriptions
+4. NOT a missed call or voicemail with no content
+5. The topic genuinely does not fit ANY existing category
+
+## Categories
+
+Choose EXACTLY ONE:
+
+Preventive Care
+Preventive Care – Vaccinations
+Preventive Care – Parasite Prevention
+Preventive Care – Annual Exams
+Preventive Care – Wellness Screening (Bloodwork, Urinalysis, Fecals)
+Urgent Care / Sick Pet
+Urgent Care – Diagnosis and Treatment of Illnesses (Vomiting, Diabetes, Infections)
+Urgent Care – Chronic Disease Management (Arthritis, Allergies, Thyroid Disease)
+Urgent Care – Internal Medicine Workups (Blood Tests, Imaging, Specialist Consults)
+Surgical Services
+Surgical Services – Spays and Neuters
+Surgical Services – Soft Tissue Surgeries (Lump Removals, Bladder Stone Removal, Wound Repair)
+Surgical Services – Orthopedic Surgeries (ACL Repairs, Fracture Repair — Sometimes Referred Out)
+Surgical Services – Emergency Surgeries (Pyometra, C-Sections, GDV)
+Surgical Services – Dental Care (Cleanings, Extractions)
+Diagnostic Services
+Diagnostic Services – X-Rays (Digital Radiography)
+Diagnostic Services – Ultrasound
+Diagnostic Services – In-House or Reference Lab Testing (Blood, Urine, Fecal, Cytology)
+Diagnostic Services – ECG or Blood Pressure Monitoring
+Emergency & Critical Care
+Emergency & Critical Care – Stabilization (Trauma, Poisoning, Seizures)
+Emergency & Critical Care – Overnight Hospitalization
+Emergency & Critical Care – Fluid Therapy, Oxygen Therapy, Intensive Monitoring
+Emergency & Critical Care – Referred to an Emergency Hospital
+Dermatology
+Dermatology – Allergies
+Dermatology – Ear Infections
+Retail
+Retail – Food Orders
+Retail – Prescriptions
+End of Life Care
+End of Life Care – In-Home Euthanasia
+End of Life Care – In-Clinic Euthanasia
+N/A (missed call)
+Other
+
+## Output Format
+
+Return JSON:
+{
+  "reasoning": "Your step-by-step reasoning citing specific transcript quotes and naming the intervention (or stating none)",
+  "answer": "<exact category string from list above>"
+}
+
+Return JSON ONLY. No commentary outside the JSON.""".strip()
+
+V9_CLIENT_TYPE_PROMPT = """You are a veterinary call transcript analyst. Your ONLY task is to determine whether the caller is a new or existing client at THIS specific clinic.
+
+"Existing" means the CALLER has been a client at THIS specific clinic before. Not the pet — the caller.
+
+## Signals
+
+**Existing (need at least one concrete signal):**
+- Agent looks up file/account and FINDS it for this caller
+- Pet already in the system under this caller's name
+- Caller references a past visit AT THIS CLINIC or ongoing medication prescribed here
+- Caller uses a specific doctor's name at this clinic
+
+**New:**
+- Caller asks "do you accept new patients?"
+- Asks about location/hours/pricing as if unfamiliar
+- Agent asks for phone number to CREATE a new file
+- Agent says "no record found"
+- Caller mentions they have a vet elsewhere
+
+**Edge cases (classify as New):**
+- New owner of a pet with an existing file from previous owner = New
+- Caller has a vet at a different clinic, calling this one for the first time = New
+- Caller has one pet on file but calling about a brand new pet with no history = lean New
+
+**Inconclusive:** Should be extremely rare. Only use when there are genuinely zero signals either way AND the transcript provides no clues.
+
+Casual or friendly tone alone does NOT indicate Existing — require concrete evidence.
+
+## Output Format
+
+Return JSON:
+{
+  "reasoning": "Your step-by-step reasoning citing specific transcript quotes",
+  "answer": "New" | "Existing" | "Inconclusive"
+}
+
+Return JSON ONLY. No commentary outside the JSON.""".strip()
+
 
 def _load_module():
     """Import the main analysis script as a module."""
