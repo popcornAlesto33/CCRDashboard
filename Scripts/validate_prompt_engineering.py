@@ -48,10 +48,10 @@ V9_APPOINTMENT_BOOKED_PROMPT = """You are a veterinary call transcript analyst. 
 ## Categories
 
 - **Yes**: An appointment was confirmed (date/time set, caller agreed to come in, or existing appointment adjusted)
-- **No**: The caller chose not to book, or the call was purely informational with no scheduling
-- **Inconclusive**: The outcome genuinely depends on a future event (voicemail, clinic will call back, inter-clinic consultation)
+- **No**: The caller did not end up with an appointment — includes: chose not to book, schedule was full, was put on a cancellation list, or clinic offered to check and call back
+- **Inconclusive**: The call was not about booking (administrative, checking results, voicemail) so appointment status doesn't apply
 
-Most calls have a clear Yes or No. Use Inconclusive only when the outcome is truly pending.
+Key distinction: if the caller TRIED to book but couldn't (schedule full, no same-day, put on callback list), that is **No** — they left the call without an appointment. Inconclusive is for calls where booking was never the purpose.
 
 ## Examples
 
@@ -63,8 +63,12 @@ Answer: Yes
 Transcript: "Caller: How much for an exam? Agent: $122. Caller: Okay, thanks. Bye."
 Answer: No
 
-### Inconclusive — clinic callback pending
-Transcript: "Agent: The doctor will review and we'll call you back. Caller: Okay, thanks."
+### No — schedule full, clinic will check and call back
+Transcript: "Agent: We're booked up, but let me take your number and see if we can squeeze you in. Caller: Okay, it's 555-1234."
+Answer: No
+
+### Inconclusive — admin call, not about booking
+Transcript: "Caller: I'm calling to check on Max's blood test results. Agent: Results look normal."
 Answer: Inconclusive
 
 ## Output Format
