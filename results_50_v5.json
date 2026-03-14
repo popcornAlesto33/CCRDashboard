@@ -1,0 +1,715 @@
+{
+  "mode": "two-model (gemini-2.5-pro -> gemini-2.5-flash)",
+  "num_calls": 50,
+  "results": {
+    "appointment_booked": {
+      "accuracy": 0.85,
+      "correct": 34,
+      "total": 40,
+      "mismatches": [
+        {
+          "call_id": "CAL0039a82c50d340abaf5823d06785a4a0",
+          "gold": "Yes",
+          "predicted": "Inconclusive"
+        },
+        {
+          "call_id": "CAL011c013103cb49bc84379c12992b27a6",
+          "gold": "No",
+          "predicted": "Inconclusive"
+        },
+        {
+          "call_id": "CAL01983d5be63a7410a179dc571fa6230a",
+          "gold": "No",
+          "predicted": "Inconclusive"
+        },
+        {
+          "call_id": "CAL0198423279ec78fdaf35068fb9b8d99d",
+          "gold": "No",
+          "predicted": "Inconclusive"
+        },
+        {
+          "call_id": "CAL019848037cc1761784113355c763b72a",
+          "gold": "No",
+          "predicted": "Inconclusive"
+        },
+        {
+          "call_id": "CAL0198481b99eb767a890f8febab7b9b06",
+          "gold": "Yes",
+          "predicted": "Inconclusive"
+        }
+      ]
+    },
+    "client_type": {
+      "accuracy": 0.825,
+      "correct": 33,
+      "total": 40,
+      "mismatches": [
+        {
+          "call_id": "CAL0039a82c50d340abaf5823d06785a4a0",
+          "gold": "Existing",
+          "predicted": "Inconclusive"
+        },
+        {
+          "call_id": "CAL011c013103cb49bc84379c12992b27a6",
+          "gold": "New",
+          "predicted": "Existing"
+        },
+        {
+          "call_id": "CAL01983cac376972818d9cef6bb1cba1fe",
+          "gold": "Existing",
+          "predicted": "New"
+        },
+        {
+          "call_id": "CAL01983d5be63a7410a179dc571fa6230a",
+          "gold": "New",
+          "predicted": "Existing"
+        },
+        {
+          "call_id": "CAL0198423279ec78fdaf35068fb9b8d99d",
+          "gold": "Existing",
+          "predicted": "New"
+        },
+        {
+          "call_id": "CAL019846d0660e78e083d2630ef0a456ca",
+          "gold": "New",
+          "predicted": "Existing"
+        },
+        {
+          "call_id": "CAL019847429fae7401a033f30149097005",
+          "gold": "New",
+          "predicted": "Existing"
+        }
+      ]
+    },
+    "treatment_type": {
+      "accuracy": 0.6,
+      "correct": 24,
+      "total": 40,
+      "mismatches": [
+        {
+          "call_id": "CAL000982de28904f1aa7f072d197347693",
+          "gold": "Preventive Care \u2013 Wellness Screening (Bloodwork, Urinalysis, Fecals)",
+          "predicted": "Diagnostic Services \u2013 In-House or Reference Lab Testing (Blood, Urine, Fecal, Cytology)"
+        },
+        {
+          "call_id": "CAL003334dc9cce46eeb1d9ddc73be4e633",
+          "gold": "Preventive Care \u2013 Vaccinations",
+          "predicted": "Preventive Care"
+        },
+        {
+          "call_id": "CAL0039a82c50d340abaf5823d06785a4a0",
+          "gold": "Preventive Care \u2013 Wellness Screening (Bloodwork, Urinalysis, Fecals)",
+          "predicted": "Other"
+        },
+        {
+          "call_id": "CAL003a2122cd8542c481baf4ddc8e40d80",
+          "gold": "Dermatology \u2013 Allergies",
+          "predicted": "Preventive Care"
+        },
+        {
+          "call_id": "CAL019838277cc37e93b4c1a543fa522122",
+          "gold": "Urgent Care / Sick Pet",
+          "predicted": "Urgent Care \u2013 Diagnosis and Treatment of Illnesses (Vomiting, Diabetes, Infections)"
+        },
+        {
+          "call_id": "CAL019838957c0f75cbb4402e55409a5c87",
+          "gold": "Urgent Care / Sick Pet",
+          "predicted": "Urgent Care \u2013 Diagnosis and Treatment of Illnesses (Vomiting, Diabetes, Infections)"
+        },
+        {
+          "call_id": "CAL019838be793178a7b613d26902e61915",
+          "gold": "Preventive Care \u2013 Wellness Screening (Bloodwork, Urinalysis, Fecals)",
+          "predicted": "Diagnostic Services \u2013 In-House or Reference Lab Testing (Blood, Urine, Fecal, Cytology)"
+        },
+        {
+          "call_id": "CAL019838beaef3720196945678ed36fe5d",
+          "gold": "Preventive Care",
+          "predicted": "Other"
+        },
+        {
+          "call_id": "CAL01983d5be63a7410a179dc571fa6230a",
+          "gold": "Preventive Care",
+          "predicted": "Preventive Care \u2013 Parasite Prevention"
+        },
+        {
+          "call_id": "CAL01983fe266137fb3a294e0c8c0defa79",
+          "gold": "Emergency & Critical Care",
+          "predicted": "Emergency & Critical Care \u2013 Stabilization (Trauma, Poisoning, Seizures)"
+        },
+        {
+          "call_id": "CAL0198422f730c76be8fb3c954115285a5",
+          "gold": "Urgent Care / Sick Pet",
+          "predicted": "Urgent Care \u2013 Diagnosis and Treatment of Illnesses (Vomiting, Diabetes, Infections)"
+        },
+        {
+          "call_id": "CAL0198423279ec78fdaf35068fb9b8d99d",
+          "gold": "Preventive Care",
+          "predicted": "Other"
+        },
+        {
+          "call_id": "CAL019843922eed72b6ad835c1f3c6afcb6",
+          "gold": "Preventive Care \u2013 Vaccinations",
+          "predicted": "Preventive Care"
+        },
+        {
+          "call_id": "CAL019846b31014783aa28b43775196dbc0",
+          "gold": "Diagnostic Services",
+          "predicted": "Surgical Services"
+        },
+        {
+          "call_id": "CAL019846d0660e78e083d2630ef0a456ca",
+          "gold": "Diagnostic Services",
+          "predicted": "Urgent Care / Sick Pet"
+        },
+        {
+          "call_id": "CAL0198481b99eb767a890f8febab7b9b06",
+          "gold": "Urgent Care / Sick Pet",
+          "predicted": "Emergency & Critical Care \u2013 Stabilization (Trauma, Poisoning, Seizures)"
+        }
+      ]
+    },
+    "reason_not_booked": {
+      "accuracy": 0.3,
+      "correct": 6,
+      "total": 20,
+      "mismatches": [
+        {
+          "call_id": "CAL0039a82c50d340abaf5823d06785a4a0",
+          "gold": "(null)",
+          "predicted": "2. Scheduling Issue"
+        },
+        {
+          "call_id": "CAL00ddc5b018204683a8005f80fb0cb08d",
+          "gold": "1. Caller Procrastination",
+          "predicted": "2b. Scheduling Issue - Full schedule"
+        },
+        {
+          "call_id": "CAL011c013103cb49bc84379c12992b27a6",
+          "gold": "1. Caller Procrastination",
+          "predicted": "9. Client/appt query (non-medical)"
+        },
+        {
+          "call_id": "CAL0198382a648d7ea09d62d10d36e470d7",
+          "gold": "1a. Caller Procrastination - Price Objection / Shopping / Request for Quote",
+          "predicted": "3. Service/treatment not offered"
+        },
+        {
+          "call_id": "CAL019838be793178a7b613d26902e61915",
+          "gold": "(null)",
+          "predicted": "9. Client/appt query (non-medical)"
+        },
+        {
+          "call_id": "CAL019838d6b3467648a76309f04cb670e6",
+          "gold": "(null)",
+          "predicted": "1c. Caller Procrastination - Getting information for someone else"
+        },
+        {
+          "call_id": "CAL01983cc93b1870e4abedb28f5c7c1b75",
+          "gold": "(null)",
+          "predicted": "9. Client/appt query (non-medical)"
+        },
+        {
+          "call_id": "CAL01983ce5f93f76e7912a3dafeb682926",
+          "gold": "(null)",
+          "predicted": "9. Client/appt query (non-medical)"
+        },
+        {
+          "call_id": "CAL0198423279ec78fdaf35068fb9b8d99d",
+          "gold": "4. Meant to call competitor hospital",
+          "predicted": "10. Missed call"
+        },
+        {
+          "call_id": "CAL019846b31014783aa28b43775196dbc0",
+          "gold": "(null)",
+          "predicted": "9. Client/appt query (non-medical)"
+        },
+        {
+          "call_id": "CAL01984749748b7815a984f39f81289ceb",
+          "gold": "(null)",
+          "predicted": "10. Missed call"
+        },
+        {
+          "call_id": "CAL019848037cc1761784113355c763b72a",
+          "gold": "1c. Caller Procrastination - Getting information for someone else",
+          "predicted": "(null)"
+        },
+        {
+          "call_id": "CAL01984e1696677206bd8c86d5510a25bd",
+          "gold": "2b. Scheduling Issue - Full schedule",
+          "predicted": "1a. Caller Procrastination - Price Objection / Shopping / Request for Quote"
+        },
+        {
+          "call_id": "CAL019850c993ee76ec901eaa9d4462c033",
+          "gold": "2b. Scheduling Issue - Full schedule",
+          "predicted": "2a. Scheduling Issue - Walk ins not available / no same day appt"
+        }
+      ]
+    }
+  },
+  "predictions": {
+    "CAL019842c062437fb3bacc52396295bf5f": {
+      "call_id": "CAL019842c062437fb3bacc52396295bf5f",
+      "appointment_booked": "Inconclusive",
+      "client_type": "Existing",
+      "treatment_type": "Retail \u2013 Prescriptions",
+      "reason_not_booked": null,
+      "stated_hospital_name": "All about pets",
+      "stated_patient_name": "Alice",
+      "agent_name": null
+    },
+    "CAL01568eebe6a143918c7fc238f5562f6b": {
+      "call_id": "CAL01568eebe6a143918c7fc238f5562f6b",
+      "appointment_booked": "Yes",
+      "client_type": "Existing",
+      "treatment_type": "Preventive Care \u2013 Vaccinations",
+      "reason_not_booked": null,
+      "stated_hospital_name": "Chaparral Veterinary Clinic",
+      "stated_patient_name": "Lucy",
+      "agent_name": null
+    },
+    "CAL003334dc9cce46eeb1d9ddc73be4e633": {
+      "call_id": "CAL003334dc9cce46eeb1d9ddc73be4e633",
+      "appointment_booked": "Yes",
+      "client_type": "Existing",
+      "treatment_type": "Preventive Care",
+      "reason_not_booked": null,
+      "stated_hospital_name": "Mccune, Frontenac Animal Hospital",
+      "stated_patient_name": "JD, Coda, Jax",
+      "agent_name": "Haley"
+    },
+    "CAL019846d0660e78e083d2630ef0a456ca": {
+      "call_id": "CAL019846d0660e78e083d2630ef0a456ca",
+      "appointment_booked": "Yes",
+      "client_type": "Existing",
+      "treatment_type": "Urgent Care / Sick Pet",
+      "reason_not_booked": null,
+      "stated_hospital_name": "Animal Hospital (unspecified)",
+      "stated_patient_name": "Duke, Kiki",
+      "agent_name": null
+    },
+    "CAL0198395d1bca7ab99e53c0432b698045": {
+      "call_id": "CAL0198395d1bca7ab99e53c0432b698045",
+      "appointment_booked": "Inconclusive",
+      "client_type": "Existing",
+      "treatment_type": "Retail \u2013 Prescriptions",
+      "reason_not_booked": null,
+      "stated_hospital_name": "Thomas Glenaran Animal Hospital",
+      "stated_patient_name": "Bumi",
+      "agent_name": null
+    },
+    "CAL019838ffcf307bd790431f1e3f32e766": {
+      "call_id": "CAL019838ffcf307bd790431f1e3f32e766",
+      "appointment_booked": "No",
+      "client_type": "New",
+      "treatment_type": "Surgical Services \u2013 Dental Care (Cleanings, Extractions)",
+      "reason_not_booked": "1a. Caller Procrastination - Price Objection / Shopping / Request for Quote",
+      "stated_hospital_name": "Amberly Animal Hospital",
+      "stated_patient_name": null,
+      "agent_name": "Natalie"
+    },
+    "CAL019838d6b3467648a76309f04cb670e6": {
+      "call_id": "CAL019838d6b3467648a76309f04cb670e6",
+      "appointment_booked": "Inconclusive",
+      "client_type": "Existing",
+      "treatment_type": "Retail \u2013 Prescriptions",
+      "reason_not_booked": "1c. Caller Procrastination - Getting information for someone else",
+      "stated_hospital_name": "Moira Veteran clinic",
+      "stated_patient_name": null,
+      "agent_name": "Megan"
+    },
+    "CAL0198380d24b573858f1ebc1d3174cf7c": {
+      "call_id": "CAL0198380d24b573858f1ebc1d3174cf7c",
+      "appointment_booked": "Yes",
+      "client_type": "Existing",
+      "treatment_type": "Urgent Care / Sick Pet",
+      "reason_not_booked": null,
+      "stated_hospital_name": "Paradise Animal Hospital and Wellness Center",
+      "stated_patient_name": "Buzz",
+      "agent_name": "Jessica"
+    },
+    "CAL019846b31014783aa28b43775196dbc0": {
+      "call_id": "CAL019846b31014783aa28b43775196dbc0",
+      "appointment_booked": "Inconclusive",
+      "client_type": "Existing",
+      "treatment_type": "Surgical Services",
+      "reason_not_booked": "9. Client/appt query (non-medical)",
+      "stated_hospital_name": "Pickering Animal Hospital",
+      "stated_patient_name": "Holmes",
+      "agent_name": "Dana"
+    },
+    "CAL012c4a0f78834f90b4d5b3a24657a2d8": {
+      "call_id": "CAL012c4a0f78834f90b4d5b3a24657a2d8",
+      "appointment_booked": "Yes",
+      "client_type": "Existing",
+      "treatment_type": "Preventive Care",
+      "reason_not_booked": null,
+      "stated_hospital_name": "Village Kid",
+      "stated_patient_name": "Finnegan",
+      "agent_name": null
+    },
+    "CAL019843478f067634b180740f68790a75": {
+      "call_id": "CAL019843478f067634b180740f68790a75",
+      "appointment_booked": "No",
+      "client_type": "New",
+      "treatment_type": "Preventive Care \u2013 Vaccinations",
+      "reason_not_booked": "2b. Scheduling Issue - Full schedule",
+      "stated_hospital_name": "Blisk Animal Hospital",
+      "stated_patient_name": null,
+      "agent_name": "JD"
+    },
+    "CAL019850c993ee76ec901eaa9d4462c033": {
+      "call_id": "CAL019850c993ee76ec901eaa9d4462c033",
+      "appointment_booked": "No",
+      "client_type": "New",
+      "treatment_type": "Urgent Care / Sick Pet",
+      "reason_not_booked": "2a. Scheduling Issue - Walk ins not available / no same day appt",
+      "stated_hospital_name": "Paradise Animal Hospital and Wellness Center",
+      "stated_patient_name": null,
+      "agent_name": "Melissa"
+    },
+    "CAL01983fe266137fb3a294e0c8c0defa79": {
+      "call_id": "CAL01983fe266137fb3a294e0c8c0defa79",
+      "appointment_booked": "Yes",
+      "client_type": "New",
+      "treatment_type": "Emergency & Critical Care \u2013 Stabilization (Trauma, Poisoning, Seizures)",
+      "reason_not_booked": null,
+      "stated_hospital_name": "Kingston Regional Pet Hospital",
+      "stated_patient_name": null,
+      "agent_name": null
+    },
+    "CAL00c4d944580b454fa32ba23e0a439d9f": {
+      "call_id": "CAL00c4d944580b454fa32ba23e0a439d9f",
+      "appointment_booked": "No",
+      "client_type": "New",
+      "treatment_type": "End of Life Care \u2013 In-Clinic Euthanasia",
+      "reason_not_booked": "1a. Caller Procrastination - Price Objection / Shopping / Request for Quote",
+      "stated_hospital_name": "Eagle Hill Animal Hospital",
+      "stated_patient_name": null,
+      "agent_name": "Seer"
+    },
+    "CAL0198423279ec78fdaf35068fb9b8d99d": {
+      "call_id": "CAL0198423279ec78fdaf35068fb9b8d99d",
+      "appointment_booked": "Inconclusive",
+      "client_type": "New",
+      "treatment_type": "Other",
+      "reason_not_booked": "10. Missed call",
+      "stated_hospital_name": "Welland Animal Hospital",
+      "stated_patient_name": null,
+      "agent_name": null
+    },
+    "CAL01983d5be63a7410a179dc571fa6230a": {
+      "call_id": "CAL01983d5be63a7410a179dc571fa6230a",
+      "appointment_booked": "Inconclusive",
+      "client_type": "Existing",
+      "treatment_type": "Preventive Care \u2013 Parasite Prevention",
+      "reason_not_booked": null,
+      "stated_hospital_name": "Animal Clinic",
+      "stated_patient_name": "Marsha",
+      "agent_name": "Tracy"
+    },
+    "CAL003a2122cd8542c481baf4ddc8e40d80": {
+      "call_id": "CAL003a2122cd8542c481baf4ddc8e40d80",
+      "appointment_booked": "Yes",
+      "client_type": "Existing",
+      "treatment_type": "Preventive Care",
+      "reason_not_booked": null,
+      "stated_hospital_name": null,
+      "stated_patient_name": "Ron",
+      "agent_name": null
+    },
+    "CAL0039a82c50d340abaf5823d06785a4a0": {
+      "call_id": "CAL0039a82c50d340abaf5823d06785a4a0",
+      "appointment_booked": "Inconclusive",
+      "client_type": "Inconclusive",
+      "treatment_type": "Other",
+      "reason_not_booked": "2. Scheduling Issue",
+      "stated_hospital_name": "Blue Sky Animal Hospital",
+      "stated_patient_name": null,
+      "agent_name": null
+    },
+    "CAL00ddc5b018204683a8005f80fb0cb08d": {
+      "call_id": "CAL00ddc5b018204683a8005f80fb0cb08d",
+      "appointment_booked": "No",
+      "client_type": "Existing",
+      "treatment_type": "Preventive Care \u2013 Parasite Prevention",
+      "reason_not_booked": "2b. Scheduling Issue - Full schedule",
+      "stated_hospital_name": "Bay Regional Veterinary Hospital",
+      "stated_patient_name": "Atticus",
+      "agent_name": "April"
+    },
+    "CAL019838beaef3720196945678ed36fe5d": {
+      "call_id": "CAL019838beaef3720196945678ed36fe5d",
+      "appointment_booked": "Yes",
+      "client_type": "Existing",
+      "treatment_type": "Other",
+      "reason_not_booked": null,
+      "stated_hospital_name": "NK RePet Hospital",
+      "stated_patient_name": null,
+      "agent_name": "Village"
+    },
+    "CAL019841d8dc337f40b883a6e7a8cbe4fd": {
+      "call_id": "CAL019841d8dc337f40b883a6e7a8cbe4fd",
+      "appointment_booked": "No",
+      "client_type": "New",
+      "treatment_type": "Preventive Care",
+      "reason_not_booked": "1a. Caller Procrastination - Price Objection / Shopping / Request for Quote",
+      "stated_hospital_name": "Amberly Animal Hospital",
+      "stated_patient_name": null,
+      "agent_name": "Natalie"
+    },
+    "CAL019838957c0f75cbb4402e55409a5c87": {
+      "call_id": "CAL019838957c0f75cbb4402e55409a5c87",
+      "appointment_booked": "Yes",
+      "client_type": "Existing",
+      "treatment_type": "Urgent Care \u2013 Diagnosis and Treatment of Illnesses (Vomiting, Diabetes, Infections)",
+      "reason_not_booked": null,
+      "stated_hospital_name": "Northern Corporate Hospitality",
+      "stated_patient_name": "Norman",
+      "agent_name": null
+    },
+    "CAL01984401a9107d337f40b883a6e7a8cbe4fd": {
+      "call_id": "CAL01984401a9107d337f40b883a6e7a8cbe4fd",
+      "appointment_booked": "Yes",
+      "client_type": "New",
+      "treatment_type": "Emergency & Critical Care \u2013 Stabilization (Trauma, Poisoning, Seizures)",
+      "reason_not_booked": null,
+      "stated_hospital_name": "Quinte Regional Pet Hospital",
+      "stated_patient_name": null,
+      "agent_name": null
+    },
+    "CAL019842d3758878689a3b16c07157b109": {
+      "call_id": "CAL019842d3758878689a3b16c07157b109",
+      "appointment_booked": "Yes",
+      "client_type": "Existing",
+      "treatment_type": "Preventive Care \u2013 Vaccinations",
+      "reason_not_booked": null,
+      "stated_hospital_name": "MCEW in Frontenac, Panama Hospital",
+      "stated_patient_name": "Rosie",
+      "agent_name": "Kim"
+    },
+    "CAL0198422f730c76be8fb3c954115285a5": {
+      "call_id": "CAL0198422f730c76be8fb3c954115285a5",
+      "appointment_booked": "Yes",
+      "client_type": "New",
+      "treatment_type": "Urgent Care \u2013 Diagnosis and Treatment of Illnesses (Vomiting, Diabetes, Infections)",
+      "reason_not_booked": null,
+      "stated_hospital_name": "Pickering Animal Hospital",
+      "stated_patient_name": "Meatball",
+      "agent_name": "Haley"
+    },
+    "CAL0198397eefb9704da9334e4087a45219": {
+      "call_id": "CAL0198397eefb9704da9334e4087a45219",
+      "appointment_booked": "No",
+      "client_type": "New",
+      "treatment_type": "Preventive Care \u2013 Vaccinations",
+      "reason_not_booked": "1a. Caller Procrastination - Price Objection / Shopping / Request for Quote",
+      "stated_hospital_name": "Lincoln Animal Hospital",
+      "stated_patient_name": null,
+      "agent_name": "Jada"
+    },
+    "CAL0198481b99eb767a890f8febab7b9b06": {
+      "call_id": "CAL0198481b99eb767a890f8febab7b9b06",
+      "appointment_booked": "Inconclusive",
+      "client_type": "New",
+      "treatment_type": "Emergency & Critical Care \u2013 Stabilization (Trauma, Poisoning, Seizures)",
+      "reason_not_booked": null,
+      "stated_hospital_name": "Kingston Regional Pet Hospital",
+      "stated_patient_name": null,
+      "agent_name": null
+    },
+    "CAL01984e1696677206bd8c86d5510a25bd": {
+      "call_id": "CAL01984e1696677206bd8c86d5510a25bd",
+      "appointment_booked": "No",
+      "client_type": "Existing",
+      "treatment_type": "Urgent Care / Sick Pet",
+      "reason_not_booked": "1a. Caller Procrastination - Price Objection / Shopping / Request for Quote",
+      "stated_hospital_name": "Kingston Regional Pet Hospital",
+      "stated_patient_name": "Brett",
+      "agent_name": null
+    },
+    "CAL000982de28904f1aa7f072d197347693": {
+      "call_id": "CAL000982de28904f1aa7f072d197347693",
+      "appointment_booked": "No",
+      "client_type": "New",
+      "treatment_type": "Diagnostic Services \u2013 In-House or Reference Lab Testing (Blood, Urine, Fecal, Cytology)",
+      "reason_not_booked": "1a. Caller Procrastination - Price Objection / Shopping / Request for Quote",
+      "stated_hospital_name": "Downtown animal clinic",
+      "stated_patient_name": null,
+      "agent_name": null
+    },
+    "CAL019847429fae7401a033f30149097005": {
+      "call_id": "CAL019847429fae7401a033f30149097005",
+      "appointment_booked": "Inconclusive",
+      "client_type": "Existing",
+      "treatment_type": "Retail \u2013 Prescriptions",
+      "reason_not_booked": null,
+      "stated_hospital_name": null,
+      "stated_patient_name": "Sophie",
+      "agent_name": "Linda"
+    },
+    "CAL019848037cc1761784113355c763b72a": {
+      "call_id": "CAL019848037cc1761784113355c763b72a",
+      "appointment_booked": "Inconclusive",
+      "client_type": "Existing",
+      "treatment_type": "Urgent Care / Sick Pet",
+      "reason_not_booked": null,
+      "stated_hospital_name": "Kingston Regional Pet Hospital",
+      "stated_patient_name": null,
+      "agent_name": null
+    },
+    "CAL0198382a648d7ea09d62d10d36e470d7": {
+      "call_id": "CAL0198382a648d7ea09d62d10d36e470d7",
+      "appointment_booked": "No",
+      "client_type": "New",
+      "treatment_type": "Surgical Services",
+      "reason_not_booked": "3. Service/treatment not offered",
+      "stated_hospital_name": null,
+      "stated_patient_name": null,
+      "agent_name": null
+    },
+    "CAL019843922eed72b6ad835c1f3c6afcb6": {
+      "call_id": "CAL019843922eed72b6ad835c1f3c6afcb6",
+      "appointment_booked": "Inconclusive",
+      "client_type": "New",
+      "treatment_type": "Preventive Care",
+      "reason_not_booked": null,
+      "stated_hospital_name": "Downtown Animal Clinic",
+      "stated_patient_name": null,
+      "agent_name": "Bethany"
+    },
+    "CAL01983cac376972818d9cef6bb1cba1fe": {
+      "call_id": "CAL01983cac376972818d9cef6bb1cba1fe",
+      "appointment_booked": "Yes",
+      "client_type": "New",
+      "treatment_type": "Preventive Care \u2013 Vaccinations",
+      "reason_not_booked": null,
+      "stated_hospital_name": "We have to get Animal Hospital",
+      "stated_patient_name": "Amor",
+      "agent_name": null
+    },
+    "CAL019838277cc37e93b4c1a543fa522122": {
+      "call_id": "CAL019838277cc37e93b4c1a543fa522122",
+      "appointment_booked": "Yes",
+      "client_type": "New",
+      "treatment_type": "Urgent Care \u2013 Diagnosis and Treatment of Illnesses (Vomiting, Diabetes, Infections)",
+      "reason_not_booked": null,
+      "stated_hospital_name": "Pickering Animal Hospital",
+      "stated_patient_name": "Leo",
+      "agent_name": "Michelle"
+    },
+    "CAL019838be793178a7b613d26902e61915": {
+      "call_id": "CAL019838be793178a7b613d26902e61915",
+      "appointment_booked": "Inconclusive",
+      "client_type": "Existing",
+      "treatment_type": "Diagnostic Services \u2013 In-House or Reference Lab Testing (Blood, Urine, Fecal, Cytology)",
+      "reason_not_booked": "9. Client/appt query (non-medical)",
+      "stated_hospital_name": "Clinic for 10 Abajo",
+      "stated_patient_name": null,
+      "agent_name": null
+    },
+    "CAL0198514be6ef740dbf227cd3dc4c4df2": {
+      "call_id": "CAL0198514be6ef740dbf227cd3dc4c4df2",
+      "appointment_booked": "Yes",
+      "client_type": "Existing",
+      "treatment_type": "End of Life Care \u2013 In-Clinic Euthanasia",
+      "reason_not_booked": null,
+      "stated_hospital_name": "Blue Animal Hospital",
+      "stated_patient_name": "Jack",
+      "agent_name": "JD"
+    },
+    "CAL01984749748b7815a984f39f81289ceb": {
+      "call_id": "CAL01984749748b7815a984f39f81289ceb",
+      "appointment_booked": "Inconclusive",
+      "client_type": "Existing",
+      "treatment_type": "Urgent Care / Sick Pet",
+      "reason_not_booked": "10. Missed call",
+      "stated_hospital_name": "Kitsilano Animal Clinic",
+      "stated_patient_name": "Zuca",
+      "agent_name": null
+    },
+    "CAL01983ca8cf2c7fb28b73d21dae08325": {
+      "call_id": "CAL01983ca8cf2c7fb28b73d21dae08325",
+      "appointment_booked": "Yes",
+      "client_type": "Existing",
+      "treatment_type": "Urgent Care \u2013 Diagnosis and Treatment of Illnesses (Vomiting, Diabetes, Infections)",
+      "reason_not_booked": null,
+      "stated_hospital_name": "McEwen-Frontenac Animal Hospital",
+      "stated_patient_name": "Stella",
+      "agent_name": "Kim"
+    },
+    "CAL01983ce5f93f76e7912a3dafeb682926": {
+      "call_id": "CAL01983ce5f93f76e7912a3dafeb682926",
+      "appointment_booked": "Inconclusive",
+      "client_type": "Existing",
+      "treatment_type": "Retail \u2013 Prescriptions",
+      "reason_not_booked": "9. Client/appt query (non-medical)",
+      "stated_hospital_name": "Pickering Animal Hospital",
+      "stated_patient_name": "Mr. Har",
+      "agent_name": "Michelle"
+    },
+    "CAL011c013103cb49bc84379c12992b27a6": {
+      "call_id": "CAL011c013103cb49bc84379c12992b27a6",
+      "appointment_booked": "Inconclusive",
+      "client_type": "Existing",
+      "treatment_type": "Urgent Care / Sick Pet",
+      "reason_not_booked": "9. Client/appt query (non-medical)",
+      "stated_hospital_name": "Kingston Regional Pet Hospital",
+      "stated_patient_name": null,
+      "agent_name": null
+    },
+    "CAL01983cc93b1870e4abedb28f5c7c1b75": {
+      "call_id": "CAL01983cc93b1870e4abedb28f5c7c1b75",
+      "appointment_booked": "Inconclusive",
+      "client_type": "Existing",
+      "treatment_type": "Retail \u2013 Prescriptions",
+      "reason_not_booked": "9. Client/appt query (non-medical)",
+      "stated_hospital_name": "Brandon Hills Vet Clinic",
+      "stated_patient_name": "Danny",
+      "agent_name": "Cassandra"
+    }
+  },
+  "reasoning": {
+    "CAL019842c062437fb3bacc52396295bf5f": "- Appointment: INCONCLUSIVE\n- Client: EXISTING\n- Service: Retail \u2013 Prescriptions\n- Reason not booked: null\n- Hospital: All about pets | Pet: Alice | Agent: Not Introduced",
+    "CAL01568eebe6a143918c7fc238f5562f6b": "- Appointment: YES\n- Client: EXISTING\n- Service: Preventive Care \u2013 Vaccinations\n- Reason not booked: null\n- Hospital: Chaparral Veterinary Clinic | Pet: Lucy | Agent: Not Introduced",
+    "CAL003334dc9cce46eeb1d9ddc73be4e633": "- Appointment: YES\n- Client: EXISTING\n- Service: Preventive Care\n- Reason not booked: null\n- Hospital: Mccune, Frontenac Animal Hospital | Pet: JD, Coda, Jax | Agent: Haley",
+    "CAL019846d0660e78e083d2630ef0a456ca": "- Appointment: YES\n- Client: EXISTING\n- Service: Urgent Care / Sick Pet\n- Reason not booked: null\n- Hospital: Animal Hospital (unspecified) | Pet: Duke, Kiki | Agent: Not Introduced",
+    "CAL0198395d1bca7ab99e53c0432b698045": "- Appointment: Inconclusive. The caller's goal was to get a prescription refill, not to book an appointment. The agent confirmed the medication would be ready for pickup, which is a successful retail transaction, not an appointment.\n- Client: Existing. The caller references a previous appointment and the agent looks up the pet, Bumi, by name and last name on file.\n- Service: The caller is requesting more calming pills for their dog's grooming appointments. This is a request for a medication refill, which is classified as \"Retail \u2013 Prescriptions\".\n- Reason not booked: null. The outcome is inconclusive as the call was for a retail purpose, not an appointment booking.\n- Hospital: Thomas Glenaran Animal Hospital | Pet: Bumi | Agent: Not Introduced",
+    "CAL019838ffcf307bd790431f1e3f32e766": "- Appointment: No. The caller was seeking a quote for dental surgery. After a detailed discussion about the complexity and potential high cost, the agent advised the caller to seek a direct referral to a dental specialist from their current vet to avoid extra fees. The caller accepted this advice and did not book.\n- Client: New. The caller explicitly states, \"It would be a new patient\".\n- Service: The caller is asking for a \"dental surgery quote\" and discusses the possibility of extractions. This is a specific surgical intervention, classified as \"Surgical Services \u2013 Dental Care\".\n- Reason not booked: The agent recommended the caller get a referral to a specialist from their current clinic, which the caller agreed to. This is \"3. Referred to another clinic/specialist\".\n- Hospital: Amberly Animal Hospital | Pet: Not Mentioned | Agent: Natalie",
+    "CAL019838d6b3467648a76309f04cb670e6": "- Appointment: Inconclusive. This is an inter-clinic call where one vet clinic is arranging to purchase medication from another. No patient appointment was discussed or intended.\n- Client: Existing. This is a call from one veterinary clinic (Sylvester Vet) to another (Moira Vet Clinic), indicating an existing professional relationship.\n- Service: The caller from Sylvester Vet is asking to buy two tablets of Cerenia. This is a transaction for medication, classified as \"Retail \u2013 Prescriptions\".\n- Reason not booked: This was an inter-clinic call to source medication, not a client attempting to book an appointment. This falls under \"1c. Getting info for someone else\".\n- Hospital: Moira Veteran clinic | Pet: Not Mentioned | Agent: Megan",
+    "CAL0198380d24b573858f1ebc1d3174cf7c": "- Appointment: Yes. The agent offered an appointment for Friday at 8:30 AM, the caller confirmed \"That's perfect,\" and the agent stated, \"I got you put in there.\"\n- Client: Existing. The agent asks for the caller's phone number, looks up the file, and confirms the pet's name (\"For Buzz?\"), indicating the pet was already in their system.\n- Service: The caller states their dog \"needs his ears checked.\" This is a symptom-driven visit. No specific intervention or diagnostic test is mentioned, so the parent category \"Urgent Care / Sick Pet\" is appropriate.\n- Reason not booked: N/A (appointment was booked).\n- Hospital: Paradise Animal Hospital and Wellness Center | Pet: Buzz | Agent: Jessica",
+    "CAL019846b31014783aa28b43775196dbc0": "- Appointment: Inconclusive\n- Client: Existing\n- Service: Surgical Services - Post-Op Care\n- Reason not booked: 9. Client/appt query\n- Hospital: Pickering Animal Hospital | Pet: Holmes | Agent: Dana",
+    "CAL012c4a0f78834f90b4d5b3a24657a2d8": "- Appointment: Yes\n- Client: Existing\n- Service: Preventive Care\n- Reason not booked: null\n- Hospital: Village Kid | Pet: Finnegan | Agent: Not Mentioned",
+    "CAL019843478f067634b180740f68790a75": "- Appointment: No\n- Client: New\n- Service: Preventive Care \u2013 Vaccinations\n- Reason not booked: 2b. Full schedule\n- Hospital: Blisk Animal Hospital | Pet: Not Mentioned | Agent: JD",
+    "CAL019850c993ee76ec901eaa9d4462c033": "- Appointment: No\n- Client: New\n- Service: Urgent Care / Sick Pet\n- Reason not booked: 2a. Walk-ins not available\n- Hospital: Paradise Animal Hospital and Wellness Center | Pet: Not Mentioned | Agent: Melissa",
+    "CAL01983fe266137fb3a294e0c8c0defa79": "- Appointment: YES\n- Client: NEW\n- Service: Emergency & Critical Care \u2013 Stabilization\n- Reason not booked: null\n- Hospital: Kingston Regional Pet Hospital | Pet: not mentioned | Agent: not introduced",
+    "CAL00c4d944580b454fa32ba23e0a439d9f": "- Appointment: NO\n- Client: NEW\n- Service: End of Life Care \u2013 In-Clinic Euthanasia\n- Reason not booked: 1a. Price Objection\n- Hospital: Eagle Hill Animal Hospital | Pet: not mentioned | Agent: Seer",
+    "CAL0198423279ec78fdaf35068fb9b8d99d": "- Appointment: Inconclusive\n- Client: NEW\n- Service: Other\n- Reason not booked: 10. Wrong number\n- Hospital: Welland Animal Hospital | Pet: not mentioned | Agent: not introduced",
+    "CAL01983d5be63a7410a179dc571fa6230a": "- Appointment: Inconclusive\n- Client: EXISTING\n- Service: Preventive Care \u2013 Parasite Prevention\n- Reason not booked: null\n- Hospital: Animal Clinic | Pet: Marsha | Agent: Tracy",
+    "CAL003a2122cd8542c481baf4ddc8e40d80": "- Appointment: YES - Caller booked an appointment for the next day at 4:00 PM.\n- Client: EXISTING - The agent asks \"Have you been here before?\" and the caller confirms \"Yes.\" The agent then looks up the file by phone number.\n- Service: Preventive Care - The caller requested an appointment for seasonal allergies, parasite prevention, and also agreed to add due vaccines. Since multiple routine and minor illness services were combined into one visit, this falls under the parent category of a general preventive/wellness appointment. No specific intervention was mentioned beyond a general check-up.\n- Reason not booked: null\n- Hospital: not mentioned | Pet: Ron | Agent: not introduced",
+    "CAL0039a82c50d340abaf5823d06785a4a0": "- Appointment: INCONCLUSIVE - The call went to an automated voicemail message because the office was closed.\n- Client: INCONCLUSIVE - The caller did not speak with a person.\n- Service: Other - The call connected to a voicemail system; no specific veterinary service was discussed.\n- Reason not booked: Clinic logistical issue - The automated message stated the office was closed between 12 and 1 PM.\n- Hospital: Blue Sky Animal Hospital | Pet: not mentioned | Agent: not introduced",
+    "CAL00ddc5b018204683a8005f80fb0cb08d": "- Appointment: NO - The caller cancelled an existing appointment and was unable to rebook for an earlier time because the clinic's schedule was full.\n- Client: EXISTING - The caller introduces himself, mentions he is \"coming back,\" and discusses an existing appointment for his pet, Atticus.\n- Service: Preventive Care \u2013 Parasite Prevention - After cancelling the appointment, the caller's primary request was to get flea and tick medication for his pet.\n- Reason not booked: Full schedule - The agent stated, \"we're pretty booked up\" when the caller asked for an appointment that week.\n- Hospital: Bay Regional Veterinary Hospital | Pet: Atticus | Agent: April",
+    "CAL019838beaef3720196945678ed36fe5d": "- Appointment: YES - The caller successfully rescheduled an existing appointment from an unspecified time to 4:00 PM the next day.\n- Client: EXISTING - The caller explicitly states, \"I have an appointment to bring my dog in tomorrow.\"\n- Service: Other - The call was purely administrative to reschedule an appointment. The underlying medical reason for the visit was not mentioned.\n- Reason not booked: null\n- Hospital: NK RePet Hospital | Pet: not mentioned | Agent: Village",
+    "CAL019841d8dc337f40b883a6e7a8cbe4fd": "- Appointment: No. The caller asked for detailed pricing information and, after receiving it, stated they would get more information about the kitten and then call back. They did not commit to the offered Monday appointment.\n- Client: New. The caller is adopting a new kitten and is inquiring about the clinic's services and prices for the first time. They are unfamiliar with the process.\n- Service: The caller is asking about a first visit for a new kitten, which includes an examination, shots, deworming, and parasite checks. Since multiple preventive services were discussed, the parent category \"Preventive Care\" is appropriate. No single intervention was the sole focus.\n- Reason not booked: Price Objection. The caller asked for a detailed cost breakdown, was quoted a potential first visit cost of $400-$500, and then decided to defer booking until they had more information, indicating the price was a factor in their decision to wait.\n- Hospital: Amberly Animal Hospital | Pet: Not mentioned (a kitten) | Agent: Natalie",
+    "CAL019838957c0f75cbb4402e55409a5c87": "- Appointment: Yes. The caller booked an appointment for the same day at 1:30 PM.\n- Client: Existing. The agent asks for the caller's name to \"open your file for normal,\" confirming the pet is already in their system.\n- Service: The caller mentioned two issues: a routine Cartrophen injection and a new problem, a \"sty on his eye.\" The agent booked a consultation and exam to investigate the new symptom. The intervention is the diagnosis of a new illness, which falls under the sub-category \"Urgent Care \u2013 Diagnosis and Treatment of Illnesses\".\n- Reason not booked: null\n- Hospital: Northern Corporate Hospitality | Pet: Norman | Agent: Not mentioned",
+    "CAL01984401a9107d337f40b883a6e7a8cbe4fd": "- Appointment: Yes. The caller confirmed they were heading to the hospital immediately (\"Yeah, we'll head in\"), gave an ETA, and the agent confirmed they would be expected (\"we'll be expecting you\").\n- Client: New. The caller did not know the hospital's location (\"No, I have no idea\") and had to ask for directions.\n- Service: The cat was described with acute symptoms (lethargy, vomiting, anorexia), and the agent triaged it as a potential life-threatening emergency (e.g., urinary blockage), advising the caller to come in immediately for after-hours care. This is a clear case for \"Emergency & Critical Care \u2013 Stabilization\".\n- Reason not booked: null\n- Hospital: Quinte Regional Pet Hospital | Pet: Not mentioned (a cat) | Agent: Not mentioned",
+    "CAL019842d3758878689a3b16c07157b109": "- Appointment: Yes. The caller successfully rescheduled an existing appointment to an earlier time on the same day (10:00 AM).\n- Client: Existing. The caller is calling about a pre-existing appointment, and the agent finds their file using the last name and pet's name.\n- Service: The purpose of the appointment was explicitly stated as \"for my cat to have a shot given.\" This directly corresponds to the sub-category \"Preventive Care \u2013 Vaccinations\".\n- Reason not booked: null\n- Hospital: MCEW in Frontenac, Panama Hospital | Pet: Rosie | Agent: Kim",
+    "CAL0198422f730c76be8fb3c954115285a5": "- Appointment: YES\n- Client: NEW\n- Service: Urgent Care \u2013 Diagnosis and Treatment of Illnesses\n- Reason not booked: null\n- Hospital: Pickering Animal Hospital | Pet: Meatball | Agent: Haley",
+    "CAL0198397eefb9704da9334e4087a45219": "- Appointment: NO\n- Client: NEW\n- Service: Preventive Care \u2013 Vaccinations\n- Reason not booked: 1a. Price Objection\n- Hospital: Lincoln Animal Hospital | Pet: not mentioned | Agent: Jada",
+    "CAL0198481b99eb767a890f8febab7b9b06": "- Appointment: INCONCLUSIVE\n- Client: NEW\n- Service: Emergency & Critical Care \u2013 Stabilization\n- Reason not booked: null\n- Hospital: Kingston Regional Pet Hospital | Pet: not mentioned | Agent: not mentioned",
+    "CAL01984e1696677206bd8c86d5510a25bd": "- Appointment: NO\n- Client: EXISTING\n- Service: Urgent Care / Sick Pet\n- Reason not booked: 1a. Price Objection\n- Hospital: Kingston Regional Pet Hospital | Pet: Brett (mentioned) | Agent: not mentioned",
+    "CAL000982de28904f1aa7f072d197347693": "- Appointment: No\n- Client: New\n- Service: Diagnostic Services \u2013 Lab Testing\n- Reason not booked: 1a. Price Objection\n- Hospital: Downtown animal clinic | Pet: Not Mentioned | Agent: Not Mentioned",
+    "CAL019847429fae7401a033f30149097005": "- Appointment: Inconclusive\n- Client: Existing\n- Service: Retail \u2013 Prescriptions\n- Reason not booked: null\n- Hospital: Not Mentioned | Pet: Sophie | Agent: Linda",
+    "CAL019848037cc1761784113355c763b72a": "- Appointment: Inconclusive\n- Client: Existing\n- Service: Urgent Care / Sick Pet\n- Reason not booked: null\n- Hospital: Kingston Regional Pet Hospital | Pet: Not Mentioned | Agent: Not Mentioned",
+    "CAL0198382a648d7ea09d62d10d36e470d7": "- Appointment: No\n- Client: New\n- Service: Surgical Services\n- Reason not booked: 4. Service not offered\n- Hospital: In an animal clinic | Pet: Not Mentioned | Agent: Not Mentioned",
+    "CAL019843922eed72b6ad835c1f3c6afcb6": "- Appointment: INCONCLUSIVE - The caller was directed to fill out a new client form on the website before an appointment could be scheduled. The agent stated they would call back after the form was received.\n- Client: NEW - The caller confirms, \"it's like a first time,\" and the agent directs them to the \"new client form.\"\n- Service: PREVENTIVE CARE - The caller has a new 10-week-old kitten and wants to schedule its first vet visit. No specific intervention was mentioned beyond a general first checkup, so the parent category is used.\n- Reason not booked: 4. Clinic Protocol - The clinic requires new clients to fill out an online form before booking an appointment.\n- Hospital: Downtown Animal Clinic | Pet: not mentioned | Agent: Bethany",
+    "CAL01983cac376972818d9cef6bb1cba1fe": "- Appointment: YES - After discussing availability, the agent booked an appointment for the same day at 10:30 AM.\n- Client: NEW - The caller states, \"This is the first time I'm coming here.\"\n- Service: PREVENTIVE CARE \u2013 VACCINATIONS - The caller explicitly states, \"I'd like to book an appointment for the second vaccination for my puppy.\" The sole purpose of the call was to schedule this specific service.\n- Reason not booked: null\n- Hospital: We have to get Animal Hospital | Pet: Amor | Agent: not mentioned",
+    "CAL019838277cc37e93b4c1a543fa522122": "- Appointment: YES - The agent booked an appointment for the caller's cat on Saturday at 11:30 AM.\n- Client: NEW - The caller states, \"I haven't come to your clinic before,\" and the agent proceeds to create a new file by collecting all of their information.\n- Service: URGENT CARE \u2013 DIAGNOSIS AND TREATMENT OF ILLNESSES - The cat is presenting with symptoms (coughing), and the agent recommends a physical examination to listen to its chest and breathing to diagnose the issue. The intervention is a diagnostic exam.\n- Reason not booked: null\n- Hospital: Pickering Animal Hospital | Pet: Leo (also Chicken) | Agent: Michelle",
+    "CAL019838be793178a7b613d26902e61915": "- Appointment: INCONCLUSIVE - The caller was not trying to book an appointment but was calling to get the results of a blood test. The agent arranged for a callback with the results.\n- Client: EXISTING - The agent looks up the client's file and asks about a previous visit in June, indicating a pre-existing relationship.\n- Service: DIAGNOSTIC SERVICES \u2013 LAB TESTING - The call is entirely about getting the results from a blood test performed that morning. The underlying service is lab testing.\n- Reason not booked: 9. Client/appt query - The purpose of the call was purely administrative (requesting test results), and the caller never intended to book an appointment.\n- Hospital: Clinic for 10 Abajo | Pet: not mentioned | Agent: not mentioned",
+    "CAL0198514be6ef740dbf227cd3dc4c4df2": "- Appointment: YES - The caller booked and prepaid for an appointment for the next day at 2:15 PM.\n- Client: EXISTING - The caller states, \"You have? It's been a long time,\" and the agent finds an unpaid cancellation fee on their account from a past interaction.\n- Service: The caller explicitly states, \"I just wanted to book an appointment to euthanize my dog.\" This is a specific intervention. -> \"End of Life Care \u2013 In-Clinic Euthanasia\".\n- Reason not booked: null\n- Hospital: Blue Animal Hospital | Pet: Jack | Agent: JD",
+    "CAL01984749748b7815a984f39f81289ceb": "- Appointment: INCONCLUSIVE - The caller left a voicemail requesting an urgent appointment and is waiting for a callback from the clinic.\n- Client: EXISTING - The caller mentions a previous visit with Dr. Herbert and provides the last name on file.\n- Service: The pet has an acute injury (\"completely limping and cannot be on that foot\") and is in pain. The caller is requesting to be seen, but no specific intervention is mentioned in the voicemail. Using the parent category. -> \"Urgent Care / Sick Pet\".\n- Reason not booked: The call went to voicemail.\n- Hospital: Kitsilano Animal Clinic | Pet: Zuca | Agent: N/A (Voicemail)",
+    "CAL01983ca8cf2c7fb28b73d21dae08325": "- Appointment: YES - The caller accepted an appointment for 11 o'clock the same day.\n- Client: EXISTING - The caller references a specific visit from earlier in the week for the same pet, Stella, and mentions the diagnosing doctor by name (Dr. Sabir).\n- Service: The call is a follow-up for a pet whose condition has not improved after a recent diagnosis. The doctor recommended a re-examination, which the agent scheduled. This is a specific intervention for an illness. -> \"Urgent Care \u2013 Diagnosis and Treatment of Illnesses\".\n- Reason not booked: null\n- Hospital: McEwen-Frontenac Animal Hospital | Pet: Stella | Agent: Kim",
+    "CAL01983ce5f93f76e7912a3dafeb682926": "- Appointment: INCONCLUSIVE - The purpose of the call was not to book an appointment. The caller was paying a bill and requesting a prescription refill.\n- Client: EXISTING - The caller and agent know each other by their first names and have a long, personal conversation, indicating a familiar relationship. The pet also has a prescription on file.\n- Service: The caller states the pet is low on medication and needs more, and the agent confirms, \"I'll refill the prescription then.\" -> \"Retail \u2013 Prescriptions\".\n- Reason not booked: The purpose of the call was administrative (payment and prescription refill).\n- Hospital: Pickering Animal Hospital | Pet: Mr. Har (implied from \"Applequil for Mr. Har\") | Agent: Michelle",
+    "CAL011c013103cb49bc84379c12992b27a6": "- Appointment: INCONCLUSIVE\n- Client: EXISTING\n- Service: Urgent Care / Sick Pet\n- Reason not booked: 9. Client/appt query\n- Hospital: Kingston Regional Pet Hospital | Pet: not mentioned | Agent: not introduced",
+    "CAL01983cc93b1870e4abedb28f5c7c1b75": "- Appointment: INCONCLUSIVE\n- Client: EXISTING\n- Service: Retail \u2013 Prescriptions\n- Reason not booked: 9. Client/appt query\n- Hospital: Brandon Hills Vet Clinic | Pet: Danny | Agent: Cassandra"
+  }
+}

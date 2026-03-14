@@ -1,0 +1,90 @@
+[
+  {
+    "call_id": "CAL000aeb5cceb842ff9ab94f9dc115873d",
+    "transcript": "Agent: Good morning, Blue Sky Animal Hospital. Caller: Hi there. I'm just wondering, are there any cancellations this afternoon for an appointment? Agent: Unfortunately, we are fully booked. Caller: Okay. Do you happen to have that smart vet phone number handy? Agent: Yep. Yep. Caller: Okay, I'm ready. Yeah. Agent: Are you ready? So it's 705-410-6916. Caller: Okay. All right. 7 oh, 541-06916. Agent: Yep. You got it. Caller: Okay. Thanks so much for your help. Agent: No problem. Caller: Okay, bye. Agent: Bye.",
+    "appointment_booked": "No",
+    "client_type": "Existing",
+    "treatment_type": "Urgent Care / Sick Pet",
+    "reason_not_booked": "2a. Scheduling Issue - Walk ins not available / no same day appt",
+    "stated_hospital_name": "Blue Sky Animal Hospital",
+    "stated_patient_name": "Not shared",
+    "agent_name": "Not shared"
+  },
+  {
+    "call_id": "CAL000e51384a1945a28c7af94f3657b772",
+    "transcript": "Agent: Good morning, Fisher Glen Animal Hospital. This is Sabrina speaking. How may I help you? Caller: Oh, hi, this is Laura Scott calling. Our cat, Luna is a patient there? She seems to be sort of. Just this morning she woke up, she seems to be in quite a bit of pain. She was vomiting foam. She's yowling. She's breathing very shallow. Agent: Okay, are you able to come in at 9:00 this morning? Caller: Yeah, can you comment nine? Agent: Okay. Caller: Yep, nine is perfect. Agent: Okay, perfect. So, yeah, I would recommend heading 9:00. in for. Caller: Okay. Okay, thanks so much. Appreciate it. Thank you. Bye. Agent: No problem. Bye now.",
+    "appointment_booked": "Yes",
+    "client_type": "Existing",
+    "treatment_type": "Urgent Care \u2013 Diagnosis and Treatment of Illnesses (Vomiting, Diabetes, Infections)",
+    "reason_not_booked": null,
+    "stated_hospital_name": "Fisher Glen Animal Hospital",
+    "stated_patient_name": "Luna",
+    "agent_name": "Sabrina"
+  },
+  {
+    "call_id": "CAL0198499d874070f18445f5efce0cc46c",
+    "transcript": "Agent: Kingston Regional. How can I help you? Caller: Yes, I have a dog. Great peer, golden retriever who ran into a porcupine. Agent: Oh, no. Okay. All right. You can definitely come in to us. They will let you know where [MEDICAL_PROCESS] [MEDICAL_PROCESS] starts at $1020. Caller: Okay. Agent: Okay, so just give us a call when you get here and we will go about today dating him and getting those quills out. Caller: Okay. Agent: Okay? Just give me a call. Okay. Caller: Thank you. Yeah. Agent: All right, take care. Bye.",
+    "appointment_booked": "Inconclusive",
+    "client_type": "New",
+    "treatment_type": "Emergency & Critical Care \u2013 Stabilization (Trauma, Poisoning, Seizures)",
+    "reason_not_booked": null,
+    "stated_hospital_name": "Kingston Regional Pet Hospital",
+    "stated_patient_name": null,
+    "agent_name": null
+  },
+  {
+    "call_id": "CAL01983e3a38ca7bc7b7b724ede0335064",
+    "transcript": "Agent: Good afternoon. McEwen, Frontenac Animal Hospital. Kim speaking. Caller: Hi there. I'm just wondering how much it would cost to bring my dog in just for the vet to, like, check a little thing on. On her leg. I think it might be just a bug bite, but I'm not sure. Agent: Okay, so for an exam, it's about 122 plus X. Caller: Wow. Okay. Thank you so much. Agent: You're welcome. Caller: Okay, bye. Bye. Agent: Bye. Bye.",
+    "appointment_booked": "No",
+    "client_type": "New",
+    "treatment_type": "Diagnostic Services",
+    "reason_not_booked": "1a. Caller Procrastination - Price Objection / Shopping / Request for Quote",
+    "stated_hospital_name": "McEwen-Frontenac Animal Hospital",
+    "stated_patient_name": null,
+    "agent_name": "Kim"
+  },
+  {
+    "call_id": "CAL01983cf857a771168f556836b2d71e37",
+    "transcript": "Agent: Animal hospital associate. How can I help you? Caller: Hi there. I'm just calling from Mountjoy Animal Clinic. I just sent an email with three photos on it. Agent: Okay. Caller: If you could show Dr. V. Bu. This person is just being very insistent that she see them before he seeks attention. Agent: Okay. Caller: So I just wanted her to take a peek. Agent: Okay, sure. I'll let her know. Caller: Okay, thank you. Agent: Okay, bye. Caller: Bye. Bye.",
+    "appointment_booked": "Inconclusive",
+    "client_type": "Existing",
+    "treatment_type": "Urgent Care / Sick Pet",
+    "reason_not_booked": "1c. Caller Procrastination - Getting information for someone else",
+    "stated_hospital_name": "Pickering Animal Hospital",
+    "stated_patient_name": null,
+    "agent_name": "Leslie"
+  },
+  {
+    "call_id": "CAL0158a08f881a40c592c795ca67df298b",
+    "transcript": "Caller: Hello? Agent: Hello. Kingston Regional Pet Hospital. How can I help you? Caller: Hi, It's Richard, Amber, LG's husband with Lulu. She's convulsing pretty bad. We're going to have to bring her back, if possible, for [MEDICAL_PROCESS] [MEDICAL_PROCESS] [MEDICAL_PROCESS] [MEDICAL_PROCESS]. Agent: Yeah, okay, yeah, so just give us a call when you arrive, okay? Caller: Okay. Yep. Agent: Okay. How soon do you think we should expect you? Caller: Well, we're going to be leaving right away here, so we're enamored for you, so probably in the next 20 minutes or so. Agent: Okay, then. All right, we'll see you when you get here. Caller: Okay, thanks. Agent: You're welcome. Caller: Bye. Bye.",
+    "appointment_booked": "Yes",
+    "client_type": "Existing",
+    "treatment_type": "End of Life Care \u2013 In-Clinic Euthanasia",
+    "reason_not_booked": null,
+    "stated_hospital_name": "KRPH",
+    "stated_patient_name": "Yes",
+    "agent_name": null
+  },
+  {
+    "call_id": "CAL01983d10780a7cb486ae9f0e2eb23aee",
+    "transcript": "Agent: Caledonia Vet Clinic. This is Kelly. How may I help you? Caller: Hi, good morning. This is Laura Horry calling. I called yesterday and made an appointment for my dog Henry for Saturday, August 2nd. Agent: Okay. Caller: I just realized he's going to run out of his medication on Thursday afternoon. So is there any chance I could come in earlier? Agent: Yep. Let me just see. So Thursday afternoon. So you're thinking like next week sometime? Caller: Like if I could come in Monday or Tuesday? Sort of. Agent: Yep. Caller: Your latest appointment that you have? Agent: Yep. So let me just go through here. So Tuesday, July 29th, there is a 4 o' clock spot. Would that work? Caller: That'd be perfect. Yes. Thank you. Agent: Okay. Yeah, that's good. And then we'll get Henry what he needs. Caller: Okay. That's great. Thanks so much. Agent: You're welcome. Thank you. Caller: All right. Bye. Bye. Agent: Okay, bye.",
+    "appointment_booked": "Yes",
+    "client_type": "Existing",
+    "treatment_type": "Retail \u2013 Prescriptions",
+    "reason_not_booked": null,
+    "stated_hospital_name": "Caledonia Vet Clinic",
+    "stated_patient_name": "Henry",
+    "agent_name": "Kelly"
+  },
+  {
+    "call_id": "CAL0198429886a878f3b478b3df14cbd463",
+    "transcript": "Agent: Thank you for Pet Hospital. Zoe speaking. How can I help you? Caller: Hey, I'm looking to book an appointment for my dog, Alan. A L L, A N. Just to get his shots. Maybe tomorrow if you guys have it. Agent: Yeah, let me see. Could I just grab your phone number so I can open up the file? Caller: Yeah, 7, 7, 8, 9, 1 8, 3, 6, 2 5. Agent: Okay, let's see. Alan, let's see what we got for tomorrow. Yeah, would you prefer morning or afternoon? Caller: Maybe like 12. Agent: Yeah, we can do 12. Caller: Okay, sweet. Thank you. I will see you then. Agent: Perfect. Yeah, sounds good. Have a good one. Caller: Okay, bye. Bye.",
+    "appointment_booked": "Yes",
+    "client_type": "New",
+    "treatment_type": "Preventive Care \u2013 Vaccinations",
+    "reason_not_booked": null,
+    "stated_hospital_name": "North Vancouver Pet Hospital",
+    "stated_patient_name": "Allen",
+    "agent_name": "Zoey"
+  }
+]
