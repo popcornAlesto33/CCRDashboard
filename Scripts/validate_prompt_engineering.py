@@ -24,7 +24,8 @@ from typing import Dict, List, Any
 
 try:
     from dotenv import load_dotenv
-    load_dotenv()
+    # .env lives in Scripts/ directory alongside this script
+    load_dotenv(os.path.join(os.path.dirname(os.path.abspath(__file__)), ".env"))
 except ImportError:
     pass
 
@@ -72,6 +73,38 @@ Read the transcript and determine: Did the caller book an appointment?
    - The call is administrative (checking results, asking about records) — no appointment was the purpose
 
 If you can determine what the CALLER decided, it is not Inconclusive.
+
+## Few-Shot Examples
+
+### Example: Existing client, urgent, appointment booked
+Transcript excerpt: "Agent: What's going on with Luna? Caller: She's been vomiting foam and seems in pain. Agent: Let me get her in today — I have 9am open. Caller: That works, thank you."
+Reasoning: Agent offers a specific time (9am), caller confirms. A date/time is confirmed.
+Answer: Yes
+
+### Example: Reschedule counts as Yes
+Transcript excerpt: "Caller: I need to move Henry's appointment from Saturday to Tuesday. Agent: I have 2pm on Tuesday. Caller: Perfect, book that."
+Reasoning: Caller already had an appointment and is rescheduling to a new confirmed time. They have a booking.
+Answer: Yes
+
+### Example: Schedule full, caller leaves without booking
+Transcript excerpt: "Caller: I need a same-day appointment. Agent: We're fully booked today. I can give you the SmartVet number. Caller: Okay, thanks."
+Reasoning: Caller wanted same-day, told none available, given alternative number. No appointment was scheduled. The caller chose to end the call.
+Answer: No
+
+### Example: Price shopping, no booking
+Transcript excerpt: "Caller: How much to bring my dog in for an exam? Agent: It's $122 for the visit. Caller: Wow. Okay. Thank you."
+Reasoning: Caller gathered pricing information and ended the call without scheduling. This is a completed interaction, not a pending one.
+Answer: No
+
+### Example: Emergency walk-in, no firm time
+Transcript excerpt: "Caller: My dog ran into a porcupine, quills everywhere. Agent: You should come in to us, it'll be about $1020. Caller: Okay."
+Reasoning: Agent tells caller to come in, caller says "okay" — but no specific time is set, and "okay" is ambiguous (could mean acknowledging price, not committing). Outcome depends on whether the caller actually comes in.
+Answer: Inconclusive
+
+### Example: Administrative call, no booking attempted
+Transcript excerpt: "Caller: I'm calling to check on Max's blood test results. Agent: Results look normal, Dr. Chen will go over them at his next appointment."
+Reasoning: This is an administrative call checking results. No appointment was being booked — the purpose was information retrieval. No booking was attempted or discussed.
+Answer: Inconclusive
 
 ## Output Format
 
@@ -124,6 +157,28 @@ Choose the MOST SPECIFIC matching category:
 - "9. Client/appt query (non-medical)" — caller had a medical need but only made an administrative inquiry. ONLY for appointment_booked=No, never for Inconclusive.
 - "10. Missed call"
 - "11. No transcription"
+
+## Few-Shot Examples
+
+### Example: Price shopping — always 1a
+Transcript excerpt: "Caller: How much to bring my dog in for an exam? Agent: It's $122. Caller: Wow. Okay. Thank you."
+Reasoning: Caller asked about pricing ("how much"), received an answer, and ended the call without booking. Price was discussed, so this is always 1a regardless of whether there was an explicit objection.
+Answer: "1a. Caller Procrastination - Price Objection / Shopping / Request for Quote"
+
+### Example: No same-day availability
+Transcript excerpt: "Caller: I need a same-day appointment for my cat. Agent: We're fully booked today, I can give you the SmartVet number. Caller: Okay, thanks."
+Reasoning: Caller wanted same-day, told none available. This is a scheduling issue specifically about same-day/walk-in availability.
+Answer: "2a. Scheduling Issue - Walk ins not available / no same day appt"
+
+### Example: Appointment booked — null
+Transcript excerpt: "Agent: We'll see you tomorrow at 2. Caller: Great, thanks!"
+Reasoning: appointment_booked=Yes, so reason is null. No reasoning needed.
+Answer: null
+
+### Example: Emergency walk-in, Inconclusive — null
+Transcript excerpt: "Caller: My dog ran into a porcupine. Agent: Come in to us, it'll be about $1020. Caller: Okay."
+Reasoning: appointment_booked=Inconclusive. No explicit barrier in transcript — caller said "okay" and the outcome is pending. Default to null.
+Answer: null
 
 ## Output Format
 
@@ -185,6 +240,38 @@ Before using "Other", verify ALL of these:
 3. NOT about medications, food, or prescriptions
 4. NOT a missed call or voicemail with no content
 5. The topic genuinely does not fit ANY existing category
+
+## Few-Shot Examples
+
+### Example: Symptoms only, no specific intervention — use PARENT
+Transcript excerpt: "Caller: My cat has been limping since yesterday. Agent: Let's get her in tomorrow at 2 and the doctor will take a look."
+Reasoning: Cat is limping (sick pet), but no specific intervention mentioned — agent says "the doctor will take a look." No specific intervention mentioned — using parent category.
+Answer: Urgent Care / Sick Pet
+
+### Example: Specific diagnostic intervention — use SUB-CATEGORY
+Transcript excerpt: "Caller: Luna's been vomiting foam and seems in pain, shallow breathing. Agent: Let's get her in at 9am, we'll run some diagnostics."
+Reasoning: Cat is vomiting with pain and breathing issues. Agent explicitly schedules a diagnostic appointment — this implies diagnosis and treatment of an illness. Specific intervention: diagnostic appointment for vomiting/pain.
+Answer: Urgent Care – Diagnosis and Treatment of Illnesses (Vomiting, Diabetes, Infections)
+
+### Example: Emergency — actual trauma/critical intervention
+Transcript excerpt: "Caller: My dog ran into a porcupine, quills all over his face. Agent: You should come in to us right away, it'll be about $1020 for stabilization."
+Reasoning: Porcupine quills require emergency removal/stabilization. This is actual emergency intervention (trauma), not routine urgent care. Specific intervention: stabilization for trauma.
+Answer: Emergency & Critical Care – Stabilization (Trauma, Poisoning, Seizures)
+
+### Example: Prescription refill — Retail
+Transcript excerpt: "Caller: Henry is running out of his medication, can I get a refill? Agent: Sure, let me pull up his file."
+Reasoning: Caller is refilling an existing prescription. This is retail, not preventive care. Specific intervention: prescription refill.
+Answer: Retail – Prescriptions
+
+### Example: Vaccinations as sole purpose — Preventive Care sub
+Transcript excerpt: "Caller: I want to book shots for my dog Alan. Agent: Let me grab your phone number to open a file. How about tomorrow at 12?"
+Reasoning: Sole stated purpose is "shots" (vaccinations). No other services discussed. Specific intervention: vaccinations only.
+Answer: Preventive Care – Vaccinations
+
+### Example: Price inquiry about general exam — Diagnostic Services parent
+Transcript excerpt: "Caller: How much to bring my dog in for an exam? Agent: It's $122 for the visit. Caller: Wow. Okay. Thank you."
+Reasoning: Caller asking about a general exam — no specific intervention mentioned. This is a diagnostic/evaluation visit. No specific intervention mentioned — using parent category.
+Answer: Diagnostic Services
 
 ## Categories
 
@@ -265,6 +352,28 @@ V9_CLIENT_TYPE_PROMPT = """You are a veterinary call transcript analyst. Your ON
 
 Casual or friendly tone alone does NOT indicate Existing — require concrete evidence.
 
+## Few-Shot Examples
+
+### Example: Existing — agent finds file, references past care
+Transcript excerpt: "Agent: What's the name? Caller: Luna, she's a tabby. Agent: I see Luna here, last visit was in March. What's going on with her?"
+Reasoning: Agent looks up the pet and finds an existing record ("I see Luna here, last visit was in March"). Concrete signal: file found in system.
+Answer: Existing
+
+### Example: Existing — caller references ongoing medication
+Transcript excerpt: "Caller: Henry is running out of his medication, can I get a refill? Agent: Let me pull up his file — yes, I see the prescription."
+Reasoning: Caller has an existing prescription at this clinic, and agent finds the file. Concrete signal: ongoing medication prescribed here.
+Answer: Existing
+
+### Example: New — agent creates file
+Transcript excerpt: "Caller: I want to book shots for my dog Alan. Agent: Let me grab your phone number to open a file. What's the number?"
+Reasoning: Agent asks for phone number to "open a file" — this means creating a new record. Concrete signal: agent needs to CREATE a new file.
+Answer: New
+
+### Example: New — price shopping, unfamiliar with clinic
+Transcript excerpt: "Caller: How much to bring my dog in for an exam? Agent: It's $122 for the visit. Caller: Wow. Okay. Thank you."
+Reasoning: Caller asks about basic pricing as if unfamiliar with the clinic. No file lookup, no mention of past visits. Concrete signal: asking about pricing as if first-time.
+Answer: New
+
 ## Output Format
 
 Return JSON:
@@ -274,6 +383,148 @@ Return JSON:
 }
 
 Return JSON ONLY. No commentary outside the JSON.""".strip()
+
+# ============================================================
+# V9 PER-FIELD STRICT ENUM RESPONSE SCHEMAS
+# ============================================================
+
+V9_APPOINTMENT_BOOKED_SCHEMA = {
+    "type": "json_schema",
+    "json_schema": {
+        "name": "appointment_booked_result",
+        "strict": True,
+        "schema": {
+            "type": "object",
+            "properties": {
+                "reasoning": {"type": "string"},
+                "answer": {"type": "string", "enum": ["Yes", "No", "Inconclusive"]}
+            },
+            "required": ["reasoning", "answer"],
+            "additionalProperties": False
+        }
+    }
+}
+
+V9_CLIENT_TYPE_SCHEMA = {
+    "type": "json_schema",
+    "json_schema": {
+        "name": "client_type_result",
+        "strict": True,
+        "schema": {
+            "type": "object",
+            "properties": {
+                "reasoning": {"type": "string"},
+                "answer": {"type": "string", "enum": ["New", "Existing", "Inconclusive"]}
+            },
+            "required": ["reasoning", "answer"],
+            "additionalProperties": False
+        }
+    }
+}
+
+V9_TREATMENT_TYPE_SCHEMA = {
+    "type": "json_schema",
+    "json_schema": {
+        "name": "treatment_type_result",
+        "strict": True,
+        "schema": {
+            "type": "object",
+            "properties": {
+                "reasoning": {"type": "string"},
+                "answer": {
+                    "type": "string",
+                    "enum": [
+                        "Preventive Care",
+                        "Preventive Care \u2013 Vaccinations",
+                        "Preventive Care \u2013 Parasite Prevention",
+                        "Preventive Care \u2013 Annual Exams",
+                        "Preventive Care \u2013 Wellness Screening (Bloodwork, Urinalysis, Fecals)",
+                        "Urgent Care / Sick Pet",
+                        "Urgent Care \u2013 Diagnosis and Treatment of Illnesses (Vomiting, Diabetes, Infections)",
+                        "Urgent Care \u2013 Chronic Disease Management (Arthritis, Allergies, Thyroid Disease)",
+                        "Urgent Care \u2013 Internal Medicine Workups (Blood Tests, Imaging, Specialist Consults)",
+                        "Surgical Services",
+                        "Surgical Services \u2013 Spays and Neuters",
+                        "Surgical Services \u2013 Soft Tissue Surgeries (Lump Removals, Bladder Stone Removal, Wound Repair)",
+                        "Surgical Services \u2013 Orthopedic Surgeries (ACL Repairs, Fracture Repair \u2014 Sometimes Referred Out)",
+                        "Surgical Services \u2013 Emergency Surgeries (Pyometra, C-Sections, GDV)",
+                        "Surgical Services \u2013 Dental Care (Cleanings, Extractions)",
+                        "Diagnostic Services",
+                        "Diagnostic Services \u2013 X-Rays (Digital Radiography)",
+                        "Diagnostic Services \u2013 Ultrasound",
+                        "Diagnostic Services \u2013 In-House or Reference Lab Testing (Blood, Urine, Fecal, Cytology)",
+                        "Diagnostic Services \u2013 ECG or Blood Pressure Monitoring",
+                        "Emergency & Critical Care",
+                        "Emergency & Critical Care \u2013 Stabilization (Trauma, Poisoning, Seizures)",
+                        "Emergency & Critical Care \u2013 Overnight Hospitalization",
+                        "Emergency & Critical Care \u2013 Fluid Therapy, Oxygen Therapy, Intensive Monitoring",
+                        "Emergency & Critical Care \u2013 Referred to an Emergency Hospital",
+                        "Dermatology",
+                        "Dermatology \u2013 Allergies",
+                        "Dermatology \u2013 Ear Infections",
+                        "Retail",
+                        "Retail \u2013 Food Orders",
+                        "Retail \u2013 Prescriptions",
+                        "End of Life Care",
+                        "End of Life Care \u2013 In-Home Euthanasia",
+                        "End of Life Care \u2013 In-Clinic Euthanasia",
+                        "N/A (missed call)",
+                        "Other"
+                    ]
+                }
+            },
+            "required": ["reasoning", "answer"],
+            "additionalProperties": False
+        }
+    }
+}
+
+V9_REASON_NOT_BOOKED_SCHEMA = {
+    "type": "json_schema",
+    "json_schema": {
+        "name": "reason_not_booked_result",
+        "strict": True,
+        "schema": {
+            "type": "object",
+            "properties": {
+                "reasoning": {"type": "string"},
+                "answer": {
+                    "type": ["string", "null"],
+                    "enum": [
+                        "1. Caller Procrastination",
+                        "1a. Caller Procrastination - Price Objection / Shopping / Request for Quote",
+                        "1b. Caller Procrastination - Need to check with partner",
+                        "1c. Caller Procrastination - Getting information for someone else",
+                        "2. Scheduling Issue",
+                        "2a. Scheduling Issue - Walk ins not available / no same day appt",
+                        "2b. Scheduling Issue - Full schedule",
+                        "2c. Scheduling Issue - Not open / no availability on evenings",
+                        "2d. Scheduling Issue - Not open / no availability on weekends",
+                        "3. Service/treatment not offered",
+                        "3a. Service/treatment not offered - Grooming",
+                        "3b. Service/treatment not offered - Pet Adoption",
+                        "3c. Service/treatment not offered - Exotics",
+                        "3d. Service/treatment not offered - Farm / Large Animals",
+                        "3e. Service/treatment not offered - Birds",
+                        "3f. Service/treatment not offered - Reptiles",
+                        "3g. Service/treatment not offered - Pocket Pets",
+                        "4. Meant to call competitor hospital",
+                        "5. Meant to call low cost / free service provider",
+                        "6. Emergency care not offered",
+                        "7. File Transferred",
+                        "8. Medication/food order",
+                        "9. Client/appt query (non-medical)",
+                        "10. Missed call",
+                        "11. No transcription",
+                        None
+                    ]
+                }
+            },
+            "required": ["reasoning", "answer"],
+            "additionalProperties": False
+        }
+    }
+}
 
 # ============================================================
 # V9 PIPELINE: RATE-LIMITED FIELD CLASSIFIER
@@ -289,6 +540,7 @@ def run_v9_field_call(
     transcript: str,
     system_prompt: str,
     step_name: str,
+    response_schema=None,
 ) -> dict:
     """Run a single field-specific LLM call with rate limiting and retry.
 
@@ -306,7 +558,7 @@ def run_v9_field_call(
                 model=model,
                 messages=messages,
                 temperature=0.0,
-                response_format={"type": "json_object"},
+                response_format=response_schema or {"type": "json_object"},
             )
             # Accumulate all v9 field usage into "reasoning" bucket (all use Pro)
             track_usage(resp, "reasoning")
@@ -332,6 +584,7 @@ def run_v9_field_batch(
     system_prompt: str,
     batch_size: int,
     step_name: str,
+    response_schema=None,
 ) -> dict:
     """Run a field classifier for all calls using thread pool.
 
@@ -352,6 +605,7 @@ def run_v9_field_batch(
             pool.submit(
                 run_v9_field_call,
                 client, model, c["id"], c["transcript"], system_prompt, step_name,
+                response_schema,
             ): c["id"]
             for c in calls
         }
@@ -373,6 +627,7 @@ def run_v9_reason_not_booked(
     calls: List[Dict],
     appointment_results: Dict[str, dict],
     batch_size: int,
+    response_schema=None,
 ) -> dict:
     """Run reason_not_booked with appointment_booked injected into the prompt.
 
@@ -402,6 +657,7 @@ def run_v9_reason_not_booked(
         prompt = V9_REASON_NOT_BOOKED_PROMPT.replace("{appointment_booked}", "No")
         llm_results = run_v9_field_batch(
             client, model, calls_needing_llm, prompt, batch_size, "reason_not_booked",
+            response_schema,
         )
         results.update(llm_results)
     else:
@@ -666,6 +922,53 @@ def run_single_model_batch(
     return all_results
 
 
+def _load_original_module():
+    """Import the original (pre-v1) analysis script as a module."""
+    from importlib.util import spec_from_file_location, module_from_spec
+    spec = spec_from_file_location(
+        "original_script",
+        os.path.join(project_dir, "Script 03 OLD - ORIGINAL.py"),
+    )
+    mod = module_from_spec(spec)
+    spec.loader.exec_module(mod)
+    return mod
+
+
+def run_original_prompt_batch(
+    client: OpenAI, model: str, calls: List[Dict], batch_size: int
+) -> List[Dict]:
+    """Run the original (pre-v1) single-model prompt."""
+    orig = _load_original_module()
+
+    all_results = []
+    batches = [calls[i:i + batch_size] for i in range(0, len(calls), batch_size)]
+
+    for i, batch in enumerate(batches):
+        logger.info(f"  Original-prompt batch {i+1}/{len(batches)} ({len(batch)} calls)")
+        payload = {
+            "analysis_version": "validation_original",
+            "calls": [{"call_id": c["id"], "transcript": c["transcript"]} for c in batch],
+        }
+        messages = [
+            {"role": "system", "content": orig.SYSTEM_PROMPT},
+            {"role": "user", "content": json.dumps(payload)},
+        ]
+        try:
+            resp = client.chat.completions.create(
+                model=model,
+                messages=messages,
+                temperature=0.0,
+                response_format={"type": "json_object"},
+            )
+            track_usage(resp, "classification")
+            result = json.loads(resp.choices[0].message.content)
+            all_results.extend(result.get("calls", []))
+        except Exception as e:
+            logger.error(f"  Original-prompt batch {i+1} failed: {e}")
+
+    return all_results
+
+
 def compute_accuracy(predictions: Dict[str, Dict], gold: Dict[str, Dict]):
     """Compute accuracy per field. Returns dict of field -> {correct, total, accuracy, mismatches}."""
     fields = ["appointment_booked", "client_type", "treatment_type", "reason_not_booked"]
@@ -764,8 +1067,8 @@ def main():
     parser.add_argument("--random", action="store_true", help="Randomly sample calls instead of first N")
     parser.add_argument("--seed", type=int, default=42, help="Random seed for reproducibility")
     parser.add_argument("--output", default="", help="Save detailed results to JSON file")
-    parser.add_argument("--pipeline", default="v8", choices=["v8", "v9"],
-                        help="Pipeline mode: v8 (two-model) or v9 (field-decomposed)")
+    parser.add_argument("--pipeline", default="v8", choices=["v8", "v9", "original"],
+                        help="Pipeline mode: v8 (two-model), v9 (field-decomposed), or original (pre-v1 prompt)")
     parser.add_argument("--v9-batch-size", type=int, default=2,
                         help="Batch size for v9 field classifiers (default: 2)")
     args = parser.parse_args()
@@ -808,16 +1111,19 @@ def main():
                 run_v9_field_batch,
                 client, args.reasoning_model, calls,
                 V9_APPOINTMENT_BOOKED_PROMPT, args.v9_batch_size, "appointment_booked",
+                V9_APPOINTMENT_BOOKED_SCHEMA,
             )
             treatment_future = phase1_pool.submit(
                 run_v9_field_batch,
                 client, args.reasoning_model, calls,
                 V9_TREATMENT_TYPE_PROMPT, args.v9_batch_size, "treatment_type",
+                V9_TREATMENT_TYPE_SCHEMA,
             )
             client_future = phase1_pool.submit(
                 run_v9_field_batch,
                 client, args.reasoning_model, calls,
                 V9_CLIENT_TYPE_PROMPT, args.v9_batch_size, "client_type",
+                V9_CLIENT_TYPE_SCHEMA,
             )
 
             appt_results = appt_future.result()
@@ -830,6 +1136,7 @@ def main():
         logger.info("Phase 2: reason_not_booked (depends on appointment_booked)...")
         reason_results = run_v9_reason_not_booked(
             client, args.reasoning_model, calls, appt_results, args.v9_batch_size,
+            V9_REASON_NOT_BOOKED_SCHEMA,
         )
         logger.info(f"Phase 2 complete: reason={len(reason_results)}")
 
@@ -849,6 +1156,20 @@ def main():
             }
             for cid in [c["id"] for c in calls]
         }
+
+    elif args.pipeline == "original":
+        logger.info(f"Running original (pre-v1) prompt with {args.classification_model}")
+        results_list = run_original_prompt_batch(
+            client, args.classification_model, calls, args.classification_batch_size
+        )
+        mode = f"original-prompt ({args.classification_model})"
+        predictions = {}
+        for item in results_list:
+            cid = item.get("call_id")
+            if cid:
+                if item.get("appointment_booked") == "Yes":
+                    item["reason_not_booked"] = None
+                predictions[str(cid)] = item
 
     elif args.single_model:
         logger.info(f"Running single-model validation with {args.classification_model}")
