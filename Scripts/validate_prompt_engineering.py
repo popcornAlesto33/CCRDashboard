@@ -43,102 +43,63 @@ logger = logging.getLogger("validate")
 # V9 FIELD-SPECIFIC PROMPTS
 # ============================================================
 
-V9_APPOINTMENT_BOOKED_PROMPT = """You are a veterinary call transcript analyst. Your ONLY task is to determine whether an appointment was booked in this call.
+V9_APPOINTMENT_BOOKED_PROMPT = """You are a veterinary call transcript analyst. Determine whether an appointment was booked in this call.
 
-Read the transcript and determine: Did the caller book an appointment?
+## Categories
 
-## Answer: Yes, No, or Inconclusive
+- **Yes**: An appointment was confirmed (date/time set, caller agreed to come in, or existing appointment adjusted)
+- **No**: The caller chose not to book, or the call was purely informational with no scheduling
+- **Inconclusive**: The outcome genuinely depends on a future event (voicemail, clinic will call back, inter-clinic consultation)
 
-**EVALUATION ORDER (follow these steps in sequence):**
+Most calls have a clear Yes or No. Use Inconclusive only when the outcome is truly pending.
 
-1. FIRST, check if YES:
-   - A specific date/time is confirmed
-   - At an emergency/walk-in clinic: agent tells caller to come in and caller agrees — even without a specific time
-   - Caller already has a confirmed appointment and is calling to adjust it (reschedule, cancellation list) — they already have a booking
-   - Agent says "we'll see you at [time]" and caller confirms
+## Examples
 
-2. SECOND, check if NO (the caller chose not to book, even if politely):
-   - Caller asks about pricing, gets info, and ends call without scheduling
-   - Caller is told the schedule is full and ends the call
-   - Caller says "I'll think about it" / "I'll call back" / "let me talk to my partner"
-   - Caller calls for advice only and never intended to book (medication questions, symptom questions)
-   - Caller gathers information (services, hours, pricing) and ends call without scheduling — this is a completed interaction, not a pending one
-   - The call ends naturally after the caller's question was answered, with no mention of scheduling
-
-3. ONLY IF NEITHER APPLIES, use INCONCLUSIVE:
-   - Inconclusive means the outcome depends on a future event that hasn't happened yet
-   - Call goes to voicemail or automated system
-   - Clinic will call back ("the doctor will review and we'll get back to you") — outcome depends on a future CLINIC action
-   - Inter-clinic consultation where no direct booking occurs
-   - The call is administrative (checking results, asking about records) — no appointment was the purpose
-
-If you can determine what the CALLER decided, it is not Inconclusive.
-
-## Few-Shot Examples
-
-### Example: Existing client, urgent, appointment booked
-Transcript excerpt: "Agent: What's going on with Luna? Caller: She's been vomiting foam and seems in pain. Agent: Let me get her in today — I have 9am open. Caller: That works, thank you."
-Reasoning: Agent offers a specific time (9am), caller confirms. A date/time is confirmed.
+### Yes — urgent booking
+Transcript: "Agent: Can you come in at 9am? Caller: Yes, that works."
 Answer: Yes
 
-### Example: Reschedule counts as Yes
-Transcript excerpt: "Caller: I need to move Henry's appointment from Saturday to Tuesday. Agent: I have 2pm on Tuesday. Caller: Perfect, book that."
-Reasoning: Caller already had an appointment and is rescheduling to a new confirmed time. They have a booking.
-Answer: Yes
-
-### Example: Schedule full, caller leaves without booking
-Transcript excerpt: "Caller: I need a same-day appointment. Agent: We're fully booked today. I can give you the SmartVet number. Caller: Okay, thanks."
-Reasoning: Caller wanted same-day, told none available, given alternative number. No appointment was scheduled. The caller chose to end the call.
+### No — got info and left
+Transcript: "Caller: How much for an exam? Agent: $122. Caller: Okay, thanks. Bye."
 Answer: No
 
-### Example: Price shopping, no booking
-Transcript excerpt: "Caller: How much to bring my dog in for an exam? Agent: It's $122 for the visit. Caller: Wow. Okay. Thank you."
-Reasoning: Caller gathered pricing information and ended the call without scheduling. This is a completed interaction, not a pending one.
-Answer: No
-
-### Example: Emergency walk-in, no firm time
-Transcript excerpt: "Caller: My dog ran into a porcupine, quills everywhere. Agent: You should come in to us, it'll be about $1020. Caller: Okay."
-Reasoning: Agent tells caller to come in, caller says "okay" — but no specific time is set, and "okay" is ambiguous (could mean acknowledging price, not committing). Outcome depends on whether the caller actually comes in.
-Answer: Inconclusive
-
-### Example: Administrative call, no booking attempted
-Transcript excerpt: "Caller: I'm calling to check on Max's blood test results. Agent: Results look normal, Dr. Chen will go over them at his next appointment."
-Reasoning: This is an administrative call checking results. No appointment was being booked — the purpose was information retrieval. No booking was attempted or discussed.
+### Inconclusive — clinic callback pending
+Transcript: "Agent: The doctor will review and we'll call you back. Caller: Okay, thanks."
 Answer: Inconclusive
 
 ## Output Format
 
-Return JSON:
-{
-  "reasoning": "Your step-by-step reasoning citing specific transcript quotes",
-  "answer": "Yes" | "No" | "Inconclusive"
-}
+Return JSON with your reasoning and answer:
+{"reasoning": "...", "answer": "Yes" | "No" | "Inconclusive"}
 
-Return JSON ONLY. No commentary outside the JSON.""".strip()
+Return JSON ONLY.""".strip()
 
-V9_REASON_NOT_BOOKED_PROMPT = """You are a veterinary call transcript analyst. Your ONLY task is to determine why an appointment was NOT booked in this call.
+V9_REASON_NOT_BOOKED_PROMPT = """You are a veterinary call transcript analyst. Determine why an appointment was NOT booked in this call.
 
-You are given:
-1. The raw transcript
-2. The appointment_booked decision (already determined): {appointment_booked}
+The appointment_booked decision has already been made: {appointment_booked}
 
 ## Rules
 
-- If appointment_booked is "Yes": output null immediately. No reasoning needed.
-- If appointment_booked is "Inconclusive": output null. Exception: only populate if the transcript contains an explicit, clear barrier (e.g., "we're fully booked so you'll have to call back").
-- If appointment_booked is "No": determine the specific reason from the categories below.
+- If appointment_booked is "Yes": answer is null.
+- If appointment_booked is "Inconclusive": answer is null (unless there's an explicit barrier like "we're fully booked").
+- If appointment_booked is "No": choose the most specific matching category below.
+
+## Key Distinctions
+
+- If pricing/cost was discussed AT ANY POINT and caller didn't book → always use 1a (Price Objection)
+- "I'll think about it" with NO price discussion → 1 (Procrastination)
+- Wants same-day, told none available → 2a
+- Schedule full for days/weeks → 2b
 
 ## Categories
 
-Choose the MOST SPECIFIC matching category:
-
-- "1. Caller Procrastination" — caller says "I'll think about it" / "I'll call back" with NO price discussion
-- "1a. Caller Procrastination - Price Objection / Shopping / Request for Quote" — pricing/cost discussed AT ANY POINT and caller doesn't book. If they asked "how much?" and didn't book, this is ALWAYS 1a
+- "1. Caller Procrastination"
+- "1a. Caller Procrastination - Price Objection / Shopping / Request for Quote"
 - "1b. Caller Procrastination - Need to check with partner"
-- "1c. Caller Procrastination - Getting information for someone else" — caller explicitly on behalf of someone else, or inter-clinic call
+- "1c. Caller Procrastination - Getting information for someone else"
 - "2. Scheduling Issue"
-- "2a. Scheduling Issue - Walk ins not available / no same day appt" — wants same-day/walk-in, told none available
-- "2b. Scheduling Issue - Full schedule" — wants upcoming appointment, schedule full for multiple days/weeks
+- "2a. Scheduling Issue - Walk ins not available / no same day appt"
+- "2b. Scheduling Issue - Full schedule"
 - "2c. Scheduling Issue - Not open / no availability on evenings"
 - "2d. Scheduling Issue - Not open / no availability on weekends"
 - "3. Service/treatment not offered"
@@ -149,133 +110,77 @@ Choose the MOST SPECIFIC matching category:
 - "3e. Service/treatment not offered - Birds"
 - "3f. Service/treatment not offered - Reptiles"
 - "3g. Service/treatment not offered - Pocket Pets"
-- "4. Meant to call competitor hospital" — caller dialed the wrong clinic
+- "4. Meant to call competitor hospital"
 - "5. Meant to call low cost / free service provider"
 - "6. Emergency care not offered"
 - "7. File Transferred"
 - "8. Medication/food order"
-- "9. Client/appt query (non-medical)" — caller had a medical need but only made an administrative inquiry. ONLY for appointment_booked=No, never for Inconclusive.
+- "9. Client/appt query (non-medical)"
 - "10. Missed call"
 - "11. No transcription"
 
-## Few-Shot Examples
-
-### Example: Price shopping — always 1a
-Transcript excerpt: "Caller: How much to bring my dog in for an exam? Agent: It's $122. Caller: Wow. Okay. Thank you."
-Reasoning: Caller asked about pricing ("how much"), received an answer, and ended the call without booking. Price was discussed, so this is always 1a regardless of whether there was an explicit objection.
-Answer: "1a. Caller Procrastination - Price Objection / Shopping / Request for Quote"
-
-### Example: No same-day availability
-Transcript excerpt: "Caller: I need a same-day appointment for my cat. Agent: We're fully booked today, I can give you the SmartVet number. Caller: Okay, thanks."
-Reasoning: Caller wanted same-day, told none available. This is a scheduling issue specifically about same-day/walk-in availability.
-Answer: "2a. Scheduling Issue - Walk ins not available / no same day appt"
-
-### Example: Appointment booked — null
-Transcript excerpt: "Agent: We'll see you tomorrow at 2. Caller: Great, thanks!"
-Reasoning: appointment_booked=Yes, so reason is null. No reasoning needed.
-Answer: null
-
-### Example: Emergency walk-in, Inconclusive — null
-Transcript excerpt: "Caller: My dog ran into a porcupine. Agent: Come in to us, it'll be about $1020. Caller: Okay."
-Reasoning: appointment_booked=Inconclusive. No explicit barrier in transcript — caller said "okay" and the outcome is pending. Default to null.
-Answer: null
-
 ## Output Format
 
-Return JSON:
-{
-  "reasoning": "Your step-by-step reasoning citing specific transcript quotes",
-  "answer": "<exact category string>" | null
-}
+Return JSON with your reasoning and answer:
+{"reasoning": "...", "answer": "<exact category string>" | null}
 
-Return JSON ONLY. No commentary outside the JSON.""".strip()
+Return JSON ONLY.""".strip()
 
-V9_TREATMENT_TYPE_PROMPT = """You are a veterinary call transcript analyst. Your ONLY task is to determine what veterinary service was discussed in this call.
+V9_TREATMENT_TYPE_PROMPT = """You are a veterinary call transcript analyst. Determine what veterinary service was discussed in this call.
 
-Read the transcript and classify the service into EXACTLY ONE of the categories listed below.
+Choose EXACTLY ONE category from the list below. Match the level of specificity that best fits — use a sub-category when the call is clearly about that specific service, use the parent when the call is general or covers multiple services.
 
-## CRITICAL: Parent vs. Sub-Category
+## Key Guidelines
 
-When in doubt between a parent category and a sub-category, ALWAYS use the parent. Over-specification is the #1 error pattern.
+- Classify based on the PRIMARY reason for the call
+- If a sick pet has specific symptoms (vomiting, ear infection, limping), use the relevant sub-category — you don't need a named procedure
+- Emergency & Critical Care requires actual emergency-level situations (trauma, poisoning, critical symptoms) — not just calling an emergency hospital
+- Rescheduling/admin calls: classify by the underlying service if you can tell what it was about
+- "Other" is a last resort — only if the call genuinely doesn't fit any category
 
-- Use the PARENT category when the transcript describes a general concern WITHOUT a specific intervention
-- Only use a SUB-CATEGORY when the transcript names or implies THE SPECIFIC INTERVENTION
+## Examples
 
-**NOT specific interventions (use PARENT):** "we'll take a look", "bring them in for an exam", "the doctor will check", "physical examination", "we'll see what's going on"
-
-**Specific interventions (required for sub-category):** "we'll run bloodwork", "we need to do X-rays", "start her on antibiotics", "dental cleaning scheduled", "allergy testing"
-
-In your reasoning, you MUST state: (a) the specific intervention mentioned, OR (b) "no specific intervention mentioned — using parent category."
-
-## Key Rules
-
-### Emergency vs. Urgent Care
-Classify by ACTUAL SERVICE, not hospital name:
-- Emergency & Critical Care: actual emergency intervention (trauma, poisoning, seizures, overnight hospitalization, directed to emergency clinic)
-- Urgent Care / Sick Pet: sick pet needing prompt attention but routine interaction (advice, medication questions, stable-patient triage) — even at an emergency hospital
-
-### Preventive Care: Parent vs. Sub
-- Parent: general wellness visits, new pet checkups, multiple preventive services discussed
-- Sub only when that service is the SOLE AND EXPLICIT purpose ("I need to get my dog his shots" = Vaccinations)
-
-### Wellness Screening vs. Diagnostic Lab
-- Routine bloodwork (annual, pre-op, wellness) = Preventive Care – Wellness Screening
-- Symptom-driven bloodwork (investigating a problem) = Diagnostic Services – Lab Testing
-
-### Dermatology
-Use only when PRIMARY reason is skin, coat, ear, or allergy issue. Do not use when skin/ear is secondary to a more urgent concern.
-
-### Retail
-- Refilling existing prescription = Retail – Prescriptions
-- New flea/tick/heartworm prevention plan = Preventive Care – Parasite Prevention
-
-### Dental
-- Dental cleanings and extractions = Surgical Services – Dental Care
-- Routine dental checkup as part of wellness = Preventive Care
-
-### "Other" — LAST RESORT
-Before using "Other", verify ALL of these:
-1. NOT about a sick pet, injury, or medical concern
-2. NOT about scheduling/rescheduling any appointment type
-3. NOT about medications, food, or prescriptions
-4. NOT a missed call or voicemail with no content
-5. The topic genuinely does not fit ANY existing category
-
-## Few-Shot Examples
-
-### Example: Symptoms only, no specific intervention — use PARENT
-Transcript excerpt: "Caller: My cat has been limping since yesterday. Agent: Let's get her in tomorrow at 2 and the doctor will take a look."
-Reasoning: Cat is limping (sick pet), but no specific intervention mentioned — agent says "the doctor will take a look." No specific intervention mentioned — using parent category.
-Answer: Urgent Care / Sick Pet
-
-### Example: Specific diagnostic intervention — use SUB-CATEGORY
-Transcript excerpt: "Caller: Luna's been vomiting foam and seems in pain, shallow breathing. Agent: Let's get her in at 9am, we'll run some diagnostics."
-Reasoning: Cat is vomiting with pain and breathing issues. Agent explicitly schedules a diagnostic appointment — this implies diagnosis and treatment of an illness. Specific intervention: diagnostic appointment for vomiting/pain.
+### Sick cat with specific symptoms → sub-category
+Transcript: "Caller: Luna's been vomiting foam and seems in pain, shallow breathing. Agent: Let's get her in at 9am."
 Answer: Urgent Care – Diagnosis and Treatment of Illnesses (Vomiting, Diabetes, Infections)
+Why: Specific symptoms (vomiting, pain) clearly map to diagnosis/treatment of illness.
 
-### Example: Emergency — actual trauma/critical intervention
-Transcript excerpt: "Caller: My dog ran into a porcupine, quills all over his face. Agent: You should come in to us right away, it'll be about $1020 for stabilization."
-Reasoning: Porcupine quills require emergency removal/stabilization. This is actual emergency intervention (trauma), not routine urgent care. Specific intervention: stabilization for trauma.
-Answer: Emergency & Critical Care – Stabilization (Trauma, Poisoning, Seizures)
+### Dog limping, no further detail → parent
+Transcript: "Caller: My dog's been limping. Agent: Let's get him in tomorrow. Caller: Okay, thanks."
+Answer: Urgent Care / Sick Pet
+Why: Limping could be many things — not enough to pick a specific sub-category.
 
-### Example: Prescription refill — Retail
-Transcript excerpt: "Caller: Henry is running out of his medication, can I get a refill? Agent: Sure, let me pull up his file."
-Reasoning: Caller is refilling an existing prescription. This is retail, not preventive care. Specific intervention: prescription refill.
-Answer: Retail – Prescriptions
+### Ear problem → Dermatology sub
+Transcript: "Caller: His ear is all black inside. Agent: We should take a look at that."
+Answer: Dermatology – Ear Infections
+Why: Ear issue is the primary complaint, maps directly to the ear infections sub-category.
 
-### Example: Vaccinations as sole purpose — Preventive Care sub
-Transcript excerpt: "Caller: I want to book shots for my dog Alan. Agent: Let me grab your phone number to open a file. How about tomorrow at 12?"
-Reasoning: Sole stated purpose is "shots" (vaccinations). No other services discussed. Specific intervention: vaccinations only.
+### Solely vaccinations → Preventive Care sub
+Transcript: "Caller: I want to book shots for my dog. Agent: We have tomorrow at 12."
 Answer: Preventive Care – Vaccinations
+Why: Sole stated purpose is vaccinations, nothing else discussed.
 
-### Example: Price inquiry about general exam — Diagnostic Services parent
-Transcript excerpt: "Caller: How much to bring my dog in for an exam? Agent: It's $122 for the visit. Caller: Wow. Okay. Thank you."
-Reasoning: Caller asking about a general exam — no specific intervention mentioned. This is a diagnostic/evaluation visit. No specific intervention mentioned — using parent category.
-Answer: Diagnostic Services
+### Annual checkup → Annual Exams sub
+Transcript: "Caller: I need to schedule a yearly appointment for my cat. Agent: We have an opening on Thursday."
+Answer: Preventive Care – Annual Exams
+Why: Caller explicitly requests annual/yearly appointment.
+
+### Prescription refill → Retail
+Transcript: "Caller: Henry's running out of his medication, can I get a refill?"
+Answer: Retail – Prescriptions
+Why: Existing prescription refill, not a new medical concern.
+
+### Porcupine quills, emergency → Emergency
+Transcript: "Caller: Dog ran into a porcupine, quills everywhere. Agent: Come in right away, it'll be $1020."
+Answer: Emergency & Critical Care – Stabilization (Trauma, Poisoning, Seizures)
+Why: Acute trauma requiring emergency intervention.
+
+### Multiple services including surgery → prioritize surgery
+Transcript: "Caller: I need to book a spay and vaccines for my dog."
+Answer: Surgical Services – Spays and Neuters
+Why: When multiple services are discussed, prioritize the most significant medical procedure.
 
 ## Categories
-
-Choose EXACTLY ONE:
 
 Preventive Care
 Preventive Care – Vaccinations
@@ -316,73 +221,43 @@ Other
 
 ## Output Format
 
-Return JSON:
-{
-  "reasoning": "Your step-by-step reasoning citing specific transcript quotes and naming the intervention (or stating none)",
-  "answer": "<exact category string from list above>"
-}
+Return JSON with your reasoning and answer:
+{"reasoning": "...", "answer": "<exact category from list above>"}
 
-Return JSON ONLY. No commentary outside the JSON.""".strip()
+Return JSON ONLY.""".strip()
 
-V9_CLIENT_TYPE_PROMPT = """You are a veterinary call transcript analyst. Your ONLY task is to determine whether the caller is a new or existing client at THIS specific clinic.
+V9_CLIENT_TYPE_PROMPT = """You are a veterinary call transcript analyst. Determine whether the caller is a new or existing client at THIS specific clinic.
 
-"Existing" means the CALLER has been a client at THIS specific clinic before. Not the pet — the caller.
+"Existing" means the CALLER (not the pet) has been a client at this clinic before.
 
 ## Signals
 
-**Existing (need at least one concrete signal):**
-- Agent looks up file/account and FINDS it for this caller
-- Pet already in the system under this caller's name
-- Caller references a past visit AT THIS CLINIC or ongoing medication prescribed here
-- Caller uses a specific doctor's name at this clinic
+**Existing:** Agent finds their file, pet already in system, caller references past visits here, knows doctor names
+**New:** Asks "do you accept new patients?", unfamiliar with pricing/location, agent creates new file, mentions having a vet elsewhere
 
-**New:**
-- Caller asks "do you accept new patients?"
-- Asks about location/hours/pricing as if unfamiliar
-- Agent asks for phone number to CREATE a new file
-- Agent says "no record found"
-- Caller mentions they have a vet elsewhere
+Casual/friendly tone alone does not indicate Existing — require concrete evidence.
+Inconclusive should be extremely rare.
 
-**Edge cases (classify as New):**
-- New owner of a pet with an existing file from previous owner = New
-- Caller has a vet at a different clinic, calling this one for the first time = New
-- Caller has one pet on file but calling about a brand new pet with no history = lean New
+## Examples
 
-**Inconclusive:** Should be extremely rare. Only use when there are genuinely zero signals either way AND the transcript provides no clues.
-
-Casual or friendly tone alone does NOT indicate Existing — require concrete evidence.
-
-## Few-Shot Examples
-
-### Example: Existing — agent finds file, references past care
-Transcript excerpt: "Agent: What's the name? Caller: Luna, she's a tabby. Agent: I see Luna here, last visit was in March. What's going on with her?"
-Reasoning: Agent looks up the pet and finds an existing record ("I see Luna here, last visit was in March"). Concrete signal: file found in system.
+### Existing — agent finds file
+Transcript: "Agent: What's the name? Caller: Luna. Agent: I see Luna here, last visit was March."
 Answer: Existing
 
-### Example: Existing — caller references ongoing medication
-Transcript excerpt: "Caller: Henry is running out of his medication, can I get a refill? Agent: Let me pull up his file — yes, I see the prescription."
-Reasoning: Caller has an existing prescription at this clinic, and agent finds the file. Concrete signal: ongoing medication prescribed here.
-Answer: Existing
-
-### Example: New — agent creates file
-Transcript excerpt: "Caller: I want to book shots for my dog Alan. Agent: Let me grab your phone number to open a file. What's the number?"
-Reasoning: Agent asks for phone number to "open a file" — this means creating a new record. Concrete signal: agent needs to CREATE a new file.
+### New — agent creates file
+Transcript: "Caller: I want to book shots for my dog. Agent: Let me grab your number to open a file."
 Answer: New
 
-### Example: New — price shopping, unfamiliar with clinic
-Transcript excerpt: "Caller: How much to bring my dog in for an exam? Agent: It's $122 for the visit. Caller: Wow. Okay. Thank you."
-Reasoning: Caller asks about basic pricing as if unfamiliar with the clinic. No file lookup, no mention of past visits. Concrete signal: asking about pricing as if first-time.
+### New — price shopping, unfamiliar
+Transcript: "Caller: How much for an exam? Agent: $122. Caller: Okay thanks. Bye."
 Answer: New
 
 ## Output Format
 
-Return JSON:
-{
-  "reasoning": "Your step-by-step reasoning citing specific transcript quotes",
-  "answer": "New" | "Existing" | "Inconclusive"
-}
+Return JSON with your reasoning and answer:
+{"reasoning": "...", "answer": "New" | "Existing" | "Inconclusive"}
 
-Return JSON ONLY. No commentary outside the JSON.""".strip()
+Return JSON ONLY.""".strip()
 
 # ============================================================
 # V9 PER-FIELD STRICT ENUM RESPONSE SCHEMAS
