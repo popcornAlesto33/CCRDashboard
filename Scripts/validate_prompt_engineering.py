@@ -17,6 +17,8 @@ import json
 import random
 import argparse
 import logging
+import threading
+import time
 from collections import Counter
 from typing import Dict, List, Any
 
@@ -272,6 +274,186 @@ Return JSON:
 }
 
 Return JSON ONLY. No commentary outside the JSON.""".strip()
+
+# ============================================================
+# V9 PIPELINE: RATE-LIMITED FIELD CLASSIFIER
+# ============================================================
+
+# Global rate limiter: max 15 concurrent Pro requests
+_v9_semaphore = threading.Semaphore(15)
+
+def run_v9_field_call(
+    client: OpenAI,
+    model: str,
+    call_id: str,
+    transcript: str,
+    system_prompt: str,
+    step_name: str,
+) -> dict:
+    """Run a single field-specific LLM call with rate limiting and retry.
+
+    Returns {"call_id": ..., "reasoning": ..., "answer": ...} or
+            {"call_id": ..., "error": ...} on failure.
+    """
+    messages = [
+        {"role": "system", "content": system_prompt},
+        {"role": "user", "content": transcript},
+    ]
+    for attempt in range(3):
+        _v9_semaphore.acquire()
+        try:
+            resp = client.chat.completions.create(
+                model=model,
+                messages=messages,
+                temperature=0.0,
+                response_format={"type": "json_object"},
+            )
+            # Accumulate all v9 field usage into "reasoning" bucket (all use Pro)
+            track_usage(resp, "reasoning")
+            result = json.loads(resp.choices[0].message.content)
+            result["call_id"] = call_id
+            return result
+        except Exception as e:
+            if attempt < 2:
+                wait = (attempt + 1) * 1.0
+                logger.warning(f"  {step_name} {call_id} attempt {attempt+1} failed: {e}. Retrying in {wait}s...")
+                time.sleep(wait)
+            else:
+                logger.error(f"  {step_name} {call_id} failed after 3 attempts: {e}")
+                return {"call_id": call_id, "error": str(e)}
+        finally:
+            _v9_semaphore.release()
+
+
+def run_v9_field_batch(
+    client: OpenAI,
+    model: str,
+    calls: List[Dict],
+    system_prompt: str,
+    batch_size: int,
+    step_name: str,
+) -> dict:
+    """Run a field classifier for all calls using thread pool.
+
+    Each call gets its own API call (one transcript per request).
+    The global semaphore (_v9_semaphore) handles rate limiting.
+    batch_size is reserved for future multi-transcript batching but
+    currently unused — all calls run as individual requests via thread pool.
+
+    Returns {call_id: {"reasoning": ..., "answer": ...}}.
+    """
+    from concurrent.futures import ThreadPoolExecutor, as_completed
+
+    results = {}
+    logger.info(f"  {step_name}: processing {len(calls)} calls via thread pool")
+
+    with ThreadPoolExecutor(max_workers=15) as pool:
+        futures = {
+            pool.submit(
+                run_v9_field_call,
+                client, model, c["id"], c["transcript"], system_prompt, step_name,
+            ): c["id"]
+            for c in calls
+        }
+        for future in as_completed(futures):
+            cid = futures[future]
+            try:
+                result = future.result()
+                results[cid] = result
+            except Exception as e:
+                logger.error(f"  {step_name} {cid} thread error: {e}")
+                results[cid] = {"call_id": cid, "error": str(e)}
+
+    return results
+
+
+def run_v9_reason_not_booked(
+    client: OpenAI,
+    model: str,
+    calls: List[Dict],
+    appointment_results: Dict[str, dict],
+    batch_size: int,
+) -> dict:
+    """Run reason_not_booked with appointment_booked injected into the prompt.
+
+    For calls where appointment_booked is Yes or Inconclusive, short-circuits to null.
+    Only calls the LLM for appointment_booked=No.
+    """
+    results = {}
+    calls_needing_llm = []
+
+    for c in calls:
+        cid = c["id"]
+        appt = appointment_results.get(cid, {})
+        appt_answer = appt.get("answer", "")
+
+        if appt_answer == "Yes":
+            results[cid] = {"call_id": cid, "reasoning": "appointment_booked=Yes, skipping", "answer": None}
+        elif appt_answer == "Inconclusive":
+            results[cid] = {"call_id": cid, "reasoning": "appointment_booked=Inconclusive, defaulting to null", "answer": None}
+        elif appt_answer == "No":
+            calls_needing_llm.append(c)
+        else:
+            # appointment_booked failed — skip
+            results[cid] = {"call_id": cid, "reasoning": f"appointment_booked unavailable ({appt_answer}), skipping", "answer": None}
+
+    if calls_needing_llm:
+        logger.info(f"  reason_not_booked: {len(calls_needing_llm)}/{len(calls)} calls need LLM (appointment_booked=No)")
+        prompt = V9_REASON_NOT_BOOKED_PROMPT.replace("{appointment_booked}", "No")
+        llm_results = run_v9_field_batch(
+            client, model, calls_needing_llm, prompt, batch_size, "reason_not_booked",
+        )
+        results.update(llm_results)
+    else:
+        logger.info(f"  reason_not_booked: 0/{len(calls)} calls need LLM (no appointment_booked=No)")
+
+    return results
+
+
+def v9_assemble(
+    calls: List[Dict],
+    appt_results: Dict[str, dict],
+    reason_results: Dict[str, dict],
+    treatment_results: Dict[str, dict],
+    client_results: Dict[str, dict],
+) -> Dict[str, Dict]:
+    """Assemble final predictions from 4 field outputs. Pure Python, no LLM.
+
+    Applies cross-field consistency rules:
+    - appointment_booked=Yes + reason populated -> null out reason, log warning
+    - appointment_booked=No + reason=null -> log warning
+    """
+    predictions = {}
+
+    for c in calls:
+        cid = c["id"]
+        appt = appt_results.get(cid, {}).get("answer")
+        reason = reason_results.get(cid, {}).get("answer")
+        treatment = treatment_results.get(cid, {}).get("answer")
+        client = client_results.get(cid, {}).get("answer")
+
+        # Cross-field consistency
+        if appt == "Yes" and reason is not None:
+            logger.warning(f"  Assembly {cid}: appointment_booked=Yes but reason_not_booked={reason!r} — setting to null")
+            reason = None
+        if appt == "No" and reason is None:
+            logger.warning(f"  Assembly {cid}: appointment_booked=No but reason_not_booked is null — flagging for review")
+
+        predictions[cid] = {
+            "call_id": cid,
+            "appointment_booked": appt,
+            "client_type": client,
+            "treatment_type": treatment,
+            "reason_not_booked": reason,
+            # TODO: Name extraction stubbed out for v9 initial implementation.
+            # Names are not scored in accuracy metrics so this doesn't affect validation.
+            # Can be added later by parsing reasoning outputs or regex on raw transcript.
+            "stated_hospital_name": None,
+            "stated_patient_name": None,
+            "agent_name": None,
+        }
+
+    return predictions
 
 
 def _load_module():
