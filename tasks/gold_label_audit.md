@@ -239,3 +239,51 @@ Audit of ~10 persistent error calls that appear in error lists across 3+ prompt 
 **Applied: 8 field-level changes across 5 calls** (2026-03-14)
 **Kept as-is: Call 4 (inter-clinic bloodwork) — treatment_type=Wellness Screening retained per user decision**
 **No change: 3 calls (edge cases / ambiguous — calls 8, 9, 10)**
+
+---
+
+## Systematic Audit (2026-03-15) — Full 510 Dataset
+
+### Audit Method
+Ran automated transcript analysis against all 510 gold labels. Flagged calls where:
+- Transcript content contradicts the gold label (wrong number, voicemail, no medical content)
+- Cross-field consistency violated (appointment_booked=Yes + reason populated, No + no reason)
+- Sub-category assigned but transcript lacks supporting keywords
+
+### Findings Summary
+
+| Severity | Count | Description |
+|----------|:---:|-------------|
+| HIGH | 4 | Wrong number with treatment type (3), Yes + reason populated (1) |
+| MEDIUM | 119 | 97 specific sub-category with no detectable medical keywords, 21 No without reason, 1 admin with specific sub |
+| LOW | 58 | Label/keyword mismatches (vaccination label but no vaccine mention, etc.) |
+
+**Unique calls flagged: ~150/510 (29%)**
+
+### HIGH Severity (require immediate fix)
+
+| Call ID | Issue | Current Gold | Recommended |
+|---------|-------|-------------|-------------|
+| `CAL008a74d19188416c...` | Wrong number | tt=Preventive Care | tt=Other (already fixed in v1 audit) |
+| `CAL019839456cd27079...` | Wrong number | tt=Preventive Care – Vaccinations, ab=Yes | Review — caller may have found right clinic after initial confusion |
+| `CAL0198473f7d2a7b25...` | Yes + reason | ab=Yes, rnb=2b. Full schedule | rnb should be null (if appointment was booked) |
+| `CAL0198490ce41a7081...` | Wrong number | tt=Retail – Food Orders | tt=Other or review transcript |
+
+**Status:** [ ] Reviewed / [ ] Fixed
+
+### MEDIUM Severity: appointment_booked=No with no reason (21 calls)
+
+These calls have appointment_booked=No but reason_not_booked is empty. Per our classification rules, every No should have a reason. Need human review to assign appropriate reason categories.
+
+**Status:** [ ] Reviewed / [ ] Fixed
+
+### Analysis: NO_MEDICAL_WITH_SPECIFIC_SUB (97 calls)
+
+97 calls (19% of dataset) have a specific sub-category label but no detectable medical keywords in the transcript. After expanding the keyword list, 25 of these have truly zero medical-related content. Most of the 97 are likely correct labels — the callers use natural language (brand names, colloquial terms) that keyword matching doesn't catch.
+
+**Impact on model accuracy:** These 97 calls are disproportionately responsible for treatment_type errors. The model cannot determine the sub-category without medical context in the transcript. Options:
+1. Downgrade these to parent categories (loses specificity but improves accuracy)
+2. Accept ~65% as the ceiling for treatment_type given current gold labels
+3. Manually review and fix the subset that are genuinely mislabeled
+
+**Status:** [ ] Reviewed / [ ] Decision made
