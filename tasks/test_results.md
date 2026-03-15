@@ -237,6 +237,45 @@ These calls have gold labels that cannot be derived from the transcript content 
 
 ---
 
+## v8 Rebaseline (corrected gold labels, 2026-03-14)
+
+**Results:** appt 93.3% | client 95.6% | treatment 62.2% | reason 57.9%
+
+**Note:** Same v8 prompts as v8, but 8 gold label corrections applied (see tasks/gold_label_audit.md). This is the true baseline for v9 comparison.
+
+**Key findings:**
+- **appointment_booked 93.3% — PASSES 90% target.** Gold label fixes (voicemail, wrong numbers) accounted for most of the improvement.
+- **client_type 95.6% — PASSES 90% target.** Fixing the 2 swapped New/Existing labels helped.
+- treatment_type 62.2% — actually dropped from v8's 66.7%. Top confusions: Preventive Care→Other (3x), Annual Exams→parent (3x), Emergency parent→sub (2x).
+- reason_not_booked 57.9% — large jump from v8's 27.3%. The gold label fixes removed many false errors.
+- Only 3 appointment_booked errors remain (2x No→Inconclusive, 1x Inconclusive→No).
+
+---
+
+## v9.3 — Field-Decomposed Pipeline, Minimal Rules (2026-03-14)
+
+**Architecture:** 4 parallel Pro calls (one per field, raw transcript) + Python assembly
+**Model:** gemini-2.5-pro, individual calls (no batching)
+**Key changes from v9.0:** Stripped excessive rules, trust model judgment, added calibrating examples, strict enum schemas, callback-is-No rule
+
+| Version | appointment_booked | client_type | treatment_type | reason_not_booked |
+|---------|:---:|:---:|:---:|:---:|
+| v9.0 (initial) | 92.0% | 94.0% | 58.0% | 50.0% |
+| v9.1 (examples+enums) | 92.0% | 90.0% | 52.0% | 52.6% |
+| v9.2 (minimal rules) | 88.0% | 96.0% | 68.0% | 52.4% |
+| **v9.3 (callback fix)** | **92.0%** | **96.0%** | **70.0%** | **63.2%** |
+
+**Key findings:**
+- Stripping rules and trusting model judgment improved treatment_type from 52% → 70% (best ever)
+- client_type 96% — highest ever, well above target
+- appointment_booked 92% — PASSES target with just minimal guidance
+- reason_not_booked 63.2% — improving via cascade break from better appointment_booked
+- The "less rules, more trust" approach from the original script analysis was validated
+- Remaining treatment_type errors: 4x admin/rescheduling→Other (likely gold label issues), 3x Urgent Care parent/sub boundary, 2x Emergency/Urgent Care confusion
+- **Blocked on n=100 validation** — Gemini Pro daily quota (1000 RPD) exhausted. Upgraded to Tier 1, will retest tomorrow.
+
+---
+
 ## Cost Per Run
 
 | Run Type | Reasoning Cost | Classification Cost | Total | Per-Call |
