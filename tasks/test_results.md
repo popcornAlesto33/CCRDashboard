@@ -321,18 +321,38 @@ Tested batch_size=1 vs 5 on n=50 to measure accuracy impact of batching.
 - Flash batch_size=5 uses 5x fewer API calls (10 vs 50)
 - GPT-4o-mini at batch_size=1 beats Flash on treatment_type (62% vs 58%) — viable as second opinion for flagged calls
 
-**Production throughput at batch_size=5 (Flash):**
-- 60K transcripts: 12,000 API calls per field × 4 fields = 48,000 API calls
-- At 10K RPD: ~5 days total
+### Batch Size Sweep (Flash n=200, GPT-5 n=50)
+
+| Field | bs=1 | bs=5 | bs=10 | bs=15 | bs=20 |
+|-------|:---:|:---:|:---:|:---:|:---:|
+| appt (Flash) | 86.0% | 89.8%* | 85.9% | 84.5% | 83.0% |
+| client (Flash) | 89.0% | 92.0%* | 91.5% | 93.0% | **79.4%** (degraded) |
+| treat (Flash) | 50.5% | 60.0%* | 52.0% | 53.0% | 53.5% |
+| treat (GPT-5) | 64.0% | 64.0% | 60.0% | — | — |
+
+*bs=5 results are n=50 only, others are n=200.
+
+- Context window usage at bs=20: ~19K tokens max (~2% of Flash 1M). Context is NOT the bottleneck.
+- Client_type degrades at bs=20 (cognitive load — too many transcripts to track subtle signals)
+- GPT-5 degrades at bs=10 (-4pp), stable at bs=5
+
+**Locked-in batch sizes:**
+- Flash (appointment_booked, client_type): **batch_size=15**
+- GPT-5 (treatment_type, reason_not_booked): **batch_size=5**
+
+**Production throughput for 60K transcripts:**
+- Flash bs=15: 4,000 API calls per field × 2 fields = 8,000 calls on Gemini
+- GPT-5 bs=5: 12,000 API calls for treatment + ~4,000 for reason = 16,000 calls on OpenAI
+- Both providers in parallel: **~1-2 days**
 
 ### Recommended Production Architecture
 
-| Field | Model | Rationale |
-|-------|-------|-----------|
-| appointment_booked | Flash | Simple Yes/No/Inconclusive — Flash performs near target |
-| client_type | Flash | Passes 90% target at n=100 |
-| treatment_type | Flash Step 1 + Pro Step 2 | Flash picks parent (11 choices), Pro picks sub (2-5 choices) |
-| reason_not_booked | Pro | 28 categories, needs reasoning. Only fires for appt=No calls (~30-40%) |
+| Field | Model | Batch Size | Provider | Rationale |
+|-------|-------|:---:|:---:|-----------|
+| appointment_booked | Flash | 15 | Gemini | Simple task, Flash handles well, batch-resistant |
+| client_type | Flash | 15 | Gemini | Passes 90%+ target, batch-resistant up to 15 |
+| treatment_type | GPT-5 | 5 | OpenAI | Best accuracy (64%), needs reasoning power for 35 categories |
+| reason_not_booked | GPT-5 | 5 | OpenAI | 28 categories, needs reasoning. Only fires for appt=No (~30-40%) |
 
 ---
 
