@@ -356,6 +356,92 @@ Tested batch_size=1 vs 5 on n=50 to measure accuracy impact of batching.
 
 ---
 
+## v9.7 Final Status (2026-03-15)
+
+### Current Best Hybrid Results (n=100)
+
+| Field | Accuracy | Target | Status | Model | Batch Size |
+|-------|:---:|:---:|:---:|:---:|:---:|
+| appointment_booked | **92%** | 90% | **PASS** | Flash | 15 |
+| client_type | **91-93%** | 90% | **PASS** | Flash | 15 |
+| treatment_type | **65%** | 80% | FAIL (-15pp) | GPT-5 | 5 |
+| reason_not_booked | **53%** | 85% | FAIL (-32pp) | GPT-5 | 5 |
+
+### What Worked
+
+1. **Field decomposition** — splitting 1 monolithic prompt into 4 per-field prompts eliminated cross-field contamination and enabled the cascade break for reason_not_booked
+2. **Less rules, more trust** — stripping over-engineered rules and trusting the model's native judgment improved treatment_type from 52% to 70% (Pro) / 65% (GPT-5)
+3. **Hybrid multi-provider** — Flash for simple fields (appt, client), GPT-5 for complex fields (treatment, reason) balances cost and accuracy
+4. **Batching** — Flash at bs=15 has zero accuracy loss. GPT-5 at bs=5 is stable. 60K transcripts in ~1-2 days across both providers.
+5. **Gold label audit** — found 8 field-level errors in first 5 calls, systematic audit found 181 issues across 510 calls (29%)
+6. **Transcript flagging** — 16.5% of calls flagged for human review based on transcript quality/ambiguity signals
+
+### What Didn't Work
+
+1. **Two-step classification** (parent → sub) — tested with Flash, GPT-5, and Flash→GPT-5 hybrid. All performed worse than single-step because errors compound across steps
+2. **LLM confidence scores** — model self-reported 97-100 for both correct and incorrect predictions. Zero signal.
+3. **Detailed rules for parent/sub boundary** — every rule that fixed one direction (over-spec) broke the other (under-spec). The parent/sub boundary is inherently ambiguous in the gold labels.
+4. **Two-phase reasoning** ("first pick parent, then decide sub") in a single prompt — made GPT-5 too cautious, reduced accuracy
+
+### Why treatment_type Is Stuck at ~65%
+
+The remaining 35 errors (n=100) break down as:
+- **~10 same-family** (right parent, wrong sub-level) — gold labels inconsistent on parent vs sub boundary
+- **~10 wrong parent** — genuinely hard calls (admin calls, ambiguous symptoms)
+- **~7 admin default** — model can't determine service type from admin/rescheduling transcripts
+- **~5 gold label suspects** — wrong number, boarding, calls where gold label can't be derived from transcript
+- **~3 Preventive Care sub confusion** — Vaccinations vs Annual Exams vs parent
+
+**Structural ceiling:** ~19% of all calls (97/510) have specific sub-category gold labels but no detectable medical keywords in the transcript. These calls are inherently hard for any model to classify at the sub-category level.
+
+### Why reason_not_booked Is Stuck at ~53%
+
+- **~30% of errors cascade** from wrong appointment_booked (Flash misclassifies → null reason when gold has a reason)
+- **Parent vs sub confusion** — gold says "2. Scheduling Issue" (parent), model picks "2b. Full schedule" (sub)
+- **Price Objection overfire** — model assigns 1a whenever price is mentioned, even when scheduling was the primary barrier
+
+### Paths to Further Improvement
+
+| Lever | Expected Impact | Effort | Notes |
+|-------|:---:|:---:|-------|
+| Gold label cleanup (97 flagged calls) | +3-5pp treatment | Medium | Review 84 flagged calls, fix inconsistent parent/sub labels |
+| Taxonomy simplification | +5-10pp treatment | High | Merge sub-categories that cause persistent confusion |
+| Try Claude Sonnet/Opus for treatment | +2-5pp treatment | Low | Different model may have better classification capability |
+| Improve appointment_booked with Pro | +2-3pp reason (cascade) | Medium | Pro scored 92% vs Flash 85-91%. Using Pro for appt would reduce cascading errors into reason |
+| Fine-tune a model on the 510 gold labels | +10-15pp all fields | High | Custom model trained specifically on this taxonomy |
+| Increase training data (more gold labels) | +5-10pp long-term | High | More labeled examples to fine-tune or few-shot from |
+
+### Transcript Flagging (Production QA)
+
+| Flag | Count (510 calls) | Purpose |
+|------|:---:|---------|
+| no_medical_content | 71 (13.9%) | No medical keywords — model is guessing treatment_type |
+| garbled | 5 (1.0%) | Heavy redaction — key context missing |
+| very_short | 5 (1.0%) | <3 turns — likely voicemail or cut-off |
+| admin_no_medical | 4 (0.8%) | Rescheduling with no medical context |
+| wrong_number | 2 (0.4%) | Caller dialed wrong clinic |
+| voicemail | 1 (0.2%) | No caller interaction |
+| **Total flagged** | **84 (16.5%)** | **Human review queue** |
+
+### Files
+
+| File | Purpose |
+|------|---------|
+| `Scripts/validate_prompt_engineering.py` | V9 pipeline with prompts, schemas, batching, flagging |
+| `Scripts/test_hybrid.py` | End-to-end hybrid (Flash+GPT-5) test runner |
+| `Scripts/test_batching.py` | Batch size comparison tool |
+| `Scripts/test_appointment_booked.py` | Per-field prompt variant testing |
+| `Scripts/test_two_step_treatment.py` | Two-step treatment_type testing |
+| `Scripts/test_two_step_hybrid.py` | Flash→GPT-5 two-step testing |
+| `Scripts/audit_gold_labels.py` | Systematic gold label audit |
+| `Scripts/generate_flagged_calls.py` | Generate flagged calls CSV for human review |
+| `CallData/flagged_calls.csv` | 84 flagged calls ready for human review |
+| `tasks/gold_label_audit.md` | Gold label audit trail with decisions |
+| `tasks/gold_label_review_97.md` | Detailed review file for 97 flagged calls |
+| `docs/superpowers/specs/2026-03-14-prompt-v9-pipeline-redesign.md` | Design spec |
+
+---
+
 ## Cost Per Run
 
 | Run Type | Reasoning Cost | Classification Cost | Total | Per-Call |
