@@ -276,6 +276,46 @@ These calls have gold labels that cannot be derived from the transcript content 
 
 ---
 
+## Flash Model Evaluation (2026-03-14)
+
+Tested gemini-2.5-flash as a cheaper alternative to Pro for each field.
+
+### Single-step Flash (v9.3 prompts, n=100)
+
+| Field | Flash (n=100) | Pro (n=50) | Target | Flash viable? |
+|-------|:---:|:---:|:---:|:---:|
+| appointment_booked | 89.0% | 92.0% | 90% | Borderline — 1pp below |
+| client_type | 91.0% | 96.0% | 90% | **Yes** — passes target |
+| treatment_type | 45.0% | 70.0% | 80% | **No** — too weak |
+| reason_not_booked | 48.6% | 63.2% | 85% | **No** — too weak |
+
+### Two-Step Flash for treatment_type (Flash parent → Flash sub)
+
+| Version | n=50 | n=100 | Change |
+|---------|:---:|:---:|:---:|
+| v1 (basic) | 64.0% | 47.0% | — |
+| v2 (improved Step 1) | 72.0% | 54.0% | +7pp |
+| v3 (Step 2 guidance) | — | 59.0% | +5pp |
+| v4 (Step 1 examples) | — | 56.0% | -3pp (overcorrected) |
+
+**Key findings:**
+- Two-step Flash beats single-step Flash by ~14pp at n=100 (59% vs 45%)
+- Two-step Flash at n=50 (72%) beat single-step Pro at n=50 (70%), but n=100 shows Flash ceiling at ~56-59%
+- Step 1 (parent classification) works well — most errors are Step 2 (sub-category selection)
+- Flash lacks reasoning power for fine-grained sub-category distinctions (Urgent Care parent vs sub, Preventive Care sub-categories)
+- **Recommended hybrid:** Flash Step 1 + Pro Step 2 for treatment_type
+
+### Recommended Production Architecture
+
+| Field | Model | Rationale |
+|-------|-------|-----------|
+| appointment_booked | Flash | Simple Yes/No/Inconclusive — Flash performs near target |
+| client_type | Flash | Passes 90% target at n=100 |
+| treatment_type | Flash Step 1 + Pro Step 2 | Flash picks parent (11 choices), Pro picks sub (2-5 choices) |
+| reason_not_booked | Pro | 28 categories, needs reasoning. Only fires for appt=No calls (~30-40%) |
+
+---
+
 ## Cost Per Run
 
 | Run Type | Reasoning Cost | Classification Cost | Total | Per-Call |
