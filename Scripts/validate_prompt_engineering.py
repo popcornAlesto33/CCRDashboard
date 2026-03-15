@@ -120,29 +120,46 @@ The appointment_booked decision has already been made: {appointment_booked}
 ## Key Distinctions
 
 - **Parent vs sub-category:** Use the PARENT category (e.g., "1. Caller Procrastination" or "2. Scheduling Issue") unless the sub-category is a clear, unambiguous match. When in doubt, use the parent.
-- **Price Objection (1a):** If pricing/cost was discussed AT ANY POINT and the caller didn't book → use 1a. This is aggressive by design — any price discussion + no booking = 1a.
+- **Price Objection (1a):** Use when the caller's PRIMARY reason for not booking was the price. The caller asked about cost and that was the deciding factor. If price was discussed but something ELSE was the real barrier (schedule full, service not offered, caller just procrastinating), use the real barrier instead.
 - "I'll think about it" with NO price discussion → 1 (Procrastination)
 - Caller cancels and says they'll reschedule later → 1 (Procrastination), NOT 9 (Client/appt query)
+- Caller asked about a service the clinic doesn't offer → 3 (Service not offered), even if price was also discussed
 - Wants same-day, told none available → 2a
 - Schedule full for days/weeks → 2b
 - If scheduling was the issue but you're unsure between 2a/2b/2c/2d → use parent "2. Scheduling Issue"
+- Caller seeking a specific service style the clinic doesn't offer (holistic, outdoor euthanasia, exotics) → 3 (Service not offered)
 
 ## Examples
 
-### Price discussed + no booking → always 1a
-Transcript: "Caller: How much for a spay? Agent: $350. Caller: Okay, I'll think about it."
+### Pure price shopping → 1a
+Transcript: "Caller: How much for an exam? Agent: $122. Caller: Wow, okay. Thanks. Bye."
 Answer: "1a. Caller Procrastination - Price Objection / Shopping / Request for Quote"
-Why: Price was discussed and no booking was made. Always 1a when price comes up.
+Why: Caller's sole purpose was pricing. Price was the barrier.
+
+### Price asked BUT scheduling was the real barrier → Scheduling
+Transcript: "Caller: How much for a spay? Agent: $350. Caller: Okay, when's the soonest? Agent: June 17th. Caller: That's too far out."
+Answer: "2. Scheduling Issue"
+Why: Caller accepted the price and asked to book. The scheduling gap was the real barrier.
 
 ### Caller cancels and will reschedule → Procrastination
 Transcript: "Caller: I need to cancel Thursday's appointment, something came up. I'll call back next week."
 Answer: "1. Caller Procrastination"
 Why: Caller is postponing, not objecting to price or encountering a scheduling barrier.
 
-### Schedule too far out → Scheduling Issue (parent)
-Transcript: "Caller: When's the soonest for a spay? Agent: June 17th. Caller: That's too far out. I'll look elsewhere."
-Answer: "2. Scheduling Issue"
-Why: Scheduling availability is the barrier. Use parent unless clearly same-day (2a) or multi-week full (2b).
+### Service not offered → even if price discussed
+Transcript: "Caller: Do you do holistic treatments? Agent: No. Caller: How much for a regular visit? Agent: $122. Caller: Okay, thanks."
+Answer: "3. Service/treatment not offered"
+Why: Primary reason: clinic doesn't offer what caller wanted. Price question was secondary.
+
+### Same-day not available → 2a specifically
+Transcript: "Caller: Can I get my puppy in today? He's been coughing. Agent: We're pretty booked, let me check... I'll take your number and call you back."
+Answer: "2a. Scheduling Issue - Walk ins not available / no same day appt"
+Why: Caller wanted same-day. Use 2a when the caller specifically needed today/now and was told none available.
+
+### Caller canceled + no availability → still Procrastination
+Transcript: "Caller: I need to cancel my appointment. Is there anything this week? Agent: We're pretty booked this week. Caller: Okay, I'll call back later."
+Answer: "1. Caller Procrastination"
+Why: The caller initiated the cancellation. Even though the schedule is full, the root cause is the caller's decision to cancel — not a scheduling barrier.
 
 ## Categories
 
