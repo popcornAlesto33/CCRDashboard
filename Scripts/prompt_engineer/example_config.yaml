@@ -1,0 +1,395 @@
+# Prompt Engineer Configuration — CCR Dashboard (Veterinary Call Classification)
+# ============================================================================
+# This config drives the /prompt-engineer skill for optimizing call transcript
+# classification prompts across 4 fields.
+
+project_name: "CCR Dashboard — Veterinary Call Classification"
+
+# ---------------------------------------------------------------------------
+# Data Sources
+# ---------------------------------------------------------------------------
+data:
+  inputs_path: "CallData/Transcript_details.csv"
+  inputs_format: csv
+  id_column: "id"
+  text_column: "transcript"
+
+  labels_path: "CallData/VetCare_CallInsight_Labels - labels.csv"
+  labels_format: csv
+  labels_id_column: "id"
+
+  holdout_ratio: 0.2
+  holdout_seed: 42
+
+# ---------------------------------------------------------------------------
+# Classification Fields
+# ---------------------------------------------------------------------------
+fields:
+  - name: appointment_booked
+    type: categorical
+    values: ["Yes", "No", "Inconclusive"]
+    gold_column: "appointment_booked"
+    target_accuracy: 90.0
+    priority: 0
+    system_prompt: |
+      You are a veterinary clinic call analyst. Determine whether an appointment was booked during this phone call.
+
+      Return JSON with:
+      - "reasoning": Brief explanation of your determination
+      - "answer": One of "Yes", "No", or "Inconclusive"
+
+      Key signals for YES: specific date/time confirmed, "we'll see you on...", confirmation number given.
+      Key signals for NO: caller declines, says they'll call back, no time discussed.
+      Key signals for INCONCLUSIVE: call cut short, unclear outcome, voicemail.
+
+      Return JSON ONLY.
+    response_schema:
+      type: json_schema
+      json_schema:
+        name: appointment_booked_result
+        strict: true
+        schema:
+          type: object
+          properties:
+            reasoning:
+              type: string
+            answer:
+              type: string
+              enum: ["Yes", "No", "Inconclusive"]
+          required: ["reasoning", "answer"]
+          additionalProperties: false
+
+  - name: client_type
+    type: categorical
+    values: ["New", "Existing", "Inconclusive"]
+    gold_column: "client_type"
+    target_accuracy: 90.0
+    priority: 0
+    system_prompt: |
+      You are a veterinary clinic call analyst. Determine whether the caller is a new or existing client.
+
+      Return JSON with:
+      - "reasoning": Brief explanation
+      - "answer": One of "New", "Existing", or "Inconclusive"
+
+      Key signals for NEW: "I've never been there", "first time", no prior records, looking for a new vet.
+      Key signals for EXISTING: agent finds records, references previous visits, knows pet name, mentions "your usual vet".
+      Key signals for INCONCLUSIVE: unclear from transcript.
+
+      Return JSON ONLY.
+    response_schema:
+      type: json_schema
+      json_schema:
+        name: client_type_result
+        strict: true
+        schema:
+          type: object
+          properties:
+            reasoning:
+              type: string
+            answer:
+              type: string
+              enum: ["New", "Existing", "Inconclusive"]
+          required: ["reasoning", "answer"]
+          additionalProperties: false
+
+  - name: treatment_type
+    type: categorical
+    values:
+      # Parent categories
+      - "Preventive Care"
+      - "Illness/Injury"
+      - "Surgical Services"
+      - "Diagnostic Services"
+      - "Emergency/Urgent Care"
+      - "Dental"
+      - "Dermatology"
+      - "Behavioral"
+      - "End of Life"
+      - "Other"
+      # Sub-categories (Preventive Care)
+      - "Preventive Care > Vaccinations"
+      - "Preventive Care > Annual/Wellness Exams"
+      - "Preventive Care > Wellness Screening/Bloodwork"
+      - "Preventive Care > Spay/Neuter"
+      - "Preventive Care > Flea/Tick/Heartworm Prevention"
+      - "Preventive Care > Microchipping"
+      # Sub-categories (Illness/Injury)
+      - "Illness/Injury > Vomiting/Diarrhea/GI Issues"
+      - "Illness/Injury > Limping/Lameness"
+      - "Illness/Injury > Ear Infections"
+      - "Illness/Injury > Eye Issues"
+      - "Illness/Injury > Skin Issues/Allergies"
+      - "Illness/Injury > Urinary Issues"
+      - "Illness/Injury > Respiratory Issues"
+      - "Illness/Injury > Pain/Discomfort (General)"
+      - "Illness/Injury > Lumps/Masses/Growths"
+      - "Illness/Injury > Wound Care/Bite/Sting"
+      - "Illness/Injury > Not Eating/Drinking"
+      - "Illness/Injury > Seizures/Neurological"
+      # Sub-categories (Surgical)
+      - "Surgical Services > Mass/Tumor Removal"
+      - "Surgical Services > Orthopedic Surgery"
+      - "Surgical Services > Soft Tissue Surgery"
+      # Sub-categories (Diagnostic)
+      - "Diagnostic Services > X-Ray/Radiograph"
+      - "Diagnostic Services > Ultrasound"
+      - "Diagnostic Services > Bloodwork/Lab Work"
+      # Sub-categories (Dental)
+      - "Dental > Dental Cleaning"
+      - "Dental > Tooth Extraction"
+      # Sub-categories (End of Life)
+      - "End of Life > Euthanasia"
+      - "End of Life > Quality of Life Consultation"
+    hierarchy:
+      parents:
+        "Preventive Care":
+          - "Preventive Care > Vaccinations"
+          - "Preventive Care > Annual/Wellness Exams"
+          - "Preventive Care > Wellness Screening/Bloodwork"
+          - "Preventive Care > Spay/Neuter"
+          - "Preventive Care > Flea/Tick/Heartworm Prevention"
+          - "Preventive Care > Microchipping"
+        "Illness/Injury":
+          - "Illness/Injury > Vomiting/Diarrhea/GI Issues"
+          - "Illness/Injury > Limping/Lameness"
+          - "Illness/Injury > Ear Infections"
+          - "Illness/Injury > Eye Issues"
+          - "Illness/Injury > Skin Issues/Allergies"
+          - "Illness/Injury > Urinary Issues"
+          - "Illness/Injury > Respiratory Issues"
+          - "Illness/Injury > Pain/Discomfort (General)"
+          - "Illness/Injury > Lumps/Masses/Growths"
+          - "Illness/Injury > Wound Care/Bite/Sting"
+          - "Illness/Injury > Not Eating/Drinking"
+          - "Illness/Injury > Seizures/Neurological"
+        "Surgical Services":
+          - "Surgical Services > Mass/Tumor Removal"
+          - "Surgical Services > Orthopedic Surgery"
+          - "Surgical Services > Soft Tissue Surgery"
+        "Diagnostic Services":
+          - "Diagnostic Services > X-Ray/Radiograph"
+          - "Diagnostic Services > Ultrasound"
+          - "Diagnostic Services > Bloodwork/Lab Work"
+        "Dental":
+          - "Dental > Dental Cleaning"
+          - "Dental > Tooth Extraction"
+        "End of Life":
+          - "End of Life > Euthanasia"
+          - "End of Life > Quality of Life Consultation"
+    gold_column: "treatment_type"
+    target_accuracy: 70.0
+    priority: 0
+    system_prompt: |
+      You are a veterinary clinic call analyst. Classify the primary treatment type discussed in this call.
+
+      Return JSON with:
+      - "reasoning": Brief explanation of treatment signals found
+      - "answer": The treatment category (use sub-category "Parent > Sub" format when specific enough)
+
+      Rules:
+      - Use sub-categories when the transcript has clear signals (specific symptoms, procedures, or keywords)
+      - Use parent category when signals are ambiguous within that parent
+      - "Other" for admin calls, medication refills, record requests, or unclear purpose
+
+      Return JSON ONLY.
+    response_schema:
+      type: json_schema
+      json_schema:
+        name: treatment_type_result
+        strict: true
+        schema:
+          type: object
+          properties:
+            reasoning:
+              type: string
+            answer:
+              type: string
+          required: ["reasoning", "answer"]
+          additionalProperties: false
+
+  - name: reason_not_booked
+    type: categorical
+    values:
+      - "1. Caller Procrastination"
+      - "1a. Caller Procrastination - Price Objection / Shopping / Request for Quote"
+      - "2. Clinic at Capacity / No Availability"
+      - "3. Hours of Operation / After-Hours Call"
+      - "4. Caller Needs to Check Schedule"
+      - "5. Existing Appointment / Already Booked"
+      - "6. Call Transferred / Referred to Another Clinic"
+      - "7. Information Inquiry Only"
+      - "8. Prescription/Medication Refill Only"
+      - "9. Voicemail / No Answer / Automated System"
+      - "10. Wrong Number / Misdial"
+      - "11. Other / Unclear"
+    gold_column: "reason_not_booked"
+    skip_null_both: true
+    target_accuracy: 60.0
+    priority: 1
+    depends_on: appointment_booked
+    skip_when:
+      field: appointment_booked
+      values: ["Yes", "Inconclusive"]
+      default: null
+    system_prompt: |
+      You are a veterinary clinic call analyst. The appointment was NOT booked. Determine why.
+
+      Return JSON with:
+      - "reasoning": Brief explanation
+      - "answer": The reason category, or null if unclear
+
+      Categories:
+      1. Caller Procrastination — caller says "I'll think about it", "let me talk to my spouse", etc.
+      1a. Price Objection — caller asks about cost and declines, or is shopping around
+      2. Clinic at Capacity — no appointments available
+      3. Hours of Operation — clinic is closed, after-hours
+      4. Caller Needs to Check Schedule — "let me check my calendar"
+      5. Existing Appointment — caller already has one scheduled
+      6. Call Transferred — referred to specialist or another clinic
+      7. Information Inquiry — caller just wanted information, not an appointment
+      8. Prescription/Medication Refill — just needs a refill
+      9. Voicemail — reached voicemail or automated system
+      10. Wrong Number — caller dialed wrong number
+      11. Other / Unclear — doesn't fit above categories
+
+      Return JSON ONLY.
+    response_schema:
+      type: json_schema
+      json_schema:
+        name: reason_not_booked_result
+        strict: true
+        schema:
+          type: object
+          properties:
+            reasoning:
+              type: string
+            answer:
+              type: ["string", "null"]
+          required: ["reasoning", "answer"]
+          additionalProperties: false
+
+# ---------------------------------------------------------------------------
+# Models
+# ---------------------------------------------------------------------------
+models:
+  - provider: gemini
+    name: gemini-2.5-flash
+    tier: cheap
+    api_key_env: GEMINI_API_KEY
+    base_url: "https://generativelanguage.googleapis.com/v1beta/openai/"
+    max_concurrent: 15
+    input_price: 0.15
+    output_price: 0.60
+    default_batch_size: 15
+    max_batch_size: 20
+
+  - provider: gemini
+    name: gemini-2.5-pro
+    tier: mid
+    api_key_env: GEMINI_API_KEY
+    base_url: "https://generativelanguage.googleapis.com/v1beta/openai/"
+    max_concurrent: 10
+    input_price: 1.25
+    output_price: 10.00
+    default_batch_size: 5
+    max_batch_size: 10
+
+  - provider: openai
+    name: gpt-4o-mini
+    tier: cheap
+    api_key_env: OPENAI_API_KEY
+    input_price: 0.15
+    output_price: 0.60
+    default_batch_size: 1
+    max_batch_size: 5
+
+  - provider: openai
+    name: gpt-5
+    tier: expensive
+    api_key_env: OPENAI_API_KEY
+    max_concurrent: 10
+    input_price: 2.50
+    output_price: 10.00
+    default_batch_size: 5
+    max_batch_size: 10
+    supports_temperature: false
+
+  - provider: anthropic
+    name: claude-haiku-4-5-20251001
+    tier: cheap
+    api_key_env: ANTHROPIC_API_KEY
+    base_url: "https://api.anthropic.com/v1/"
+    input_price: 0.80
+    output_price: 4.00
+    default_batch_size: 1
+    max_batch_size: 5
+
+# ---------------------------------------------------------------------------
+# Budget
+# ---------------------------------------------------------------------------
+budget:
+  max_total_usd: 10.0
+  warn_at_usd: 5.0
+  max_per_phase_usd: 3.0
+
+# ---------------------------------------------------------------------------
+# Convergence
+# ---------------------------------------------------------------------------
+convergence:
+  min_rounds: 3
+  max_rounds: 15
+  plateau_rounds: 3
+  plateau_threshold: 1.0
+  sample_sizes:
+    baseline: 50
+    iteration: 100
+    confirmation: 200
+
+# ---------------------------------------------------------------------------
+# Architecture Search
+# ---------------------------------------------------------------------------
+architecture:
+  test_batch_sizes: [1, 5, 10, 15]
+  test_models: true
+  test_decomposition: true
+  decomposition_options:
+    - per_field
+    - two_step
+
+# ---------------------------------------------------------------------------
+# Cross-Field Rules (applied after all fields classified)
+# ---------------------------------------------------------------------------
+cross_field_rules:
+  - name: "booked_nulls_reason"
+    condition:
+      field: appointment_booked
+      value: "Yes"
+    action:
+      set_field: reason_not_booked
+      to_value: null
+    severity: warning
+
+  - name: "inconclusive_nulls_reason"
+    condition:
+      field: appointment_booked
+      value: "Inconclusive"
+    action:
+      set_field: reason_not_booked
+      to_value: null
+    severity: warning
+
+# ---------------------------------------------------------------------------
+# Input Quality Flags
+# ---------------------------------------------------------------------------
+flags:
+  keyword_patterns:
+    medical: "(sick|vomit|limp|pain|bleed|itch|sneez|cough|infect|allergy|diarrhea|seiz|surgery|spay|neuter|dental|vaccin|shot|booster|rabies|bloodwork|x-ray|ultrasound|emergency|euthan|lump|swollen|limping|not eating|not drinking|discharge|medication|prescription|refill)"
+    admin: "(reschedule|cancel|pick.?up|results|records|transfer|file)"
+  rules:
+    - name: very_short
+      condition: "turns < 3 or text_length < 100"
+    - name: voicemail
+      condition: "caller_words < 5"
+    - name: no_medical_content
+      condition: "not keyword_matches['medical'] and turns >= 4"
