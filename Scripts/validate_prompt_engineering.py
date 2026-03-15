@@ -112,10 +112,13 @@ The appointment_booked decision has already been made: {appointment_booked}
 
 ## Key Distinctions
 
-- If pricing/cost was discussed AT ANY POINT and caller didn't book → always use 1a (Price Objection)
+- **Parent vs sub-category:** Use the PARENT category (e.g., "1. Caller Procrastination" or "2. Scheduling Issue") unless the sub-category is a clear, unambiguous match. When in doubt, use the parent.
+- If pricing/cost was discussed AT ANY POINT and caller didn't book → use 1a (Price Objection). EXCEPTION: if the caller's primary reason for not booking was clearly something else (e.g., schedule was full, service not offered) and they just asked price as a secondary question, use the primary reason instead.
 - "I'll think about it" with NO price discussion → 1 (Procrastination)
+- Caller cancels and says they'll reschedule later → 1 (Procrastination), NOT 9 (Client/appt query)
 - Wants same-day, told none available → 2a
 - Schedule full for days/weeks → 2b
+- If scheduling was the issue but you're unsure between 2a/2b/2c/2d → use parent "2. Scheduling Issue"
 
 ## Categories
 
@@ -161,8 +164,13 @@ Choose EXACTLY ONE category from the list below. Match the level of specificity 
 - Classify based on the PRIMARY reason for the call
 - If a sick pet has specific symptoms (vomiting, ear infection, limping), use the relevant sub-category — you don't need a named procedure
 - Emergency & Critical Care requires actual emergency-level situations (trauma, poisoning, critical symptoms) — not just calling an emergency hospital
-- Rescheduling/admin calls: classify by the underlying service if you can tell what it was about
-- "Other" is a last resort — only if the call genuinely doesn't fit any category
+- Routine bloodwork (annual, wellness, pre-op) = Preventive Care – Wellness Screening, NOT Diagnostic Services. Only use Diagnostic when the bloodwork is investigating a specific problem.
+- "Other" is a LAST RESORT. Before using Other, check:
+  - Rescheduling/cancelling/admin calls → use Preventive Care (default for admin calls where service is unknown)
+  - Nail trims, microchip scans, general checkups → Preventive Care
+  - Medication ordering for an existing condition → Retail – Prescriptions
+  - If the caller mentioned ANY medical concern → classify by that concern
+- When choosing between parent and sub-category: use the PARENT "Scheduling Issue" or "Caller Procrastination" unless the sub-category is clearly and specifically the right match
 
 ## Examples
 
@@ -205,6 +213,16 @@ Why: Acute trauma requiring emergency intervention.
 Transcript: "Caller: I need to book a spay and vaccines for my dog."
 Answer: Surgical Services – Spays and Neuters
 Why: When multiple services are discussed, prioritize the most significant medical procedure.
+
+### Rescheduling call, no medical detail → Preventive Care (default)
+Transcript: "Caller: I need to move my appointment to next week. Agent: Sure, how about Tuesday at 3?"
+Answer: Preventive Care
+Why: Admin/rescheduling call with no medical content discussed. Default to Preventive Care, NOT Other.
+
+### Routine bloodwork → Wellness Screening, NOT Diagnostic
+Transcript: "Caller: I'd like to schedule bloodwork for my senior dog, he's due for his annual check. Agent: Sure, we can do that Thursday."
+Answer: Preventive Care – Wellness Screening (Bloodwork, Urinalysis, Fecals)
+Why: Routine/annual bloodwork is Wellness Screening under Preventive Care, not Diagnostic Services.
 
 ## Categories
 
