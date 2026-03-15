@@ -165,10 +165,12 @@ Choose EXACTLY ONE category from the list below. Match the level of specificity 
 - If a sick pet has specific symptoms (vomiting, ear infection, limping), use the relevant sub-category — you don't need a named procedure
 - Emergency & Critical Care requires actual emergency-level situations (trauma, poisoning, critical symptoms) — not just calling an emergency hospital
 - Routine bloodwork (annual, wellness, pre-op) = Preventive Care – Wellness Screening, NOT Diagnostic Services. Only use Diagnostic when the bloodwork is investigating a specific problem.
+- Admin/rescheduling calls: if the transcript mentions WHAT the appointment is for (surgery, sick visit, etc.), classify by THAT service — only default to Preventive Care when the service type is truly unknown
 - "Other" is a LAST RESORT. Before using Other, check:
-  - Rescheduling/cancelling/admin calls → use Preventive Care (default for admin calls where service is unknown)
+  - Rescheduling/cancelling calls → classify by the underlying service if mentioned, else Preventive Care
   - Nail trims, microchip scans, general checkups → Preventive Care
   - Medication ordering for an existing condition → Retail – Prescriptions
+  - Service not offered (exotics, grooming) → still use the relevant category (e.g., "Surgical Services" if they asked about a procedure)
   - If the caller mentioned ANY medical concern → classify by that concern
 
 ## Examples
@@ -198,6 +200,11 @@ Transcript: "Caller: I need to schedule a yearly appointment for my cat. Agent: 
 Answer: Preventive Care – Annual Exams
 Why: Caller explicitly requests annual/yearly appointment.
 
+### Vaccines + checkup → Vaccinations (primary purpose wins)
+Transcript: "Caller: I need to bring my dog in for his booster shot. Agent: We can also do a quick checkup while he's here."
+Answer: Preventive Care – Vaccinations
+Why: Primary purpose is vaccinations. The checkup is secondary — classify by what the caller called about.
+
 ### Prescription refill → Retail
 Transcript: "Caller: Henry's running out of his medication, can I get a refill?"
 Answer: Retail – Prescriptions
@@ -222,6 +229,16 @@ Why: Admin/rescheduling call with no medical content discussed. Default to Preve
 Transcript: "Caller: I'd like to schedule bloodwork for my senior dog, he's due for his annual check. Agent: Sure, we can do that Thursday."
 Answer: Preventive Care – Wellness Screening (Bloodwork, Urinalysis, Fecals)
 Why: Routine/annual bloodwork is Wellness Screening under Preventive Care, not Diagnostic Services.
+
+### Surgery rescheduling → classify by the surgery, not as Preventive Care
+Transcript: "Caller: I need to reschedule Bella's spay from next week. Agent: How about the 15th?"
+Answer: Surgical Services – Spays and Neuters
+Why: Even though this is a rescheduling call, the underlying service (spay) is mentioned — classify by that.
+
+### Elderly dog declining → End of Life Care, not Urgent Care
+Transcript: "Caller: My 16-year-old lab isn't eating and can barely walk anymore. We think it might be time. Agent: I'm so sorry. Would you like to discuss options?"
+Answer: End of Life Care
+Why: Context (very old pet, "might be time") indicates end-of-life discussion, not just a sick pet visit.
 
 ## Categories
 
