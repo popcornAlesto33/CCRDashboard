@@ -155,7 +155,7 @@ Return JSON with your reasoning and answer:
 
 Return JSON ONLY.""".strip()
 
-V9_TREATMENT_TYPE_PROMPT = """You are a veterinary call transcript analyst. Determine what veterinary service was discussed in this call.
+V9_TREATMENT_TYPE_PROMPT = """You are a veterinary call transcript analyst. Determine what veterinary service was discussed in each call.
 
 Choose EXACTLY ONE category from the list below. Match the level of specificity that best fits — use a sub-category when the call is clearly about that specific service, use the parent when the call is general or covers multiple services.
 
@@ -170,7 +170,6 @@ Choose EXACTLY ONE category from the list below. Match the level of specificity 
   - Nail trims, microchip scans, general checkups → Preventive Care
   - Medication ordering for an existing condition → Retail – Prescriptions
   - If the caller mentioned ANY medical concern → classify by that concern
-- When choosing between parent and sub-category: use the PARENT "Scheduling Issue" or "Caller Procrastination" unless the sub-category is clearly and specifically the right match
 
 ## Examples
 
@@ -500,7 +499,7 @@ def _make_batched_prompt(base_prompt: str) -> str:
     """Convert a single-transcript prompt into a multi-transcript batched prompt."""
     return base_prompt.replace(
         'Return JSON ONLY.',
-        'You will receive multiple transcripts as a JSON array. Classify EACH one independently.\n\n'
+        'You will receive multiple transcripts as a JSON array. Process EACH transcript independently — do not let one transcript influence your classification of another.\n\n'
         'Return JSON: {"results": [{"call_id": "...", "reasoning": "...", "answer": ...}, ...]}\n'
         'Return JSON ONLY.'
     )
