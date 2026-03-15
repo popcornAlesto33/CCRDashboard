@@ -696,6 +696,67 @@ def run_v9_reason_not_booked(
     return results
 
 
+import re as _re
+
+_MEDICAL_KEYWORDS = _re.compile(
+    r'(sick|vomit|limp|pain|bleed|itch|sneez|cough|infect|allergy|diarrhea|seiz|surgery|spay|neuter'
+    r'|dental|vaccin|shot|booster|rabies|bloodwork|blood.?work|blood test|x-ray|xray|ultrasound'
+    r'|emergency|euthan|lump|swollen|limping|not eating|not drinking|discharge|medication|prescription'
+    r'|refill|pills?|tablets?|apoquel|cytopoint|gabapentin|bravecto|interceptor|revolution|advantage'
+    r'|frontline|heartgard|metacam|rimadyl|prednisone|doxycycline|amoxicillin|clavamox|cerenia'
+    r'|zylkene|cosequin|food order|kibble|diet|royal canin|hills|purina|science diet'
+    r'|flea|tick|heartworm|worm|deworming|annual|yearly|wellness|checkup|check.?up'
+    r'|fecal|urine|stool|anal gland|abscess|hot spot|rash|bump|growth|mass|wound|bite|sting'
+    r'|broken|fracture|torn|rupture|blocked|obstruct|put down|put.{0,5}sleep|quality of life'
+    r'|microchip|nail trim|groom|boarding|kennel|records|transfer|file'
+    r'|eye.{0,10}(?:red|swollen|discharge)|ear.{0,10}(?:smell|black|discharge)'
+    r'|shak|trembl|collaps|faint|convuls|panting|drool|foam)',
+    _re.IGNORECASE,
+)
+
+
+def flag_transcript(transcript: str) -> List[str]:
+    """Flag transcript quality/ambiguity issues. Returns list of flag strings.
+
+    Flags:
+        very_short: <3 speaker turns or <100 chars
+        voicemail: caller speaks <5 words (automated greeting)
+        garbled: >5% of words are redacted [MEDICAL_CONDITION] etc.
+        wrong_number: caller says "wrong number"
+        no_medical_content: no medical keywords detected + not a reschedule/admin call
+        admin_no_medical: rescheduling/admin call with no medical keywords
+    """
+    flags = []
+    turns = len(_re.findall(r'(Agent:|Caller:)', transcript))
+    caller_parts = _re.findall(r'Caller:\s*(.*?)(?=Agent:|$)', transcript, _re.DOTALL)
+    caller_words = sum(len(p.split()) for p in caller_parts)
+    total_words = len(transcript.split())
+    redacted = len(_re.findall(r'\[(MEDICAL_CONDITION|DRUG|MEDICAL_PROCESS|INJURY)\]', transcript))
+
+    if turns < 3 or len(transcript) < 100:
+        flags.append('very_short')
+    if caller_words < 5:
+        flags.append('voicemail')
+    if total_words > 0 and redacted / total_words > 0.05:
+        flags.append('garbled')
+    if _re.search(r'wrong number|called the wrong', transcript, _re.IGNORECASE) and len(transcript) < 500:
+        flags.append('wrong_number')
+
+    has_medical = bool(_MEDICAL_KEYWORDS.search(transcript))
+    is_reschedule = bool(_re.search(
+        r'reschedule|cancel.{1,15}appointment|move.{1,15}appointment|change.{1,15}appointment',
+        transcript, _re.IGNORECASE,
+    ))
+
+    if not has_medical:
+        if is_reschedule:
+            flags.append('admin_no_medical')
+        elif turns >= 4:
+            flags.append('no_medical_content')
+
+    return flags
+
+
 def v9_assemble(
     calls: List[Dict],
     appt_results: Dict[str, dict],
@@ -725,15 +786,17 @@ def v9_assemble(
         if appt == "No" and reason is None:
             logger.warning(f"  Assembly {cid}: appointment_booked=No but reason_not_booked is null — flagging for review")
 
+        # Transcript quality flags
+        transcript_flags = flag_transcript(c.get("transcript", ""))
+
         predictions[cid] = {
             "call_id": cid,
             "appointment_booked": appt,
             "client_type": client,
             "treatment_type": treatment,
             "reason_not_booked": reason,
+            "transcript_flags": transcript_flags,
             # TODO: Name extraction stubbed out for v9 initial implementation.
-            # Names are not scored in accuracy metrics so this doesn't affect validation.
-            # Can be added later by parsing reasoning outputs or regex on raw transcript.
             "stated_hospital_name": None,
             "stated_patient_name": None,
             "agent_name": None,
