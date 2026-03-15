@@ -34,6 +34,28 @@ from openai import OpenAI
 script_dir = os.path.dirname(os.path.abspath(__file__))
 project_dir = os.path.dirname(script_dir)
 
+# ============================================================
+# PROVIDER CONFIGURATION
+# ============================================================
+
+PROVIDERS = {
+    "gemini": {
+        "api_key_env": "GEMINI_API_KEY",
+        "base_url_env": "GEMINI_BASE_URL",
+        "base_url_default": "https://generativelanguage.googleapis.com/v1beta/openai/",
+        "reasoning_model_default": "gemini-2.5-pro",
+        "classification_model_default": "gemini-2.5-flash",
+    },
+    "openai": {
+        "api_key_env": "OPENAI_API_KEY",
+        "base_url_env": "OPENAI_BASE_URL",
+        "base_url_default": "https://api.openai.com/v1",
+        "reasoning_model_default": "gpt-5",
+        "classification_model_default": "gpt-4o-mini",
+    },
+}
+
+# Legacy fallback: LLM_API_KEY / LLM_BASE_URL still work if no provider is specified
 DEFAULT_LLM_BASE_URL = os.getenv("LLM_BASE_URL", "https://generativelanguage.googleapis.com/v1beta/openai/")
 
 logging.basicConfig(level=logging.INFO, format="%(asctime)s - %(levelname)s - %(message)s")
@@ -456,6 +478,79 @@ def run_v9_field_call(
             _v9_semaphore.release()
 
 
+def _make_batched_prompt(base_prompt: str) -> str:
+    """Convert a single-transcript prompt into a multi-transcript batched prompt."""
+    return base_prompt.replace(
+        'Return JSON ONLY.',
+        'You will receive multiple transcripts as a JSON array. Classify EACH one independently.\n\n'
+        'Return JSON: {"results": [{"call_id": "...", "reasoning": "...", "answer": ...}, ...]}\n'
+        'Return JSON ONLY.'
+    )
+
+
+def _make_batched_schema(single_schema: dict) -> dict:
+    """Convert a single-result schema into a batched results schema."""
+    single_item = single_schema["json_schema"]["schema"].copy()
+    item_props = {**single_item["properties"], "call_id": {"type": "string"}}
+    item_required = list(single_item["required"]) + ["call_id"]
+    return {
+        "type": "json_schema",
+        "json_schema": {
+            "name": single_schema["json_schema"]["name"] + "_batch",
+            "strict": True,
+            "schema": {
+                "type": "object",
+                "properties": {
+                    "results": {
+                        "type": "array",
+                        "items": {
+                            "type": "object",
+                            "properties": item_props,
+                            "required": item_required,
+                            "additionalProperties": False,
+                        }
+                    }
+                },
+                "required": ["results"],
+                "additionalProperties": False,
+            }
+        }
+    }
+
+
+def _run_v9_multi_call(client, model, calls_batch, system_prompt, step_name, response_schema=None):
+    """Send multiple transcripts in a single API call. Returns {call_id: result}."""
+    payload = json.dumps([
+        {"call_id": c["id"], "transcript": c["transcript"]}
+        for c in calls_batch
+    ])
+    messages = [
+        {"role": "system", "content": system_prompt},
+        {"role": "user", "content": payload},
+    ]
+    for attempt in range(3):
+        _v9_semaphore.acquire()
+        try:
+            resp = client.chat.completions.create(
+                model=model, messages=messages, temperature=0.0,
+                response_format=response_schema or {"type": "json_object"},
+            )
+            track_usage(resp, "reasoning")
+            result = json.loads(resp.choices[0].message.content)
+            items = result.get("results", [])
+            return {str(item.get("call_id", "")): item for item in items}
+        except Exception as e:
+            if attempt < 2:
+                wait = (attempt + 1) * 1.0
+                logger.warning(f"  {step_name} batch attempt {attempt+1} failed: {e}. Retrying in {wait}s...")
+                time.sleep(wait)
+            else:
+                logger.error(f"  {step_name} batch failed after 3 attempts: {e}")
+                return {c["id"]: {"call_id": c["id"], "error": str(e)} for c in calls_batch}
+        finally:
+            _v9_semaphore.release()
+
+
 def run_v9_field_batch(
     client: OpenAI,
     model: str,
@@ -465,37 +560,59 @@ def run_v9_field_batch(
     step_name: str,
     response_schema=None,
 ) -> dict:
-    """Run a field classifier for all calls using thread pool.
+    """Run a field classifier for all calls.
 
-    Each call gets its own API call (one transcript per request).
-    The global semaphore (_v9_semaphore) handles rate limiting.
-    batch_size is reserved for future multi-transcript batching but
-    currently unused — all calls run as individual requests via thread pool.
+    If batch_size <= 1: one transcript per API call (original approach).
+    If batch_size > 1: multiple transcripts per API call (batched).
+    All batches run concurrently via thread pool.
 
     Returns {call_id: {"reasoning": ..., "answer": ...}}.
     """
     from concurrent.futures import ThreadPoolExecutor, as_completed
 
     results = {}
-    logger.info(f"  {step_name}: processing {len(calls)} calls via thread pool")
 
-    with ThreadPoolExecutor(max_workers=15) as pool:
-        futures = {
-            pool.submit(
-                run_v9_field_call,
-                client, model, c["id"], c["transcript"], system_prompt, step_name,
-                response_schema,
-            ): c["id"]
-            for c in calls
-        }
-        for future in as_completed(futures):
-            cid = futures[future]
-            try:
-                result = future.result()
-                results[cid] = result
-            except Exception as e:
-                logger.error(f"  {step_name} {cid} thread error: {e}")
-                results[cid] = {"call_id": cid, "error": str(e)}
+    if batch_size <= 1:
+        # Single-transcript mode
+        logger.info(f"  {step_name}: processing {len(calls)} calls individually via thread pool")
+        with ThreadPoolExecutor(max_workers=15) as pool:
+            futures = {
+                pool.submit(
+                    run_v9_field_call,
+                    client, model, c["id"], c["transcript"], system_prompt, step_name,
+                    response_schema,
+                ): c["id"]
+                for c in calls
+            }
+            for future in as_completed(futures):
+                cid = futures[future]
+                try:
+                    result = future.result()
+                    results[cid] = result
+                except Exception as e:
+                    logger.error(f"  {step_name} {cid} thread error: {e}")
+                    results[cid] = {"call_id": cid, "error": str(e)}
+    else:
+        # Multi-transcript batched mode
+        batched_prompt = _make_batched_prompt(system_prompt)
+        batched_schema = _make_batched_schema(response_schema) if response_schema else None
+        batches = [calls[i:i + batch_size] for i in range(0, len(calls), batch_size)]
+        logger.info(f"  {step_name}: processing {len(calls)} calls in {len(batches)} batches of {batch_size}")
+
+        with ThreadPoolExecutor(max_workers=15) as pool:
+            futures = {
+                pool.submit(
+                    _run_v9_multi_call,
+                    client, model, batch, batched_prompt, step_name, batched_schema,
+                ): i
+                for i, batch in enumerate(batches)
+            }
+            for future in as_completed(futures):
+                try:
+                    batch_results = future.result()
+                    results.update(batch_results)
+                except Exception as e:
+                    logger.error(f"  {step_name} batch thread error: {e}")
 
     return results
 
@@ -940,8 +1057,10 @@ def main():
     parser.add_argument("--max-calls", type=int, default=0, help="Max calls to validate (0=all)")
     parser.add_argument("--reasoning-batch-size", type=int, default=4)
     parser.add_argument("--classification-batch-size", type=int, default=8)
-    parser.add_argument("--reasoning-model", default=os.getenv("REASONING_MODEL", "gemini-2.5-pro"))
-    parser.add_argument("--classification-model", default=os.getenv("CLASSIFICATION_MODEL", "gemini-2.5-flash"))
+    parser.add_argument("--reasoning-model", default=None,
+                        help="Override reasoning model (default: provider's default)")
+    parser.add_argument("--classification-model", default=None,
+                        help="Override classification model (default: provider's default)")
     parser.add_argument("--single-model", action="store_true", help="Test single-model mode")
     parser.add_argument("--random", action="store_true", help="Randomly sample calls instead of first N")
     parser.add_argument("--seed", type=int, default=42, help="Random seed for reproducibility")
@@ -950,6 +1069,9 @@ def main():
                         help="Pipeline mode: v8 (two-model), v9 (field-decomposed), or original (pre-v1 prompt)")
     parser.add_argument("--v9-batch-size", type=int, default=2,
                         help="Batch size for v9 field classifiers (default: 2)")
+    parser.add_argument("--provider", default=None, choices=["gemini", "openai"],
+                        help="LLM provider (reads provider-specific keys from .env). "
+                             "If omitted, falls back to LLM_API_KEY/LLM_BASE_URL.")
     args = parser.parse_args()
 
     # Load data
@@ -968,11 +1090,32 @@ def main():
 
     calls = [{"id": cid, "transcript": data[cid]["transcript"]} for cid in call_ids]
 
-    # Initialize LLM client via OpenAI-compatible API
-    api_key = os.getenv("LLM_API_KEY")
-    if not api_key:
-        raise RuntimeError("LLM_API_KEY not found in environment or .env")
-    client = OpenAI(api_key=api_key, base_url=DEFAULT_LLM_BASE_URL, max_retries=3)
+    # Initialize LLM client — provider-aware
+    if args.provider:
+        prov = PROVIDERS[args.provider]
+        api_key = os.getenv(prov["api_key_env"])
+        if not api_key:
+            raise RuntimeError(f"{prov['api_key_env']} not found in environment or .env")
+        base_url = os.getenv(prov["base_url_env"], prov["base_url_default"])
+        # Apply provider defaults for models if not overridden
+        if not args.reasoning_model:
+            args.reasoning_model = prov["reasoning_model_default"]
+        if not args.classification_model:
+            args.classification_model = prov["classification_model_default"]
+        logger.info(f"Provider: {args.provider} | base_url: {base_url}")
+    else:
+        # Legacy: use LLM_API_KEY / LLM_BASE_URL
+        api_key = os.getenv("LLM_API_KEY")
+        if not api_key:
+            raise RuntimeError("LLM_API_KEY not found in environment or .env. Use --provider or set LLM_API_KEY.")
+        base_url = DEFAULT_LLM_BASE_URL
+        if not args.reasoning_model:
+            args.reasoning_model = os.getenv("REASONING_MODEL", "gemini-2.5-pro")
+        if not args.classification_model:
+            args.classification_model = os.getenv("CLASSIFICATION_MODEL", "gemini-2.5-flash")
+
+    client = OpenAI(api_key=api_key, base_url=base_url, max_retries=3)
+    logger.info(f"Models: reasoning={args.reasoning_model}, classification={args.classification_model}")
 
     # Initialize optional debug variables
     reasoning_debug = None  # v9 mode

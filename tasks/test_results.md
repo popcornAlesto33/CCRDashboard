@@ -305,6 +305,26 @@ Tested gemini-2.5-flash as a cheaper alternative to Pro for each field.
 - Flash lacks reasoning power for fine-grained sub-category distinctions (Urgent Care parent vs sub, Preventive Care sub-categories)
 - **Recommended hybrid:** Flash Step 1 + Pro Step 2 for treatment_type
 
+### Batching Impact (2026-03-15)
+
+Tested batch_size=1 vs 5 on n=50 to measure accuracy impact of batching.
+
+| Field | Flash bs=1 | Flash bs=5 | GPT-4o-mini bs=1 | GPT-4o-mini bs=5 |
+|-------|:---:|:---:|:---:|:---:|
+| appointment_booked | 90.0% | 89.8% (-0.2pp) | 90.0% | 82.0% (-8pp) |
+| client_type | 90.0% | 92.0% (+2pp) | 82.0% | 80.0% (-2pp) |
+| treatment_type | 58.0% | 60.0% (+2pp) | 62.0% | 48.0% (-14pp) |
+
+**Key findings:**
+- **Flash is batch-resistant** — no accuracy loss at batch_size=5, even slight improvement on client_type and treatment_type
+- **GPT-4o-mini degrades badly with batching** — -8pp on appointment_booked, -14pp on treatment_type
+- Flash batch_size=5 uses 5x fewer API calls (10 vs 50)
+- GPT-4o-mini at batch_size=1 beats Flash on treatment_type (62% vs 58%) — viable as second opinion for flagged calls
+
+**Production throughput at batch_size=5 (Flash):**
+- 60K transcripts: 12,000 API calls per field × 4 fields = 48,000 API calls
+- At 10K RPD: ~5 days total
+
 ### Recommended Production Architecture
 
 | Field | Model | Rationale |
