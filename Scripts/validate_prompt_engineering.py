@@ -53,6 +53,13 @@ PROVIDERS = {
         "reasoning_model_default": "gpt-5",
         "classification_model_default": "gpt-4o-mini",
     },
+    "anthropic": {
+        "api_key_env": "ANTHROPIC_API_KEY",
+        "base_url_env": "ANTHROPIC_BASE_URL",
+        "base_url_default": "https://api.anthropic.com/v1/",
+        "reasoning_model_default": "claude-sonnet-4-5-20250514",
+        "classification_model_default": "claude-haiku-4-5-20251001",
+    },
 }
 
 # Legacy fallback: LLM_API_KEY / LLM_BASE_URL still work if no provider is specified
@@ -113,12 +120,29 @@ The appointment_booked decision has already been made: {appointment_booked}
 ## Key Distinctions
 
 - **Parent vs sub-category:** Use the PARENT category (e.g., "1. Caller Procrastination" or "2. Scheduling Issue") unless the sub-category is a clear, unambiguous match. When in doubt, use the parent.
-- If pricing/cost was discussed AT ANY POINT and caller didn't book → use 1a (Price Objection). EXCEPTION: if the caller's primary reason for not booking was clearly something else (e.g., schedule was full, service not offered) and they just asked price as a secondary question, use the primary reason instead.
+- **Price Objection (1a):** If pricing/cost was discussed AT ANY POINT and the caller didn't book → use 1a. This is aggressive by design — any price discussion + no booking = 1a.
 - "I'll think about it" with NO price discussion → 1 (Procrastination)
 - Caller cancels and says they'll reschedule later → 1 (Procrastination), NOT 9 (Client/appt query)
 - Wants same-day, told none available → 2a
 - Schedule full for days/weeks → 2b
 - If scheduling was the issue but you're unsure between 2a/2b/2c/2d → use parent "2. Scheduling Issue"
+
+## Examples
+
+### Price discussed + no booking → always 1a
+Transcript: "Caller: How much for a spay? Agent: $350. Caller: Okay, I'll think about it."
+Answer: "1a. Caller Procrastination - Price Objection / Shopping / Request for Quote"
+Why: Price was discussed and no booking was made. Always 1a when price comes up.
+
+### Caller cancels and will reschedule → Procrastination
+Transcript: "Caller: I need to cancel Thursday's appointment, something came up. I'll call back next week."
+Answer: "1. Caller Procrastination"
+Why: Caller is postponing, not objecting to price or encountering a scheduling barrier.
+
+### Schedule too far out → Scheduling Issue (parent)
+Transcript: "Caller: When's the soonest for a spay? Agent: June 17th. Caller: That's too far out. I'll look elsewhere."
+Answer: "2. Scheduling Issue"
+Why: Scheduling availability is the barrier. Use parent unless clearly same-day (2a) or multi-week full (2b).
 
 ## Categories
 
@@ -1166,7 +1190,7 @@ def main():
                         help="Pipeline mode: v8 (two-model), v9 (field-decomposed), or original (pre-v1 prompt)")
     parser.add_argument("--v9-batch-size", type=int, default=2,
                         help="Batch size for v9 field classifiers (default: 2)")
-    parser.add_argument("--provider", default=None, choices=["gemini", "openai"],
+    parser.add_argument("--provider", default=None, choices=["gemini", "openai", "anthropic"],
                         help="LLM provider (reads provider-specific keys from .env). "
                              "If omitted, falls back to LLM_API_KEY/LLM_BASE_URL.")
     args = parser.parse_args()
