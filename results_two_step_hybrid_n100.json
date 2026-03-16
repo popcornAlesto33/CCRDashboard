@@ -1,0 +1,1270 @@
+{
+  "accuracy": 0.63,
+  "correct": 63,
+  "total": 100,
+  "step1_results": {
+    "CAL0198385255f8738ca83ae22e29e15dcc": {
+      "call_id": "CAL0198385255f8738ca83ae22e29e15dcc",
+      "reasoning": "The caller is asking for recommendations for cat boarding, which is not a direct veterinary service provided by the clinic.",
+      "answer": "Other"
+    },
+    "CAL0198385b6e3772fc89e3f22f41af0b46": {
+      "call_id": "CAL0198385b6e3772fc89e3f22f41af0b46",
+      "reasoning": "The caller's dog has a rash that needs to be examined, which is a primary complaint related to skin/allergy issues.",
+      "answer": "Dermatology"
+    },
+    "CAL01983864fd50700396fe8fb50860c0ae": {
+      "call_id": "CAL01983864fd50700396fe8fb50860c0ae",
+      "reasoning": "The caller is inquiring if the clinic treats exotic animals like a bearded dragon. This is an informational call about the scope of services.",
+      "answer": "Other"
+    },
+    "CAL01983872f881791f9d0eae5c58b35de9": {
+      "call_id": "CAL01983872f881791f9d0eae5c58b35de9",
+      "reasoning": "The caller is requesting anxiety medication for a kitten to be used before a spay surgery. While the surgery is elsewhere, the medication is directly related to a surgical procedure.",
+      "answer": "Surgical Services"
+    },
+    "CAL0198387534b27b21af285cf499eac523": {
+      "call_id": "CAL0198387534b27b21af285cf499eac523",
+      "reasoning": "The caller is rescheduling an appointment for Benji, but the type of service for the appointment is not specified. As per instructions, rescheduling/admin calls with unclear service type default to Preventive Care.",
+      "answer": "Preventive Care"
+    },
+    "CAL019838760fe97e58898d00136787ed15": {
+      "call_id": "CAL019838760fe97e58898d00136787ed15",
+      "reasoning": "The caller needs more tick medication for their dog, which falls under parasite prevention.",
+      "answer": "Preventive Care"
+    },
+    "CAL0198387a31297659b98d57bb828b2c1d": {
+      "call_id": "CAL0198387a31297659b98d57bb828b2c1d",
+      "reasoning": "The caller is inquiring about X-rays because they suspect their dog might have a bone stuck in its intestinal tract, making the primary focus a diagnostic procedure.",
+      "answer": "Diagnostic Services"
+    },
+    "CAL0198387ec66d739fb6850962fd609815": {
+      "call_id": "CAL0198387ec66d739fb6850962fd609815",
+      "reasoning": "The caller is ordering a refill for amitriptyline liquid medication for their cat.",
+      "answer": "Retail"
+    },
+    "CAL01983885684f7cfeaf588dcf1f8a9e28": {
+      "call_id": "CAL01983885684f7cfeaf588dcf1f8a9e28",
+      "reasoning": "The primary service discussed is an annual exam for two pets, which is a routine wellness visit.",
+      "answer": "Preventive Care"
+    },
+    "CAL019838906bb373e3b8900dfb87d1f627": {
+      "call_id": "CAL019838906bb373e3b8900dfb87d1f627",
+      "reasoning": "The caller is returning cat food and discussing different types of specialized food (hydrolyzed protein, urinary diet) and canned food options, which is related to retail and dietary advice.",
+      "answer": "Retail"
+    },
+    "CAL00cc318557b84211830f8f9165abff38": {
+      "call_id": "CAL00cc318557b84211830f8f9165abff38",
+      "reasoning": "The caller is booking an appointment for their dog due to a recurring yeast ear infection, which is a dermatological issue.",
+      "answer": "Dermatology"
+    },
+    "CAL00d3bb91c37c494dae58d1f03970cf7c": {
+      "call_id": "CAL00d3bb91c37c494dae58d1f03970cf7c",
+      "reasoning": "The caller is looking to book a spay and vaccines for their dog. Spaying is a surgical procedure.",
+      "answer": "Surgical Services"
+    },
+    "CAL00ddc5b018204683a8005f80fb0cb08d": {
+      "call_id": "CAL00ddc5b018204683a8005f80fb0cb08d",
+      "reasoning": "The caller is canceling an appointment and then inquiring about flea and tick medication, which falls under preventive care.",
+      "answer": "Preventive Care"
+    },
+    "CAL00e3726d100f45e8913c8f8dfb2fd4ce": {
+      "call_id": "CAL00e3726d100f45e8913c8f8dfb2fd4ce",
+      "reasoning": "The caller's cat is limping and has a swollen paw, indicating an injury or illness.",
+      "answer": "Urgent Care / Sick Pet"
+    },
+    "CAL011c013103cb49bc84379c12992b27a6": {
+      "call_id": "CAL011c013103cb49bc84379c12992b27a6",
+      "reasoning": "The caller is seeking advice on medication for a cat with repeated medical conditions in its nails, which is related to a sick pet's treatment.",
+      "answer": "Urgent Care / Sick Pet"
+    },
+    "CAL011ebf53493445e7896fed44ce7c81f6": {
+      "call_id": "CAL011ebf53493445e7896fed44ce7c81f6",
+      "reasoning": "The caller is booking an appointment for their dog due to symptoms of old age, eating less, and difficulty with stairs, indicating a sick or ailing pet.",
+      "answer": "Urgent Care / Sick Pet"
+    },
+    "CAL0123fdba3d2942b0af41e1ee7d7d3bac": {
+      "call_id": "CAL0123fdba3d2942b0af41e1ee7d7d3bac",
+      "reasoning": "The caller's dog has a suspected burst anal gland, which is a medical issue requiring urgent attention.",
+      "answer": "Urgent Care / Sick Pet"
+    },
+    "CAL012c4a0f78834f90b4d5b3a24657a2d8": {
+      "call_id": "CAL012c4a0f78834f90b4d5b3a24657a2d8",
+      "reasoning": "The caller is booking an appointment for a new kitten, which typically involves a wellness check and initial vaccinations.",
+      "answer": "Preventive Care"
+    },
+    "CAL01307cbeca1945d3a9201018704f109a": {
+      "call_id": "CAL01307cbeca1945d3a9201018704f109a",
+      "reasoning": "The caller's dog has a 'big bump' under its eye, which is a symptom requiring a vet visit for diagnosis and treatment.",
+      "answer": "Urgent Care / Sick Pet"
+    },
+    "CAL013ccba9eedc4e67a1005d99fc3fa4bb": {
+      "call_id": "CAL013ccba9eedc4e67a1005d99fc3fa4bb",
+      "reasoning": "The caller's cat has matted fur with bleeding underneath, indicating an injury or urgent medical issue.",
+      "answer": "Urgent Care / Sick Pet"
+    },
+    "CAL014854d99d7940c1910271fee0349169": {
+      "call_id": "CAL014854d99d7940c1910271fee0349169",
+      "reasoning": "The caller is booking an appointment for overdue vaccines and an annual exam, and also ordering dog food. The primary service is preventive care.",
+      "answer": "Preventive Care"
+    },
+    "CAL014b1b4985f340e8ba39b659373275b2": {
+      "call_id": "CAL014b1b4985f340e8ba39b659373275b2",
+      "reasoning": "The caller is inquiring about a wellness check and vaccinations for their two cats, which are routine preventive services.",
+      "answer": "Preventive Care"
+    },
+    "CAL01568eebe6a143918c7fc238f5562f6b": {
+      "call_id": "CAL01568eebe6a143918c7fc238f5562f6b",
+      "reasoning": "The caller is booking an appointment to get their dog's vaccines updated, which is a preventive care service.",
+      "answer": "Preventive Care"
+    },
+    "CAL0158a08f881a40c592c795ca67df298b": {
+      "call_id": "CAL0158a08f881a40c592c795ca67df298b",
+      "reasoning": "The caller's dog is 'convulsing pretty bad', which is a life-threatening symptom requiring emergency care.",
+      "answer": "Emergency & Critical Care"
+    },
+    "CAL017e403dd5c64398ac43ffe88d4b3cf5": {
+      "call_id": "CAL017e403dd5c64398ac43ffe88d4b3cf5",
+      "reasoning": "The caller is booking an appointment for their cats' 'yearly thingama. Dewey', which is confirmed to be for their annual exam and vaccines.",
+      "answer": "Preventive Care"
+    },
+    "CAL0081cff67cb34ae0b30d1dc0b426d15c": {
+      "call_id": "CAL0081cff67cb34ae0b30d1dc0b426d15c",
+      "reasoning": "The caller is booking an appointment for a new rescue dog for a general check-up, vaccines, tick prevention, and microchip insertion, all of which fall under routine health maintenance.",
+      "answer": "Preventive Care"
+    },
+    "CAL0083311f69934f448c9bbac4cb31ed5e": {
+      "call_id": "CAL0083311f69934f448c9bbac4cb31ed5e",
+      "reasoning": "The caller is inquiring about the cost of euthanizing a rabbit, including associated fees like examination and cremation.",
+      "answer": "End of Life Care"
+    },
+    "CAL00848f2fc8ea47239cff6c6c1177f95a": {
+      "call_id": "CAL00848f2fc8ea47239cff6c6c1177f95a",
+      "reasoning": "The primary medical reason for the call is a suspected ear infection in a cat, which is a dermatology issue. The food order is secondary.",
+      "answer": "Dermatology"
+    },
+    "CAL0084da0fae0c4da6a7bfdabc646c5ba9": {
+      "call_id": "CAL0084da0fae0c4da6a7bfdabc646c5ba9",
+      "reasoning": "The caller is inquiring about consultation costs and the price of Apoquel, a medication specifically for allergy/dermatology issues, for their dog.",
+      "answer": "Dermatology"
+    },
+    "CAL008550503109471bb301dbdb52ea8453": {
+      "call_id": "CAL008550503109471bb301dbdb52ea8453",
+      "reasoning": "The caller is rescheduling a 'checkup' for their cat, which is a routine wellness visit.",
+      "answer": "Preventive Care"
+    },
+    "CAL008a74d19188416cbd3be39780335bbb": {
+      "call_id": "CAL008a74d19188416cbd3be39780335bbb",
+      "reasoning": "The caller dialed the wrong number and no veterinary service was discussed.",
+      "answer": "N/A (missed call)"
+    },
+    "CAL008db269e7294a62a394fecdbe852724": {
+      "call_id": "CAL008db269e7294a62a394fecdbe852724",
+      "reasoning": "The caller is rescheduling an appointment for their pet, but the specific type of service is not mentioned, so it defaults to preventive care.",
+      "answer": "Preventive Care"
+    },
+    "CAL008f2a090e7f4d42a4488a553045d64f": {
+      "call_id": "CAL008f2a090e7f4d42a4488a553045d64f",
+      "reasoning": "The caller is booking an 'annual checkup' and 'vaccines' for two older cats, which are routine wellness services.",
+      "answer": "Preventive Care"
+    },
+    "CAL00929b7f48514a6b85c94fad4b997d9f": {
+      "call_id": "CAL00929b7f48514a6b85c94fad4b997d9f",
+      "reasoning": "The caller is seeking an appointment for a dog with an eye issue ('something going on with his left eye', 'keeps closing it'), indicating a sick pet needing attention.",
+      "answer": "Urgent Care / Sick Pet"
+    },
+    "CAL009fecf1e3dc43fcb124f083b4886d34": {
+      "call_id": "CAL009fecf1e3dc43fcb124f083b4886d34",
+      "reasoning": "The caller is rescheduling an appointment for their two cats, but the specific type of service is not mentioned, so it defaults to preventive care.",
+      "answer": "Preventive Care"
+    },
+    "CAL00a0052f044140e2ab2535a85367c137": {
+      "call_id": "CAL00a0052f044140e2ab2535a85367c137",
+      "reasoning": "The caller is following up on a paw print related to a previous cremation service for their dog.",
+      "answer": "End of Life Care"
+    },
+    "CAL00a33094c71445c3896aac927ab0c6b9": {
+      "call_id": "CAL00a33094c71445c3896aac927ab0c6b9",
+      "reasoning": "The caller is specifically inquiring about the cost of an X-ray for a dog's kidneys, which is a diagnostic procedure.",
+      "answer": "Diagnostic Services"
+    },
+    "CAL00b175c88b6d4b20a8f2ecb4d226d689": {
+      "call_id": "CAL00b175c88b6d4b20a8f2ecb4d226d689",
+      "reasoning": "The caller is rescheduling an appointment for their pet, but the specific type of service is not mentioned, so it defaults to preventive care.",
+      "answer": "Preventive Care"
+    },
+    "CAL00bf0e33a835402c8e1ab317b17d16ce": {
+      "call_id": "CAL00bf0e33a835402c8e1ab317b17d16ce",
+      "reasoning": "The caller is booking an appointment for a dog that 'broke his nail' and has a 'slight limp', indicating an injury needing attention.",
+      "answer": "Urgent Care / Sick Pet"
+    },
+    "CAL00c4d944580b454fa32ba23e0a439d9f": {
+      "call_id": "CAL00c4d944580b454fa32ba23e0a439d9f",
+      "reasoning": "The caller is inquiring about the cost to 'put down' their cat and discusses cremation options.",
+      "answer": "End of Life Care"
+    },
+    "CAL0039a82c50d340abaf5823d06785a4a0": {
+      "call_id": "CAL0039a82c50d340abaf5823d06785a4a0",
+      "reasoning": "The transcript is an automated message indicating the office is closed and offering options to schedule an appointment. There is no actual conversation or service discussed.",
+      "answer": "N/A (missed call)"
+    },
+    "CAL003a2122cd8542c481baf4ddc8e40d80": {
+      "call_id": "CAL003a2122cd8542c481baf4ddc8e40d80",
+      "reasoning": "The caller explicitly states they want to book an appointment for 'seasonal allergy stuff because he's getting itchy' and also 'Perfecto or tick stuff as well.' The agent also notes the dog is due for vaccines. The primary complaint of itchiness and seasonal allergies falls under Dermatology, even though other preventive care items are added.",
+      "answer": "Dermatology"
+    },
+    "CAL00415f59577343e1aaad08431561d554": {
+      "call_id": "CAL00415f59577343e1aaad08431561d554",
+      "reasoning": "The caller is specifically asking to book an appointment for their dog to receive a Bordetella vaccine, which is a routine vaccination.",
+      "answer": "Preventive Care"
+    },
+    "CAL00427bb94384468b8457c5b48be0dffa": {
+      "call_id": "CAL00427bb94384468b8457c5b48be0dffa",
+      "reasoning": "The caller wants to book a 'yearly appointment' for their cat, and the agent confirms it's for the 'annual appointment, the physical and the vaccines' and recommends fecal checks. This is routine wellness and preventive care.",
+      "answer": "Preventive Care"
+    },
+    "CAL00584c7b588f4128be84a13ff49dbe96": {
+      "call_id": "CAL00584c7b588f4128be84a13ff49dbe96",
+      "reasoning": "The caller is inquiring about the soonest date to get her female cat spayed, which is a surgical procedure.",
+      "answer": "Surgical Services"
+    },
+    "CAL0059cd46261848899dadd858b1297a7a": {
+      "call_id": "CAL0059cd46261848899dadd858b1297a7a",
+      "reasoning": "The caller wants to 'neuter her' cat (referring to a spay for a female cat) and asks about the process and fastest time. This is a surgical procedure.",
+      "answer": "Surgical Services"
+    },
+    "CAL005e941190aa4eeeb16b5520f59e8526": {
+      "call_id": "CAL005e941190aa4eeeb16b5520f59e8526",
+      "reasoning": "The caller is asking about the cost of her dog's vaccination appointment, which is a routine preventive service.",
+      "answer": "Preventive Care"
+    },
+    "CAL00644c70bf09449a835487c3ddc673b2": {
+      "call_id": "CAL00644c70bf09449a835487c3ddc673b2",
+      "reasoning": "The caller has two new puppies and wants to get their 'needles' (vaccines) and 'stuff for ticks and for the parasites.' These are all routine preventive care items.",
+      "answer": "Preventive Care"
+    },
+    "CAL00653e0d49dc40199c3e555625cb2117": {
+      "call_id": "CAL00653e0d49dc40199c3e555625cb2117",
+      "reasoning": "The caller's cat is 'not doing so well,' drinking a lot of water, urinating on the floor, and seems uncomfortable. These are symptoms of a sick pet requiring urgent attention.",
+      "answer": "Urgent Care / Sick Pet"
+    },
+    "CAL0068dc66d062488fa1f4879724451050": {
+      "call_id": "CAL0068dc66d062488fa1f4879724451050",
+      "reasoning": "The caller's dog has a 'strange limp' and is 'very sore in her hind end,' having difficulty getting up. They are seeking an examination and potential X-rays for this injury/sickness.",
+      "answer": "Urgent Care / Sick Pet"
+    },
+    "CAL006c0c3985f84e298f13d3d696ce8650": {
+      "call_id": "CAL006c0c3985f84e298f13d3d696ce8650",
+      "reasoning": "The caller is looking to schedule their dog Thor for vaccines, specifically rabies, distemper, and discussing Bordetella. These are routine vaccinations.",
+      "answer": "Preventive Care"
+    },
+    "CAL00747d7c7e454434a6fbb219ddef83b0": {
+      "call_id": "CAL00747d7c7e454434a6fbb219ddef83b0",
+      "reasoning": "The caller's dog is 'due for an appointment' and received a reminder for leptospirosis and kennel cough vaccines. This is routine preventive care.",
+      "answer": "Preventive Care"
+    },
+    "CAL007df41abd3e463298f55c7d7d733d9a": {
+      "call_id": "CAL007df41abd3e463298f55c7d7d733d9a",
+      "reasoning": "The caller is booking an appointment for their dog Gracie to receive her 'shot,' which is confirmed to be for 'annual vaccine.' This is routine preventive care.",
+      "answer": "Preventive Care"
+    },
+    "CAL00803d059d424bb296f8f9916a7115fd": {
+      "call_id": "CAL00803d059d424bb296f8f9916a7115fd",
+      "reasoning": "The caller is making an appointment for their dog Archie who is 'overdue for some shots,' specifically Bordetella and leptospirosis. These are routine vaccinations.",
+      "answer": "Preventive Care"
+    },
+    "CAL00817a0b30d241d39d3953af8bdffd0e": {
+      "call_id": "CAL00817a0b30d241d39d3953af8bdffd0e",
+      "reasoning": "The caller is booking an appointment for both of their dogs for 'vaccines, whatever they were out of date for.' This is routine preventive care.",
+      "answer": "Preventive Care"
+    },
+    "CAL0198381fff847e6d97bd58d60abcb00e": {
+      "call_id": "CAL0198381fff847e6d97bd58d60abcb00e",
+      "reasoning": "The caller is scheduling an annual exam and vaccines for their dog, which falls under routine preventative care.",
+      "answer": "Preventive Care"
+    },
+    "CAL01983822ac26708db3b026da626a071c": {
+      "call_id": "CAL01983822ac26708db3b026da626a071c",
+      "reasoning": "The caller is inquiring if the clinic is a holistic veterinary clinic, which is a general inquiry about the clinic's services/philosophy, not a specific pet service.",
+      "answer": "Other"
+    },
+    "CAL019838234a5573079b0722f822b613f7": {
+      "call_id": "CAL019838234a5573079b0722f822b613f7",
+      "reasoning": "The caller is asking about the availability of specific pet food (diabetes food) for pickup, which is a retail transaction.",
+      "answer": "Retail"
+    },
+    "CAL01983823e3fd7e76a7ec906121a17dee": {
+      "call_id": "CAL01983823e3fd7e76a7ec906121a17dee",
+      "reasoning": "The caller is requesting to pick up specific wet and dry pet food, which is a retail transaction.",
+      "answer": "Retail"
+    },
+    "CAL019838277cc37e93b4c1a543fa522122": {
+      "call_id": "CAL019838277cc37e93b4c1a543fa522122",
+      "reasoning": "The caller's cat has been coughing and trying to throw up hairballs for several days, indicating a sick pet needing attention.",
+      "answer": "Urgent Care / Sick Pet"
+    },
+    "CAL01983828e7347b6281fe9fa52524f73e": {
+      "call_id": "CAL01983828e7347b6281fe9fa52524f73e",
+      "reasoning": "The caller needs proof of their dog's rabies shot for grooming, which is an administrative request related to a preventative vaccine.",
+      "answer": "Preventive Care"
+    },
+    "CAL0198382a648d7ea09d62d10d36e470d7": {
+      "call_id": "CAL0198382a648d7ea09d62d10d36e470d7",
+      "reasoning": "The caller is inquiring about tail docking for puppies, which is a surgical procedure.",
+      "answer": "Surgical Services"
+    },
+    "CAL01983837207c78339c0dc0ac40dc2540": {
+      "call_id": "CAL01983837207c78339c0dc0ac40dc2540",
+      "reasoning": "The caller is rescheduling an appointment for a 'checkup' for their dog, which is a wellness visit.",
+      "answer": "Preventive Care"
+    },
+    "CAL0198383ba24b764186763c2357974ba3": {
+      "call_id": "CAL0198383ba24b764186763c2357974ba3",
+      "reasoning": "The caller is asking about the price and options for 'putting the dog down', which refers to euthanasia.",
+      "answer": "End of Life Care"
+    },
+    "CAL0198383bf2cd7adaa841d36177d17bbc": {
+      "call_id": "CAL0198383bf2cd7adaa841d36177d17bbc",
+      "reasoning": "The caller is asking for the prices for spaying their dog, which is a surgical service.",
+      "answer": "Surgical Services"
+    },
+    "CAL019838424bff7fa7890d74af370fc6f0": {
+      "call_id": "CAL019838424bff7fa7890d74af370fc6f0",
+      "reasoning": "The caller is inquiring about their dog's upcoming annual exam and parasite prevention (Bravecto and Interceptor).",
+      "answer": "Preventive Care"
+    },
+    "CAL01983845f24c74ca8e084a529e08b4d8": {
+      "call_id": "CAL01983845f24c74ca8e084a529e08b4d8",
+      "reasoning": "The caller wants to make an appointment for their dog due to an 'infection d'oreille' (ear infection), which falls under dermatology.",
+      "answer": "Dermatology"
+    },
+    "CAL019838482da37a9f9344c2d92538c61f": {
+      "call_id": "CAL019838482da37a9f9344c2d92538c61f",
+      "reasoning": "The caller is scheduling a 'yearly checkup' and 'annual vaccines' for their dog, which is routine preventative care.",
+      "answer": "Preventive Care"
+    },
+    "CAL0198384b51907551aab56685e09cde9c": {
+      "call_id": "CAL0198384b51907551aab56685e09cde9c",
+      "reasoning": "The caller is checking on the status of their dog's examination at the clinic. The specific reason for the examination is unclear, so it defaults to Preventive Care as an administrative check-in.",
+      "answer": "Preventive Care"
+    },
+    "CAL019838502ce87cbdbc990b0ade416e7a": {
+      "call_id": "CAL019838502ce87cbdbc990b0ade416e7a",
+      "reasoning": "The caller is requesting their newly adopted cat's birth date for insurance purposes, which is an administrative request for pet information. The default for administrative calls when service type is unclear is Preventive Care.",
+      "answer": "Preventive Care"
+    },
+    "CAL018db6069ff2459da919dd5241e6615a": {
+      "call_id": "CAL018db6069ff2459da919dd5241e6615a",
+      "reasoning": "The caller's dog is scratching raw and bleeding, and the caller is asking about allergy shots, which falls under skin/allergy issues.",
+      "answer": "Dermatology"
+    },
+    "CAL018df2fa33fb456f8959e4287cbf5bb7": {
+      "call_id": "CAL018df2fa33fb456f8959e4287cbf5bb7",
+      "reasoning": "The caller is booking an appointment for a rabies vaccination for their cat, which is a routine preventive measure.",
+      "answer": "Preventive Care"
+    },
+    "CAL018e04d97ba74747b033b3120bd39163": {
+      "call_id": "CAL018e04d97ba74747b033b3120bd39163",
+      "reasoning": "The caller is booking an annual checkup, yearly vaccines, and asking about flea and tick prevention for their dog.",
+      "answer": "Preventive Care"
+    },
+    "CAL019837cf0ff37f4d8d1af062be24cbab": {
+      "call_id": "CAL019837cf0ff37f4d8d1af062be24cbab",
+      "reasoning": "The caller's dog is limping, not wanting to use a back leg, and having difficulty standing, indicating a sick or injured pet.",
+      "answer": "Urgent Care / Sick Pet"
+    },
+    "CAL019837cf1fe87f139b863a24117182bb": {
+      "call_id": "CAL019837cf1fe87f139b863a24117182bb",
+      "reasoning": "The call is about rescheduling a previously booked surgery for a growth removal because the growth is bleeding.",
+      "answer": "Surgical Services"
+    },
+    "CAL019837e8fdaf7d31b9a87d56d518b19a": {
+      "call_id": "CAL019837e8fdaf7d31b9a87d56d518b19a",
+      "reasoning": "The caller is inquiring about getting a kitten 'fixed' (neutered) and the necessary steps, including initial vaccines, which makes surgical services the primary intent.",
+      "answer": "Surgical Services"
+    },
+    "CAL019837f52c29747e9a736faff8ee96a0": {
+      "call_id": "CAL019837f52c29747e9a736faff8ee96a0",
+      "reasoning": "The caller is canceling an appointment for a pet that was experiencing sneezing, indicating the original appointment was for a sick pet.",
+      "answer": "Urgent Care / Sick Pet"
+    },
+    "CAL019837fa1ec07a778412598cf2c6c69b": {
+      "call_id": "CAL019837fa1ec07a778412598cf2c6c69b",
+      "reasoning": "The caller is booking a 'quality of life assessment' for an older cat that is 'looking a little tired' and needs advice on food, which falls under a sick pet visit for mild, non-urgent symptoms.",
+      "answer": "Urgent Care / Sick Pet"
+    },
+    "CAL01983804e7477d2ab9762cb70d48f2e3": {
+      "call_id": "CAL01983804e7477d2ab9762cb70d48f2e3",
+      "reasoning": "The caller is inquiring about and confirming a rabies vaccine for their kitten, which is a routine vaccination.",
+      "answer": "Preventive Care"
+    },
+    "CAL01983809118e7b7ab76583beb15baec6": {
+      "call_id": "CAL01983809118e7b7ab76583beb15baec6",
+      "reasoning": "The caller is booking an annual checkup and vaccine for their dog, and also wants a 'little spot' checked, which is part of a routine wellness visit.",
+      "answer": "Preventive Care"
+    },
+    "CAL01983809fd0870bfb1a41e0cc0148c1a": {
+      "call_id": "CAL01983809fd0870bfb1a41e0cc0148c1a",
+      "reasoning": "This is an administrative call from another clinic requesting file transfers. As per instructions, administrative calls default to Preventive Care when not explicitly about another service.",
+      "answer": "Preventive Care"
+    },
+    "CAL0198380d24b573858f1ebc1d3174cf7c": {
+      "call_id": "CAL0198380d24b573858f1ebc1d3174cf7c",
+      "reasoning": "The caller is making an appointment for their dog because 'he needs his ears checked,' and ear issues are categorized under Dermatology.",
+      "answer": "Dermatology"
+    },
+    "CAL0198380e825f714ba6f533c90cee0983": {
+      "call_id": "CAL0198380e825f714ba6f533c90cee0983",
+      "reasoning": "The caller is inquiring about the results of a stool sample, which is a diagnostic procedure.",
+      "answer": "Diagnostic Services"
+    },
+    "CAL01983815a4767f56a58f01c1c70c0a18": {
+      "call_id": "CAL01983815a4767f56a58f01c1c70c0a18",
+      "reasoning": "The caller needs a prescription for mirtazapine faxed to a pharmacy, which is a prescription refill/management.",
+      "answer": "Retail"
+    },
+    "CAL01983817fcfd7454a63d6cdf8169a5aa": {
+      "call_id": "CAL01983817fcfd7454a63d6cdf8169a5aa",
+      "reasoning": "The caller is inquiring about the cost of a checkup for a kitten that 'doesn't look so good,' indicating a sick pet needing attention. The discussion of euthanasia is a potential outcome for a sick pet.",
+      "answer": "Urgent Care / Sick Pet"
+    },
+    "CAL000498baa67742cb9a4fed89664cd014": {
+      "call_id": "CAL000498baa67742cb9a4fed89664cd014",
+      "reasoning": "The caller is concerned about their puppy coughing and gagging frequently with some discharge, which are symptoms of illness. The agent suggests a checkup or virtual vet.",
+      "answer": "Urgent Care / Sick Pet"
+    },
+    "CAL00057325c1924ef5be1874417c20b262": {
+      "call_id": "CAL00057325c1924ef5be1874417c20b262",
+      "reasoning": "The caller orders prescription refills (Cosequin and Zycline) and books a nail trim. While refills are Retail, a nail trim is a routine service that falls under Preventive Care. Given the options, Preventive Care encompasses routine services like nail trims.",
+      "answer": "Preventive Care"
+    },
+    "CAL0005db904b5746e18d9c5a855f8ff8fd": {
+      "call_id": "CAL0005db904b5746e18d9c5a855f8ff8fd",
+      "reasoning": "The dog ingested horse feed containing ketoconazole, is vomiting, and the agent advises watching for critical symptoms and suggests an emergency clinic due to the potential toxicity of the medication.",
+      "answer": "Emergency & Critical Care"
+    },
+    "CAL000982de28904f1aa7f072d197347693": {
+      "call_id": "CAL000982de28904f1aa7f072d197347693",
+      "reasoning": "The caller is a new patient inquiring about exam fees and blood work for a potential thyroid condition in their cat. This is an investigation into a specific medical concern, not routine wellness.",
+      "answer": "Urgent Care / Sick Pet"
+    },
+    "CAL0009ad7aca3748009c5fb31f51eee5ad": {
+      "call_id": "CAL0009ad7aca3748009c5fb31f51eee5ad",
+      "reasoning": "The dog has a bleeding mat on its bum, and the caller is concerned about the bleeding and the extent of the injury. The agent suggests bringing the dog to the emergency clinic.",
+      "answer": "Emergency & Critical Care"
+    },
+    "CAL000aeb5cceb842ff9ab94f9dc115873d": {
+      "call_id": "CAL000aeb5cceb842ff9ab94f9dc115873d",
+      "reasoning": "The caller asks about appointment cancellations and then for the Smart Vet phone number. The specific service type for the original appointment is unclear, so it defaults to Preventive Care as per the instructions for administrative/rescheduling calls.",
+      "answer": "Preventive Care"
+    },
+    "CAL000e51384a1945a28c7af94f3657b772": {
+      "call_id": "CAL000e51384a1945a28c7af94f3657b772",
+      "reasoning": "The cat is exhibiting symptoms of acute illness including pain, vomiting foam, yowling, and shallow breathing. An urgent appointment is booked for the same morning.",
+      "answer": "Urgent Care / Sick Pet"
+    },
+    "CAL001052c35ec84a74857f15ba89aa2183": {
+      "call_id": "CAL001052c35ec84a74857f15ba89aa2183",
+      "reasoning": "The caller is booking an appointment for their dog to get blood work done. Without further context of an illness, routine blood work is classified under Preventive Care.",
+      "answer": "Preventive Care"
+    },
+    "CAL0011b20af94b4c4289cf6a51af871369": {
+      "call_id": "CAL0011b20af94b4c4289cf6a51af871369",
+      "reasoning": "The caller is a new client booking an appointment for a cat with worsening coughing issues, indicating a sick pet needing a medical evaluation.",
+      "answer": "Urgent Care / Sick Pet"
+    },
+    "CAL001aad9b8a0947ed8ac0353348259263": {
+      "call_id": "CAL001aad9b8a0947ed8ac0353348259263",
+      "reasoning": "The call is for a follow-up appointment for a dog with an ear issue (black inside, possibly an infection). Ear issues are specifically categorized under Dermatology.",
+      "answer": "Dermatology"
+    },
+    "CAL001b27da05104332895e8f037e981343": {
+      "call_id": "CAL001b27da05104332895e8f037e981343",
+      "reasoning": "The caller is a new patient booking an appointment for cat vaccinations and a general checkup, which are routine health maintenance services.",
+      "answer": "Preventive Care"
+    },
+    "CAL0024c5183d6641a7bab31a88e46fbc69": {
+      "call_id": "CAL0024c5183d6641a7bab31a88e46fbc69",
+      "reasoning": "The dog is experiencing severe symptoms including drooling, inability to walk, and severe abdominal pain after medication, leading the agent to suggest an emergency evaluation.",
+      "answer": "Emergency & Critical Care"
+    },
+    "CAL003334dc9cce46eeb1d9ddc73be4e633": {
+      "call_id": "CAL003334dc9cce46eeb1d9ddc73be4e633",
+      "reasoning": "The caller is booking appointments for their dog's rabies, lepto, and Lyme vaccines, which are all routine preventive care measures.",
+      "answer": "Preventive Care"
+    },
+    "CAL0038d600a47946ebb1c82834efd14ec2": {
+      "call_id": "CAL0038d600a47946ebb1c82834efd14ec2",
+      "reasoning": "The caller found a stray cat and wants to bring it in to scan for a microchip and potentially a general checkup. Scanning for a microchip and a general checkup for a new/found animal are routine administrative and health assessment tasks.",
+      "answer": "Preventive Care"
+    },
+    "CAL003947c6d73e405a8ff5214e6719fcbd": {
+      "call_id": "CAL003947c6d73e405a8ff5214e6719fcbd",
+      "reasoning": "The caller is booking a nail trim for a canary. Nail trims are a routine grooming service.",
+      "answer": "Preventive Care"
+    }
+  },
+  "final_results": {
+    "CAL0039a82c50d340abaf5823d06785a4a0": {
+      "call_id": "CAL0039a82c50d340abaf5823d06785a4a0",
+      "answer": "N/A (missed call)",
+      "reasoning": "No sub-categories for this parent."
+    },
+    "CAL008a74d19188416cbd3be39780335bbb": {
+      "call_id": "CAL008a74d19188416cbd3be39780335bbb",
+      "answer": "N/A (missed call)",
+      "reasoning": "No sub-categories for this parent."
+    },
+    "CAL01983822ac26708db3b026da626a071c": {
+      "call_id": "CAL01983822ac26708db3b026da626a071c",
+      "answer": "Other",
+      "reasoning": "No sub-categories for this parent."
+    },
+    "CAL0198385255f8738ca83ae22e29e15dcc": {
+      "call_id": "CAL0198385255f8738ca83ae22e29e15dcc",
+      "answer": "Other",
+      "reasoning": "No sub-categories for this parent."
+    },
+    "CAL01983864fd50700396fe8fb50860c0ae": {
+      "call_id": "CAL01983864fd50700396fe8fb50860c0ae",
+      "answer": "Other",
+      "reasoning": "No sub-categories for this parent."
+    },
+    "CAL00a33094c71445c3896aac927ab0c6b9": {
+      "call_id": "CAL00a33094c71445c3896aac927ab0c6b9",
+      "reasoning": "Caller requests pricing and details for kidney X-rays, including number of views and sedation.",
+      "answer": "Diagnostic Services \u2013 X-Rays (Digital Radiography)"
+    },
+    "CAL0198380e825f714ba6f533c90cee0983": {
+      "call_id": "CAL0198380e825f714ba6f533c90cee0983",
+      "reasoning": "Discussion of a stool sample sent to a lab and receiving negative results for boarding.",
+      "answer": "Diagnostic Services \u2013 In-House or Reference Lab Testing (Blood, Urine, Fecal, Cytology)"
+    },
+    "CAL0198387a31297659b98d57bb828b2c1d": {
+      "call_id": "CAL0198387a31297659b98d57bb828b2c1d",
+      "reasoning": "Caller asks if clinic does X-rays for a dog that may have swallowed a bone; scheduling for radiographs discussed.",
+      "answer": "Diagnostic Services \u2013 X-Rays (Digital Radiography)"
+    },
+    "CAL0083311f69934f448c9bbac4cb31ed5e": {
+      "call_id": "CAL0083311f69934f448c9bbac4cb31ed5e",
+      "reasoning": "Caller asks cost to bring the rabbit in for euthanasia; fees quoted for exam, euthanasia, cremation at the clinic.",
+      "answer": "End of Life Care \u2013 In-Clinic Euthanasia"
+    },
+    "CAL00a0052f044140e2ab2535a85367c137": {
+      "call_id": "CAL00a0052f044140e2ab2535a85367c137",
+      "reasoning": "Post-cremation paw print pickup inquiry; no info about where euthanasia occurred.",
+      "answer": "End of Life Care"
+    },
+    "CAL00c4d944580b454fa32ba23e0a439d9f": {
+      "call_id": "CAL00c4d944580b454fa32ba23e0a439d9f",
+      "reasoning": "Clinic provides exam and euthanasia pricing and cremation; no in-home discussed, implying in-clinic service.",
+      "answer": "End of Life Care \u2013 In-Clinic Euthanasia"
+    },
+    "CAL0198383ba24b764186763c2357974ba3": {
+      "call_id": "CAL0198383ba24b764186763c2357974ba3",
+      "reasoning": "Caller asks about outside vs inside; clinic confirms euthanasia is done inside and provides pricing.",
+      "answer": "End of Life Care \u2013 In-Clinic Euthanasia"
+    },
+    "CAL01983815a4767f56a58f01c1c70c0a18": {
+      "call_id": "CAL01983815a4767f56a58f01c1c70c0a18",
+      "reasoning": "Caller requests clinic to fax a mirtazapine prescription to a pharmacy.",
+      "answer": "Retail \u2013 Prescriptions"
+    },
+    "CAL019838234a5573079b0722f822b613f7": {
+      "call_id": "CAL019838234a5573079b0722f822b613f7",
+      "reasoning": "Inquiry about diabetic pet food availability and arranging pickup.",
+      "answer": "Retail \u2013 Food Orders"
+    },
+    "CAL01983823e3fd7e76a7ec906121a17dee": {
+      "call_id": "CAL01983823e3fd7e76a7ec906121a17dee",
+      "reasoning": "Voicemail requesting urinary wet food be set aside and mentions dry food.",
+      "answer": "Retail \u2013 Food Orders"
+    },
+    "CAL0198387ec66d739fb6850962fd609815": {
+      "call_id": "CAL0198387ec66d739fb6850962fd609815",
+      "reasoning": "Caller orders amitriptyline medication for their cat.",
+      "answer": "Retail \u2013 Prescriptions"
+    },
+    "CAL019838906bb373e3b8900dfb87d1f627": {
+      "call_id": "CAL019838906bb373e3b8900dfb87d1f627",
+      "reasoning": "Discussion about returning/exchanging cat food and suitable canned food options.",
+      "answer": "Retail \u2013 Food Orders"
+    },
+    "CAL019837f52c29747e9a736faff8ee96a0": {
+      "call_id": "CAL019837f52c29747e9a736faff8ee96a0",
+      "reasoning": "Appointment canceled; prior sneezing resolved. No diagnosis discussed and no tests planned.",
+      "answer": "Urgent Care / Sick Pet"
+    },
+    "CAL019837fa1ec07a778412598cf2c6c69b": {
+      "call_id": "CAL019837fa1ec07a778412598cf2c6c69b",
+      "reasoning": "General check-up/quality-of-life concern for older cat feeling tired; no specific condition identified and no concrete diagnostics discussed.",
+      "answer": "Urgent Care / Sick Pet"
+    },
+    "CAL01983817fcfd7454a63d6cdf8169a5aa": {
+      "call_id": "CAL01983817fcfd7454a63d6cdf8169a5aa",
+      "reasoning": "Kitten \u201cdoesn\u2019t look so good\u201d; caller inquires about costs and possible euthanasia. No specific symptoms, diagnosis, or testing plan.",
+      "answer": "Urgent Care / Sick Pet"
+    },
+    "CAL019838277cc37e93b4c1a543fa522122": {
+      "call_id": "CAL019838277cc37e93b4c1a543fa522122",
+      "reasoning": "Cat coughing/hairball-like episodes; advised exam but no specific diagnosis or internal medicine workup planned.",
+      "answer": "Urgent Care / Sick Pet"
+    },
+    "CAL011ebf53493445e7896fed44ce7c81f6": {
+      "call_id": "CAL011ebf53493445e7896fed44ce7c81f6",
+      "reasoning": "General symptoms in an elderly dog (eating less, lethargy, difficulty with stairs) without a specific diagnosis or tests discussed.",
+      "answer": "Urgent Care / Sick Pet"
+    },
+    "CAL0123fdba3d2942b0af41e1ee7d7d3bac": {
+      "call_id": "CAL0123fdba3d2942b0af41e1ee7d7d3bac",
+      "reasoning": "Caller suspects a ruptured anal gland, indicating a specific acute condition needing diagnosis/treatment.",
+      "answer": "Urgent Care \u2013 Diagnosis and Treatment of Illnesses (Vomiting, Diabetes, Infections)"
+    },
+    "CAL01307cbeca1945d3a9201018704f109a": {
+      "call_id": "CAL01307cbeca1945d3a9201018704f109a",
+      "reasoning": "A bump under the eye after rough play is a nonspecific symptom; no diagnosis or workup discussed.",
+      "answer": "Urgent Care / Sick Pet"
+    },
+    "CAL013ccba9eedc4e67a1005d99fc3fa4bb": {
+      "call_id": "CAL013ccba9eedc4e67a1005d99fc3fa4bb",
+      "reasoning": "Bleeding/matted fur with a possible cut is a general symptom; no specific condition or diagnostics identified.",
+      "answer": "Urgent Care / Sick Pet"
+    },
+    "CAL019837cf0ff37f4d8d1af062be24cbab": {
+      "call_id": "CAL019837cf0ff37f4d8d1af062be24cbab",
+      "reasoning": "Lameness/difficulty using a hind leg is a general symptom; no diagnosis or testing discussed.",
+      "answer": "Urgent Care / Sick Pet"
+    },
+    "CAL0068dc66d062488fa1f4879724451050": {
+      "call_id": "CAL0068dc66d062488fa1f4879724451050",
+      "reasoning": "Specific diagnostic imaging (X-rays) and sedation discussed for a hind-limb lameness workup.",
+      "answer": "Urgent Care \u2013 Internal Medicine Workups (Blood Tests, Imaging, Specialist Consults)"
+    },
+    "CAL00929b7f48514a6b85c94fad4b997d9f": {
+      "call_id": "CAL00929b7f48514a6b85c94fad4b997d9f",
+      "reasoning": "Only a general symptom (left eye closing) with scheduling; no diagnosis or tests discussed.",
+      "answer": "Urgent Care / Sick Pet"
+    },
+    "CAL00bf0e33a835402c8e1ab317b17d16ce": {
+      "call_id": "CAL00bf0e33a835402c8e1ab317b17d16ce",
+      "reasoning": "Acute broken nail injury with mild limping; no specific disease diagnosis or workup discussed.",
+      "answer": "Urgent Care / Sick Pet"
+    },
+    "CAL00e3726d100f45e8913c8f8dfb2fd4ce": {
+      "call_id": "CAL00e3726d100f45e8913c8f8dfb2fd4ce",
+      "reasoning": "Suspected paw burn and limping with general triage advice; no diagnostics or specific condition confirmed.",
+      "answer": "Urgent Care / Sick Pet"
+    },
+    "CAL011c013103cb49bc84379c12992b27a6": {
+      "call_id": "CAL011c013103cb49bc84379c12992b27a6",
+      "reasoning": "Discusses treatment/ingestion safety for a repeated nail condition likely infectious; specific illness management.",
+      "answer": "Urgent Care \u2013 Diagnosis and Treatment of Illnesses (Vomiting, Diabetes, Infections)"
+    },
+    "CAL000498baa67742cb9a4fed89664cd014": {
+      "call_id": "CAL000498baa67742cb9a4fed89664cd014",
+      "reasoning": "Coughing/gagging with no specific diagnosis or tests discussed; general urgent concern only.",
+      "answer": "Urgent Care / Sick Pet"
+    },
+    "CAL000982de28904f1aa7f072d197347693": {
+      "call_id": "CAL000982de28904f1aa7f072d197347693",
+      "reasoning": "They specifically discuss bloodwork to check thyroid levels and pricing for labs.",
+      "answer": "Urgent Care \u2013 Internal Medicine Workups (Blood Tests, Imaging, Specialist Consults)"
+    },
+    "CAL000e51384a1945a28c7af94f3657b772": {
+      "call_id": "CAL000e51384a1945a28c7af94f3657b772",
+      "reasoning": "Acute specific illness symptoms (vomiting foam, shallow breathing, pain) prompting same-day exam.",
+      "answer": "Urgent Care \u2013 Diagnosis and Treatment of Illnesses (Vomiting, Diabetes, Infections)"
+    },
+    "CAL0011b20af94b4c4289cf6a51af871369": {
+      "call_id": "CAL0011b20af94b4c4289cf6a51af871369",
+      "reasoning": "Chronic cough with discussion of repeating imaging to check status.",
+      "answer": "Urgent Care \u2013 Internal Medicine Workups (Blood Tests, Imaging, Specialist Consults)"
+    },
+    "CAL00653e0d49dc40199c3e555625cb2117": {
+      "call_id": "CAL00653e0d49dc40199c3e555625cb2117",
+      "reasoning": "Specific illness symptoms (polydipsia/urination accidents) suggest diabetes/UTI-type concerns.",
+      "answer": "Urgent Care \u2013 Diagnosis and Treatment of Illnesses (Vomiting, Diabetes, Infections)"
+    },
+    "CAL0005db904b5746e18d9c5a855f8ff8fd": {
+      "call_id": "CAL0005db904b5746e18d9c5a855f8ff8fd",
+      "reasoning": "Dog ingested horse grain containing ketoconazole; agent advises monitoring and specifically directs them to Kawartha emergency clinic and provides ER resources.",
+      "answer": "Emergency & Critical Care \u2013 Referred to an Emergency Hospital"
+    },
+    "CAL0009ad7aca3748009c5fb31f51eee5ad": {
+      "call_id": "CAL0009ad7aca3748009c5fb31f51eee5ad",
+      "reasoning": "Bleeding from matted fur; caller may come to ER but no specific intervention or referral discussed.",
+      "answer": "Emergency & Critical Care"
+    },
+    "CAL0024c5183d6641a7bab31a88e46fbc69": {
+      "call_id": "CAL0024c5183d6641a7bab31a88e46fbc69",
+      "reasoning": "Dog with severe drooling, ataxia, and abdominal pain after meds; advised to come in for ER evaluation; no specific stabilization/therapy or referral detailed.",
+      "answer": "Emergency & Critical Care"
+    },
+    "CAL0158a08f881a40c592c795ca67df298b": {
+      "call_id": "CAL0158a08f881a40c592c795ca67df298b",
+      "reasoning": "Caller reports active convulsions/seizures and is bringing the dog in urgently.",
+      "answer": "Emergency & Critical Care \u2013 Stabilization (Trauma, Poisoning, Seizures)"
+    },
+    "CAL0198382a648d7ea09d62d10d36e470d7": {
+      "call_id": "CAL0198382a648d7ea09d62d10d36e470d7",
+      "reasoning": "Caller asks about tail docking, which isn\u2019t covered by the listed subcategories.",
+      "answer": "Surgical Services"
+    },
+    "CAL0198383bf2cd7adaa841d36177d17bbc": {
+      "call_id": "CAL0198383bf2cd7adaa841d36177d17bbc",
+      "reasoning": "Caller requests pricing for spaying her dog; clearly a spay.",
+      "answer": "Surgical Services \u2013 Spays and Neuters"
+    },
+    "CAL01983872f881791f9d0eae5c58b35de9": {
+      "call_id": "CAL01983872f881791f9d0eae5c58b35de9",
+      "reasoning": "Call concerns medication prior to a scheduled spay; clearly related to spay surgery.",
+      "answer": "Surgical Services \u2013 Spays and Neuters"
+    },
+    "CAL00584c7b588f4128be84a13ff49dbe96": {
+      "call_id": "CAL00584c7b588f4128be84a13ff49dbe96",
+      "reasoning": "Caller is seeking to schedule and price a spay for a female cat in heat.",
+      "answer": "Surgical Services \u2013 Spays and Neuters"
+    },
+    "CAL0059cd46261848899dadd858b1297a7a": {
+      "call_id": "CAL0059cd46261848899dadd858b1297a7a",
+      "reasoning": "Caller inquires about spaying a female cat post-partum; costs and scheduling discussed.",
+      "answer": "Surgical Services \u2013 Spays and Neuters"
+    },
+    "CAL00d3bb91c37c494dae58d1f03970cf7c": {
+      "call_id": "CAL00d3bb91c37c494dae58d1f03970cf7c",
+      "reasoning": "Caller books a spay for their female dog and asks about recovery.",
+      "answer": "Surgical Services \u2013 Spays and Neuters"
+    },
+    "CAL019837cf1fe87f139b863a24117182bb": {
+      "call_id": "CAL019837cf1fe87f139b863a24117182bb",
+      "reasoning": "Caller requests an earlier date to remove a lesion/mass that bleeds when scratched\u2014fits soft tissue (lump/wound) surgery.",
+      "answer": "Surgical Services \u2013 Soft Tissue Surgeries (Lump Removals, Bladder Stone Removal, Wound Repair)"
+    },
+    "CAL019837e8fdaf7d31b9a87d56d518b19a": {
+      "call_id": "CAL019837e8fdaf7d31b9a87d56d518b19a",
+      "reasoning": "Caller wants to have a kitten neutered; steps and scheduling discussed.",
+      "answer": "Surgical Services \u2013 Spays and Neuters"
+    },
+    "CAL018db6069ff2459da919dd5241e6615a": {
+      "call_id": "CAL018db6069ff2459da919dd5241e6615a",
+      "reasoning": "Caller reports severe itching and asks specifically about an allergy shot for the dog.",
+      "answer": "Dermatology \u2013 Allergies"
+    },
+    "CAL0198380d24b573858f1ebc1d3174cf7c": {
+      "call_id": "CAL0198380d24b573858f1ebc1d3174cf7c",
+      "reasoning": "Caller only says the dog needs its ears checked; no clear mention of infection.",
+      "answer": "Dermatology"
+    },
+    "CAL01983845f24c74ca8e084a529e08b4d8": {
+      "call_id": "CAL01983845f24c74ca8e084a529e08b4d8",
+      "reasoning": "Caller states the dog seems to have an ear infection (\u201cinfection d\u2019oreille\u201d).",
+      "answer": "Dermatology \u2013 Ear Infections"
+    },
+    "CAL0198385b6e3772fc89e3f22f41af0b46": {
+      "call_id": "CAL0198385b6e3772fc89e3f22f41af0b46",
+      "reasoning": "Caller reports a skin rash possibly like mange; general dermatology without allergy or ear infection specified.",
+      "answer": "Dermatology"
+    },
+    "CAL001aad9b8a0947ed8ac0353348259263": {
+      "call_id": "CAL001aad9b8a0947ed8ac0353348259263",
+      "reasoning": "Caller reports the dog\u2019s ear is \u201call black inside\u201d and books a recheck focused on the ear, suggesting an ear infection concern.",
+      "answer": "Dermatology \u2013 Ear Infections"
+    },
+    "CAL003a2122cd8542c481baf4ddc8e40d80": {
+      "call_id": "CAL003a2122cd8542c481baf4ddc8e40d80",
+      "reasoning": "Caller requests seasonal allergy medication for an itchy dog.",
+      "answer": "Dermatology \u2013 Allergies"
+    },
+    "CAL00848f2fc8ea47239cff6c6c1177f95a": {
+      "call_id": "CAL00848f2fc8ea47239cff6c6c1177f95a",
+      "reasoning": "Caller states the cat may have an ear infection and books a same-day exam.",
+      "answer": "Dermatology \u2013 Ear Infections"
+    },
+    "CAL0084da0fae0c4da6a7bfdabc646c5ba9": {
+      "call_id": "CAL0084da0fae0c4da6a7bfdabc646c5ba9",
+      "reasoning": "Discussion is about pricing for Apoquel, a medication used to manage allergies/itch.",
+      "answer": "Dermatology \u2013 Allergies"
+    },
+    "CAL00cc318557b84211830f8f9165abff38": {
+      "call_id": "CAL00cc318557b84211830f8f9165abff38",
+      "reasoning": "Caller explicitly says the dog has a yeast ear infection again and schedules a visit.",
+      "answer": "Dermatology \u2013 Ear Infections"
+    },
+    "CAL00057325c1924ef5be1874417c20b262": {
+      "call_id": "CAL00057325c1924ef5be1874417c20b262",
+      "reasoning": "Caller ordered meds and booked a nail trim; no specific preventive service like vaccines, annual exam, parasite prevention, or screening was the focus.",
+      "answer": "Preventive Care"
+    },
+    "CAL000aeb5cceb842ff9ab94f9dc115873d": {
+      "call_id": "CAL000aeb5cceb842ff9ab94f9dc115873d",
+      "reasoning": "General scheduling inquiry with no specific preventive service mentioned.",
+      "answer": "Preventive Care"
+    },
+    "CAL001052c35ec84a74857f15ba89aa2183": {
+      "call_id": "CAL001052c35ec84a74857f15ba89aa2183",
+      "reasoning": "Primary purpose stated as getting blood work done.",
+      "answer": "Preventive Care \u2013 Wellness Screening (Bloodwork, Urinalysis, Fecals)"
+    },
+    "CAL001b27da05104332895e8f037e981343": {
+      "call_id": "CAL001b27da05104332895e8f037e981343",
+      "reasoning": "Caller explicitly booking for vaccinations for a new patient cat.",
+      "answer": "Preventive Care \u2013 Vaccinations"
+    },
+    "CAL003334dc9cce46eeb1d9ddc73be4e633": {
+      "call_id": "CAL003334dc9cce46eeb1d9ddc73be4e633",
+      "reasoning": "Call centers on booking vaccines (rabies, lepto, Lyme).",
+      "answer": "Preventive Care \u2013 Vaccinations"
+    },
+    "CAL00644c70bf09449a835487c3ddc673b2": {
+      "call_id": "CAL00644c70bf09449a835487c3ddc673b2",
+      "reasoning": "Caller\u2019s main purpose is getting tick/parasite prevention; vaccines mentioned only to say they\u2019re up to date.",
+      "answer": "Preventive Care \u2013 Parasite Prevention"
+    },
+    "CAL006c0c3985f84e298f13d3d696ce8650": {
+      "call_id": "CAL006c0c3985f84e298f13d3d696ce8650",
+      "reasoning": "Caller explicitly scheduling vaccines and discussing rabies/Bordetella options.",
+      "answer": "Preventive Care \u2013 Vaccinations"
+    },
+    "CAL00747d7c7e454434a6fbb219ddef83b0": {
+      "call_id": "CAL00747d7c7e454434a6fbb219ddef83b0",
+      "reasoning": "Appointment set specifically for leptospirosis and kennel cough vaccines.",
+      "answer": "Preventive Care \u2013 Vaccinations"
+    },
+    "CAL007df41abd3e463298f55c7d7d733d9a": {
+      "call_id": "CAL007df41abd3e463298f55c7d7d733d9a",
+      "reasoning": "New client booking for shots; agent confirms it\u2019s for vaccines (annual vaccine noted).",
+      "answer": "Preventive Care \u2013 Vaccinations"
+    },
+    "CAL00803d059d424bb296f8f9916a7115fd": {
+      "call_id": "CAL00803d059d424bb296f8f9916a7115fd",
+      "reasoning": "Caller overdue for shots; identified vaccines (Bordetella, leptospirosis).",
+      "answer": "Preventive Care \u2013 Vaccinations"
+    },
+    "CAL0038d600a47946ebb1c82834efd14ec2": {
+      "call_id": "CAL0038d600a47946ebb1c82834efd14ec2",
+      "reasoning": "Caller wants a microchip scan and possibly a general checkup; vaccines mentioned only as advice. No single preventive service is primary.",
+      "answer": "Preventive Care"
+    },
+    "CAL003947c6d73e405a8ff5214e6719fcbd": {
+      "call_id": "CAL003947c6d73e405a8ff5214e6719fcbd",
+      "reasoning": "Appointment for a bird nail trim; not one of the listed preventive sub-services.",
+      "answer": "Preventive Care"
+    },
+    "CAL00415f59577343e1aaad08431561d554": {
+      "call_id": "CAL00415f59577343e1aaad08431561d554",
+      "reasoning": "Primary purpose is scheduling a Bordetella shot.",
+      "answer": "Preventive Care \u2013 Vaccinations"
+    },
+    "CAL00427bb94384468b8457c5b48be0dffa": {
+      "call_id": "CAL00427bb94384468b8457c5b48be0dffa",
+      "reasoning": "Caller confirms it\u2019s the yearly appointment; annual exam with vaccines discussed.",
+      "answer": "Preventive Care \u2013 Annual Exams"
+    },
+    "CAL005e941190aa4eeeb16b5520f59e8526": {
+      "call_id": "CAL005e941190aa4eeeb16b5520f59e8526",
+      "reasoning": "Call centers on a vaccination appointment and its cost/scheduling.",
+      "answer": "Preventive Care \u2013 Vaccinations"
+    },
+    "CAL00817a0b30d241d39d3953af8bdffd0e": {
+      "call_id": "CAL00817a0b30d241d39d3953af8bdffd0e",
+      "reasoning": "Caller booked two dogs specifically for overdue vaccines after receiving an email reminder.",
+      "answer": "Preventive Care \u2013 Vaccinations"
+    },
+    "CAL0081cff67cb34ae0b30d1dc0b426d15c": {
+      "call_id": "CAL0081cff67cb34ae0b30d1dc0b426d15c",
+      "reasoning": "Primary concern is tick prevention before travel; discussion centers on obtaining tick control product.",
+      "answer": "Preventive Care \u2013 Parasite Prevention"
+    },
+    "CAL008550503109471bb301dbdb52ea8453": {
+      "call_id": "CAL008550503109471bb301dbdb52ea8453",
+      "reasoning": "Caller requests a general checkup without specifying annual/yearly or another specific service.",
+      "answer": "Preventive Care"
+    },
+    "CAL008db269e7294a62a394fecdbe852724": {
+      "call_id": "CAL008db269e7294a62a394fecdbe852724",
+      "reasoning": "Purely a rescheduling call with no service details provided.",
+      "answer": "Preventive Care"
+    },
+    "CAL008f2a090e7f4d42a4488a553045d64f": {
+      "call_id": "CAL008f2a090e7f4d42a4488a553045d64f",
+      "reasoning": "Caller states both cats are due for their annual checkup; vaccines discussed as secondary.",
+      "answer": "Preventive Care \u2013 Annual Exams"
+    },
+    "CAL0198387534b27b21af285cf499eac523": {
+      "call_id": "CAL0198387534b27b21af285cf499eac523",
+      "reasoning": "Purely rescheduling an appointment; no specific preventive service mentioned.",
+      "answer": "Preventive Care"
+    },
+    "CAL019838760fe97e58898d00136787ed15": {
+      "call_id": "CAL019838760fe97e58898d00136787ed15",
+      "reasoning": "Caller requests tick medication (Simparica); primary topic is parasite prevention.",
+      "answer": "Preventive Care \u2013 Parasite Prevention"
+    },
+    "CAL01983885684f7cfeaf588dcf1f8a9e28": {
+      "call_id": "CAL01983885684f7cfeaf588dcf1f8a9e28",
+      "reasoning": "They discuss estimates for the pets\u2019 annual appointment; \u201cannual\u201d explicitly mentioned.",
+      "answer": "Preventive Care \u2013 Annual Exams"
+    },
+    "CAL01983804e7477d2ab9762cb70d48f2e3": {
+      "call_id": "CAL01983804e7477d2ab9762cb70d48f2e3",
+      "reasoning": "Caller inquires about scheduling/timing for rabies vaccine; vaccines are the clear primary purpose.",
+      "answer": "Preventive Care \u2013 Vaccinations"
+    },
+    "CAL01983809118e7b7ab76583beb15baec6": {
+      "call_id": "CAL01983809118e7b7ab76583beb15baec6",
+      "reasoning": "Caller explicitly requests an annual checkup; vaccines also discussed but the main purpose is the annual exam.",
+      "answer": "Preventive Care \u2013 Annual Exams"
+    },
+    "CAL01983809fd0870bfb1a41e0cc0148c1a": {
+      "call_id": "CAL01983809fd0870bfb1a41e0cc0148c1a",
+      "reasoning": "Administrative records transfer between clinics; no specific preventive service discussed.",
+      "answer": "Preventive Care"
+    },
+    "CAL0198381fff847e6d97bd58d60abcb00e": {
+      "call_id": "CAL0198381fff847e6d97bd58d60abcb00e",
+      "reasoning": "Caller says it\u2019s time for annual shots; appointment includes exam but shots are the stated reason.",
+      "answer": "Preventive Care \u2013 Vaccinations"
+    },
+    "CAL01983828e7347b6281fe9fa52524f73e": {
+      "call_id": "CAL01983828e7347b6281fe9fa52524f73e",
+      "reasoning": "Requesting proof of rabies vaccination; vaccination is the specific topic.",
+      "answer": "Preventive Care \u2013 Vaccinations"
+    },
+    "CAL014b1b4985f340e8ba39b659373275b2": {
+      "call_id": "CAL014b1b4985f340e8ba39b659373275b2",
+      "reasoning": "Caller requested both a wellness check and vaccinations; multiple preventive services with no single primary.",
+      "answer": "Preventive Care"
+    },
+    "CAL01568eebe6a143918c7fc238f5562f6b": {
+      "call_id": "CAL01568eebe6a143918c7fc238f5562f6b",
+      "reasoning": "Caller explicitly called to update dog\u2019s vaccines; vaccines are the primary purpose.",
+      "answer": "Preventive Care \u2013 Vaccinations"
+    },
+    "CAL017e403dd5c64398ac43ffe88d4b3cf5": {
+      "call_id": "CAL017e403dd5c64398ac43ffe88d4b3cf5",
+      "reasoning": "Caller referred to the pets\u2019 yearly visit; agent confirmed due for annual exam and scheduled accordingly.",
+      "answer": "Preventive Care \u2013 Annual Exams"
+    },
+    "CAL018df2fa33fb456f8959e4287cbf5bb7": {
+      "call_id": "CAL018df2fa33fb456f8959e4287cbf5bb7",
+      "reasoning": "Primary need is a rabies vaccination for border crossing; discussion centers on vaccine timing.",
+      "answer": "Preventive Care \u2013 Vaccinations"
+    },
+    "CAL018e04d97ba74747b033b3120bd39163": {
+      "call_id": "CAL018e04d97ba74747b033b3120bd39163",
+      "reasoning": "Caller requested yearly shots due (multiple vaccines) and asked secondarily about flea/tick; vaccines are the main reason.",
+      "answer": "Preventive Care \u2013 Vaccinations"
+    },
+    "CAL01983837207c78339c0dc0ac40dc2540": {
+      "call_id": "CAL01983837207c78339c0dc0ac40dc2540",
+      "reasoning": "Rescheduling a general checkup; not explicitly annual and no single service is primary.",
+      "answer": "Preventive Care"
+    },
+    "CAL019838424bff7fa7890d74af370fc6f0": {
+      "call_id": "CAL019838424bff7fa7890d74af370fc6f0",
+      "reasoning": "Primary discussion is Bravecto/Interceptor timing and year-round flea/tick/heartworm prevention.",
+      "answer": "Preventive Care \u2013 Parasite Prevention"
+    },
+    "CAL019838482da37a9f9344c2d92538c61f": {
+      "call_id": "CAL019838482da37a9f9344c2d92538c61f",
+      "reasoning": "Caller books a yearly checkup but vaccines and a fecal sample are also discussed; multiple preventive services.",
+      "answer": "Preventive Care"
+    },
+    "CAL0198384b51907551aab56685e09cde9c": {
+      "call_id": "CAL0198384b51907551aab56685e09cde9c",
+      "reasoning": "Status update call with no specific preventive service mentioned.",
+      "answer": "Preventive Care"
+    },
+    "CAL019838502ce87cbdbc990b0ade416e7a": {
+      "call_id": "CAL019838502ce87cbdbc990b0ade416e7a",
+      "reasoning": "Administrative DOB inquiry for insurance; no preventive service requested.",
+      "answer": "Preventive Care"
+    },
+    "CAL009fecf1e3dc43fcb124f083b4886d34": {
+      "call_id": "CAL009fecf1e3dc43fcb124f083b4886d34",
+      "reasoning": "Purely a cancellation/reschedule with no specific service mentioned.",
+      "answer": "Preventive Care"
+    },
+    "CAL00b175c88b6d4b20a8f2ecb4d226d689": {
+      "call_id": "CAL00b175c88b6d4b20a8f2ecb4d226d689",
+      "reasoning": "Rescheduling an appointment; no preventive service specified.",
+      "answer": "Preventive Care"
+    },
+    "CAL00ddc5b018204683a8005f80fb0cb08d": {
+      "call_id": "CAL00ddc5b018204683a8005f80fb0cb08d",
+      "reasoning": "Caller specifically requests flea/tick medication; primary discussed service is parasite prevention.",
+      "answer": "Preventive Care \u2013 Parasite Prevention"
+    },
+    "CAL012c4a0f78834f90b4d5b3a24657a2d8": {
+      "call_id": "CAL012c4a0f78834f90b4d5b3a24657a2d8",
+      "reasoning": "New kitten general appointment; no specific service like vaccines or tests mentioned.",
+      "answer": "Preventive Care"
+    },
+    "CAL014854d99d7940c1910271fee0349169": {
+      "call_id": "CAL014854d99d7940c1910271fee0349169",
+      "reasoning": "Vaccines and an annual exam are both discussed; multiple preventive services rather than a single primary one.",
+      "answer": "Preventive Care"
+    }
+  },
+  "mismatches": [
+    {
+      "call_id": "CAL0005db904b5746e18d9c5a855f8ff8fd",
+      "gold": "Emergency & Critical Care \u2013 Stabilization (Trauma, Poisoning, Seizures)",
+      "pred": "Emergency & Critical Care \u2013 Referred to an Emergency Hospital",
+      "step1": "Emergency & Critical Care",
+      "step2_reasoning": "Dog ingested horse grain containing ketoconazole; agent advises monitoring and specifically directs them to Kawartha emergency clinic and provides ER "
+    },
+    {
+      "call_id": "CAL000982de28904f1aa7f072d197347693",
+      "gold": "Preventive Care \u2013 Wellness Screening (Bloodwork, Urinalysis, Fecals)",
+      "pred": "Urgent Care \u2013 Internal Medicine Workups (Blood Tests, Imaging, Specialist Consults)",
+      "step1": "Urgent Care / Sick Pet",
+      "step2_reasoning": "They specifically discuss bloodwork to check thyroid levels and pricing for labs."
+    },
+    {
+      "call_id": "CAL000aeb5cceb842ff9ab94f9dc115873d",
+      "gold": "Urgent Care / Sick Pet",
+      "pred": "Preventive Care",
+      "step1": "Preventive Care",
+      "step2_reasoning": "General scheduling inquiry with no specific preventive service mentioned."
+    },
+    {
+      "call_id": "CAL0011b20af94b4c4289cf6a51af871369",
+      "gold": "Urgent Care \u2013 Diagnosis and Treatment of Illnesses (Vomiting, Diabetes, Infections)",
+      "pred": "Urgent Care \u2013 Internal Medicine Workups (Blood Tests, Imaging, Specialist Consults)",
+      "step1": "Urgent Care / Sick Pet",
+      "step2_reasoning": "Chronic cough with discussion of repeating imaging to check status."
+    },
+    {
+      "call_id": "CAL00653e0d49dc40199c3e555625cb2117",
+      "gold": "Urgent Care / Sick Pet",
+      "pred": "Urgent Care \u2013 Diagnosis and Treatment of Illnesses (Vomiting, Diabetes, Infections)",
+      "step1": "Urgent Care / Sick Pet",
+      "step2_reasoning": "Specific illness symptoms (polydipsia/urination accidents) suggest diabetes/UTI-type concerns."
+    },
+    {
+      "call_id": "CAL0084da0fae0c4da6a7bfdabc646c5ba9",
+      "gold": "Preventive Care \u2013 Vaccinations",
+      "pred": "Dermatology \u2013 Allergies",
+      "step1": "Dermatology",
+      "step2_reasoning": "Discussion is about pricing for Apoquel, a medication used to manage allergies/itch."
+    },
+    {
+      "call_id": "CAL008550503109471bb301dbdb52ea8453",
+      "gold": "Preventive Care \u2013 Annual Exams",
+      "pred": "Preventive Care",
+      "step1": "Preventive Care",
+      "step2_reasoning": "Caller requests a general checkup without specifying annual/yearly or another specific service."
+    },
+    {
+      "call_id": "CAL008a74d19188416cbd3be39780335bbb",
+      "gold": "Preventive Care",
+      "pred": "N/A (missed call)",
+      "step1": "N/A (missed call)",
+      "step2_reasoning": "No sub-categories for this parent."
+    },
+    {
+      "call_id": "CAL008db269e7294a62a394fecdbe852724",
+      "gold": "Preventive Care \u2013 Annual Exams",
+      "pred": "Preventive Care",
+      "step1": "Preventive Care",
+      "step2_reasoning": "Purely a rescheduling call with no service details provided."
+    },
+    {
+      "call_id": "CAL00929b7f48514a6b85c94fad4b997d9f",
+      "gold": "Urgent Care \u2013 Diagnosis and Treatment of Illnesses (Vomiting, Diabetes, Infections)",
+      "pred": "Urgent Care / Sick Pet",
+      "step1": "Urgent Care / Sick Pet",
+      "step2_reasoning": "Only a general symptom (left eye closing) with scheduling; no diagnosis or tests discussed."
+    },
+    {
+      "call_id": "CAL00e3726d100f45e8913c8f8dfb2fd4ce",
+      "gold": "Emergency & Critical Care",
+      "pred": "Urgent Care / Sick Pet",
+      "step1": "Urgent Care / Sick Pet",
+      "step2_reasoning": "Suspected paw burn and limping with general triage advice; no diagnostics or specific condition confirmed."
+    },
+    {
+      "call_id": "CAL011c013103cb49bc84379c12992b27a6",
+      "gold": "Urgent Care / Sick Pet",
+      "pred": "Urgent Care \u2013 Diagnosis and Treatment of Illnesses (Vomiting, Diabetes, Infections)",
+      "step1": "Urgent Care / Sick Pet",
+      "step2_reasoning": "Discusses treatment/ingestion safety for a repeated nail condition likely infectious; specific illness management."
+    },
+    {
+      "call_id": "CAL011ebf53493445e7896fed44ce7c81f6",
+      "gold": "End of Life Care",
+      "pred": "Urgent Care / Sick Pet",
+      "step1": "Urgent Care / Sick Pet",
+      "step2_reasoning": "General symptoms in an elderly dog (eating less, lethargy, difficulty with stairs) without a specific diagnosis or tests discussed."
+    },
+    {
+      "call_id": "CAL0123fdba3d2942b0af41e1ee7d7d3bac",
+      "gold": "Urgent Care / Sick Pet",
+      "pred": "Urgent Care \u2013 Diagnosis and Treatment of Illnesses (Vomiting, Diabetes, Infections)",
+      "step1": "Urgent Care / Sick Pet",
+      "step2_reasoning": "Caller suspects a ruptured anal gland, indicating a specific acute condition needing diagnosis/treatment."
+    },
+    {
+      "call_id": "CAL014854d99d7940c1910271fee0349169",
+      "gold": "Preventive Care \u2013 Vaccinations",
+      "pred": "Preventive Care",
+      "step1": "Preventive Care",
+      "step2_reasoning": "Vaccines and an annual exam are both discussed; multiple preventive services rather than a single primary one."
+    },
+    {
+      "call_id": "CAL014b1b4985f340e8ba39b659373275b2",
+      "gold": "Preventive Care \u2013 Vaccinations",
+      "pred": "Preventive Care",
+      "step1": "Preventive Care",
+      "step2_reasoning": "Caller requested both a wellness check and vaccinations; multiple preventive services with no single primary."
+    },
+    {
+      "call_id": "CAL0158a08f881a40c592c795ca67df298b",
+      "gold": "End of Life Care \u2013 In-Clinic Euthanasia",
+      "pred": "Emergency & Critical Care \u2013 Stabilization (Trauma, Poisoning, Seizures)",
+      "step1": "Emergency & Critical Care",
+      "step2_reasoning": "Caller reports active convulsions/seizures and is bringing the dog in urgently."
+    },
+    {
+      "call_id": "CAL017e403dd5c64398ac43ffe88d4b3cf5",
+      "gold": "Preventive Care",
+      "pred": "Preventive Care \u2013 Annual Exams",
+      "step1": "Preventive Care",
+      "step2_reasoning": "Caller referred to the pets\u2019 yearly visit; agent confirmed due for annual exam and scheduled accordingly."
+    },
+    {
+      "call_id": "CAL019837cf1fe87f139b863a24117182bb",
+      "gold": "Urgent Care / Sick Pet",
+      "pred": "Surgical Services \u2013 Soft Tissue Surgeries (Lump Removals, Bladder Stone Removal, Wound Repair)",
+      "step1": "Surgical Services",
+      "step2_reasoning": "Caller requests an earlier date to remove a lesion/mass that bleeds when scratched\u2014fits soft tissue (lump/wound) surgery."
+    },
+    {
+      "call_id": "CAL019837e8fdaf7d31b9a87d56d518b19a",
+      "gold": "Preventive Care",
+      "pred": "Surgical Services \u2013 Spays and Neuters",
+      "step1": "Surgical Services",
+      "step2_reasoning": "Caller wants to have a kitten neutered; steps and scheduling discussed."
+    },
+    {
+      "call_id": "CAL019837f52c29747e9a736faff8ee96a0",
+      "gold": "Urgent Care \u2013 Diagnosis and Treatment of Illnesses (Vomiting, Diabetes, Infections)",
+      "pred": "Urgent Care / Sick Pet",
+      "step1": "Urgent Care / Sick Pet",
+      "step2_reasoning": "Appointment canceled; prior sneezing resolved. No diagnosis discussed and no tests planned."
+    },
+    {
+      "call_id": "CAL019837fa1ec07a778412598cf2c6c69b",
+      "gold": "Preventive Care \u2013 Wellness Screening (Bloodwork, Urinalysis, Fecals)",
+      "pred": "Urgent Care / Sick Pet",
+      "step1": "Urgent Care / Sick Pet",
+      "step2_reasoning": "General check-up/quality-of-life concern for older cat feeling tired; no specific condition identified and no concrete diagnostics discussed."
+    },
+    {
+      "call_id": "CAL01983809fd0870bfb1a41e0cc0148c1a",
+      "gold": "Urgent Care / Sick Pet",
+      "pred": "Preventive Care",
+      "step1": "Preventive Care",
+      "step2_reasoning": "Administrative records transfer between clinics; no specific preventive service discussed."
+    },
+    {
+      "call_id": "CAL0198380d24b573858f1ebc1d3174cf7c",
+      "gold": "Urgent Care / Sick Pet",
+      "pred": "Dermatology",
+      "step1": "Dermatology",
+      "step2_reasoning": "Caller only says the dog needs its ears checked; no clear mention of infection."
+    },
+    {
+      "call_id": "CAL0198380e825f714ba6f533c90cee0983",
+      "gold": "Preventive Care \u2013 Wellness Screening (Bloodwork, Urinalysis, Fecals)",
+      "pred": "Diagnostic Services \u2013 In-House or Reference Lab Testing (Blood, Urine, Fecal, Cytology)",
+      "step1": "Diagnostic Services",
+      "step2_reasoning": "Discussion of a stool sample sent to a lab and receiving negative results for boarding."
+    },
+    {
+      "call_id": "CAL01983822ac26708db3b026da626a071c",
+      "gold": "Preventive Care",
+      "pred": "Other",
+      "step1": "Other",
+      "step2_reasoning": "No sub-categories for this parent."
+    },
+    {
+      "call_id": "CAL0198383ba24b764186763c2357974ba3",
+      "gold": "End of Life Care \u2013 In-Home Euthanasia",
+      "pred": "End of Life Care \u2013 In-Clinic Euthanasia",
+      "step1": "End of Life Care",
+      "step2_reasoning": "Caller asks about outside vs inside; clinic confirms euthanasia is done inside and provides pricing."
+    },
+    {
+      "call_id": "CAL019838424bff7fa7890d74af370fc6f0",
+      "gold": "Preventive Care",
+      "pred": "Preventive Care \u2013 Parasite Prevention",
+      "step1": "Preventive Care",
+      "step2_reasoning": "Primary discussion is Bravecto/Interceptor timing and year-round flea/tick/heartworm prevention."
+    },
+    {
+      "call_id": "CAL01983845f24c74ca8e084a529e08b4d8",
+      "gold": "Urgent Care \u2013 Diagnosis and Treatment of Illnesses (Vomiting, Diabetes, Infections)",
+      "pred": "Dermatology \u2013 Ear Infections",
+      "step1": "Dermatology",
+      "step2_reasoning": "Caller states the dog seems to have an ear infection (\u201cinfection d\u2019oreille\u201d)."
+    },
+    {
+      "call_id": "CAL019838482da37a9f9344c2d92538c61f",
+      "gold": "Preventive Care \u2013 Vaccinations",
+      "pred": "Preventive Care",
+      "step1": "Preventive Care",
+      "step2_reasoning": "Caller books a yearly checkup but vaccines and a fecal sample are also discussed; multiple preventive services."
+    },
+    {
+      "call_id": "CAL0198384b51907551aab56685e09cde9c",
+      "gold": "Surgical Services",
+      "pred": "Preventive Care",
+      "step1": "Preventive Care",
+      "step2_reasoning": "Status update call with no specific preventive service mentioned."
+    },
+    {
+      "call_id": "CAL019838502ce87cbdbc990b0ade416e7a",
+      "gold": "Surgical Services \u2013 Spays and Neuters",
+      "pred": "Preventive Care",
+      "step1": "Preventive Care",
+      "step2_reasoning": "Administrative DOB inquiry for insurance; no preventive service requested."
+    },
+    {
+      "call_id": "CAL0198385255f8738ca83ae22e29e15dcc",
+      "gold": "Emergency & Critical Care \u2013 Overnight Hospitalization",
+      "pred": "Other",
+      "step1": "Other",
+      "step2_reasoning": "No sub-categories for this parent."
+    },
+    {
+      "call_id": "CAL01983864fd50700396fe8fb50860c0ae",
+      "gold": "Preventive Care",
+      "pred": "Other",
+      "step1": "Other",
+      "step2_reasoning": "No sub-categories for this parent."
+    },
+    {
+      "call_id": "CAL01983872f881791f9d0eae5c58b35de9",
+      "gold": "Retail \u2013 Prescriptions",
+      "pred": "Surgical Services \u2013 Spays and Neuters",
+      "step1": "Surgical Services",
+      "step2_reasoning": "Call concerns medication prior to a scheduled spay; clearly related to spay surgery."
+    },
+    {
+      "call_id": "CAL019838760fe97e58898d00136787ed15",
+      "gold": "Retail \u2013 Prescriptions",
+      "pred": "Preventive Care \u2013 Parasite Prevention",
+      "step1": "Preventive Care",
+      "step2_reasoning": "Caller requests tick medication (Simparica); primary topic is parasite prevention."
+    },
+    {
+      "call_id": "CAL0198387a31297659b98d57bb828b2c1d",
+      "gold": "Urgent Care / Sick Pet",
+      "pred": "Diagnostic Services \u2013 X-Rays (Digital Radiography)",
+      "step1": "Diagnostic Services",
+      "step2_reasoning": "Caller asks if clinic does X-rays for a dog that may have swallowed a bone; scheduling for radiographs discussed."
+    }
+  ]
+}

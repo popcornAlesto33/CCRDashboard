@@ -1,0 +1,401 @@
+{
+  "accuracy": 0.64,
+  "correct": 32,
+  "total": 50,
+  "mismatches": [
+    {
+      "call_id": "CAL000498baa67742cb9a4fed89664cd014",
+      "gold": "Urgent Care / Sick Pet",
+      "predicted": "Urgent Care \u2013 Diagnosis and Treatment of Illnesses (Vomiting, Diabetes, Infections)"
+    },
+    {
+      "call_id": "CAL0005db904b5746e18d9c5a855f8ff8fd",
+      "gold": "Emergency & Critical Care \u2013 Stabilization (Trauma, Poisoning, Seizures)",
+      "predicted": "Emergency & Critical Care \u2013 Referred to an Emergency Hospital"
+    },
+    {
+      "call_id": "CAL000982de28904f1aa7f072d197347693",
+      "gold": "Preventive Care \u2013 Wellness Screening (Bloodwork, Urinalysis, Fecals)",
+      "predicted": "Diagnostic Services \u2013 In-House or Reference Lab Testing (Blood, Urine, Fecal, Cytology)"
+    },
+    {
+      "call_id": "CAL0009ad7aca3748009c5fb31f51eee5ad",
+      "gold": "Emergency & Critical Care",
+      "predicted": "Emergency & Critical Care \u2013 Stabilization (Trauma, Poisoning, Seizures)"
+    },
+    {
+      "call_id": "CAL000aeb5cceb842ff9ab94f9dc115873d",
+      "gold": "Urgent Care / Sick Pet",
+      "predicted": "Other"
+    },
+    {
+      "call_id": "CAL001052c35ec84a74857f15ba89aa2183",
+      "gold": "Preventive Care \u2013 Wellness Screening (Bloodwork, Urinalysis, Fecals)",
+      "predicted": "Diagnostic Services \u2013 In-House or Reference Lab Testing (Blood, Urine, Fecal, Cytology)"
+    },
+    {
+      "call_id": "CAL0024c5183d6641a7bab31a88e46fbc69",
+      "gold": "Emergency & Critical Care",
+      "predicted": "Emergency & Critical Care \u2013 Stabilization (Trauma, Poisoning, Seizures)"
+    },
+    {
+      "call_id": "CAL0038d600a47946ebb1c82834efd14ec2",
+      "gold": "Preventive Care",
+      "predicted": "Diagnostic Services"
+    },
+    {
+      "call_id": "CAL00653e0d49dc40199c3e555625cb2117",
+      "gold": "Urgent Care / Sick Pet",
+      "predicted": "Urgent Care \u2013 Diagnosis and Treatment of Illnesses (Vomiting, Diabetes, Infections)"
+    },
+    {
+      "call_id": "CAL0068dc66d062488fa1f4879724451050",
+      "gold": "Urgent Care \u2013 Internal Medicine Workups (Blood Tests, Imaging, Specialist Consults)",
+      "predicted": "Urgent Care \u2013 Diagnosis and Treatment of Illnesses (Vomiting, Diabetes, Infections)"
+    },
+    {
+      "call_id": "CAL00848f2fc8ea47239cff6c6c1177f95a",
+      "gold": "Dermatology \u2013 Ear Infections",
+      "predicted": "Urgent Care \u2013 Diagnosis and Treatment of Illnesses (Vomiting, Diabetes, Infections)"
+    },
+    {
+      "call_id": "CAL0084da0fae0c4da6a7bfdabc646c5ba9",
+      "gold": "Preventive Care \u2013 Vaccinations",
+      "predicted": "Retail \u2013 Prescriptions"
+    },
+    {
+      "call_id": "CAL008a74d19188416cbd3be39780335bbb",
+      "gold": "Preventive Care",
+      "predicted": "Other"
+    },
+    {
+      "call_id": "CAL008db269e7294a62a394fecdbe852724",
+      "gold": "Preventive Care \u2013 Annual Exams",
+      "predicted": "Other"
+    },
+    {
+      "call_id": "CAL00b175c88b6d4b20a8f2ecb4d226d689",
+      "gold": "Preventive Care",
+      "predicted": "Other"
+    },
+    {
+      "call_id": "CAL00ddc5b018204683a8005f80fb0cb08d",
+      "gold": "Preventive Care \u2013 Parasite Prevention",
+      "predicted": "Retail \u2013 Prescriptions"
+    },
+    {
+      "call_id": "CAL00e3726d100f45e8913c8f8dfb2fd4ce",
+      "gold": "Emergency & Critical Care",
+      "predicted": "Urgent Care \u2013 Diagnosis and Treatment of Illnesses (Vomiting, Diabetes, Infections)"
+    },
+    {
+      "call_id": "CAL011c013103cb49bc84379c12992b27a6",
+      "gold": "Urgent Care / Sick Pet",
+      "predicted": "Dermatology"
+    }
+  ],
+  "step1_results": {
+    "CAL001b27da05104332895e8f037e981343": {
+      "reasoning": "The caller explicitly states they want to bring their cat for vaccination and a general checkup. Vaccinations and wellness visits are core components of Preventive Care.",
+      "answer": "Preventive Care",
+      "call_id": "CAL001b27da05104332895e8f037e981343"
+    },
+    "CAL003334dc9cce46eeb1d9ddc73be4e633": {
+      "reasoning": "The call is primarily about scheduling appointments for dogs to receive various vaccinations (rabies, lepto, Lyme, distemper). This falls under routine health maintenance and disease prevention.",
+      "answer": "Preventive Care",
+      "call_id": "CAL003334dc9cce46eeb1d9ddc73be4e633"
+    },
+    "CAL0024c5183d6641a7bab31a88e46fbc69": {
+      "reasoning": "The caller's dog is experiencing severe and acute symptoms including drooling, inability to walk, falling over, and severe abdominal pain/guarding. These symptoms are critical and potentially life-threatening, requiring immediate veterinary attention. The agent also identifies their facility as an 'after hours emergency' hospital. This situation fits the definition of 'Emergency & Critical Care'.",
+      "answer": "Emergency & Critical Care",
+      "call_id": "CAL0024c5183d6641a7bab31a88e46fbc69"
+    },
+    "CAL0039a82c50d340abaf5823d06785a4a0": {
+      "reasoning": "The transcript indicates the office is closed and offers options to schedule an appointment. There is no discussion about a specific veterinary service or pet's condition, making it a missed call or an informational message rather than a service-related conversation.",
+      "answer": "N/A (missed call)",
+      "call_id": "CAL0039a82c50d340abaf5823d06785a4a0"
+    },
+    "CAL0011b20af94b4c4289cf6a51af871369": {
+      "reasoning": "The caller is scheduling an appointment for their cat, Peanut, who has been experiencing a worsening cough for six months. This indicates a medical issue requiring prompt attention for a sick pet.",
+      "answer": "Urgent Care / Sick Pet",
+      "call_id": "CAL0011b20af94b4c4289cf6a51af871369"
+    },
+    "CAL000aeb5cceb842ff9ab94f9dc115873d": {
+      "reasoning": "The caller is trying to get an appointment due to cancellations and then asks for a referral phone number ('smart vet phone number'). The reason for the appointment or the referral is not specified, making it impossible to categorize into a specific service type.",
+      "answer": "Other",
+      "call_id": "CAL000aeb5cceb842ff9ab94f9dc115873d"
+    },
+    "CAL000498baa67742cb9a4fed89664cd014": {
+      "reasoning": "The caller's puppy is experiencing coughing and gagging, which has become more frequent and now includes some discharge. This indicates a sick pet needing prompt attention, but the symptoms described (coughing, gagging, discharge, increased frequency over two weeks) do not suggest an immediate life-threatening emergency. The agent is trying to schedule a 'checkup' and even suggests a virtual vet if they can't fit them in, which aligns with urgent care for a sick pet rather than an emergency.",
+      "answer": "Urgent Care / Sick Pet",
+      "call_id": "CAL000498baa67742cb9a4fed89664cd014"
+    },
+    "CAL00415f59577343e1aaad08431561d554": {
+      "reasoning": "The caller is scheduling an appointment for their dog to receive a Bordetella vaccine, which is a routine vaccination for preventive health. This falls directly under 'Preventive Care'.",
+      "answer": "Preventive Care",
+      "call_id": "CAL00415f59577343e1aaad08431561d554"
+    },
+    "CAL001aad9b8a0947ed8ac0353348259263": {
+      "reasoning": "The caller is scheduling a follow-up appointment for their dog, Rico, who was previously in pain and is now experiencing an issue with his ear, described as 'all black inside'. The prompt defines 'Dermatology' as covering 'skin, coat, ear, or allergy issues'. An ear problem directly falls under this category.",
+      "answer": "Dermatology",
+      "call_id": "CAL001aad9b8a0947ed8ac0353348259263"
+    },
+    "CAL003947c6d73e405a8ff5214e6719fcbd": {
+      "reasoning": "The caller is inquiring about and booking an appointment for a bird's nail trim. This is a routine maintenance procedure that falls under general wellness and preventive care to maintain the animal's health and prevent issues caused by overgrown nails.",
+      "answer": "Preventive Care",
+      "call_id": "CAL003947c6d73e405a8ff5214e6719fcbd"
+    },
+    "CAL000e51384a1945a28c7af94f3657b772": {
+      "reasoning": "The caller describes their cat experiencing acute symptoms such as pain, vomiting foam, yowling, and shallow breathing, which indicates a sick pet needing prompt attention. The agent schedules an immediate same-day appointment (9:00 AM) at the animal hospital, fitting the description of urgent care for a sick pet.",
+      "answer": "Urgent Care / Sick Pet",
+      "call_id": "CAL000e51384a1945a28c7af94f3657b772"
+    },
+    "CAL00427bb94384468b8457c5b48be0dffa": {
+      "reasoning": "The caller is booking a 'yearly appointment' for their cat, which includes a 'physical and the vaccines'. The agent also recommends an annual fecal check. These services are all components of routine preventive care.",
+      "answer": "Preventive Care",
+      "call_id": "CAL00427bb94384468b8457c5b48be0dffa"
+    },
+    "CAL00584c7b588f4128be84a13ff49dbe96": {
+      "reasoning": "The primary purpose of the call is to inquire about and schedule a spay surgery for a female cat. The discussion revolves around the timing of the surgery (due to the cat being in heat), costs, and pre-surgical requirements like an exam. Spaying falls under surgical services.",
+      "answer": "Surgical Services",
+      "call_id": "CAL00584c7b588f4128be84a13ff49dbe96"
+    },
+    "CAL0059cd46261848899dadd858b1297a7a": {
+      "reasoning": "The caller is inquiring about getting their female cat spayed ('neuter her'), discussing the process, cost, and availability for the procedure. Spaying is a surgical service.",
+      "answer": "Surgical Services",
+      "call_id": "CAL0059cd46261848899dadd858b1297a7a"
+    },
+    "CAL005e941190aa4eeeb16b5520f59e8526": {
+      "reasoning": "The caller explicitly states they booked an appointment for their dog Mia for 'her vaccination' and asks about the cost of 'one shot'. Vaccinations fall under routine wellness and preventive care.",
+      "answer": "Preventive Care",
+      "call_id": "CAL005e941190aa4eeeb16b5520f59e8526"
+    },
+    "CAL00644c70bf09449a835487c3ddc673b2": {
+      "reasoning": "The caller is inquiring about vaccinations ('needles') and parasite prevention for two new puppies. The agent confirms that a vet visit is required for prescription parasite medication and then books appointments for both puppies for these services. These services fall under routine wellness and prevention.",
+      "answer": "Preventive Care",
+      "call_id": "CAL00644c70bf09449a835487c3ddc673b2"
+    },
+    "CAL00653e0d49dc40199c3e555625cb2117": {
+      "reasoning": "The caller's cat, Roxy, is exhibiting symptoms such as drinking a lot of water, urinating outside the litter box, and appearing uncomfortable. These indicate a sick pet needing prompt attention, but not a life-threatening emergency. The clinic was able to fit the cat in on the same day due to a cancellation, which aligns with urgent care for a sick animal.",
+      "answer": "Urgent Care / Sick Pet",
+      "call_id": "CAL00653e0d49dc40199c3e555625cb2117"
+    },
+    "CAL006c0c3985f84e298f13d3d696ce8650": {
+      "reasoning": "The caller explicitly states they are looking to schedule their pet, Thor, for vaccines (rabies, distemper, Bordetella). This is a routine health maintenance activity aimed at preventing disease.",
+      "answer": "Preventive Care",
+      "call_id": "CAL006c0c3985f84e298f13d3d696ce8650"
+    },
+    "CAL0005db904b5746e18d9c5a855f8ff8fd": {
+      "reasoning": "The call initially discusses a dog vomiting after eating horse feed, which could be considered urgent care. However, the situation escalates when it's discovered the feed contained Ketoconazole, a medication that can affect organs like the liver. The agent explicitly recommends contacting an emergency veterinary clinic (Kawartha) to determine the dosage and assess the potential for organ damage, suggesting blood work. The concern about potential organ damage from medication ingestion, and the direct recommendation for an emergency clinic, places this in the 'Emergency & Critical Care' category, as it involves a potentially life-threatening situation (poisoning/toxicity) requiring immediate assessment and intervention.",
+      "answer": "Emergency & Critical Care",
+      "call_id": "CAL0005db904b5746e18d9c5a855f8ff8fd"
+    },
+    "CAL00747d7c7e454434a6fbb219ddef83b0": {
+      "reasoning": "The call is about scheduling an appointment for Finnegan's leptospirosis and kennel cough vaccines, which are routine preventive measures.",
+      "answer": "Preventive Care",
+      "call_id": "CAL00747d7c7e454434a6fbb219ddef83b0"
+    },
+    "CAL003a2122cd8542c481baf4ddc8e40d80": {
+      "reasoning": "The caller initially requested an appointment for their dog's 'seasonal allergy stuff because he's getting itchy,' which directly falls under Dermatology. While vaccinations and parasite prevention (Preventive Care) were also added to the appointment, the primary concern expressed by the owner that prompted the call was the allergy-related itching.",
+      "answer": "Dermatology",
+      "call_id": "CAL003a2122cd8542c481baf4ddc8e40d80"
+    },
+    "CAL00803d059d424bb296f8f9916a7115fd": {
+      "reasoning": "The caller is scheduling an appointment for their dog to receive overdue vaccinations (Bordetella and leptospirosis). This falls under routine wellness and vaccinations, which is a core component of preventive care.",
+      "answer": "Preventive Care",
+      "call_id": "CAL00803d059d424bb296f8f9916a7115fd"
+    },
+    "CAL00817a0b30d241d39d3953af8bdffd0e": {
+      "reasoning": "The caller explicitly states they are looking to book an appointment for both their dogs, and the agent confirms the appointment is for 'vaccines'. Vaccinations are a core component of preventive care.",
+      "answer": "Preventive Care",
+      "call_id": "CAL00817a0b30d241d39d3953af8bdffd0e"
+    },
+    "CAL007df41abd3e463298f55c7d7d733d9a": {
+      "reasoning": "The caller explicitly states they are bringing their pet, Gracie, in for 'her shot' and later confirms it's 'just for vaccines' and 'her annual vaccine.' This falls directly under the 'Preventive Care' category, which includes vaccinations and annual exams.",
+      "answer": "Preventive Care",
+      "call_id": "CAL007df41abd3e463298f55c7d7d733d9a"
+    },
+    "CAL008550503109471bb301dbdb52ea8453": {
+      "reasoning": "The caller explicitly states that their cat, Tara, needs to get in for a 'checkup'. This is a routine wellness visit, which falls under preventive care.",
+      "answer": "Preventive Care",
+      "call_id": "CAL008550503109471bb301dbdb52ea8453"
+    },
+    "CAL000982de28904f1aa7f072d197347693": {
+      "reasoning": "The caller is inquiring about an initial exam for their cat and specifically asks about a 'medical process' (likely lab testing for thyroid levels) due to a 'sneaking concern about possible [MEDICAL_CONDITION]'. The agent provides a price range for this 'medical process' which falls under diagnostic services (lab testing).",
+      "answer": "Diagnostic Services",
+      "call_id": "CAL000982de28904f1aa7f072d197347693"
+    },
+    "CAL0009ad7aca3748009c5fb31f51eee5ad": {
+      "reasoning": "The caller is bringing their dog to an emergency clinic due to active bleeding from a matted area on its bum. The caller is concerned because they cannot stop the bleeding or assess the extent of the injury. While the agent initially questions if it's 'super urgent,' the caller's decision to go to an emergency clinic for active, unmanaged bleeding indicates a perceived critical symptom requiring immediate attention and stabilization, which aligns with Emergency & Critical Care.",
+      "answer": "Emergency & Critical Care",
+      "call_id": "CAL0009ad7aca3748009c5fb31f51eee5ad"
+    },
+    "CAL008a74d19188416cbd3be39780335bbb": {
+      "reasoning": "The call transcript indicates that the caller dialed the wrong number and no veterinary service was discussed. Therefore, it doesn't fit into any specific service category.",
+      "answer": "Other",
+      "call_id": "CAL008a74d19188416cbd3be39780335bbb"
+    },
+    "CAL0083311f69934f448c9bbac4cb31ed5e": {
+      "reasoning": "The entire conversation revolves around inquiring about the cost and process for euthanizing a rabbit, including discussion of examination fees and cremation options. This directly falls under 'End of Life Care'.",
+      "answer": "End of Life Care",
+      "call_id": "CAL0083311f69934f448c9bbac4cb31ed5e"
+    },
+    "CAL008f2a090e7f4d42a4488a553045d64f": {
+      "reasoning": "The caller is scheduling an annual checkup and vaccinations for two older cats. The agent confirms it's not an urgent medical issue and books a routine appointment for an 'exam and the vaccine for each cat'. This aligns perfectly with 'Preventive Care' services.",
+      "answer": "Preventive Care",
+      "call_id": "CAL008f2a090e7f4d42a4488a553045d64f"
+    },
+    "CAL0068dc66d062488fa1f4879724451050": {
+      "reasoning": "The caller is seeking veterinary attention for their dog, Callie, who has developed a limp and is experiencing soreness in her hind end, making it difficult for her to get up. This describes a sick or injured animal needing prompt (non-emergency) attention to diagnose and address the cause of the pain and lameness. While X-rays are discussed as a potential diagnostic tool, the primary reason for the call and the booked appointment is to address the dog's current symptoms.",
+      "answer": "Urgent Care / Sick Pet",
+      "call_id": "CAL0068dc66d062488fa1f4879724451050"
+    },
+    "CAL0038d600a47946ebb1c82834efd14ec2": {
+      "reasoning": "The caller found a stray cat and wants to bring it in immediately to scan for a microchip to identify potential owners. The agent confirms this can be done today without an appointment. While a general checkup is also discussed as a future possibility if no owner is found (which would be Preventive Care), the primary and immediate action agreed upon is the microchip scan. Scanning for a microchip is a diagnostic procedure used to gather information about the animal.",
+      "answer": "Diagnostic Services",
+      "call_id": "CAL0038d600a47946ebb1c82834efd14ec2"
+    },
+    "CAL00a33094c71445c3896aac927ab0c6b9": {
+      "reasoning": "The caller explicitly states, \"My dog needs an X ray of his kidneys.\" The conversation then revolves around the cost of the X-ray, sedation, and consultation. X-rays are a primary diagnostic tool.",
+      "answer": "Diagnostic Services",
+      "call_id": "CAL00a33094c71445c3896aac927ab0c6b9"
+    },
+    "CAL0081cff67cb34ae0b30d1dc0b426d15c": {
+      "reasoning": "The caller has a new rescue dog and wants to get him 'updated with anything he might need' before traveling to an area with many ticks, specifically asking about tick prevention. They also mention needing to get a microchip inserted. These services (parasite prevention, general check-up for a new pet, microchip insertion) fall under preventive care.",
+      "answer": "Preventive Care",
+      "call_id": "CAL0081cff67cb34ae0b30d1dc0b426d15c"
+    },
+    "CAL001052c35ec84a74857f15ba89aa2183": {
+      "reasoning": "The caller explicitly states they want to make an appointment for their dog to \"get his blood work done.\" Blood work is a form of lab testing, which falls directly under the 'Diagnostic Services' category. While routine bloodwork can be part of 'Preventive Care,' the primary service requested is the diagnostic test itself, and the call does not specify it as part of a broader wellness visit or annual exam.",
+      "answer": "Diagnostic Services",
+      "call_id": "CAL001052c35ec84a74857f15ba89aa2183"
+    },
+    "CAL00c4d944580b454fa32ba23e0a439d9f": {
+      "reasoning": "The caller explicitly states, \"I have a cat that I need to put down,\" and the conversation revolves around the cost and procedure for euthanasia and communal cremation. This directly aligns with End of Life Care.",
+      "answer": "End of Life Care",
+      "call_id": "CAL00c4d944580b454fa32ba23e0a439d9f"
+    },
+    "CAL00a0052f044140e2ab2535a85367c137": {
+      "reasoning": "The call is a follow-up regarding a paw print for a dog that was cremated a few weeks prior. This service is directly related to the end-of-life care provided for the pet.",
+      "answer": "End of Life Care",
+      "call_id": "CAL00a0052f044140e2ab2535a85367c137"
+    },
+    "CAL00929b7f48514a6b85c94fad4b997d9f": {
+      "reasoning": "The caller is seeking an appointment for their pet, Prince, due to an issue with his left eye, which he keeps closing. The agent acknowledges the need to see the pet promptly because 'we don't like to mess around with eyes.' This indicates a sick pet needing prompt, non-emergency attention for a specific symptom.",
+      "answer": "Urgent Care / Sick Pet",
+      "call_id": "CAL00929b7f48514a6b85c94fad4b997d9f"
+    },
+    "CAL00b175c88b6d4b20a8f2ecb4d226d689": {
+      "reasoning": "The call is solely about rescheduling an existing appointment for a pet. The specific nature of the veterinary service (e.g., wellness, sick visit, surgery) is not discussed or revealed in the transcript. Therefore, it falls under 'Other' as an administrative task.",
+      "answer": "Other",
+      "call_id": "CAL00b175c88b6d4b20a8f2ecb4d226d689"
+    },
+    "CAL00848f2fc8ea47239cff6c6c1177f95a": {
+      "reasoning": "The caller is making an appointment for their cat, Halali, who they suspect has an ear infection. This falls under 'Urgent Care / Sick Pet' as it's a sick animal needing prompt (non-emergency) attention. The caller also orders food for another cat, which is a 'Retail' service. However, since the prompt asks for ONE broad category and the primary reason for the appointment is the sick pet, 'Urgent Care / Sick Pet' is the most fitting primary category for the veterinary service discussed.",
+      "answer": "Urgent Care / Sick Pet",
+      "call_id": "CAL00848f2fc8ea47239cff6c6c1177f95a"
+    },
+    "CAL0084da0fae0c4da6a7bfdabc646c5ba9": {
+      "reasoning": "The caller is primarily comparing costs for a new veterinary clinic, specifically inquiring about the price of a general consultation/exam and, in significant detail, the monthly cost of a specific prescription medication for their dog. The extensive discussion about the medication cost, including the agent checking with a technician, falls under the 'Retail' category, which includes prescription refills.",
+      "answer": "Retail",
+      "call_id": "CAL0084da0fae0c4da6a7bfdabc646c5ba9"
+    },
+    "CAL00bf0e33a835402c8e1ab317b17d16ce": {
+      "reasoning": "The caller is booking an appointment for their dog, Toby, who broke a nail, bled, and has a slight limp. This is an injury requiring prompt attention but is not described as life-threatening, fitting the 'Urgent Care / Sick Pet' category.",
+      "answer": "Urgent Care / Sick Pet",
+      "call_id": "CAL00bf0e33a835402c8e1ab317b17d16ce"
+    },
+    "CAL00057325c1924ef5be1874417c20b262": {
+      "reasoning": "The call involves two main components: ordering Cosequin and Zycline, which falls under 'Retail' (prescription refills/food orders), and booking a nail trim for a dog. A nail trim is a routine maintenance service that contributes to a pet's overall wellness and is typically offered as part of general preventive care. Since the prompt requires choosing ONE broad category and a nail trim is a direct service provided to the animal for its well-being, 'Preventive Care' is the most appropriate category for the service aspect of the call, even though retail is also present. The nail trim represents a direct interaction for the animal's physical care, aligning with the broader scope of veterinary services.",
+      "answer": "Preventive Care",
+      "call_id": "CAL00057325c1924ef5be1874417c20b262"
+    },
+    "CAL00d3bb91c37c494dae58d1f03970cf7c": {
+      "reasoning": "The caller explicitly states they are looking to book a spay and vaccines for their dog. While vaccines fall under 'Preventive Care', the spay is a major surgical procedure. The conversation includes detailed discussion about the spay, including recovery time and specific scheduling, making 'Surgical Services' the most prominent and broad category for this call.",
+      "answer": "Surgical Services",
+      "call_id": "CAL00d3bb91c37c494dae58d1f03970cf7c"
+    },
+    "CAL00e3726d100f45e8913c8f8dfb2fd4ce": {
+      "reasoning": "The caller's cat has a swollen paw, is limping, and is suspected to have stepped on a hot burner. These symptoms indicate an injury or acute condition requiring prompt attention, but not necessarily a life-threatening emergency. The agent offers to see the pet over the weekend or suggests waiting until Monday for a regular vet, which aligns with urgent care rather than critical emergency care.",
+      "answer": "Urgent Care / Sick Pet",
+      "call_id": "CAL00e3726d100f45e8913c8f8dfb2fd4ce"
+    },
+    "CAL00cc318557b84211830f8f9165abff38": {
+      "reasoning": "The caller is scheduling an appointment for their pet, Kiwi, who has a recurring yeast ear infection. The category 'Dermatology' specifically includes 'ear issues' in its description, making it the most appropriate and specific broad category for this type of ailment.",
+      "answer": "Dermatology",
+      "call_id": "CAL00cc318557b84211830f8f9165abff38"
+    },
+    "CAL00ddc5b018204683a8005f80fb0cb08d": {
+      "reasoning": "The call primarily involves canceling an existing appointment. However, during the call, the client explicitly asks if they can get some flea and tick medication for their cat. The agent discusses the requirements for 'prescription refills,' which falls under the 'Retail' category.",
+      "answer": "Retail",
+      "call_id": "CAL00ddc5b018204683a8005f80fb0cb08d"
+    },
+    "CAL011c013103cb49bc84379c12992b27a6": {
+      "reasoning": "The caller's cat has a recurring medical condition on its paw, described as producing 'snot-like gunk,' for which chlorhexidine soap was prescribed. Chlorhexidine is an antiseptic commonly used for skin issues. The call is about managing the application of this medication and concerns about potential side effects, which directly relates to the treatment of a dermatological condition.",
+      "answer": "Dermatology",
+      "call_id": "CAL011c013103cb49bc84379c12992b27a6"
+    },
+    "CAL008db269e7294a62a394fecdbe852724": {
+      "reasoning": "The call is solely about rescheduling an existing appointment for a pet named Leo. The specific nature or type of veterinary service for this appointment (e.g., wellness exam, sick visit, surgery, etc.) is not mentioned or discussed in the transcript. Therefore, it does not fit into any of the specific service categories provided.",
+      "answer": "Other",
+      "call_id": "CAL008db269e7294a62a394fecdbe852724"
+    },
+    "CAL009fecf1e3dc43fcb124f083b4886d34": {
+      "reasoning": "The call is about rescheduling a routine appointment for two cats with their regular veterinarian. The non-urgent nature of the reschedule (waiting for the vet to return from vacation) suggests it is not an emergency, urgent care, or a time-sensitive specialized service. Routine appointments for multiple pets with their primary veterinarian most commonly fall under preventive care, such as wellness exams or vaccinations.",
+      "answer": "Preventive Care",
+      "call_id": "CAL009fecf1e3dc43fcb124f083b4886d34"
+    }
+  },
+  "final_results": {
+    "CAL000aeb5cceb842ff9ab94f9dc115873d": "Other",
+    "CAL0039a82c50d340abaf5823d06785a4a0": "N/A (missed call)",
+    "CAL008a74d19188416cbd3be39780335bbb": "Other",
+    "CAL008db269e7294a62a394fecdbe852724": "Other",
+    "CAL00b175c88b6d4b20a8f2ecb4d226d689": "Other",
+    "CAL001052c35ec84a74857f15ba89aa2183": "Diagnostic Services \u2013 In-House or Reference Lab Testing (Blood, Urine, Fecal, Cytology)",
+    "CAL001aad9b8a0947ed8ac0353348259263": "Dermatology \u2013 Ear Infections",
+    "CAL003a2122cd8542c481baf4ddc8e40d80": "Dermatology \u2013 Allergies",
+    "CAL001b27da05104332895e8f037e981343": "Preventive Care \u2013 Vaccinations",
+    "CAL003334dc9cce46eeb1d9ddc73be4e633": "Preventive Care \u2013 Vaccinations",
+    "CAL003947c6d73e405a8ff5214e6719fcbd": "Preventive Care",
+    "CAL0038d600a47946ebb1c82834efd14ec2": "Diagnostic Services",
+    "CAL000982de28904f1aa7f072d197347693": "Diagnostic Services \u2013 In-House or Reference Lab Testing (Blood, Urine, Fecal, Cytology)",
+    "CAL0005db904b5746e18d9c5a855f8ff8fd": "Emergency & Critical Care \u2013 Referred to an Emergency Hospital",
+    "CAL00415f59577343e1aaad08431561d554": "Preventive Care \u2013 Vaccinations",
+    "CAL000e51384a1945a28c7af94f3657b772": "Urgent Care \u2013 Diagnosis and Treatment of Illnesses (Vomiting, Diabetes, Infections)",
+    "CAL00584c7b588f4128be84a13ff49dbe96": "Surgical Services \u2013 Spays and Neuters",
+    "CAL005e941190aa4eeeb16b5520f59e8526": "Preventive Care \u2013 Vaccinations",
+    "CAL0059cd46261848899dadd858b1297a7a": "Surgical Services \u2013 Spays and Neuters",
+    "CAL00057325c1924ef5be1874417c20b262": "Preventive Care",
+    "CAL0024c5183d6641a7bab31a88e46fbc69": "Emergency & Critical Care \u2013 Stabilization (Trauma, Poisoning, Seizures)",
+    "CAL000498baa67742cb9a4fed89664cd014": "Urgent Care \u2013 Diagnosis and Treatment of Illnesses (Vomiting, Diabetes, Infections)",
+    "CAL006c0c3985f84e298f13d3d696ce8650": "Preventive Care \u2013 Vaccinations",
+    "CAL0009ad7aca3748009c5fb31f51eee5ad": "Emergency & Critical Care \u2013 Stabilization (Trauma, Poisoning, Seizures)",
+    "CAL00747d7c7e454434a6fbb219ddef83b0": "Preventive Care \u2013 Vaccinations",
+    "CAL007df41abd3e463298f55c7d7d733d9a": "Preventive Care \u2013 Vaccinations",
+    "CAL00803d059d424bb296f8f9916a7115fd": "Preventive Care \u2013 Vaccinations",
+    "CAL00817a0b30d241d39d3953af8bdffd0e": "Preventive Care \u2013 Vaccinations",
+    "CAL0011b20af94b4c4289cf6a51af871369": "Urgent Care \u2013 Diagnosis and Treatment of Illnesses (Vomiting, Diabetes, Infections)",
+    "CAL0081cff67cb34ae0b30d1dc0b426d15c": "Preventive Care \u2013 Parasite Prevention",
+    "CAL008550503109471bb301dbdb52ea8453": "Preventive Care \u2013 Annual Exams",
+    "CAL00653e0d49dc40199c3e555625cb2117": "Urgent Care \u2013 Diagnosis and Treatment of Illnesses (Vomiting, Diabetes, Infections)",
+    "CAL00427bb94384468b8457c5b48be0dffa": "Preventive Care \u2013 Annual Exams",
+    "CAL0083311f69934f448c9bbac4cb31ed5e": "End of Life Care \u2013 In-Clinic Euthanasia",
+    "CAL00a33094c71445c3896aac927ab0c6b9": "Diagnostic Services \u2013 X-Rays (Digital Radiography)",
+    "CAL00929b7f48514a6b85c94fad4b997d9f": "Urgent Care \u2013 Diagnosis and Treatment of Illnesses (Vomiting, Diabetes, Infections)",
+    "CAL009fecf1e3dc43fcb124f083b4886d34": "Preventive Care",
+    "CAL00d3bb91c37c494dae58d1f03970cf7c": "Surgical Services \u2013 Spays and Neuters",
+    "CAL00848f2fc8ea47239cff6c6c1177f95a": "Urgent Care \u2013 Diagnosis and Treatment of Illnesses (Vomiting, Diabetes, Infections)",
+    "CAL00cc318557b84211830f8f9165abff38": "Dermatology \u2013 Ear Infections",
+    "CAL00a0052f044140e2ab2535a85367c137": "End of Life Care",
+    "CAL0084da0fae0c4da6a7bfdabc646c5ba9": "Retail \u2013 Prescriptions",
+    "CAL00644c70bf09449a835487c3ddc673b2": "Preventive Care \u2013 Parasite Prevention",
+    "CAL00ddc5b018204683a8005f80fb0cb08d": "Retail \u2013 Prescriptions",
+    "CAL00c4d944580b454fa32ba23e0a439d9f": "End of Life Care \u2013 In-Clinic Euthanasia",
+    "CAL011c013103cb49bc84379c12992b27a6": "Dermatology",
+    "CAL00bf0e33a835402c8e1ab317b17d16ce": "Urgent Care / Sick Pet",
+    "CAL00e3726d100f45e8913c8f8dfb2fd4ce": "Urgent Care \u2013 Diagnosis and Treatment of Illnesses (Vomiting, Diabetes, Infections)",
+    "CAL0068dc66d062488fa1f4879724451050": "Urgent Care \u2013 Diagnosis and Treatment of Illnesses (Vomiting, Diabetes, Infections)",
+    "CAL008f2a090e7f4d42a4488a553045d64f": "Preventive Care \u2013 Annual Exams"
+  }
+}

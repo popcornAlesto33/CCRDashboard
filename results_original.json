@@ -1,0 +1,801 @@
+{
+  "mode": "original-prompt (gemini-2.5-flash)",
+  "num_calls": 50,
+  "results": {
+    "appointment_booked": {
+      "accuracy": 0.9591836734693877,
+      "correct": 47,
+      "total": 49,
+      "mismatches": [
+        {
+          "call_id": "CAL0024c5183d6641a7bab31a88e46fbc69",
+          "gold": "Yes",
+          "predicted": "No"
+        },
+        {
+          "call_id": "CAL0083311f69934f448c9bbac4cb31ed5e",
+          "gold": "Inconclusive",
+          "predicted": "No"
+        }
+      ]
+    },
+    "client_type": {
+      "accuracy": 0.8163265306122449,
+      "correct": 40,
+      "total": 49,
+      "mismatches": [
+        {
+          "call_id": "CAL0009ad7aca3748009c5fb31f51eee5ad",
+          "gold": "New",
+          "predicted": "Existing"
+        },
+        {
+          "call_id": "CAL0024c5183d6641a7bab31a88e46fbc69",
+          "gold": "New",
+          "predicted": "Inconclusive"
+        },
+        {
+          "call_id": "CAL005e941190aa4eeeb16b5520f59e8526",
+          "gold": "New",
+          "predicted": "Existing"
+        },
+        {
+          "call_id": "CAL0081cff67cb34ae0b30d1dc0b426d15c",
+          "gold": "Existing",
+          "predicted": "New"
+        },
+        {
+          "call_id": "CAL0083311f69934f448c9bbac4cb31ed5e",
+          "gold": "New",
+          "predicted": "Inconclusive"
+        },
+        {
+          "call_id": "CAL008a74d19188416cbd3be39780335bbb",
+          "gold": "New",
+          "predicted": "Inconclusive"
+        },
+        {
+          "call_id": "CAL00929b7f48514a6b85c94fad4b997d9f",
+          "gold": "Existing",
+          "predicted": "Inconclusive"
+        },
+        {
+          "call_id": "CAL00bf0e33a835402c8e1ab317b17d16ce",
+          "gold": "Existing",
+          "predicted": "New"
+        },
+        {
+          "call_id": "CAL011c013103cb49bc84379c12992b27a6",
+          "gold": "New",
+          "predicted": "Existing"
+        }
+      ]
+    },
+    "treatment_type": {
+      "accuracy": 0.5306122448979592,
+      "correct": 26,
+      "total": 49,
+      "mismatches": [
+        {
+          "call_id": "CAL000498baa67742cb9a4fed89664cd014",
+          "gold": "Urgent Care / Sick Pet",
+          "predicted": "Urgent Care \u2013 Diagnosis and Treatment of Illnesses (Vomiting, Diabetes, Infections)"
+        },
+        {
+          "call_id": "CAL000982de28904f1aa7f072d197347693",
+          "gold": "Preventive Care \u2013 Wellness Screening (Bloodwork, Urinalysis, Fecals)",
+          "predicted": "Preventive Care \u2013 Annual Exams"
+        },
+        {
+          "call_id": "CAL0009ad7aca3748009c5fb31f51eee5ad",
+          "gold": "Emergency & Critical Care",
+          "predicted": "Emergency & Critical Care \u2013 Stabilization (Trauma, Poisoning, Seizures)"
+        },
+        {
+          "call_id": "CAL001052c35ec84a74857f15ba89aa2183",
+          "gold": "Preventive Care \u2013 Wellness Screening (Bloodwork, Urinalysis, Fecals)",
+          "predicted": "Diagnostic Services \u2013 In-House or Reference Lab Testing (Blood, Urine, Fecal, Cytology)"
+        },
+        {
+          "call_id": "CAL001aad9b8a0947ed8ac0353348259263",
+          "gold": "Dermatology \u2013 Ear Infections",
+          "predicted": "Urgent Care \u2013 Diagnosis and Treatment of Illnesses (Vomiting, Diabetes, Infections)"
+        },
+        {
+          "call_id": "CAL0024c5183d6641a7bab31a88e46fbc69",
+          "gold": "Emergency & Critical Care",
+          "predicted": "Emergency & Critical Care \u2013 Stabilization (Trauma, Poisoning, Seizures)"
+        },
+        {
+          "call_id": "CAL0038d600a47946ebb1c82834efd14ec2",
+          "gold": "Preventive Care",
+          "predicted": "Preventive Care \u2013 Annual Exams"
+        },
+        {
+          "call_id": "CAL003947c6d73e405a8ff5214e6719fcbd",
+          "gold": "Preventive Care",
+          "predicted": "Other"
+        },
+        {
+          "call_id": "CAL003a2122cd8542c481baf4ddc8e40d80",
+          "gold": "Dermatology \u2013 Allergies",
+          "predicted": "Urgent Care \u2013 Chronic Disease Management (Arthritis, Allergies, Thyroid Disease)"
+        },
+        {
+          "call_id": "CAL00644c70bf09449a835487c3ddc673b2",
+          "gold": "Preventive Care \u2013 Parasite Prevention",
+          "predicted": "Preventive Care \u2013 Vaccinations"
+        },
+        {
+          "call_id": "CAL00653e0d49dc40199c3e555625cb2117",
+          "gold": "Urgent Care / Sick Pet",
+          "predicted": "Urgent Care \u2013 Diagnosis and Treatment of Illnesses (Vomiting, Diabetes, Infections)"
+        },
+        {
+          "call_id": "CAL0068dc66d062488fa1f4879724451050",
+          "gold": "Urgent Care \u2013 Internal Medicine Workups (Blood Tests, Imaging, Specialist Consults)",
+          "predicted": "Urgent Care \u2013 Diagnosis and Treatment of Illnesses (Vomiting, Diabetes, Infections)"
+        },
+        {
+          "call_id": "CAL00848f2fc8ea47239cff6c6c1177f95a",
+          "gold": "Dermatology \u2013 Ear Infections",
+          "predicted": "Urgent Care \u2013 Diagnosis and Treatment of Illnesses (Vomiting, Diabetes, Infections)"
+        },
+        {
+          "call_id": "CAL0084da0fae0c4da6a7bfdabc646c5ba9",
+          "gold": "Preventive Care \u2013 Vaccinations",
+          "predicted": "Preventive Care \u2013 Annual Exams"
+        },
+        {
+          "call_id": "CAL008a74d19188416cbd3be39780335bbb",
+          "gold": "Preventive Care",
+          "predicted": "Other"
+        },
+        {
+          "call_id": "CAL008db269e7294a62a394fecdbe852724",
+          "gold": "Preventive Care \u2013 Annual Exams",
+          "predicted": "Other"
+        },
+        {
+          "call_id": "CAL009fecf1e3dc43fcb124f083b4886d34",
+          "gold": "Preventive Care",
+          "predicted": "Other"
+        },
+        {
+          "call_id": "CAL00a0052f044140e2ab2535a85367c137",
+          "gold": "End of Life Care",
+          "predicted": "End of Life Care \u2013 In-Clinic Euthanasia"
+        },
+        {
+          "call_id": "CAL00b175c88b6d4b20a8f2ecb4d226d689",
+          "gold": "Preventive Care",
+          "predicted": "Other"
+        },
+        {
+          "call_id": "CAL00bf0e33a835402c8e1ab317b17d16ce",
+          "gold": "Urgent Care / Sick Pet",
+          "predicted": "Urgent Care \u2013 Diagnosis and Treatment of Illnesses (Vomiting, Diabetes, Infections)"
+        },
+        {
+          "call_id": "CAL00ddc5b018204683a8005f80fb0cb08d",
+          "gold": "Preventive Care \u2013 Parasite Prevention",
+          "predicted": "Other"
+        },
+        {
+          "call_id": "CAL00e3726d100f45e8913c8f8dfb2fd4ce",
+          "gold": "Emergency & Critical Care",
+          "predicted": "Urgent Care \u2013 Diagnosis and Treatment of Illnesses (Vomiting, Diabetes, Infections)"
+        },
+        {
+          "call_id": "CAL011c013103cb49bc84379c12992b27a6",
+          "gold": "Urgent Care / Sick Pet",
+          "predicted": "Retail \u2013 Prescriptions"
+        }
+      ]
+    },
+    "reason_not_booked": {
+      "accuracy": 0.05,
+      "correct": 1,
+      "total": 20,
+      "mismatches": [
+        {
+          "call_id": "CAL000498baa67742cb9a4fed89664cd014",
+          "gold": "2a. Scheduling Issue - Walk ins not available / no same day appt",
+          "predicted": "Scheduling Issue - Full schedule"
+        },
+        {
+          "call_id": "CAL0005db904b5746e18d9c5a855f8ff8fd",
+          "gold": "6. Emergency care not offered",
+          "predicted": "Emergency care not offered"
+        },
+        {
+          "call_id": "CAL000982de28904f1aa7f072d197347693",
+          "gold": "1a. Caller Procrastination - Price Objection / Shopping / Request for Quote",
+          "predicted": "Caller Procrastination - Price Objection / Shopping / Request for Quote"
+        },
+        {
+          "call_id": "CAL0024c5183d6641a7bab31a88e46fbc69",
+          "gold": "(null)",
+          "predicted": "Scheduling Issue - Walk ins not available / no same day appt"
+        },
+        {
+          "call_id": "CAL0038d600a47946ebb1c82834efd14ec2",
+          "gold": "2b. Scheduling Issue - Full schedule",
+          "predicted": "Scheduling Issue - Full schedule"
+        },
+        {
+          "call_id": "CAL00584c7b588f4128be84a13ff49dbe96",
+          "gold": "2. Scheduling Issue",
+          "predicted": "Scheduling Issue - Full schedule"
+        },
+        {
+          "call_id": "CAL0059cd46261848899dadd858b1297a7a",
+          "gold": "1a. Caller Procrastination - Price Objection / Shopping / Request for Quote",
+          "predicted": "Caller Procrastination"
+        },
+        {
+          "call_id": "CAL005e941190aa4eeeb16b5520f59e8526",
+          "gold": "2. Scheduling Issue",
+          "predicted": "Scheduling Issue"
+        },
+        {
+          "call_id": "CAL0081cff67cb34ae0b30d1dc0b426d15c",
+          "gold": "2. Scheduling Issue",
+          "predicted": "Scheduling Issue - Full schedule"
+        },
+        {
+          "call_id": "CAL0083311f69934f448c9bbac4cb31ed5e",
+          "gold": "1a. Caller Procrastination - Price Objection / Shopping / Request for Quote",
+          "predicted": "Caller Procrastination - Price Objection / Shopping / Request for Quote"
+        },
+        {
+          "call_id": "CAL0084da0fae0c4da6a7bfdabc646c5ba9",
+          "gold": "1a. Caller Procrastination - Price Objection / Shopping / Request for Quote",
+          "predicted": "Caller Procrastination - Price Objection / Shopping / Request for Quote"
+        },
+        {
+          "call_id": "CAL008a74d19188416cbd3be39780335bbb",
+          "gold": "4. Meant to call competitor hospital",
+          "predicted": "Meant to call competitor hospital"
+        },
+        {
+          "call_id": "CAL00929b7f48514a6b85c94fad4b997d9f",
+          "gold": "2b. Scheduling Issue - Full schedule",
+          "predicted": "Scheduling Issue - Full schedule"
+        },
+        {
+          "call_id": "CAL009fecf1e3dc43fcb124f083b4886d34",
+          "gold": "1. Caller Procrastination",
+          "predicted": "Caller Procrastination"
+        },
+        {
+          "call_id": "CAL00a0052f044140e2ab2535a85367c137",
+          "gold": "(null)",
+          "predicted": "Client/appt query (non-medical)"
+        },
+        {
+          "call_id": "CAL00a33094c71445c3896aac927ab0c6b9",
+          "gold": "1a. Caller Procrastination - Price Objection / Shopping / Request for Quote",
+          "predicted": "Caller Procrastination - Price Objection / Shopping / Request for Quote"
+        },
+        {
+          "call_id": "CAL00c4d944580b454fa32ba23e0a439d9f",
+          "gold": "1a. Caller Procrastination - Price Objection / Shopping / Request for Quote",
+          "predicted": "Caller Procrastination"
+        },
+        {
+          "call_id": "CAL00ddc5b018204683a8005f80fb0cb08d",
+          "gold": "1. Caller Procrastination",
+          "predicted": "Scheduling Issue"
+        },
+        {
+          "call_id": "CAL011c013103cb49bc84379c12992b27a6",
+          "gold": "1. Caller Procrastination",
+          "predicted": "8. Medication/food order"
+        }
+      ]
+    }
+  },
+  "predictions": {
+    "CAL000498baa67742cb9a4fed89664cd014": {
+      "call_id": "CAL000498baa67742cb9a4fed89664cd014",
+      "appointment_booked": "No",
+      "client_type": "Existing",
+      "treatment_type": "Urgent Care \u2013 Diagnosis and Treatment of Illnesses (Vomiting, Diabetes, Infections)",
+      "stated_hospital_name": "Blue Sky Animal Hospital",
+      "stated_patient_name": null,
+      "agent_name": "Sarah",
+      "reason_not_booked": "Scheduling Issue - Full schedule"
+    },
+    "CAL00057325c1924ef5be1874417c20b262": {
+      "call_id": "CAL00057325c1924ef5be1874417c20b262",
+      "appointment_booked": "Yes",
+      "client_type": "Existing",
+      "treatment_type": "Preventive Care",
+      "stated_hospital_name": "Mount Joy Animal Clinic",
+      "stated_patient_name": "Dickens, Charlie",
+      "agent_name": null,
+      "reason_not_booked": null
+    },
+    "CAL0005db904b5746e18d9c5a855f8ff8fd": {
+      "call_id": "CAL0005db904b5746e18d9c5a855f8ff8fd",
+      "appointment_booked": "No",
+      "client_type": "Existing",
+      "treatment_type": "Emergency & Critical Care \u2013 Stabilization (Trauma, Poisoning, Seizures)",
+      "stated_hospital_name": "Maury Veterinary Clinic",
+      "stated_patient_name": "Jimmy",
+      "agent_name": "Megan",
+      "reason_not_booked": "Emergency care not offered"
+    },
+    "CAL000982de28904f1aa7f072d197347693": {
+      "call_id": "CAL000982de28904f1aa7f072d197347693",
+      "appointment_booked": "No",
+      "client_type": "New",
+      "treatment_type": "Preventive Care \u2013 Annual Exams",
+      "stated_hospital_name": "Downtown animal clinic",
+      "stated_patient_name": null,
+      "agent_name": null,
+      "reason_not_booked": "Caller Procrastination - Price Objection / Shopping / Request for Quote"
+    },
+    "CAL0009ad7aca3748009c5fb31f51eee5ad": {
+      "call_id": "CAL0009ad7aca3748009c5fb31f51eee5ad",
+      "appointment_booked": "Yes",
+      "client_type": "Existing",
+      "treatment_type": "Emergency & Critical Care \u2013 Stabilization (Trauma, Poisoning, Seizures)",
+      "stated_hospital_name": "Kingston Regional Pet Hospital",
+      "stated_patient_name": null,
+      "agent_name": null,
+      "reason_not_booked": null
+    },
+    "CAL000aeb5cceb842ff9ab94f3657b772": {
+      "call_id": "CAL000aeb5cceb842ff9ab94f3657b772",
+      "appointment_booked": "No",
+      "client_type": "Inconclusive",
+      "treatment_type": "Other",
+      "stated_hospital_name": "Blue Sky Animal Hospital",
+      "stated_patient_name": null,
+      "agent_name": null,
+      "reason_not_booked": "Scheduling Issue - Full schedule"
+    },
+    "CAL000e51384a1945a28c7af94f3657b772": {
+      "call_id": "CAL000e51384a1945a28c7af94f3657b772",
+      "appointment_booked": "Yes",
+      "client_type": "Existing",
+      "treatment_type": "Urgent Care \u2013 Diagnosis and Treatment of Illnesses (Vomiting, Diabetes, Infections)",
+      "stated_hospital_name": "Fisher Glen Animal Hospital",
+      "stated_patient_name": "Luna",
+      "agent_name": "Sabrina",
+      "reason_not_booked": null
+    },
+    "CAL001052c35ec84a74857f15ba89aa2183": {
+      "call_id": "CAL001052c35ec84a74857f15ba89aa2183",
+      "appointment_booked": "Yes",
+      "client_type": "Existing",
+      "treatment_type": "Diagnostic Services \u2013 In-House or Reference Lab Testing (Blood, Urine, Fecal, Cytology)",
+      "stated_hospital_name": "Mccune, Franic Animal Hospital",
+      "stated_patient_name": "Buck",
+      "agent_name": "Haley",
+      "reason_not_booked": null
+    },
+    "CAL0011b20af94b4c4289cf6a51af871369": {
+      "call_id": "CAL0011b20af94b4c4289cf6a51af871369",
+      "appointment_booked": "Yes",
+      "client_type": "New",
+      "treatment_type": "Urgent Care \u2013 Diagnosis and Treatment of Illnesses (Vomiting, Diabetes, Infections)",
+      "stated_hospital_name": "Animal Clinic",
+      "stated_patient_name": "Peanut",
+      "agent_name": "Maeve",
+      "reason_not_booked": null
+    },
+    "CAL001aad9b8a0947ed8ac0353348259263": {
+      "call_id": "CAL001aad9b8a0947ed8ac0353348259263",
+      "appointment_booked": "Yes",
+      "client_type": "Existing",
+      "treatment_type": "Urgent Care \u2013 Diagnosis and Treatment of Illnesses (Vomiting, Diabetes, Infections)",
+      "stated_hospital_name": "Downtown Animal Clinic",
+      "stated_patient_name": "Rico",
+      "agent_name": null,
+      "reason_not_booked": null
+    },
+    "CAL001b27da05104332895e8f037e981343": {
+      "call_id": "CAL001b27da05104332895e8f037e981343",
+      "appointment_booked": "Yes",
+      "client_type": "New",
+      "treatment_type": "Preventive Care \u2013 Vaccinations",
+      "stated_hospital_name": "Pickering Animal Hospital",
+      "stated_patient_name": "Harry Potter",
+      "agent_name": "Dean",
+      "reason_not_booked": null
+    },
+    "CAL0024c5183d6641a7bab31a88e46fbc69": {
+      "call_id": "CAL0024c5183d6641a7bab31a88e46fbc69",
+      "appointment_booked": "No",
+      "client_type": "Inconclusive",
+      "treatment_type": "Emergency & Critical Care \u2013 Stabilization (Trauma, Poisoning, Seizures)",
+      "stated_hospital_name": "Kingston Regional Pet Hospital",
+      "stated_patient_name": null,
+      "agent_name": null,
+      "reason_not_booked": "Scheduling Issue - Walk ins not available / no same day appt"
+    },
+    "CAL003334dc9cce46eeb1d9ddc73be4e633": {
+      "call_id": "CAL003334dc9cce46eeb1d9ddc73be4e633",
+      "appointment_booked": "Yes",
+      "client_type": "Existing",
+      "treatment_type": "Preventive Care \u2013 Vaccinations",
+      "stated_hospital_name": "Mccune, Frontenac Animal Hospital",
+      "stated_patient_name": "JD",
+      "agent_name": "Haley",
+      "reason_not_booked": null
+    },
+    "CAL0038d600a47946ebb1c82834efd14ec2": {
+      "call_id": "CAL0038d600a47946ebb1c82834efd14ec2",
+      "appointment_booked": "No",
+      "client_type": "Existing",
+      "treatment_type": "Preventive Care \u2013 Annual Exams",
+      "stated_hospital_name": "Blue Animal Hospital",
+      "stated_patient_name": null,
+      "agent_name": "JD",
+      "reason_not_booked": "Scheduling Issue - Full schedule"
+    },
+    "CAL003947c6d73e405a8ff5214e6719fcbd": {
+      "call_id": "CAL003947c6d73e405a8ff5214e6719fcbd",
+      "appointment_booked": "Yes",
+      "client_type": "New",
+      "treatment_type": "Other",
+      "stated_hospital_name": "Properties Animal Clinic",
+      "stated_patient_name": "Chris",
+      "agent_name": null,
+      "reason_not_booked": null
+    },
+    "CAL0039a82c50d340abaf5823d06785a4a0": {
+      "call_id": "CAL0039a82c50d340abaf5823d06785a4a0",
+      "appointment_booked": "Inconclusive",
+      "client_type": "Inconclusive",
+      "treatment_type": "N/A (missed call)",
+      "stated_hospital_name": "Blue Sky Animal Hospital",
+      "stated_patient_name": null,
+      "agent_name": null,
+      "reason_not_booked": null
+    },
+    "CAL003a2122cd8542c481baf4ddc8e40d80": {
+      "call_id": "CAL003a2122cd8542c481baf4ddc8e40d80",
+      "appointment_booked": "Yes",
+      "client_type": "Existing",
+      "treatment_type": "Urgent Care \u2013 Chronic Disease Management (Arthritis, Allergies, Thyroid Disease)",
+      "stated_hospital_name": null,
+      "stated_patient_name": "Ron",
+      "agent_name": null,
+      "reason_not_booked": null
+    },
+    "CAL00415f59577343e1aaad08431561d554": {
+      "call_id": "CAL00415f59577343e1aaad08431561d554",
+      "appointment_booked": "Yes",
+      "client_type": "Existing",
+      "treatment_type": "Preventive Care \u2013 Vaccinations",
+      "stated_hospital_name": "Wingrove Veterinary Hospital",
+      "stated_patient_name": null,
+      "agent_name": "Taylor",
+      "reason_not_booked": null
+    },
+    "CAL00427bb94384468b8457c5b48be0dffa": {
+      "call_id": "CAL00427bb94384468b8457c5b48be0dffa",
+      "appointment_booked": "Yes",
+      "client_type": "Existing",
+      "treatment_type": "Preventive Care \u2013 Annual Exams",
+      "stated_hospital_name": null,
+      "stated_patient_name": "Shade",
+      "agent_name": null,
+      "reason_not_booked": null
+    },
+    "CAL00584c7b588f4128be84a13ff49dbe96": {
+      "call_id": "CAL00584c7b588f4128be84a13ff49dbe96",
+      "appointment_booked": "No",
+      "client_type": "New",
+      "treatment_type": "Surgical Services \u2013 Spays and Neuters",
+      "stated_hospital_name": "Chaparral Veterinary Clinic",
+      "stated_patient_name": "Missy",
+      "agent_name": "Camila",
+      "reason_not_booked": "Scheduling Issue - Full schedule"
+    },
+    "CAL0059cd46261848899dadd858b1297a7a": {
+      "call_id": "CAL0059cd46261848899dadd858b1297a7a",
+      "appointment_booked": "No",
+      "client_type": "New",
+      "treatment_type": "Surgical Services \u2013 Spays and Neuters",
+      "stated_hospital_name": "Kitsilano Animal Clinic",
+      "stated_patient_name": null,
+      "agent_name": "Tracy",
+      "reason_not_booked": "Caller Procrastination"
+    },
+    "CAL005e941190aa4eeeb16b5520f59e8526": {
+      "call_id": "CAL005e941190aa4eeeb16b5520f59e8526",
+      "appointment_booked": "No",
+      "client_type": "Existing",
+      "treatment_type": "Preventive Care \u2013 Vaccinations",
+      "stated_hospital_name": "Properties Animal Clinic",
+      "stated_patient_name": "Mia",
+      "agent_name": null,
+      "reason_not_booked": "Scheduling Issue"
+    },
+    "CAL00644c70bf09449a835487c3ddc673b2": {
+      "call_id": "CAL00644c70bf09449a835487c3ddc673b2",
+      "appointment_booked": "Yes",
+      "client_type": "Existing",
+      "treatment_type": "Preventive Care \u2013 Vaccinations",
+      "stated_hospital_name": "Paradise Animal Hospital and Wellness Center",
+      "stated_patient_name": "Cooper, Bentley",
+      "agent_name": "Sarah",
+      "reason_not_booked": null
+    },
+    "CAL00653e0d49dc40199c3e555625cb2117": {
+      "call_id": "CAL00653e0d49dc40199c3e555625cb2117",
+      "appointment_booked": "Yes",
+      "client_type": "New",
+      "treatment_type": "Urgent Care \u2013 Diagnosis and Treatment of Illnesses (Vomiting, Diabetes, Infections)",
+      "stated_hospital_name": "Beaver Creek Animal Hospital",
+      "stated_patient_name": "Roxy",
+      "agent_name": "Shoshana",
+      "reason_not_booked": null
+    },
+    "CAL0068dc66d062488fa1f4879724451050": {
+      "call_id": "CAL0068dc66d062488fa1f4879724451050",
+      "appointment_booked": "Yes",
+      "client_type": "Existing",
+      "treatment_type": "Urgent Care \u2013 Diagnosis and Treatment of Illnesses (Vomiting, Diabetes, Infections)",
+      "stated_hospital_name": "Blue Sky Animal Hospital",
+      "stated_patient_name": "Callie",
+      "agent_name": "Sarah",
+      "reason_not_booked": null
+    },
+    "CAL006c0c3985f84e298f13d3d696ce8650": {
+      "call_id": "CAL006c0c3985f84e298f13d3d696ce8650",
+      "appointment_booked": "Yes",
+      "client_type": "Existing",
+      "treatment_type": "Preventive Care \u2013 Vaccinations",
+      "stated_hospital_name": "Amberly Animal Hospital",
+      "stated_patient_name": "Thor",
+      "agent_name": "Anisha",
+      "reason_not_booked": null
+    },
+    "CAL00747d7c7e454434a6fbb219ddef83b0": {
+      "call_id": "CAL00747d7c7e454434a6fbb219ddef83b0",
+      "appointment_booked": "Yes",
+      "client_type": "Existing",
+      "treatment_type": "Preventive Care \u2013 Vaccinations",
+      "stated_hospital_name": "Linden Animal Clinic",
+      "stated_patient_name": "Finnegan",
+      "agent_name": "Ashley",
+      "reason_not_booked": null
+    },
+    "CAL007df41abd3e463298f55c7d7d733d9a": {
+      "call_id": "CAL007df41abd3e463298f55c7d7d733d9a",
+      "appointment_booked": "Yes",
+      "client_type": "New",
+      "treatment_type": "Preventive Care \u2013 Vaccinations",
+      "stated_hospital_name": "Village Gate Animal Hospital",
+      "stated_patient_name": "Gracie",
+      "agent_name": "Bella",
+      "reason_not_booked": null
+    },
+    "CAL00803d059d424bb296f8f9916a7115fd": {
+      "call_id": "CAL00803d059d424bb296f8f9916a7115fd",
+      "appointment_booked": "Yes",
+      "client_type": "Existing",
+      "treatment_type": "Preventive Care \u2013 Vaccinations",
+      "stated_hospital_name": "Helena One Animal Clinic",
+      "stated_patient_name": "Archie",
+      "agent_name": "Nicole",
+      "reason_not_booked": null
+    },
+    "CAL00817a0b30d241d39d3953af8bdffd0e": {
+      "call_id": "CAL00817a0b30d241d39d3953af8bdffd0e",
+      "appointment_booked": "Yes",
+      "client_type": "Existing",
+      "treatment_type": "Preventive Care \u2013 Vaccinations",
+      "stated_hospital_name": "Lynden Animal Clinic",
+      "stated_patient_name": "Birdie and Blue",
+      "agent_name": "Amanda",
+      "reason_not_booked": null
+    },
+    "CAL0081cff67cb34ae0b30d1dc0b426d15c": {
+      "call_id": "CAL0081cff67cb34ae0b30d1dc0b426d15c",
+      "appointment_booked": "No",
+      "client_type": "New",
+      "treatment_type": "Preventive Care \u2013 Parasite Prevention",
+      "stated_hospital_name": "Blue Sky Animal Hospital",
+      "stated_patient_name": null,
+      "agent_name": "JD",
+      "reason_not_booked": "Scheduling Issue - Full schedule"
+    },
+    "CAL0083311f69934f448c9bbac4cb31ed5e": {
+      "call_id": "CAL0083311f69934f448c9bbac4cb31ed5e",
+      "appointment_booked": "No",
+      "client_type": "Inconclusive",
+      "treatment_type": "End of Life Care \u2013 In-Clinic Euthanasia",
+      "stated_hospital_name": "Pickering Animal Hospital",
+      "stated_patient_name": null,
+      "agent_name": "Haley",
+      "reason_not_booked": "Caller Procrastination - Price Objection / Shopping / Request for Quote"
+    },
+    "CAL00848f2fc8ea47239cff6c6c1177f95a": {
+      "call_id": "CAL00848f2fc8ea47239cff6c6c1177f95a",
+      "appointment_booked": "Yes",
+      "client_type": "Existing",
+      "treatment_type": "Urgent Care \u2013 Diagnosis and Treatment of Illnesses (Vomiting, Diabetes, Infections)",
+      "stated_hospital_name": "Fisher Glen Animal Hospital",
+      "stated_patient_name": "Halali",
+      "agent_name": "Sabrina",
+      "reason_not_booked": null
+    },
+    "CAL0084da0fae0c4da6a7bfdabc646c5ba9": {
+      "call_id": "CAL0084da0fae0c4da6a7bfdabc646c5ba9",
+      "appointment_booked": "No",
+      "client_type": "New",
+      "treatment_type": "Preventive Care \u2013 Annual Exams",
+      "stated_hospital_name": "Downtown Animal Clinic",
+      "stated_patient_name": null,
+      "agent_name": "Claire",
+      "reason_not_booked": "Caller Procrastination - Price Objection / Shopping / Request for Quote"
+    },
+    "CAL008550503109471bb301dbdb52ea8453": {
+      "call_id": "CAL008550503109471bb301dbdb52ea8453",
+      "appointment_booked": "Yes",
+      "client_type": "Existing",
+      "treatment_type": "Preventive Care \u2013 Annual Exams",
+      "stated_hospital_name": "Orlando Animal Hospital",
+      "stated_patient_name": "Tara",
+      "agent_name": null,
+      "reason_not_booked": null
+    },
+    "CAL008a74d19188416cbd3be39780335bbb": {
+      "call_id": "CAL008a74d19188416cbd3be39780335bbb",
+      "appointment_booked": "No",
+      "client_type": "Inconclusive",
+      "treatment_type": "Other",
+      "stated_hospital_name": "All about pets animal hospital",
+      "stated_patient_name": null,
+      "agent_name": null,
+      "reason_not_booked": "Meant to call competitor hospital"
+    },
+    "CAL008db269e7294a62a394fecdbe852724": {
+      "call_id": "CAL008db269e7294a62a394fecdbe852724",
+      "appointment_booked": "Yes",
+      "client_type": "Existing",
+      "treatment_type": "Other",
+      "stated_hospital_name": "Glennard Animal Hospital",
+      "stated_patient_name": "Leo",
+      "agent_name": null,
+      "reason_not_booked": null
+    },
+    "CAL008f2a090e7f4d42a4488a553045d64f": {
+      "call_id": "CAL008f2a090e7f4d42a4488a553045d64f",
+      "appointment_booked": "Yes",
+      "client_type": "New",
+      "treatment_type": "Preventive Care \u2013 Annual Exams",
+      "stated_hospital_name": "Animal Clinic",
+      "stated_patient_name": "Obi, Arthur",
+      "agent_name": null,
+      "reason_not_booked": null
+    },
+    "CAL00929b7f48514a6b85c94fad4b997d9f": {
+      "call_id": "CAL00929b7f48514a6b85c94fad4b997d9f",
+      "appointment_booked": "No",
+      "client_type": "Inconclusive",
+      "treatment_type": "Urgent Care \u2013 Diagnosis and Treatment of Illnesses (Vomiting, Diabetes, Infections)",
+      "stated_hospital_name": "Morris Veterinary Clinic",
+      "stated_patient_name": "Prince",
+      "agent_name": null,
+      "reason_not_booked": "Scheduling Issue - Full schedule"
+    },
+    "CAL009fecf1e3dc43fcb124f083b4886d34": {
+      "call_id": "CAL009fecf1e3dc43fcb124f083b4886d34",
+      "appointment_booked": "No",
+      "client_type": "Existing",
+      "treatment_type": "Other",
+      "stated_hospital_name": "Village Gate Animal Hospital",
+      "stated_patient_name": "Emmanuel, Simone",
+      "agent_name": "Sarah",
+      "reason_not_booked": "Caller Procrastination"
+    },
+    "CAL00a0052f044140e2ab2535a85367c137": {
+      "call_id": "CAL00a0052f044140e2ab2535a85367c137",
+      "appointment_booked": "No",
+      "client_type": "Existing",
+      "treatment_type": "End of Life Care \u2013 In-Clinic Euthanasia",
+      "stated_hospital_name": "Emily Animal Hospital",
+      "stated_patient_name": "Missy",
+      "agent_name": null,
+      "reason_not_booked": "Client/appt query (non-medical)"
+    },
+    "CAL00a33094c71445c3896aac927ab0c6b9": {
+      "call_id": "CAL00a33094c71445c3896aac927ab0c6b9",
+      "appointment_booked": "No",
+      "client_type": "New",
+      "treatment_type": "Diagnostic Services \u2013 X-Rays (Digital Radiography)",
+      "stated_hospital_name": "Pickering Animal Hospital",
+      "stated_patient_name": null,
+      "agent_name": null,
+      "reason_not_booked": "Caller Procrastination - Price Objection / Shopping / Request for Quote"
+    },
+    "CAL00b175c88b6d4b20a8f2ecb4d226d689": {
+      "call_id": "CAL00b175c88b6d4b20a8f2ecb4d226d689",
+      "appointment_booked": "Yes",
+      "client_type": "Existing",
+      "treatment_type": "Other",
+      "stated_hospital_name": "Matur Animal Clinic",
+      "stated_patient_name": "Bella",
+      "agent_name": "Abe",
+      "reason_not_booked": null
+    },
+    "CAL00bf0e33a835402c8e1ab317b17d16ce": {
+      "call_id": "CAL00bf0e33a835402c8e1ab317b17d16ce",
+      "appointment_booked": "Yes",
+      "client_type": "New",
+      "treatment_type": "Urgent Care \u2013 Diagnosis and Treatment of Illnesses (Vomiting, Diabetes, Infections)",
+      "stated_hospital_name": "Hickory Animal Hospital",
+      "stated_patient_name": "Toby",
+      "agent_name": null,
+      "reason_not_booked": null
+    },
+    "CAL00c4d944580b454fa32ba23e0a439d9f": {
+      "call_id": "CAL00c4d944580b454fa32ba23e0a439d9f",
+      "appointment_booked": "No",
+      "client_type": "New",
+      "treatment_type": "End of Life Care \u2013 In-Clinic Euthanasia",
+      "stated_hospital_name": "Eagle Hill Animal Hospital",
+      "stated_patient_name": null,
+      "agent_name": "Seer",
+      "reason_not_booked": "Caller Procrastination"
+    },
+    "CAL00cc318557b84211830f8f9165abff38": {
+      "call_id": "CAL00cc318557b84211830f8f9165abff38",
+      "appointment_booked": "Yes",
+      "client_type": "Existing",
+      "treatment_type": "Dermatology \u2013 Ear Infections",
+      "stated_hospital_name": "Pickering Animal",
+      "stated_patient_name": "Kiwi",
+      "agent_name": null,
+      "reason_not_booked": null
+    },
+    "CAL00d3bb91c37c494dae58d1f03970cf7c": {
+      "call_id": "CAL00d3bb91c37c494dae58d1f03970cf7c",
+      "appointment_booked": "Yes",
+      "client_type": "New",
+      "treatment_type": "Surgical Services \u2013 Spays and Neuters",
+      "stated_hospital_name": "Paradise Animal Hospital and Wellness Center",
+      "stated_patient_name": "Bridy",
+      "agent_name": "Jessica",
+      "reason_not_booked": null
+    },
+    "CAL00ddc5b018204683a8005f80fb0cb08d": {
+      "call_id": "CAL00ddc5b018204683a8005f80fb0cb08d",
+      "appointment_booked": "No",
+      "client_type": "Existing",
+      "treatment_type": "Other",
+      "stated_hospital_name": "Bay Regional Veterinary Hospital",
+      "stated_patient_name": "Atticus",
+      "agent_name": "April",
+      "reason_not_booked": "Scheduling Issue"
+    },
+    "CAL00e3726d100f45e8913c8f8dfb2fd4ce": {
+      "call_id": "CAL00e3726d100f45e8913c8f8dfb2fd4ce",
+      "appointment_booked": "No",
+      "client_type": "New",
+      "treatment_type": "Urgent Care \u2013 Diagnosis and Treatment of Illnesses (Vomiting, Diabetes, Infections)",
+      "stated_hospital_name": "Regional Pet Hospital",
+      "stated_patient_name": "Broome",
+      "agent_name": null,
+      "reason_not_booked": "1. Caller Procrastination"
+    },
+    "CAL011c013103cb49bc84379c12992b27a6": {
+      "call_id": "CAL011c013103cb49bc84379c12992b27a6",
+      "appointment_booked": "No",
+      "client_type": "Existing",
+      "treatment_type": "Retail \u2013 Prescriptions",
+      "stated_hospital_name": "Kingston Regional Pet Hospital",
+      "stated_patient_name": null,
+      "agent_name": null,
+      "reason_not_booked": "8. Medication/food order"
+    }
+  }
+}

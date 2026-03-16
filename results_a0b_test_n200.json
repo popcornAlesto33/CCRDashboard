@@ -1,0 +1,50 @@
+{
+  "n": 200,
+  "seed": 42,
+  "summary": {
+    "A0b": {
+      "appointment_booked": {
+        "accuracy": 67.33668341708542,
+        "correct": 134,
+        "total": 199
+      },
+      "client_type": {
+        "accuracy": 90.95477386934674,
+        "correct": 181,
+        "total": 199
+      },
+      "treatment_type": {
+        "accuracy": 45.7286432160804,
+        "correct": 91,
+        "total": 199
+      },
+      "reason_not_booked": {
+        "accuracy": 22.93577981651376,
+        "correct": 25,
+        "total": 109
+      }
+    },
+    "A0b+E": {
+      "appointment_booked": {
+        "accuracy": 67.0,
+        "correct": 134,
+        "total": 200
+      },
+      "client_type": {
+        "accuracy": 82.5,
+        "correct": 165,
+        "total": 200
+      },
+      "treatment_type": {
+        "accuracy": 39.0,
+        "correct": 78,
+        "total": 200
+      },
+      "reason_not_booked": {
+        "accuracy": 24.752475247524753,
+        "correct": 25,
+        "total": 101
+      }
+    }
+  }
+}

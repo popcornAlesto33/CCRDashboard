@@ -1,0 +1,2291 @@
+{
+  "mode": "a1b (gemini-2.5-flash, bs=15)",
+  "num_calls": 200,
+  "results": {
+    "appointment_booked": {
+      "accuracy": 0.85,
+      "correct": 170,
+      "total": 200,
+      "mismatches": [
+        {
+          "call_id": "CAL0083311f69934f448c9bbac4cb31ed5e",
+          "gold": "Inconclusive",
+          "predicted": "No"
+        },
+        {
+          "call_id": "CAL008a74d19188416cbd3be39780335bbb",
+          "gold": "No",
+          "predicted": "Inconclusive"
+        },
+        {
+          "call_id": "CAL00a0052f044140e2ab2535a85367c137",
+          "gold": "No",
+          "predicted": "Inconclusive"
+        },
+        {
+          "call_id": "CAL00d3bb91c37c494dae58d1f03970cf7c",
+          "gold": "Yes",
+          "predicted": "(null)"
+        },
+        {
+          "call_id": "CAL011c013103cb49bc84379c12992b27a6",
+          "gold": "No",
+          "predicted": "Inconclusive"
+        },
+        {
+          "call_id": "CAL019837f52c29747e9a736faff8ee96a0",
+          "gold": "Yes",
+          "predicted": "Inconclusive"
+        },
+        {
+          "call_id": "CAL01983809fd0870bfb1a41e0cc0148c1a",
+          "gold": "No",
+          "predicted": "Inconclusive"
+        },
+        {
+          "call_id": "CAL01983822ac26708db3b026da626a071c",
+          "gold": "No",
+          "predicted": "Inconclusive"
+        },
+        {
+          "call_id": "CAL019838424bff7fa7890d74af370fc6f0",
+          "gold": "No",
+          "predicted": "Inconclusive"
+        },
+        {
+          "call_id": "CAL01983885684f7cfeaf588dcf1f8a9e28",
+          "gold": "Yes",
+          "predicted": "Inconclusive"
+        },
+        {
+          "call_id": "CAL019838aee7997a33aa593e40ee397846",
+          "gold": "No",
+          "predicted": "Yes"
+        },
+        {
+          "call_id": "CAL019838b1f2d77d7f9496fb92f910a282",
+          "gold": "Yes",
+          "predicted": "Inconclusive"
+        },
+        {
+          "call_id": "CAL019838e5133f728f8e7390ef05981bc6",
+          "gold": "Yes",
+          "predicted": "Inconclusive"
+        },
+        {
+          "call_id": "CAL0198390e184271aa88fdb761a30ed4b1",
+          "gold": "Inconclusive",
+          "predicted": "Yes"
+        },
+        {
+          "call_id": "CAL0198392628fc70e4b42d46b863b3890d",
+          "gold": "Yes",
+          "predicted": "No"
+        },
+        {
+          "call_id": "CAL0198394fe92f75bd89f5c30da130643f",
+          "gold": "Yes",
+          "predicted": "Inconclusive"
+        },
+        {
+          "call_id": "CAL01983951dbe377eb8d5d7f7142e81509",
+          "gold": "No",
+          "predicted": "Inconclusive"
+        },
+        {
+          "call_id": "CAL01983c51ac917d4497cd5ad7f647d593",
+          "gold": "Yes",
+          "predicted": "No"
+        },
+        {
+          "call_id": "CAL01983c55888b7652b02efbb6a54752ba",
+          "gold": "Inconclusive",
+          "predicted": "No"
+        },
+        {
+          "call_id": "CAL01983c6d5f9f7c0d8241b7a8f1152205",
+          "gold": "Inconclusive",
+          "predicted": "No"
+        },
+        {
+          "call_id": "CAL01983c7ddf45755696aa13a858a9021e",
+          "gold": "Inconclusive",
+          "predicted": "No"
+        },
+        {
+          "call_id": "CAL01983c91ddb27cdf909c91480c30cc38",
+          "gold": "Inconclusive",
+          "predicted": "Yes"
+        },
+        {
+          "call_id": "CAL01983cbae1a6793299e3d3fad309374c",
+          "gold": "Yes",
+          "predicted": "Inconclusive"
+        },
+        {
+          "call_id": "CAL01983cc519197d11b51db3adc8a2251c",
+          "gold": "Inconclusive",
+          "predicted": "No"
+        },
+        {
+          "call_id": "CAL01983ccceddd7f4abe511966c66e1954",
+          "gold": "Yes",
+          "predicted": "No"
+        },
+        {
+          "call_id": "CAL01983ccf32937298a61b354edab13ca4",
+          "gold": "No",
+          "predicted": "Inconclusive"
+        },
+        {
+          "call_id": "CAL01983cdb03697dc38868335ccdc45ff8",
+          "gold": "Inconclusive",
+          "predicted": "No"
+        },
+        {
+          "call_id": "CAL01983ce012417e8b96aa826b5a362b67",
+          "gold": "No",
+          "predicted": "Inconclusive"
+        },
+        {
+          "call_id": "CAL01983ce59450749db5d91f11b08af414",
+          "gold": "Inconclusive",
+          "predicted": "No"
+        },
+        {
+          "call_id": "CAL01983cf65468762787908b3a76f32a18",
+          "gold": "No",
+          "predicted": "Inconclusive"
+        }
+      ]
+    },
+    "client_type": {
+      "accuracy": 0.895,
+      "correct": 179,
+      "total": 200,
+      "mismatches": [
+        {
+          "call_id": "CAL000aeb5cceb842ff9ab94f9dc115873d",
+          "gold": "Existing",
+          "predicted": "Inconclusive"
+        },
+        {
+          "call_id": "CAL0081cff67cb34ae0b30d1dc0b426d15c",
+          "gold": "Existing",
+          "predicted": "New"
+        },
+        {
+          "call_id": "CAL008a74d19188416cbd3be39780335bbb",
+          "gold": "New",
+          "predicted": "Inconclusive"
+        },
+        {
+          "call_id": "CAL00bf0e33a835402c8e1ab317b17d16ce",
+          "gold": "Existing",
+          "predicted": "New"
+        },
+        {
+          "call_id": "CAL00d3bb91c37c494dae58d1f03970cf7c",
+          "gold": "New",
+          "predicted": "(null)"
+        },
+        {
+          "call_id": "CAL011c013103cb49bc84379c12992b27a6",
+          "gold": "New",
+          "predicted": "Existing"
+        },
+        {
+          "call_id": "CAL019837cf0ff37f4d8d1af062be24cbab",
+          "gold": "Existing",
+          "predicted": "New"
+        },
+        {
+          "call_id": "CAL019838502ce87cbdbc990b0ade416e7a",
+          "gold": "New",
+          "predicted": "Existing"
+        },
+        {
+          "call_id": "CAL0198389a5e4d77f688308ebf78950714",
+          "gold": "Existing",
+          "predicted": "New"
+        },
+        {
+          "call_id": "CAL019838b0ce8870818d880dd1851cb5f1",
+          "gold": "Existing",
+          "predicted": "New"
+        },
+        {
+          "call_id": "CAL019838d6b3467648a76309f04cb670e6",
+          "gold": "Existing",
+          "predicted": "New"
+        },
+        {
+          "call_id": "CAL019838eb0e9c7a20a0d2e589280ff07b",
+          "gold": "Existing",
+          "predicted": "New"
+        },
+        {
+          "call_id": "CAL0198390c573272ad8edafd3caef461ce",
+          "gold": "New",
+          "predicted": "Existing"
+        },
+        {
+          "call_id": "CAL0198393257cf7e9ab000e231050b0d92",
+          "gold": "Existing",
+          "predicted": "New"
+        },
+        {
+          "call_id": "CAL01983951dbe377eb8d5d7f7142e81509",
+          "gold": "Existing",
+          "predicted": "Inconclusive"
+        },
+        {
+          "call_id": "CAL0198396f004a7c9fa7982cab05237ddf",
+          "gold": "Existing",
+          "predicted": "Inconclusive"
+        },
+        {
+          "call_id": "CAL01983a07163d7f73987f1ff2e4adf3c1",
+          "gold": "New",
+          "predicted": "Inconclusive"
+        },
+        {
+          "call_id": "CAL01983a0e1a2f721d926584589b973374",
+          "gold": "Existing",
+          "predicted": "Inconclusive"
+        },
+        {
+          "call_id": "CAL01983a22408b7b5ea81886924eb0e376",
+          "gold": "New",
+          "predicted": "Inconclusive"
+        },
+        {
+          "call_id": "CAL01983c6025277d2d8afea7756aacc533",
+          "gold": "Existing",
+          "predicted": "Inconclusive"
+        },
+        {
+          "call_id": "CAL01983c97faa873ab801b402713d9ebc2",
+          "gold": "Existing",
+          "predicted": "Inconclusive"
+        }
+      ]
+    },
+    "treatment_type": {
+      "accuracy": 0.61,
+      "correct": 122,
+      "total": 200,
+      "mismatches": [
+        {
+          "call_id": "CAL000498baa67742cb9a4fed89664cd014",
+          "gold": "Urgent Care / Sick Pet",
+          "predicted": "Urgent Care \u2013 Diagnosis and Treatment of Illnesses (Vomiting, Diabetes, Infections)"
+        },
+        {
+          "call_id": "CAL000982de28904f1aa7f072d197347693",
+          "gold": "Preventive Care \u2013 Wellness Screening (Bloodwork, Urinalysis, Fecals)",
+          "predicted": "Diagnostic Services \u2013 In-House or Reference Lab Testing (Blood, Urine, Fecal, Cytology)"
+        },
+        {
+          "call_id": "CAL0009ad7aca3748009c5fb31f51eee5ad",
+          "gold": "Emergency & Critical Care",
+          "predicted": "Emergency & Critical Care \u2013 Stabilization (Trauma, Poisoning, Seizures)"
+        },
+        {
+          "call_id": "CAL000aeb5cceb842ff9ab94f9dc115873d",
+          "gold": "Urgent Care / Sick Pet",
+          "predicted": "Preventive Care"
+        },
+        {
+          "call_id": "CAL0024c5183d6641a7bab31a88e46fbc69",
+          "gold": "Emergency & Critical Care",
+          "predicted": "Emergency & Critical Care \u2013 Stabilization (Trauma, Poisoning, Seizures)"
+        },
+        {
+          "call_id": "CAL00653e0d49dc40199c3e555625cb2117",
+          "gold": "Urgent Care / Sick Pet",
+          "predicted": "Urgent Care \u2013 Diagnosis and Treatment of Illnesses (Vomiting, Diabetes, Infections)"
+        },
+        {
+          "call_id": "CAL0068dc66d062488fa1f4879724451050",
+          "gold": "Urgent Care \u2013 Internal Medicine Workups (Blood Tests, Imaging, Specialist Consults)",
+          "predicted": "Urgent Care \u2013 Diagnosis and Treatment of Illnesses (Vomiting, Diabetes, Infections)"
+        },
+        {
+          "call_id": "CAL0084da0fae0c4da6a7bfdabc646c5ba9",
+          "gold": "Preventive Care \u2013 Vaccinations",
+          "predicted": "Urgent Care \u2013 Chronic Disease Management (Arthritis, Allergies, Thyroid Disease)"
+        },
+        {
+          "call_id": "CAL008a74d19188416cbd3be39780335bbb",
+          "gold": "Preventive Care",
+          "predicted": "N/A (missed call)"
+        },
+        {
+          "call_id": "CAL008db269e7294a62a394fecdbe852724",
+          "gold": "Preventive Care \u2013 Annual Exams",
+          "predicted": "Preventive Care"
+        },
+        {
+          "call_id": "CAL00d3bb91c37c494dae58d1f03970cf7c",
+          "gold": "Surgical Services \u2013 Spays and Neuters",
+          "predicted": "(null)"
+        },
+        {
+          "call_id": "CAL00e3726d100f45e8913c8f8dfb2fd4ce",
+          "gold": "Emergency & Critical Care",
+          "predicted": "Urgent Care \u2013 Diagnosis and Treatment of Illnesses (Vomiting, Diabetes, Infections)"
+        },
+        {
+          "call_id": "CAL011c013103cb49bc84379c12992b27a6",
+          "gold": "Urgent Care / Sick Pet",
+          "predicted": "Urgent Care \u2013 Diagnosis and Treatment of Illnesses (Vomiting, Diabetes, Infections)"
+        },
+        {
+          "call_id": "CAL011ebf53493445e7896fed44ce7c81f6",
+          "gold": "End of Life Care",
+          "predicted": "Urgent Care \u2013 Diagnosis and Treatment of Illnesses (Vomiting, Diabetes, Infections)"
+        },
+        {
+          "call_id": "CAL0123fdba3d2942b0af41e1ee7d7d3bac",
+          "gold": "Urgent Care / Sick Pet",
+          "predicted": "Urgent Care \u2013 Diagnosis and Treatment of Illnesses (Vomiting, Diabetes, Infections)"
+        },
+        {
+          "call_id": "CAL012c4a0f78834f90b4d5b3a24657a2d8",
+          "gold": "Preventive Care",
+          "predicted": "Preventive Care \u2013 Annual Exams"
+        },
+        {
+          "call_id": "CAL013ccba9eedc4e67a1005d99fc3fa4bb",
+          "gold": "Urgent Care / Sick Pet",
+          "predicted": "Urgent Care \u2013 Diagnosis and Treatment of Illnesses (Vomiting, Diabetes, Infections)"
+        },
+        {
+          "call_id": "CAL014854d99d7940c1910271fee0349169",
+          "gold": "Preventive Care \u2013 Vaccinations",
+          "predicted": "Preventive Care \u2013 Annual Exams"
+        },
+        {
+          "call_id": "CAL014b1b4985f340e8ba39b659373275b2",
+          "gold": "Preventive Care \u2013 Vaccinations",
+          "predicted": "Preventive Care"
+        },
+        {
+          "call_id": "CAL0158a08f881a40c592c795ca67df298b",
+          "gold": "End of Life Care \u2013 In-Clinic Euthanasia",
+          "predicted": "Emergency & Critical Care \u2013 Stabilization (Trauma, Poisoning, Seizures)"
+        },
+        {
+          "call_id": "CAL017e403dd5c64398ac43ffe88d4b3cf5",
+          "gold": "Preventive Care",
+          "predicted": "Preventive Care \u2013 Annual Exams"
+        },
+        {
+          "call_id": "CAL018e04d97ba74747b033b3120bd39163",
+          "gold": "Preventive Care \u2013 Vaccinations",
+          "predicted": "Preventive Care \u2013 Annual Exams"
+        },
+        {
+          "call_id": "CAL019837cf0ff37f4d8d1af062be24cbab",
+          "gold": "Urgent Care / Sick Pet",
+          "predicted": "Urgent Care \u2013 Diagnosis and Treatment of Illnesses (Vomiting, Diabetes, Infections)"
+        },
+        {
+          "call_id": "CAL019837cf1fe87f139b863a24117182bb",
+          "gold": "Urgent Care / Sick Pet",
+          "predicted": "Surgical Services \u2013 Soft Tissue Surgeries (Lump Removals, Bladder Stone Removal, Wound Repair)"
+        },
+        {
+          "call_id": "CAL019837e8fdaf7d31b9a87d56d518b19a",
+          "gold": "Preventive Care",
+          "predicted": "Surgical Services \u2013 Spays and Neuters"
+        },
+        {
+          "call_id": "CAL019837f52c29747e9a736faff8ee96a0",
+          "gold": "Urgent Care \u2013 Diagnosis and Treatment of Illnesses (Vomiting, Diabetes, Infections)",
+          "predicted": "Urgent Care / Sick Pet"
+        },
+        {
+          "call_id": "CAL019837fa1ec07a778412598cf2c6c69b",
+          "gold": "Preventive Care \u2013 Wellness Screening (Bloodwork, Urinalysis, Fecals)",
+          "predicted": "Urgent Care \u2013 Diagnosis and Treatment of Illnesses (Vomiting, Diabetes, Infections)"
+        },
+        {
+          "call_id": "CAL01983809fd0870bfb1a41e0cc0148c1a",
+          "gold": "Urgent Care / Sick Pet",
+          "predicted": "Retail"
+        },
+        {
+          "call_id": "CAL0198380d24b573858f1ebc1d3174cf7c",
+          "gold": "Urgent Care / Sick Pet",
+          "predicted": "Dermatology \u2013 Ear Infections"
+        },
+        {
+          "call_id": "CAL0198380e825f714ba6f533c90cee0983",
+          "gold": "Preventive Care \u2013 Wellness Screening (Bloodwork, Urinalysis, Fecals)",
+          "predicted": "Diagnostic Services \u2013 In-House or Reference Lab Testing (Blood, Urine, Fecal, Cytology)"
+        },
+        {
+          "call_id": "CAL0198381fff847e6d97bd58d60abcb00e",
+          "gold": "Preventive Care \u2013 Vaccinations",
+          "predicted": "Preventive Care \u2013 Annual Exams"
+        },
+        {
+          "call_id": "CAL01983822ac26708db3b026da626a071c",
+          "gold": "Preventive Care",
+          "predicted": "Other"
+        },
+        {
+          "call_id": "CAL019838277cc37e93b4c1a543fa522122",
+          "gold": "Urgent Care / Sick Pet",
+          "predicted": "Urgent Care \u2013 Diagnosis and Treatment of Illnesses (Vomiting, Diabetes, Infections)"
+        },
+        {
+          "call_id": "CAL01983837207c78339c0dc0ac40dc2540",
+          "gold": "Preventive Care",
+          "predicted": "Preventive Care \u2013 Annual Exams"
+        },
+        {
+          "call_id": "CAL0198383ba24b764186763c2357974ba3",
+          "gold": "End of Life Care \u2013 In-Home Euthanasia",
+          "predicted": "End of Life Care"
+        },
+        {
+          "call_id": "CAL019838424bff7fa7890d74af370fc6f0",
+          "gold": "Preventive Care",
+          "predicted": "Preventive Care \u2013 Parasite Prevention"
+        },
+        {
+          "call_id": "CAL01983845f24c74ca8e084a529e08b4d8",
+          "gold": "Urgent Care \u2013 Diagnosis and Treatment of Illnesses (Vomiting, Diabetes, Infections)",
+          "predicted": "Dermatology \u2013 Ear Infections"
+        },
+        {
+          "call_id": "CAL019838482da37a9f9344c2d92538c61f",
+          "gold": "Preventive Care \u2013 Vaccinations",
+          "predicted": "Preventive Care \u2013 Annual Exams"
+        },
+        {
+          "call_id": "CAL0198384b51907551aab56685e09cde9c",
+          "gold": "Surgical Services",
+          "predicted": "Urgent Care / Sick Pet"
+        },
+        {
+          "call_id": "CAL019838502ce87cbdbc990b0ade416e7a",
+          "gold": "Surgical Services \u2013 Spays and Neuters",
+          "predicted": "Other"
+        },
+        {
+          "call_id": "CAL0198385255f8738ca83ae22e29e15dcc",
+          "gold": "Emergency & Critical Care \u2013 Overnight Hospitalization",
+          "predicted": "Other"
+        },
+        {
+          "call_id": "CAL0198385b6e3772fc89e3f22f41af0b46",
+          "gold": "Dermatology",
+          "predicted": "Dermatology \u2013 Allergies"
+        },
+        {
+          "call_id": "CAL01983864fd50700396fe8fb50860c0ae",
+          "gold": "Preventive Care",
+          "predicted": "Other"
+        },
+        {
+          "call_id": "CAL0198387a31297659b98d57bb828b2c1d",
+          "gold": "Urgent Care / Sick Pet",
+          "predicted": "Diagnostic Services \u2013 X-Rays (Digital Radiography)"
+        },
+        {
+          "call_id": "CAL019838957c0f75cbb4402e55409a5c87",
+          "gold": "Urgent Care / Sick Pet",
+          "predicted": "Urgent Care \u2013 Diagnosis and Treatment of Illnesses (Vomiting, Diabetes, Infections)"
+        },
+        {
+          "call_id": "CAL0198389a5e4d77f688308ebf78950714",
+          "gold": "Urgent Care / Sick Pet",
+          "predicted": "Other"
+        },
+        {
+          "call_id": "CAL019838a6d53c7c27836008665c04d9ee",
+          "gold": "Preventive Care \u2013 Vaccinations",
+          "predicted": "Other"
+        },
+        {
+          "call_id": "CAL019838b0ce8870818d880dd1851cb5f1",
+          "gold": "Urgent Care / Sick Pet",
+          "predicted": "Other"
+        },
+        {
+          "call_id": "CAL019838b50e7772a19e18618b90dc851c",
+          "gold": "Preventive Care \u2013 Wellness Screening (Bloodwork, Urinalysis, Fecals)",
+          "predicted": "Diagnostic Services \u2013 In-House or Reference Lab Testing (Blood, Urine, Fecal, Cytology)"
+        },
+        {
+          "call_id": "CAL019838be793178a7b613d26902e61915",
+          "gold": "Preventive Care \u2013 Wellness Screening (Bloodwork, Urinalysis, Fecals)",
+          "predicted": "Diagnostic Services \u2013 In-House or Reference Lab Testing (Blood, Urine, Fecal, Cytology)"
+        },
+        {
+          "call_id": "CAL019838beaef3720196945678ed36fe5d",
+          "gold": "Other",
+          "predicted": "Preventive Care"
+        },
+        {
+          "call_id": "CAL019838c9818f7ad181845b8401268211",
+          "gold": "Preventive Care",
+          "predicted": "Surgical Services \u2013 Dental Care (Cleanings, Extractions)"
+        },
+        {
+          "call_id": "CAL019838cff3ac7123bc2a1196f0d7e85c",
+          "gold": "Preventive Care \u2013 Wellness Screening (Bloodwork, Urinalysis, Fecals)",
+          "predicted": "Preventive Care"
+        },
+        {
+          "call_id": "CAL019838daaf5e7dc9af5f42649dcdf2e4",
+          "gold": "Preventive Care \u2013 Wellness Screening (Bloodwork, Urinalysis, Fecals)",
+          "predicted": "Diagnostic Services \u2013 In-House or Reference Lab Testing (Blood, Urine, Fecal, Cytology)"
+        },
+        {
+          "call_id": "CAL019838e5133f728f8e7390ef05981bc6",
+          "gold": "Preventive Care \u2013 Annual Exams",
+          "predicted": "Preventive Care"
+        },
+        {
+          "call_id": "CAL019838ee40bd75d79ed3a09727199f16",
+          "gold": "Preventive Care",
+          "predicted": "Urgent Care \u2013 Diagnosis and Treatment of Illnesses (Vomiting, Diabetes, Infections)"
+        },
+        {
+          "call_id": "CAL019838f21de27ed8a61c7b82572b4501",
+          "gold": "Diagnostic Services \u2013 ECG or Blood Pressure Monitoring",
+          "predicted": "Diagnostic Services \u2013 Ultrasound"
+        },
+        {
+          "call_id": "CAL01983903cb0d7d2cb167c54ec307a550",
+          "gold": "Urgent Care / Sick Pet",
+          "predicted": "Urgent Care \u2013 Diagnosis and Treatment of Illnesses (Vomiting, Diabetes, Infections)"
+        },
+        {
+          "call_id": "CAL0198390c573272ad8edafd3caef461ce",
+          "gold": "Preventive Care \u2013 Vaccinations",
+          "predicted": "Urgent Care \u2013 Diagnosis and Treatment of Illnesses (Vomiting, Diabetes, Infections)"
+        },
+        {
+          "call_id": "CAL0198390e184271aa88fdb761a30ed4b1",
+          "gold": "Urgent Care / Sick Pet",
+          "predicted": "Urgent Care \u2013 Diagnosis and Treatment of Illnesses (Vomiting, Diabetes, Infections)"
+        },
+        {
+          "call_id": "CAL0198392628fc70e4b42d46b863b3890d",
+          "gold": "Urgent Care / Sick Pet",
+          "predicted": "Urgent Care \u2013 Diagnosis and Treatment of Illnesses (Vomiting, Diabetes, Infections)"
+        },
+        {
+          "call_id": "CAL0198393257cf7e9ab000e231050b0d92",
+          "gold": "Emergency & Critical Care \u2013 Referred to an Emergency Hospital",
+          "predicted": "Emergency & Critical Care \u2013 Stabilization (Trauma, Poisoning, Seizures)"
+        },
+        {
+          "call_id": "CAL0198394fe92f75bd89f5c30da130643f",
+          "gold": "Preventive Care \u2013 Vaccinations",
+          "predicted": "Preventive Care"
+        },
+        {
+          "call_id": "CAL01983951dbe377eb8d5d7f7142e81509",
+          "gold": "Preventive Care",
+          "predicted": "Other"
+        },
+        {
+          "call_id": "CAL0198396f004a7c9fa7982cab05237ddf",
+          "gold": "Urgent Care / Sick Pet",
+          "predicted": "Urgent Care \u2013 Diagnosis and Treatment of Illnesses (Vomiting, Diabetes, Infections)"
+        },
+        {
+          "call_id": "CAL019839ae907d7353acdbcbd98d9acb3b",
+          "gold": "Emergency & Critical Care",
+          "predicted": "Emergency & Critical Care \u2013 Stabilization (Trauma, Poisoning, Seizures)"
+        },
+        {
+          "call_id": "CAL01983c5f5b777033b267894dde732a41",
+          "gold": "Preventive Care \u2013 Vaccinations",
+          "predicted": "Preventive Care"
+        },
+        {
+          "call_id": "CAL01983c6119d87102a24253225a449a30",
+          "gold": "Preventive Care",
+          "predicted": "Other"
+        },
+        {
+          "call_id": "CAL01983c7ddf45755696aa13a858a9021e",
+          "gold": "Urgent Care / Sick Pet",
+          "predicted": "Urgent Care \u2013 Diagnosis and Treatment of Illnesses (Vomiting, Diabetes, Infections)"
+        },
+        {
+          "call_id": "CAL01983c97faa873ab801b402713d9ebc2",
+          "gold": "Preventive Care \u2013 Vaccinations",
+          "predicted": "Other"
+        },
+        {
+          "call_id": "CAL01983cbd63607bf58cd9f32d6b1a77ac",
+          "gold": "Urgent Care / Sick Pet",
+          "predicted": "Urgent Care \u2013 Diagnosis and Treatment of Illnesses (Vomiting, Diabetes, Infections)"
+        },
+        {
+          "call_id": "CAL01983cc022317c228e60e028acc64816",
+          "gold": "Preventive Care \u2013 Wellness Screening (Bloodwork, Urinalysis, Fecals)",
+          "predicted": "Preventive Care \u2013 Annual Exams"
+        },
+        {
+          "call_id": "CAL01983cc519197d11b51db3adc8a2251c",
+          "gold": "Preventive Care \u2013 Vaccinations",
+          "predicted": "Diagnostic Services \u2013 In-House or Reference Lab Testing (Blood, Urine, Fecal, Cytology)"
+        },
+        {
+          "call_id": "CAL01983ccb781c779e93e882092ee5b3fa",
+          "gold": "Emergency & Critical Care \u2013 Fluid Therapy, Oxygen Therapy, Intensive Monitoring",
+          "predicted": "Emergency & Critical Care \u2013 Stabilization (Trauma, Poisoning, Seizures)"
+        },
+        {
+          "call_id": "CAL01983cd9b0787775b704b2948440c287",
+          "gold": "Preventive Care \u2013 Vaccinations",
+          "predicted": "Surgical Services \u2013 Spays and Neuters"
+        },
+        {
+          "call_id": "CAL01983ce59450749db5d91f11b08af414",
+          "gold": "Surgical Services \u2013 Spays and Neuters",
+          "predicted": "Urgent Care / Sick Pet"
+        },
+        {
+          "call_id": "CAL01983ce94ced76b8a7a8bbe416af0f65",
+          "gold": "Preventive Care \u2013 Vaccinations",
+          "predicted": "Preventive Care"
+        },
+        {
+          "call_id": "CAL01983ced7cbc7e5a83af5831511dc016",
+          "gold": "Emergency & Critical Care",
+          "predicted": "Urgent Care \u2013 Diagnosis and Treatment of Illnesses (Vomiting, Diabetes, Infections)"
+        }
+      ]
+    },
+    "reason_not_booked": {
+      "accuracy": 0.391304347826087,
+      "correct": 27,
+      "total": 69,
+      "mismatches": [
+        {
+          "call_id": "CAL000498baa67742cb9a4fed89664cd014",
+          "gold": "2a. Scheduling Issue - Walk ins not available / no same day appt",
+          "predicted": "2b. Scheduling Issue - Full schedule"
+        },
+        {
+          "call_id": "CAL000aeb5cceb842ff9ab94f9dc115873d",
+          "gold": "2a. Scheduling Issue - Walk ins not available / no same day appt",
+          "predicted": "2b. Scheduling Issue - Full schedule"
+        },
+        {
+          "call_id": "CAL00584c7b588f4128be84a13ff49dbe96",
+          "gold": "2. Scheduling Issue",
+          "predicted": "2b. Scheduling Issue - Full schedule"
+        },
+        {
+          "call_id": "CAL0059cd46261848899dadd858b1297a7a",
+          "gold": "1a. Caller Procrastination - Price Objection / Shopping / Request for Quote",
+          "predicted": "1. Caller Procrastination"
+        },
+        {
+          "call_id": "CAL0081cff67cb34ae0b30d1dc0b426d15c",
+          "gold": "2. Scheduling Issue",
+          "predicted": "2b. Scheduling Issue - Full schedule"
+        },
+        {
+          "call_id": "CAL008a74d19188416cbd3be39780335bbb",
+          "gold": "4. Meant to call competitor hospital",
+          "predicted": "(null)"
+        },
+        {
+          "call_id": "CAL00c4d944580b454fa32ba23e0a439d9f",
+          "gold": "1a. Caller Procrastination - Price Objection / Shopping / Request for Quote",
+          "predicted": "1. Caller Procrastination"
+        },
+        {
+          "call_id": "CAL011c013103cb49bc84379c12992b27a6",
+          "gold": "1. Caller Procrastination",
+          "predicted": "(null)"
+        },
+        {
+          "call_id": "CAL019837cf1fe87f139b863a24117182bb",
+          "gold": "2a. Scheduling Issue - Walk ins not available / no same day appt",
+          "predicted": "2. Scheduling Issue"
+        },
+        {
+          "call_id": "CAL019837f52c29747e9a736faff8ee96a0",
+          "gold": "(null)",
+          "predicted": "1. Caller Procrastination"
+        },
+        {
+          "call_id": "CAL01983809fd0870bfb1a41e0cc0148c1a",
+          "gold": "1c. Caller Procrastination - Getting information for someone else",
+          "predicted": "(null)"
+        },
+        {
+          "call_id": "CAL01983817fcfd7454a63d6cdf8169a5aa",
+          "gold": "1a. Caller Procrastination - Price Objection / Shopping / Request for Quote",
+          "predicted": "1b. Caller Procrastination - Need to check with partner"
+        },
+        {
+          "call_id": "CAL01983822ac26708db3b026da626a071c",
+          "gold": "1a. Caller Procrastination - Price Objection / Shopping / Request for Quote",
+          "predicted": "3. Service/treatment not offered"
+        },
+        {
+          "call_id": "CAL0198382a648d7ea09d62d10d36e470d7",
+          "gold": "1a. Caller Procrastination - Price Objection / Shopping / Request for Quote",
+          "predicted": "3. Service/treatment not offered"
+        },
+        {
+          "call_id": "CAL0198383ba24b764186763c2357974ba3",
+          "gold": "1a. Caller Procrastination - Price Objection / Shopping / Request for Quote",
+          "predicted": "3. Service/treatment not offered"
+        },
+        {
+          "call_id": "CAL019838424bff7fa7890d74af370fc6f0",
+          "gold": "1. Caller Procrastination",
+          "predicted": "(null)"
+        },
+        {
+          "call_id": "CAL01983845f24c74ca8e084a529e08b4d8",
+          "gold": "2b. Scheduling Issue - Full schedule",
+          "predicted": "2. Scheduling Issue"
+        },
+        {
+          "call_id": "CAL01983864fd50700396fe8fb50860c0ae",
+          "gold": "3. Service/treatment not offered",
+          "predicted": "3c. Service/treatment not offered - Exotics"
+        },
+        {
+          "call_id": "CAL01983892a84f773a9b31879e92d73ad0",
+          "gold": "2b. Scheduling Issue - Full schedule",
+          "predicted": "2a. Scheduling Issue - Walk ins not available / no same day appt"
+        },
+        {
+          "call_id": "CAL0198389a5e4d77f688308ebf78950714",
+          "gold": "1c. Caller Procrastination - Getting information for someone else",
+          "predicted": "(null)"
+        },
+        {
+          "call_id": "CAL019838b0ce8870818d880dd1851cb5f1",
+          "gold": "1c. Caller Procrastination - Getting information for someone else",
+          "predicted": "(null)"
+        },
+        {
+          "call_id": "CAL019838b50e7772a19e18618b90dc851c",
+          "gold": "1a. Caller Procrastination - Price Objection / Shopping / Request for Quote",
+          "predicted": "2. Scheduling Issue"
+        },
+        {
+          "call_id": "CAL019838e2e8477900af5f458ae4cf5493",
+          "gold": "2. Scheduling Issue",
+          "predicted": "2b. Scheduling Issue - Full schedule"
+        },
+        {
+          "call_id": "CAL019838ee40bd75d79ed3a09727199f16",
+          "gold": "(null)",
+          "predicted": "10. Missed call"
+        },
+        {
+          "call_id": "CAL019838f21de27ed8a61c7b82572b4501",
+          "gold": "1a. Caller Procrastination - Price Objection / Shopping / Request for Quote",
+          "predicted": "1. Caller Procrastination"
+        },
+        {
+          "call_id": "CAL019838ffcf307bd790431f1e3f32e766",
+          "gold": "1a. Caller Procrastination - Price Objection / Shopping / Request for Quote",
+          "predicted": "3. Service/treatment not offered"
+        },
+        {
+          "call_id": "CAL01983903cb0d7d2cb167c54ec307a550",
+          "gold": "3c. Service/treatment not offered - Exotics",
+          "predicted": "2. Scheduling Issue"
+        },
+        {
+          "call_id": "CAL0198394a12727494b993186628c42fa4",
+          "gold": "1a. Caller Procrastination - Price Objection / Shopping / Request for Quote",
+          "predicted": "1b. Caller Procrastination - Need to check with partner"
+        },
+        {
+          "call_id": "CAL01983951dbe377eb8d5d7f7142e81509",
+          "gold": "1c. Caller Procrastination - Getting information for someone else",
+          "predicted": "(null)"
+        },
+        {
+          "call_id": "CAL0198396f004a7c9fa7982cab05237ddf",
+          "gold": "2c. Scheduling Issue - Not open / no availability on evenings",
+          "predicted": "10. Missed call"
+        },
+        {
+          "call_id": "CAL0198397eefb9704da9334e4087a45219",
+          "gold": "1a. Caller Procrastination - Price Objection / Shopping / Request for Quote",
+          "predicted": "1. Caller Procrastination"
+        },
+        {
+          "call_id": "CAL019839ae907d7353acdbcbd98d9acb3b",
+          "gold": "6. Emergency care not offered",
+          "predicted": "1. Caller Procrastination"
+        },
+        {
+          "call_id": "CAL01983c51ac917d4497cd5ad7f647d593",
+          "gold": "(null)",
+          "predicted": "10. Missed call"
+        },
+        {
+          "call_id": "CAL01983c55888b7652b02efbb6a54752ba",
+          "gold": "(null)",
+          "predicted": "8. Medication/food order"
+        },
+        {
+          "call_id": "CAL01983c6025277d2d8afea7756aacc533",
+          "gold": "2c. Scheduling Issue - Not open / no availability on evenings",
+          "predicted": "10. Missed call"
+        },
+        {
+          "call_id": "CAL01983c6d5f9f7c0d8241b7a8f1152205",
+          "gold": "(null)",
+          "predicted": "8. Medication/food order"
+        },
+        {
+          "call_id": "CAL01983c7ddf45755696aa13a858a9021e",
+          "gold": "(null)",
+          "predicted": "10. Missed call"
+        },
+        {
+          "call_id": "CAL01983cc519197d11b51db3adc8a2251c",
+          "gold": "(null)",
+          "predicted": "1a. Caller Procrastination - Price Objection / Shopping / Request for Quote"
+        },
+        {
+          "call_id": "CAL01983ccceddd7f4abe511966c66e1954",
+          "gold": "(null)",
+          "predicted": "9. Client/appt query (non-medical)"
+        },
+        {
+          "call_id": "CAL01983cdb03697dc38868335ccdc45ff8",
+          "gold": "(null)",
+          "predicted": "2. Scheduling Issue"
+        },
+        {
+          "call_id": "CAL01983ce59450749db5d91f11b08af414",
+          "gold": "(null)",
+          "predicted": "1. Caller Procrastination"
+        },
+        {
+          "call_id": "CAL01983cf65468762787908b3a76f32a18",
+          "gold": "1a. Caller Procrastination - Price Objection / Shopping / Request for Quote",
+          "predicted": "(null)"
+        }
+      ]
+    }
+  },
+  "predictions": {
+    "CAL000498baa67742cb9a4fed89664cd014": {
+      "call_id": "CAL000498baa67742cb9a4fed89664cd014",
+      "appointment_booked": "No",
+      "client_type": "Existing",
+      "treatment_type": "Urgent Care \u2013 Diagnosis and Treatment of Illnesses (Vomiting, Diabetes, Infections)",
+      "reason_not_booked": "2b. Scheduling Issue - Full schedule"
+    },
+    "CAL00057325c1924ef5be1874417c20b262": {
+      "call_id": "CAL00057325c1924ef5be1874417c20b262",
+      "appointment_booked": "Yes",
+      "client_type": "Existing",
+      "treatment_type": "Preventive Care",
+      "reason_not_booked": null
+    },
+    "CAL0005db904b5746e18d9c5a855f8ff8fd": {
+      "call_id": "CAL0005db904b5746e18d9c5a855f8ff8fd",
+      "appointment_booked": "No",
+      "client_type": "Existing",
+      "treatment_type": "Emergency & Critical Care \u2013 Stabilization (Trauma, Poisoning, Seizures)",
+      "reason_not_booked": "6. Emergency care not offered"
+    },
+    "CAL000982de28904f1aa7f072d197347693": {
+      "call_id": "CAL000982de28904f1aa7f072d197347693",
+      "appointment_booked": "No",
+      "client_type": "New",
+      "treatment_type": "Diagnostic Services \u2013 In-House or Reference Lab Testing (Blood, Urine, Fecal, Cytology)",
+      "reason_not_booked": "1a. Caller Procrastination - Price Objection / Shopping / Request for Quote"
+    },
+    "CAL0009ad7aca3748009c5fb31f51eee5ad": {
+      "call_id": "CAL0009ad7aca3748009c5fb31f51eee5ad",
+      "appointment_booked": "Yes",
+      "client_type": "New",
+      "treatment_type": "Emergency & Critical Care \u2013 Stabilization (Trauma, Poisoning, Seizures)",
+      "reason_not_booked": null
+    },
+    "CAL000aeb5cceb842ff9ab94f9dc115873d": {
+      "call_id": "CAL000aeb5cceb842ff9ab94f9dc115873d",
+      "appointment_booked": "No",
+      "client_type": "Inconclusive",
+      "treatment_type": "Preventive Care",
+      "reason_not_booked": "2b. Scheduling Issue - Full schedule"
+    },
+    "CAL000e51384a1945a28c7af94f3657b772": {
+      "call_id": "CAL000e51384a1945a28c7af94f3657b772",
+      "appointment_booked": "Yes",
+      "client_type": "Existing",
+      "treatment_type": "Urgent Care \u2013 Diagnosis and Treatment of Illnesses (Vomiting, Diabetes, Infections)",
+      "reason_not_booked": null
+    },
+    "CAL001052c35ec84a74857f15ba89aa2183": {
+      "call_id": "CAL001052c35ec84a74857f15ba89aa2183",
+      "appointment_booked": "Yes",
+      "client_type": "Existing",
+      "treatment_type": "Preventive Care \u2013 Wellness Screening (Bloodwork, Urinalysis, Fecals)",
+      "reason_not_booked": null
+    },
+    "CAL0011b20af94b4c4289cf6a51af871369": {
+      "call_id": "CAL0011b20af94b4c4289cf6a51af871369",
+      "appointment_booked": "Yes",
+      "client_type": "New",
+      "treatment_type": "Urgent Care \u2013 Diagnosis and Treatment of Illnesses (Vomiting, Diabetes, Infections)",
+      "reason_not_booked": null
+    },
+    "CAL001aad9b8a0947ed8ac0353348259263": {
+      "call_id": "CAL001aad9b8a0947ed8ac0353348259263",
+      "appointment_booked": "Yes",
+      "client_type": "Existing",
+      "treatment_type": "Dermatology \u2013 Ear Infections",
+      "reason_not_booked": null
+    },
+    "CAL001b27da05104332895e8f037e981343": {
+      "call_id": "CAL001b27da05104332895e8f037e981343",
+      "appointment_booked": "Yes",
+      "client_type": "New",
+      "treatment_type": "Preventive Care \u2013 Vaccinations",
+      "reason_not_booked": null
+    },
+    "CAL0024c5183d6641a7bab31a88e46fbc69": {
+      "call_id": "CAL0024c5183d6641a7bab31a88e46fbc69",
+      "appointment_booked": "Yes",
+      "client_type": "New",
+      "treatment_type": "Emergency & Critical Care \u2013 Stabilization (Trauma, Poisoning, Seizures)",
+      "reason_not_booked": null
+    },
+    "CAL003334dc9cce46eeb1d9ddc73be4e633": {
+      "call_id": "CAL003334dc9cce46eeb1d9ddc73be4e633",
+      "appointment_booked": "Yes",
+      "client_type": "Existing",
+      "treatment_type": "Preventive Care \u2013 Vaccinations",
+      "reason_not_booked": null
+    },
+    "CAL0038d600a47946ebb1c82834efd14ec2": {
+      "call_id": "CAL0038d600a47946ebb1c82834efd14ec2",
+      "appointment_booked": "No",
+      "client_type": "Existing",
+      "treatment_type": "Preventive Care",
+      "reason_not_booked": "2b. Scheduling Issue - Full schedule"
+    },
+    "CAL003947c6d73e405a8ff5214e6719fcbd": {
+      "call_id": "CAL003947c6d73e405a8ff5214e6719fcbd",
+      "appointment_booked": "Yes",
+      "client_type": "New",
+      "treatment_type": "Preventive Care",
+      "reason_not_booked": null
+    },
+    "CAL0039a82c50d340abaf5823d06785a4a0": {
+      "call_id": "CAL0039a82c50d340abaf5823d06785a4a0",
+      "appointment_booked": "Inconclusive",
+      "client_type": "Inconclusive",
+      "treatment_type": "N/A (missed call)",
+      "reason_not_booked": null
+    },
+    "CAL003a2122cd8542c481baf4ddc8e40d80": {
+      "call_id": "CAL003a2122cd8542c481baf4ddc8e40d80",
+      "appointment_booked": "Yes",
+      "client_type": "Existing",
+      "treatment_type": "Dermatology \u2013 Allergies",
+      "reason_not_booked": null
+    },
+    "CAL00415f59577343e1aaad08431561d554": {
+      "call_id": "CAL00415f59577343e1aaad08431561d554",
+      "appointment_booked": "Yes",
+      "client_type": "Existing",
+      "treatment_type": "Preventive Care \u2013 Vaccinations",
+      "reason_not_booked": null
+    },
+    "CAL00427bb94384468b8457c5b48be0dffa": {
+      "call_id": "CAL00427bb94384468b8457c5b48be0dffa",
+      "appointment_booked": "Yes",
+      "client_type": "Existing",
+      "treatment_type": "Preventive Care \u2013 Annual Exams",
+      "reason_not_booked": null
+    },
+    "CAL00584c7b588f4128be84a13ff49dbe96": {
+      "call_id": "CAL00584c7b588f4128be84a13ff49dbe96",
+      "appointment_booked": "No",
+      "client_type": "New",
+      "treatment_type": "Surgical Services \u2013 Spays and Neuters",
+      "reason_not_booked": "2b. Scheduling Issue - Full schedule"
+    },
+    "CAL0059cd46261848899dadd858b1297a7a": {
+      "call_id": "CAL0059cd46261848899dadd858b1297a7a",
+      "appointment_booked": "No",
+      "client_type": "New",
+      "treatment_type": "Surgical Services \u2013 Spays and Neuters",
+      "reason_not_booked": "1. Caller Procrastination"
+    },
+    "CAL005e941190aa4eeeb16b5520f59e8526": {
+      "call_id": "CAL005e941190aa4eeeb16b5520f59e8526",
+      "appointment_booked": "No",
+      "client_type": "New",
+      "treatment_type": "Preventive Care \u2013 Vaccinations",
+      "reason_not_booked": "2. Scheduling Issue"
+    },
+    "CAL00644c70bf09449a835487c3ddc673b2": {
+      "call_id": "CAL00644c70bf09449a835487c3ddc673b2",
+      "appointment_booked": "Yes",
+      "client_type": "Existing",
+      "treatment_type": "Preventive Care \u2013 Parasite Prevention",
+      "reason_not_booked": null
+    },
+    "CAL00653e0d49dc40199c3e555625cb2117": {
+      "call_id": "CAL00653e0d49dc40199c3e555625cb2117",
+      "appointment_booked": "Yes",
+      "client_type": "New",
+      "treatment_type": "Urgent Care \u2013 Diagnosis and Treatment of Illnesses (Vomiting, Diabetes, Infections)",
+      "reason_not_booked": null
+    },
+    "CAL0068dc66d062488fa1f4879724451050": {
+      "call_id": "CAL0068dc66d062488fa1f4879724451050",
+      "appointment_booked": "Yes",
+      "client_type": "Existing",
+      "treatment_type": "Urgent Care \u2013 Diagnosis and Treatment of Illnesses (Vomiting, Diabetes, Infections)",
+      "reason_not_booked": null
+    },
+    "CAL006c0c3985f84e298f13d3d696ce8650": {
+      "call_id": "CAL006c0c3985f84e298f13d3d696ce8650",
+      "appointment_booked": "Yes",
+      "client_type": "Existing",
+      "treatment_type": "Preventive Care \u2013 Vaccinations",
+      "reason_not_booked": null
+    },
+    "CAL00747d7c7e454434a6fbb219ddef83b0": {
+      "call_id": "CAL00747d7c7e454434a6fbb219ddef83b0",
+      "appointment_booked": "Yes",
+      "client_type": "Existing",
+      "treatment_type": "Preventive Care \u2013 Vaccinations",
+      "reason_not_booked": null
+    },
+    "CAL007df41abd3e463298f55c7d7d733d9a": {
+      "call_id": "CAL007df41abd3e463298f55c7d7d733d9a",
+      "appointment_booked": "Yes",
+      "client_type": "New",
+      "treatment_type": "Preventive Care \u2013 Vaccinations",
+      "reason_not_booked": null
+    },
+    "CAL00803d059d424bb296f8f9916a7115fd": {
+      "call_id": "CAL00803d059d424bb296f8f9916a7115fd",
+      "appointment_booked": "Yes",
+      "client_type": "Existing",
+      "treatment_type": "Preventive Care \u2013 Vaccinations",
+      "reason_not_booked": null
+    },
+    "CAL00817a0b30d241d39d3953af8bdffd0e": {
+      "call_id": "CAL00817a0b30d241d39d3953af8bdffd0e",
+      "appointment_booked": "Yes",
+      "client_type": "Existing",
+      "treatment_type": "Preventive Care \u2013 Vaccinations",
+      "reason_not_booked": null
+    },
+    "CAL0081cff67cb34ae0b30d1dc0b426d15c": {
+      "call_id": "CAL0081cff67cb34ae0b30d1dc0b426d15c",
+      "appointment_booked": "No",
+      "client_type": "New",
+      "treatment_type": "Preventive Care \u2013 Parasite Prevention",
+      "reason_not_booked": "2b. Scheduling Issue - Full schedule"
+    },
+    "CAL0083311f69934f448c9bbac4cb31ed5e": {
+      "call_id": "CAL0083311f69934f448c9bbac4cb31ed5e",
+      "appointment_booked": "No",
+      "client_type": "New",
+      "treatment_type": "End of Life Care \u2013 In-Clinic Euthanasia",
+      "reason_not_booked": "1a. Caller Procrastination - Price Objection / Shopping / Request for Quote"
+    },
+    "CAL00848f2fc8ea47239cff6c6c1177f95a": {
+      "call_id": "CAL00848f2fc8ea47239cff6c6c1177f95a",
+      "appointment_booked": "Yes",
+      "client_type": "Existing",
+      "treatment_type": "Dermatology \u2013 Ear Infections",
+      "reason_not_booked": null
+    },
+    "CAL0084da0fae0c4da6a7bfdabc646c5ba9": {
+      "call_id": "CAL0084da0fae0c4da6a7bfdabc646c5ba9",
+      "appointment_booked": "No",
+      "client_type": "New",
+      "treatment_type": "Urgent Care \u2013 Chronic Disease Management (Arthritis, Allergies, Thyroid Disease)",
+      "reason_not_booked": "1a. Caller Procrastination - Price Objection / Shopping / Request for Quote"
+    },
+    "CAL008550503109471bb301dbdb52ea8453": {
+      "call_id": "CAL008550503109471bb301dbdb52ea8453",
+      "appointment_booked": "Yes",
+      "client_type": "Existing",
+      "treatment_type": "Preventive Care \u2013 Annual Exams",
+      "reason_not_booked": null
+    },
+    "CAL008a74d19188416cbd3be39780335bbb": {
+      "call_id": "CAL008a74d19188416cbd3be39780335bbb",
+      "appointment_booked": "Inconclusive",
+      "client_type": "Inconclusive",
+      "treatment_type": "N/A (missed call)",
+      "reason_not_booked": null
+    },
+    "CAL008db269e7294a62a394fecdbe852724": {
+      "call_id": "CAL008db269e7294a62a394fecdbe852724",
+      "appointment_booked": "Yes",
+      "client_type": "Existing",
+      "treatment_type": "Preventive Care",
+      "reason_not_booked": null
+    },
+    "CAL008f2a090e7f4d42a4488a553045d64f": {
+      "call_id": "CAL008f2a090e7f4d42a4488a553045d64f",
+      "appointment_booked": "Yes",
+      "client_type": "New",
+      "treatment_type": "Preventive Care \u2013 Annual Exams",
+      "reason_not_booked": null
+    },
+    "CAL00929b7f48514a6b85c94fad4b997d9f": {
+      "call_id": "CAL00929b7f48514a6b85c94fad4b997d9f",
+      "appointment_booked": "No",
+      "client_type": "Existing",
+      "treatment_type": "Urgent Care \u2013 Diagnosis and Treatment of Illnesses (Vomiting, Diabetes, Infections)",
+      "reason_not_booked": "2b. Scheduling Issue - Full schedule"
+    },
+    "CAL009fecf1e3dc43fcb124f083b4886d34": {
+      "call_id": "CAL009fecf1e3dc43fcb124f083b4886d34",
+      "appointment_booked": "No",
+      "client_type": "Existing",
+      "treatment_type": "Preventive Care",
+      "reason_not_booked": "1. Caller Procrastination"
+    },
+    "CAL00a0052f044140e2ab2535a85367c137": {
+      "call_id": "CAL00a0052f044140e2ab2535a85367c137",
+      "appointment_booked": "Inconclusive",
+      "client_type": "Existing",
+      "treatment_type": "End of Life Care",
+      "reason_not_booked": null
+    },
+    "CAL00a33094c71445c3896aac927ab0c6b9": {
+      "call_id": "CAL00a33094c71445c3896aac927ab0c6b9",
+      "appointment_booked": "No",
+      "client_type": "New",
+      "treatment_type": "Diagnostic Services \u2013 X-Rays (Digital Radiography)",
+      "reason_not_booked": "1a. Caller Procrastination - Price Objection / Shopping / Request for Quote"
+    },
+    "CAL00b175c88b6d4b20a8f2ecb4d226d689": {
+      "call_id": "CAL00b175c88b6d4b20a8f2ecb4d226d689",
+      "appointment_booked": "Yes",
+      "client_type": "Existing",
+      "treatment_type": "Preventive Care",
+      "reason_not_booked": null
+    },
+    "CAL00bf0e33a835402c8e1ab317b17d16ce": {
+      "call_id": "CAL00bf0e33a835402c8e1ab317b17d16ce",
+      "appointment_booked": "Yes",
+      "client_type": "New",
+      "treatment_type": "Urgent Care / Sick Pet",
+      "reason_not_booked": null
+    },
+    "CAL00c4d944580b454fa32ba23e0a439d9f": {
+      "call_id": "CAL00c4d944580b454fa32ba23e0a439d9f",
+      "appointment_booked": "No",
+      "client_type": "New",
+      "treatment_type": "End of Life Care \u2013 In-Clinic Euthanasia",
+      "reason_not_booked": "1. Caller Procrastination"
+    },
+    "CAL00cc318557b84211830f8f9165abff38": {
+      "call_id": "CAL00cc318557b84211830f8f9165abff38",
+      "appointment_booked": "Yes",
+      "client_type": "Existing",
+      "treatment_type": "Dermatology \u2013 Ear Infections",
+      "reason_not_booked": null
+    },
+    "CAL00d3bb91c37c494dae58d1f03970cf7c": {
+      "call_id": "CAL00d3bb91c37c494dae58d1f03970cf7c",
+      "appointment_booked": null,
+      "client_type": null,
+      "treatment_type": null,
+      "reason_not_booked": null
+    },
+    "CAL00ddc5b018204683a8005f80fb0cb08d": {
+      "call_id": "CAL00ddc5b018204683a8005f80fb0cb08d",
+      "appointment_booked": "No",
+      "client_type": "Existing",
+      "treatment_type": "Preventive Care \u2013 Parasite Prevention",
+      "reason_not_booked": "1. Caller Procrastination"
+    },
+    "CAL00e3726d100f45e8913c8f8dfb2fd4ce": {
+      "call_id": "CAL00e3726d100f45e8913c8f8dfb2fd4ce",
+      "appointment_booked": "No",
+      "client_type": "New",
+      "treatment_type": "Urgent Care \u2013 Diagnosis and Treatment of Illnesses (Vomiting, Diabetes, Infections)",
+      "reason_not_booked": "1. Caller Procrastination"
+    },
+    "CAL011c013103cb49bc84379c12992b27a6": {
+      "call_id": "CAL011c013103cb49bc84379c12992b27a6",
+      "appointment_booked": "Inconclusive",
+      "client_type": "Existing",
+      "treatment_type": "Urgent Care \u2013 Diagnosis and Treatment of Illnesses (Vomiting, Diabetes, Infections)",
+      "reason_not_booked": null
+    },
+    "CAL011ebf53493445e7896fed44ce7c81f6": {
+      "call_id": "CAL011ebf53493445e7896fed44ce7c81f6",
+      "appointment_booked": "Yes",
+      "client_type": "Existing",
+      "treatment_type": "Urgent Care \u2013 Diagnosis and Treatment of Illnesses (Vomiting, Diabetes, Infections)",
+      "reason_not_booked": null
+    },
+    "CAL0123fdba3d2942b0af41e1ee7d7d3bac": {
+      "call_id": "CAL0123fdba3d2942b0af41e1ee7d7d3bac",
+      "appointment_booked": "Yes",
+      "client_type": "New",
+      "treatment_type": "Urgent Care \u2013 Diagnosis and Treatment of Illnesses (Vomiting, Diabetes, Infections)",
+      "reason_not_booked": null
+    },
+    "CAL012c4a0f78834f90b4d5b3a24657a2d8": {
+      "call_id": "CAL012c4a0f78834f90b4d5b3a24657a2d8",
+      "appointment_booked": "Yes",
+      "client_type": "Existing",
+      "treatment_type": "Preventive Care \u2013 Annual Exams",
+      "reason_not_booked": null
+    },
+    "CAL01307cbeca1945d3a9201018704f109a": {
+      "call_id": "CAL01307cbeca1945d3a9201018704f109a",
+      "appointment_booked": "No",
+      "client_type": "Existing",
+      "treatment_type": "Urgent Care / Sick Pet",
+      "reason_not_booked": "2. Scheduling Issue"
+    },
+    "CAL013ccba9eedc4e67a1005d99fc3fa4bb": {
+      "call_id": "CAL013ccba9eedc4e67a1005d99fc3fa4bb",
+      "appointment_booked": "Yes",
+      "client_type": "Existing",
+      "treatment_type": "Urgent Care \u2013 Diagnosis and Treatment of Illnesses (Vomiting, Diabetes, Infections)",
+      "reason_not_booked": null
+    },
+    "CAL014854d99d7940c1910271fee0349169": {
+      "call_id": "CAL014854d99d7940c1910271fee0349169",
+      "appointment_booked": "Yes",
+      "client_type": "Existing",
+      "treatment_type": "Preventive Care \u2013 Annual Exams",
+      "reason_not_booked": null
+    },
+    "CAL014b1b4985f340e8ba39b659373275b2": {
+      "call_id": "CAL014b1b4985f340e8ba39b659373275b2",
+      "appointment_booked": "No",
+      "client_type": "New",
+      "treatment_type": "Preventive Care",
+      "reason_not_booked": "1a. Caller Procrastination - Price Objection / Shopping / Request for Quote"
+    },
+    "CAL01568eebe6a143918c7fc238f5562f6b": {
+      "call_id": "CAL01568eebe6a143918c7fc238f5562f6b",
+      "appointment_booked": "Yes",
+      "client_type": "Existing",
+      "treatment_type": "Preventive Care \u2013 Vaccinations",
+      "reason_not_booked": null
+    },
+    "CAL0158a08f881a40c592c795ca67df298b": {
+      "call_id": "CAL0158a08f881a40c592c795ca67df298b",
+      "appointment_booked": "Yes",
+      "client_type": "Existing",
+      "treatment_type": "Emergency & Critical Care \u2013 Stabilization (Trauma, Poisoning, Seizures)",
+      "reason_not_booked": null
+    },
+    "CAL017e403dd5c64398ac43ffe88d4b3cf5": {
+      "call_id": "CAL017e403dd5c64398ac43ffe88d4b3cf5",
+      "appointment_booked": "Yes",
+      "client_type": "Existing",
+      "treatment_type": "Preventive Care \u2013 Annual Exams",
+      "reason_not_booked": null
+    },
+    "CAL018db6069ff2459da919dd5241e6615a": {
+      "call_id": "CAL018db6069ff2459da919dd5241e6615a",
+      "appointment_booked": "No",
+      "client_type": "Existing",
+      "treatment_type": "Dermatology \u2013 Allergies",
+      "reason_not_booked": "1a. Caller Procrastination - Price Objection / Shopping / Request for Quote"
+    },
+    "CAL018df2fa33fb456f8959e4287cbf5bb7": {
+      "call_id": "CAL018df2fa33fb456f8959e4287cbf5bb7",
+      "appointment_booked": "Yes",
+      "client_type": "New",
+      "treatment_type": "Preventive Care \u2013 Vaccinations",
+      "reason_not_booked": null
+    },
+    "CAL018e04d97ba74747b033b3120bd39163": {
+      "call_id": "CAL018e04d97ba74747b033b3120bd39163",
+      "appointment_booked": "Yes",
+      "client_type": "Existing",
+      "treatment_type": "Preventive Care \u2013 Annual Exams",
+      "reason_not_booked": null
+    },
+    "CAL019837cf0ff37f4d8d1af062be24cbab": {
+      "call_id": "CAL019837cf0ff37f4d8d1af062be24cbab",
+      "appointment_booked": "Yes",
+      "client_type": "New",
+      "treatment_type": "Urgent Care \u2013 Diagnosis and Treatment of Illnesses (Vomiting, Diabetes, Infections)",
+      "reason_not_booked": null
+    },
+    "CAL019837cf1fe87f139b863a24117182bb": {
+      "call_id": "CAL019837cf1fe87f139b863a24117182bb",
+      "appointment_booked": "No",
+      "client_type": "Existing",
+      "treatment_type": "Surgical Services \u2013 Soft Tissue Surgeries (Lump Removals, Bladder Stone Removal, Wound Repair)",
+      "reason_not_booked": "2. Scheduling Issue"
+    },
+    "CAL019837e8fdaf7d31b9a87d56d518b19a": {
+      "call_id": "CAL019837e8fdaf7d31b9a87d56d518b19a",
+      "appointment_booked": "Yes",
+      "client_type": "New",
+      "treatment_type": "Surgical Services \u2013 Spays and Neuters",
+      "reason_not_booked": null
+    },
+    "CAL019837f52c29747e9a736faff8ee96a0": {
+      "call_id": "CAL019837f52c29747e9a736faff8ee96a0",
+      "appointment_booked": "Inconclusive",
+      "client_type": "Existing",
+      "treatment_type": "Urgent Care / Sick Pet",
+      "reason_not_booked": "1. Caller Procrastination"
+    },
+    "CAL019837fa1ec07a778412598cf2c6c69b": {
+      "call_id": "CAL019837fa1ec07a778412598cf2c6c69b",
+      "appointment_booked": "Yes",
+      "client_type": "Existing",
+      "treatment_type": "Urgent Care \u2013 Diagnosis and Treatment of Illnesses (Vomiting, Diabetes, Infections)",
+      "reason_not_booked": null
+    },
+    "CAL01983804e7477d2ab9762cb70d48f2e3": {
+      "call_id": "CAL01983804e7477d2ab9762cb70d48f2e3",
+      "appointment_booked": "Yes",
+      "client_type": "Existing",
+      "treatment_type": "Preventive Care \u2013 Vaccinations",
+      "reason_not_booked": null
+    },
+    "CAL01983809118e7b7ab76583beb15baec6": {
+      "call_id": "CAL01983809118e7b7ab76583beb15baec6",
+      "appointment_booked": "Yes",
+      "client_type": "Existing",
+      "treatment_type": "Preventive Care \u2013 Annual Exams",
+      "reason_not_booked": null
+    },
+    "CAL01983809fd0870bfb1a41e0cc0148c1a": {
+      "call_id": "CAL01983809fd0870bfb1a41e0cc0148c1a",
+      "appointment_booked": "Inconclusive",
+      "client_type": "Existing",
+      "treatment_type": "Retail",
+      "reason_not_booked": null
+    },
+    "CAL0198380d24b573858f1ebc1d3174cf7c": {
+      "call_id": "CAL0198380d24b573858f1ebc1d3174cf7c",
+      "appointment_booked": "Yes",
+      "client_type": "Existing",
+      "treatment_type": "Dermatology \u2013 Ear Infections",
+      "reason_not_booked": null
+    },
+    "CAL0198380e825f714ba6f533c90cee0983": {
+      "call_id": "CAL0198380e825f714ba6f533c90cee0983",
+      "appointment_booked": "Inconclusive",
+      "client_type": "Existing",
+      "treatment_type": "Diagnostic Services \u2013 In-House or Reference Lab Testing (Blood, Urine, Fecal, Cytology)",
+      "reason_not_booked": null
+    },
+    "CAL01983815a4767f56a58f01c1c70c0a18": {
+      "call_id": "CAL01983815a4767f56a58f01c1c70c0a18",
+      "appointment_booked": "Inconclusive",
+      "client_type": "Existing",
+      "treatment_type": "Retail \u2013 Prescriptions",
+      "reason_not_booked": null
+    },
+    "CAL01983817fcfd7454a63d6cdf8169a5aa": {
+      "call_id": "CAL01983817fcfd7454a63d6cdf8169a5aa",
+      "appointment_booked": "No",
+      "client_type": "New",
+      "treatment_type": "Urgent Care / Sick Pet",
+      "reason_not_booked": "1b. Caller Procrastination - Need to check with partner"
+    },
+    "CAL0198381fff847e6d97bd58d60abcb00e": {
+      "call_id": "CAL0198381fff847e6d97bd58d60abcb00e",
+      "appointment_booked": "Yes",
+      "client_type": "Existing",
+      "treatment_type": "Preventive Care \u2013 Annual Exams",
+      "reason_not_booked": null
+    },
+    "CAL01983822ac26708db3b026da626a071c": {
+      "call_id": "CAL01983822ac26708db3b026da626a071c",
+      "appointment_booked": "Inconclusive",
+      "client_type": "New",
+      "treatment_type": "Other",
+      "reason_not_booked": "3. Service/treatment not offered"
+    },
+    "CAL019838234a5573079b0722f822b613f7": {
+      "call_id": "CAL019838234a5573079b0722f822b613f7",
+      "appointment_booked": "Inconclusive",
+      "client_type": "Existing",
+      "treatment_type": "Retail \u2013 Food Orders",
+      "reason_not_booked": null
+    },
+    "CAL01983823e3fd7e76a7ec906121a17dee": {
+      "call_id": "CAL01983823e3fd7e76a7ec906121a17dee",
+      "appointment_booked": "Inconclusive",
+      "client_type": "Existing",
+      "treatment_type": "Retail \u2013 Food Orders",
+      "reason_not_booked": null
+    },
+    "CAL019838277cc37e93b4c1a543fa522122": {
+      "call_id": "CAL019838277cc37e93b4c1a543fa522122",
+      "appointment_booked": "Yes",
+      "client_type": "New",
+      "treatment_type": "Urgent Care \u2013 Diagnosis and Treatment of Illnesses (Vomiting, Diabetes, Infections)",
+      "reason_not_booked": null
+    },
+    "CAL01983828e7347b6281fe9fa52524f73e": {
+      "call_id": "CAL01983828e7347b6281fe9fa52524f73e",
+      "appointment_booked": "Inconclusive",
+      "client_type": "Existing",
+      "treatment_type": "Preventive Care \u2013 Vaccinations",
+      "reason_not_booked": null
+    },
+    "CAL0198382a648d7ea09d62d10d36e470d7": {
+      "call_id": "CAL0198382a648d7ea09d62d10d36e470d7",
+      "appointment_booked": "No",
+      "client_type": "New",
+      "treatment_type": "Surgical Services",
+      "reason_not_booked": "3. Service/treatment not offered"
+    },
+    "CAL01983837207c78339c0dc0ac40dc2540": {
+      "call_id": "CAL01983837207c78339c0dc0ac40dc2540",
+      "appointment_booked": "Yes",
+      "client_type": "Existing",
+      "treatment_type": "Preventive Care \u2013 Annual Exams",
+      "reason_not_booked": null
+    },
+    "CAL0198383ba24b764186763c2357974ba3": {
+      "call_id": "CAL0198383ba24b764186763c2357974ba3",
+      "appointment_booked": "No",
+      "client_type": "New",
+      "treatment_type": "End of Life Care",
+      "reason_not_booked": "3. Service/treatment not offered"
+    },
+    "CAL0198383bf2cd7adaa841d36177d17bbc": {
+      "call_id": "CAL0198383bf2cd7adaa841d36177d17bbc",
+      "appointment_booked": "Inconclusive",
+      "client_type": "Existing",
+      "treatment_type": "Surgical Services \u2013 Spays and Neuters",
+      "reason_not_booked": "1a. Caller Procrastination - Price Objection / Shopping / Request for Quote"
+    },
+    "CAL019838424bff7fa7890d74af370fc6f0": {
+      "call_id": "CAL019838424bff7fa7890d74af370fc6f0",
+      "appointment_booked": "Inconclusive",
+      "client_type": "Existing",
+      "treatment_type": "Preventive Care \u2013 Parasite Prevention",
+      "reason_not_booked": null
+    },
+    "CAL01983845f24c74ca8e084a529e08b4d8": {
+      "call_id": "CAL01983845f24c74ca8e084a529e08b4d8",
+      "appointment_booked": "No",
+      "client_type": "New",
+      "treatment_type": "Dermatology \u2013 Ear Infections",
+      "reason_not_booked": "2. Scheduling Issue"
+    },
+    "CAL019838482da37a9f9344c2d92538c61f": {
+      "call_id": "CAL019838482da37a9f9344c2d92538c61f",
+      "appointment_booked": "Yes",
+      "client_type": "Existing",
+      "treatment_type": "Preventive Care \u2013 Annual Exams",
+      "reason_not_booked": null
+    },
+    "CAL0198384b51907551aab56685e09cde9c": {
+      "call_id": "CAL0198384b51907551aab56685e09cde9c",
+      "appointment_booked": "Inconclusive",
+      "client_type": "Existing",
+      "treatment_type": "Urgent Care / Sick Pet",
+      "reason_not_booked": null
+    },
+    "CAL019838502ce87cbdbc990b0ade416e7a": {
+      "call_id": "CAL019838502ce87cbdbc990b0ade416e7a",
+      "appointment_booked": "Inconclusive",
+      "client_type": "Existing",
+      "treatment_type": "Other",
+      "reason_not_booked": null
+    },
+    "CAL0198385255f8738ca83ae22e29e15dcc": {
+      "call_id": "CAL0198385255f8738ca83ae22e29e15dcc",
+      "appointment_booked": "Inconclusive",
+      "client_type": "Existing",
+      "treatment_type": "Other",
+      "reason_not_booked": "3. Service/treatment not offered"
+    },
+    "CAL0198385b6e3772fc89e3f22f41af0b46": {
+      "call_id": "CAL0198385b6e3772fc89e3f22f41af0b46",
+      "appointment_booked": "Yes",
+      "client_type": "Existing",
+      "treatment_type": "Dermatology \u2013 Allergies",
+      "reason_not_booked": null
+    },
+    "CAL01983864fd50700396fe8fb50860c0ae": {
+      "call_id": "CAL01983864fd50700396fe8fb50860c0ae",
+      "appointment_booked": "No",
+      "client_type": "New",
+      "treatment_type": "Other",
+      "reason_not_booked": "3c. Service/treatment not offered - Exotics"
+    },
+    "CAL01983872f881791f9d0eae5c58b35de9": {
+      "call_id": "CAL01983872f881791f9d0eae5c58b35de9",
+      "appointment_booked": "Inconclusive",
+      "client_type": "Existing",
+      "treatment_type": "Retail \u2013 Prescriptions",
+      "reason_not_booked": null
+    },
+    "CAL0198387534b27b21af285cf499eac523": {
+      "call_id": "CAL0198387534b27b21af285cf499eac523",
+      "appointment_booked": "Yes",
+      "client_type": "Existing",
+      "treatment_type": "Preventive Care",
+      "reason_not_booked": null
+    },
+    "CAL019838760fe97e58898d00136787ed15": {
+      "call_id": "CAL019838760fe97e58898d00136787ed15",
+      "appointment_booked": "Inconclusive",
+      "client_type": "Existing",
+      "treatment_type": "Retail \u2013 Prescriptions",
+      "reason_not_booked": null
+    },
+    "CAL0198387a31297659b98d57bb828b2c1d": {
+      "call_id": "CAL0198387a31297659b98d57bb828b2c1d",
+      "appointment_booked": "No",
+      "client_type": "Existing",
+      "treatment_type": "Diagnostic Services \u2013 X-Rays (Digital Radiography)",
+      "reason_not_booked": "2b. Scheduling Issue - Full schedule"
+    },
+    "CAL0198387ec66d739fb6850962fd609815": {
+      "call_id": "CAL0198387ec66d739fb6850962fd609815",
+      "appointment_booked": "Inconclusive",
+      "client_type": "Existing",
+      "treatment_type": "Retail \u2013 Prescriptions",
+      "reason_not_booked": null
+    },
+    "CAL01983885684f7cfeaf588dcf1f8a9e28": {
+      "call_id": "CAL01983885684f7cfeaf588dcf1f8a9e28",
+      "appointment_booked": "Inconclusive",
+      "client_type": "Existing",
+      "treatment_type": "Preventive Care \u2013 Annual Exams",
+      "reason_not_booked": null
+    },
+    "CAL019838906bb373e3b8900dfb87d1f627": {
+      "call_id": "CAL019838906bb373e3b8900dfb87d1f627",
+      "appointment_booked": "Inconclusive",
+      "client_type": "Existing",
+      "treatment_type": "Retail \u2013 Food Orders",
+      "reason_not_booked": null
+    },
+    "CAL01983892a84f773a9b31879e92d73ad0": {
+      "call_id": "CAL01983892a84f773a9b31879e92d73ad0",
+      "appointment_booked": "No",
+      "client_type": "New",
+      "treatment_type": "Urgent Care \u2013 Diagnosis and Treatment of Illnesses (Vomiting, Diabetes, Infections)",
+      "reason_not_booked": "2a. Scheduling Issue - Walk ins not available / no same day appt"
+    },
+    "CAL019838957c0f75cbb4402e55409a5c87": {
+      "call_id": "CAL019838957c0f75cbb4402e55409a5c87",
+      "appointment_booked": "Yes",
+      "client_type": "Existing",
+      "treatment_type": "Urgent Care \u2013 Diagnosis and Treatment of Illnesses (Vomiting, Diabetes, Infections)",
+      "reason_not_booked": null
+    },
+    "CAL01983898e3217448975702e04867a9ab": {
+      "call_id": "CAL01983898e3217448975702e04867a9ab",
+      "appointment_booked": "Inconclusive",
+      "client_type": "Existing",
+      "treatment_type": "Retail \u2013 Prescriptions",
+      "reason_not_booked": null
+    },
+    "CAL0198389a5e4d77f688308ebf78950714": {
+      "call_id": "CAL0198389a5e4d77f688308ebf78950714",
+      "appointment_booked": "Inconclusive",
+      "client_type": "New",
+      "treatment_type": "Other",
+      "reason_not_booked": null
+    },
+    "CAL019838a6d53c7c27836008665c04d9ee": {
+      "call_id": "CAL019838a6d53c7c27836008665c04d9ee",
+      "appointment_booked": "No",
+      "client_type": "Existing",
+      "treatment_type": "Other",
+      "reason_not_booked": "2b. Scheduling Issue - Full schedule"
+    },
+    "CAL019838aa07b4769484b524ea1dedba13": {
+      "call_id": "CAL019838aa07b4769484b524ea1dedba13",
+      "appointment_booked": "Yes",
+      "client_type": "Existing",
+      "treatment_type": "Preventive Care \u2013 Vaccinations",
+      "reason_not_booked": null
+    },
+    "CAL019838aee7997a33aa593e40ee397846": {
+      "call_id": "CAL019838aee7997a33aa593e40ee397846",
+      "appointment_booked": "Yes",
+      "client_type": "Existing",
+      "treatment_type": "Urgent Care / Sick Pet",
+      "reason_not_booked": null
+    },
+    "CAL019838b0ce8870818d880dd1851cb5f1": {
+      "call_id": "CAL019838b0ce8870818d880dd1851cb5f1",
+      "appointment_booked": "Inconclusive",
+      "client_type": "New",
+      "treatment_type": "Other",
+      "reason_not_booked": null
+    },
+    "CAL019838b1f2d77d7f9496fb92f910a282": {
+      "call_id": "CAL019838b1f2d77d7f9496fb92f910a282",
+      "appointment_booked": "Inconclusive",
+      "client_type": "Existing",
+      "treatment_type": "Preventive Care \u2013 Vaccinations",
+      "reason_not_booked": null
+    },
+    "CAL019838b50e7772a19e18618b90dc851c": {
+      "call_id": "CAL019838b50e7772a19e18618b90dc851c",
+      "appointment_booked": "No",
+      "client_type": "Existing",
+      "treatment_type": "Diagnostic Services \u2013 In-House or Reference Lab Testing (Blood, Urine, Fecal, Cytology)",
+      "reason_not_booked": "2. Scheduling Issue"
+    },
+    "CAL019838be793178a7b613d26902e61915": {
+      "call_id": "CAL019838be793178a7b613d26902e61915",
+      "appointment_booked": "Inconclusive",
+      "client_type": "Existing",
+      "treatment_type": "Diagnostic Services \u2013 In-House or Reference Lab Testing (Blood, Urine, Fecal, Cytology)",
+      "reason_not_booked": null
+    },
+    "CAL019838beaef3720196945678ed36fe5d": {
+      "call_id": "CAL019838beaef3720196945678ed36fe5d",
+      "appointment_booked": "Yes",
+      "client_type": "Existing",
+      "treatment_type": "Preventive Care",
+      "reason_not_booked": null
+    },
+    "CAL019838c9818f7ad181845b8401268211": {
+      "call_id": "CAL019838c9818f7ad181845b8401268211",
+      "appointment_booked": "Inconclusive",
+      "client_type": "Existing",
+      "treatment_type": "Surgical Services \u2013 Dental Care (Cleanings, Extractions)",
+      "reason_not_booked": null
+    },
+    "CAL019838cff3ac7123bc2a1196f0d7e85c": {
+      "call_id": "CAL019838cff3ac7123bc2a1196f0d7e85c",
+      "appointment_booked": "Yes",
+      "client_type": "Existing",
+      "treatment_type": "Preventive Care",
+      "reason_not_booked": null
+    },
+    "CAL019838d6b3467648a76309f04cb670e6": {
+      "call_id": "CAL019838d6b3467648a76309f04cb670e6",
+      "appointment_booked": "Inconclusive",
+      "client_type": "New",
+      "treatment_type": "Retail \u2013 Prescriptions",
+      "reason_not_booked": null
+    },
+    "CAL019838daaf5e7dc9af5f42649dcdf2e4": {
+      "call_id": "CAL019838daaf5e7dc9af5f42649dcdf2e4",
+      "appointment_booked": "Inconclusive",
+      "client_type": "Existing",
+      "treatment_type": "Diagnostic Services \u2013 In-House or Reference Lab Testing (Blood, Urine, Fecal, Cytology)",
+      "reason_not_booked": null
+    },
+    "CAL019838e00df07a8290a973aa6c6e471d": {
+      "call_id": "CAL019838e00df07a8290a973aa6c6e471d",
+      "appointment_booked": "Yes",
+      "client_type": "Existing",
+      "treatment_type": "Surgical Services \u2013 Dental Care (Cleanings, Extractions)",
+      "reason_not_booked": null
+    },
+    "CAL019838e2e8477900af5f458ae4cf5493": {
+      "call_id": "CAL019838e2e8477900af5f458ae4cf5493",
+      "appointment_booked": "No",
+      "client_type": "New",
+      "treatment_type": "Preventive Care \u2013 Vaccinations",
+      "reason_not_booked": "2b. Scheduling Issue - Full schedule"
+    },
+    "CAL019838e5133f728f8e7390ef05981bc6": {
+      "call_id": "CAL019838e5133f728f8e7390ef05981bc6",
+      "appointment_booked": "Inconclusive",
+      "client_type": "Existing",
+      "treatment_type": "Preventive Care",
+      "reason_not_booked": null
+    },
+    "CAL019838eb0e9c7a20a0d2e589280ff07b": {
+      "call_id": "CAL019838eb0e9c7a20a0d2e589280ff07b",
+      "appointment_booked": "Inconclusive",
+      "client_type": "New",
+      "treatment_type": "Urgent Care / Sick Pet",
+      "reason_not_booked": null
+    },
+    "CAL019838ec50f97b3ea827c0d7066e0081": {
+      "call_id": "CAL019838ec50f97b3ea827c0d7066e0081",
+      "appointment_booked": "Yes",
+      "client_type": "Existing",
+      "treatment_type": "Preventive Care \u2013 Vaccinations",
+      "reason_not_booked": null
+    },
+    "CAL019838edcbce714681b2f15569b21783": {
+      "call_id": "CAL019838edcbce714681b2f15569b21783",
+      "appointment_booked": "Inconclusive",
+      "client_type": "Existing",
+      "treatment_type": "Retail \u2013 Prescriptions",
+      "reason_not_booked": null
+    },
+    "CAL019838ee40bd75d79ed3a09727199f16": {
+      "call_id": "CAL019838ee40bd75d79ed3a09727199f16",
+      "appointment_booked": "No",
+      "client_type": "New",
+      "treatment_type": "Urgent Care \u2013 Diagnosis and Treatment of Illnesses (Vomiting, Diabetes, Infections)",
+      "reason_not_booked": "10. Missed call"
+    },
+    "CAL019838efe4a67e518932fd710a48ccb4": {
+      "call_id": "CAL019838efe4a67e518932fd710a48ccb4",
+      "appointment_booked": "Inconclusive",
+      "client_type": "Existing",
+      "treatment_type": "Retail \u2013 Prescriptions",
+      "reason_not_booked": null
+    },
+    "CAL019838f21de27ed8a61c7b82572b4501": {
+      "call_id": "CAL019838f21de27ed8a61c7b82572b4501",
+      "appointment_booked": "No",
+      "client_type": "New",
+      "treatment_type": "Diagnostic Services \u2013 Ultrasound",
+      "reason_not_booked": "1. Caller Procrastination"
+    },
+    "CAL019838ffcf307bd790431f1e3f32e766": {
+      "call_id": "CAL019838ffcf307bd790431f1e3f32e766",
+      "appointment_booked": "No",
+      "client_type": "New",
+      "treatment_type": "Surgical Services \u2013 Dental Care (Cleanings, Extractions)",
+      "reason_not_booked": "3. Service/treatment not offered"
+    },
+    "CAL01983903cb0d7d2cb167c54ec307a550": {
+      "call_id": "CAL01983903cb0d7d2cb167c54ec307a550",
+      "appointment_booked": "No",
+      "client_type": "New",
+      "treatment_type": "Urgent Care \u2013 Diagnosis and Treatment of Illnesses (Vomiting, Diabetes, Infections)",
+      "reason_not_booked": "2. Scheduling Issue"
+    },
+    "CAL0198390c573272ad8edafd3caef461ce": {
+      "call_id": "CAL0198390c573272ad8edafd3caef461ce",
+      "appointment_booked": "Yes",
+      "client_type": "Existing",
+      "treatment_type": "Urgent Care \u2013 Diagnosis and Treatment of Illnesses (Vomiting, Diabetes, Infections)",
+      "reason_not_booked": null
+    },
+    "CAL0198390dd222713b90f8e58477149228": {
+      "call_id": "CAL0198390dd222713b90f8e58477149228",
+      "appointment_booked": "Yes",
+      "client_type": "Existing",
+      "treatment_type": "Preventive Care \u2013 Vaccinations",
+      "reason_not_booked": null
+    },
+    "CAL0198390e184271aa88fdb761a30ed4b1": {
+      "call_id": "CAL0198390e184271aa88fdb761a30ed4b1",
+      "appointment_booked": "Yes",
+      "client_type": "New",
+      "treatment_type": "Urgent Care \u2013 Diagnosis and Treatment of Illnesses (Vomiting, Diabetes, Infections)",
+      "reason_not_booked": null
+    },
+    "CAL01983914e3d17e06b3780b27b7ff711b": {
+      "call_id": "CAL01983914e3d17e06b3780b27b7ff711b",
+      "appointment_booked": "Inconclusive",
+      "client_type": "Existing",
+      "treatment_type": "Retail \u2013 Prescriptions",
+      "reason_not_booked": null
+    },
+    "CAL0198392628fc70e4b42d46b863b3890d": {
+      "call_id": "CAL0198392628fc70e4b42d46b863b3890d",
+      "appointment_booked": "No",
+      "client_type": "Existing",
+      "treatment_type": "Urgent Care \u2013 Diagnosis and Treatment of Illnesses (Vomiting, Diabetes, Infections)",
+      "reason_not_booked": null
+    },
+    "CAL0198392d6db1775da2feffd30d725c9c": {
+      "call_id": "CAL0198392d6db1775da2feffd30d725c9c",
+      "appointment_booked": "Inconclusive",
+      "client_type": "Existing",
+      "treatment_type": "Retail \u2013 Prescriptions",
+      "reason_not_booked": null
+    },
+    "CAL0198393257cf7e9ab000e231050b0d92": {
+      "call_id": "CAL0198393257cf7e9ab000e231050b0d92",
+      "appointment_booked": "No",
+      "client_type": "New",
+      "treatment_type": "Emergency & Critical Care \u2013 Stabilization (Trauma, Poisoning, Seizures)",
+      "reason_not_booked": "6. Emergency care not offered"
+    },
+    "CAL0198393c407d7e06af1969b1fbf5910f": {
+      "call_id": "CAL0198393c407d7e06af1969b1fbf5910f",
+      "appointment_booked": "Yes",
+      "client_type": "Existing",
+      "treatment_type": "Dermatology \u2013 Ear Infections",
+      "reason_not_booked": null
+    },
+    "CAL019839456cd2707995c13445604374ae": {
+      "call_id": "CAL019839456cd2707995c13445604374ae",
+      "appointment_booked": "Yes",
+      "client_type": "Existing",
+      "treatment_type": "Preventive Care \u2013 Vaccinations",
+      "reason_not_booked": null
+    },
+    "CAL0198394a12727494b993186628c42fa4": {
+      "call_id": "CAL0198394a12727494b993186628c42fa4",
+      "appointment_booked": "No",
+      "client_type": "Existing",
+      "treatment_type": "Preventive Care \u2013 Vaccinations",
+      "reason_not_booked": "1b. Caller Procrastination - Need to check with partner"
+    },
+    "CAL0198394fe92f75bd89f5c30da130643f": {
+      "call_id": "CAL0198394fe92f75bd89f5c30da130643f",
+      "appointment_booked": "Inconclusive",
+      "client_type": "Existing",
+      "treatment_type": "Preventive Care",
+      "reason_not_booked": null
+    },
+    "CAL01983951dbe377eb8d5d7f7142e81509": {
+      "call_id": "CAL01983951dbe377eb8d5d7f7142e81509",
+      "appointment_booked": "Inconclusive",
+      "client_type": "Inconclusive",
+      "treatment_type": "Other",
+      "reason_not_booked": null
+    },
+    "CAL0198395352eb71d98060eabad90c64f8": {
+      "call_id": "CAL0198395352eb71d98060eabad90c64f8",
+      "appointment_booked": "Yes",
+      "client_type": "Existing",
+      "treatment_type": "Preventive Care \u2013 Vaccinations",
+      "reason_not_booked": null
+    },
+    "CAL0198395d1bca7ab99e53c0432b698045": {
+      "call_id": "CAL0198395d1bca7ab99e53c0432b698045",
+      "appointment_booked": "Inconclusive",
+      "client_type": "Existing",
+      "treatment_type": "Retail \u2013 Prescriptions",
+      "reason_not_booked": null
+    },
+    "CAL0198396f004a7c9fa7982cab05237ddf": {
+      "call_id": "CAL0198396f004a7c9fa7982cab05237ddf",
+      "appointment_booked": "No",
+      "client_type": "Inconclusive",
+      "treatment_type": "Urgent Care \u2013 Diagnosis and Treatment of Illnesses (Vomiting, Diabetes, Infections)",
+      "reason_not_booked": "10. Missed call"
+    },
+    "CAL0198397eefb9704da9334e4087a45219": {
+      "call_id": "CAL0198397eefb9704da9334e4087a45219",
+      "appointment_booked": "No",
+      "client_type": "New",
+      "treatment_type": "Preventive Care \u2013 Vaccinations",
+      "reason_not_booked": "1. Caller Procrastination"
+    },
+    "CAL019839950d247453a651bdee3ce9111e": {
+      "call_id": "CAL019839950d247453a651bdee3ce9111e",
+      "appointment_booked": "Yes",
+      "client_type": "Existing",
+      "treatment_type": "Preventive Care \u2013 Vaccinations",
+      "reason_not_booked": null
+    },
+    "CAL019839ae907d7353acdbcbd98d9acb3b": {
+      "call_id": "CAL019839ae907d7353acdbcbd98d9acb3b",
+      "appointment_booked": "No",
+      "client_type": "New",
+      "treatment_type": "Emergency & Critical Care \u2013 Stabilization (Trauma, Poisoning, Seizures)",
+      "reason_not_booked": "1. Caller Procrastination"
+    },
+    "CAL01983a07163d7f73987f1ff2e4adf3c1": {
+      "call_id": "CAL01983a07163d7f73987f1ff2e4adf3c1",
+      "appointment_booked": "Yes",
+      "client_type": "Inconclusive",
+      "treatment_type": "Emergency & Critical Care \u2013 Stabilization (Trauma, Poisoning, Seizures)",
+      "reason_not_booked": null
+    },
+    "CAL01983a0e1a2f721d926584589b973374": {
+      "call_id": "CAL01983a0e1a2f721d926584589b973374",
+      "appointment_booked": "Inconclusive",
+      "client_type": "Inconclusive",
+      "treatment_type": "Retail \u2013 Food Orders",
+      "reason_not_booked": null
+    },
+    "CAL01983a22408b7b5ea81886924eb0e376": {
+      "call_id": "CAL01983a22408b7b5ea81886924eb0e376",
+      "appointment_booked": "No",
+      "client_type": "Inconclusive",
+      "treatment_type": "End of Life Care \u2013 In-Clinic Euthanasia",
+      "reason_not_booked": "1a. Caller Procrastination - Price Objection / Shopping / Request for Quote"
+    },
+    "CAL01983c51ac917d4497cd5ad7f647d593": {
+      "call_id": "CAL01983c51ac917d4497cd5ad7f647d593",
+      "appointment_booked": "No",
+      "client_type": "Existing",
+      "treatment_type": "Preventive Care",
+      "reason_not_booked": "10. Missed call"
+    },
+    "CAL01983c528c917e7ba4b35fcbbe02927f": {
+      "call_id": "CAL01983c528c917e7ba4b35fcbbe02927f",
+      "appointment_booked": "Yes",
+      "client_type": "Existing",
+      "treatment_type": "Preventive Care",
+      "reason_not_booked": null
+    },
+    "CAL01983c55888b7652b02efbb6a54752ba": {
+      "call_id": "CAL01983c55888b7652b02efbb6a54752ba",
+      "appointment_booked": "No",
+      "client_type": "Existing",
+      "treatment_type": "Retail \u2013 Prescriptions",
+      "reason_not_booked": "8. Medication/food order"
+    },
+    "CAL01983c5772447f23b09a04afb1080ca2": {
+      "call_id": "CAL01983c5772447f23b09a04afb1080ca2",
+      "appointment_booked": "No",
+      "client_type": "New",
+      "treatment_type": "Urgent Care / Sick Pet",
+      "reason_not_booked": "2d. Scheduling Issue - Not open / no availability on weekends"
+    },
+    "CAL01983c5855777a33a8de73d04e194d96": {
+      "call_id": "CAL01983c5855777a33a8de73d04e194d96",
+      "appointment_booked": "No",
+      "client_type": "New",
+      "treatment_type": "Surgical Services \u2013 Spays and Neuters",
+      "reason_not_booked": "1a. Caller Procrastination - Price Objection / Shopping / Request for Quote"
+    },
+    "CAL01983c5f5b777033b267894dde732a41": {
+      "call_id": "CAL01983c5f5b777033b267894dde732a41",
+      "appointment_booked": "Inconclusive",
+      "client_type": "Existing",
+      "treatment_type": "Preventive Care",
+      "reason_not_booked": null
+    },
+    "CAL01983c6025277d2d8afea7756aacc533": {
+      "call_id": "CAL01983c6025277d2d8afea7756aacc533",
+      "appointment_booked": "No",
+      "client_type": "Inconclusive",
+      "treatment_type": "Urgent Care \u2013 Diagnosis and Treatment of Illnesses (Vomiting, Diabetes, Infections)",
+      "reason_not_booked": "10. Missed call"
+    },
+    "CAL01983c6119d87102a24253225a449a30": {
+      "call_id": "CAL01983c6119d87102a24253225a449a30",
+      "appointment_booked": "Inconclusive",
+      "client_type": "Existing",
+      "treatment_type": "Other",
+      "reason_not_booked": null
+    },
+    "CAL01983c6519027f208da88940f01ec576": {
+      "call_id": "CAL01983c6519027f208da88940f01ec576",
+      "appointment_booked": "Yes",
+      "client_type": "Existing",
+      "treatment_type": "Preventive Care",
+      "reason_not_booked": null
+    },
+    "CAL01983c6d5f9f7c0d8241b7a8f1152205": {
+      "call_id": "CAL01983c6d5f9f7c0d8241b7a8f1152205",
+      "appointment_booked": "No",
+      "client_type": "Existing",
+      "treatment_type": "Retail \u2013 Prescriptions",
+      "reason_not_booked": "8. Medication/food order"
+    },
+    "CAL01983c6e3a60784488bd2e15b2bda982": {
+      "call_id": "CAL01983c6e3a60784488bd2e15b2bda982",
+      "appointment_booked": "Yes",
+      "client_type": "Existing",
+      "treatment_type": "Urgent Care \u2013 Diagnosis and Treatment of Illnesses (Vomiting, Diabetes, Infections)",
+      "reason_not_booked": null
+    },
+    "CAL01983c728a407262be58ff48a2c91262": {
+      "call_id": "CAL01983c728a407262be58ff48a2c91262",
+      "appointment_booked": "Yes",
+      "client_type": "Existing",
+      "treatment_type": "Preventive Care \u2013 Vaccinations",
+      "reason_not_booked": null
+    },
+    "CAL01983c7b7c887d39b7cdf91a6d370d63": {
+      "call_id": "CAL01983c7b7c887d39b7cdf91a6d370d63",
+      "appointment_booked": "Yes",
+      "client_type": "Existing",
+      "treatment_type": "Urgent Care \u2013 Diagnosis and Treatment of Illnesses (Vomiting, Diabetes, Infections)",
+      "reason_not_booked": null
+    },
+    "CAL01983c7ddf45755696aa13a858a9021e": {
+      "call_id": "CAL01983c7ddf45755696aa13a858a9021e",
+      "appointment_booked": "No",
+      "client_type": "Existing",
+      "treatment_type": "Urgent Care \u2013 Diagnosis and Treatment of Illnesses (Vomiting, Diabetes, Infections)",
+      "reason_not_booked": "10. Missed call"
+    },
+    "CAL01983c8583bf7d6fb66ba1e565a9271a": {
+      "call_id": "CAL01983c8583bf7d6fb66ba1e565a9271a",
+      "appointment_booked": "Yes",
+      "client_type": "Existing",
+      "treatment_type": "Dermatology \u2013 Ear Infections",
+      "reason_not_booked": null
+    },
+    "CAL01983c864fd27568be700962b74f5c65": {
+      "call_id": "CAL01983c864fd27568be700962b74f5c65",
+      "appointment_booked": "Yes",
+      "client_type": "Existing",
+      "treatment_type": "End of Life Care \u2013 In-Clinic Euthanasia",
+      "reason_not_booked": null
+    },
+    "CAL01983c8a3e137c2d915449118f89a10b": {
+      "call_id": "CAL01983c8a3e137c2d915449118f89a10b",
+      "appointment_booked": "Inconclusive",
+      "client_type": "Existing",
+      "treatment_type": "Retail \u2013 Food Orders",
+      "reason_not_booked": null
+    },
+    "CAL01983c8f81f274f4a1dc45d0ac0f76d8": {
+      "call_id": "CAL01983c8f81f274f4a1dc45d0ac0f76d8",
+      "appointment_booked": "Inconclusive",
+      "client_type": "Existing",
+      "treatment_type": "Retail \u2013 Food Orders",
+      "reason_not_booked": null
+    },
+    "CAL01983c91ddb27cdf909c91480c30cc38": {
+      "call_id": "CAL01983c91ddb27cdf909c91480c30cc38",
+      "appointment_booked": "Yes",
+      "client_type": "Existing",
+      "treatment_type": "Preventive Care",
+      "reason_not_booked": null
+    },
+    "CAL01983c93866b7a8eae191e0a6131377b": {
+      "call_id": "CAL01983c93866b7a8eae191e0a6131377b",
+      "appointment_booked": "Yes",
+      "client_type": "New",
+      "treatment_type": "Preventive Care \u2013 Vaccinations",
+      "reason_not_booked": null
+    },
+    "CAL01983c97faa873ab801b402713d9ebc2": {
+      "call_id": "CAL01983c97faa873ab801b402713d9ebc2",
+      "appointment_booked": "Inconclusive",
+      "client_type": "Inconclusive",
+      "treatment_type": "Other",
+      "reason_not_booked": null
+    },
+    "CAL01983c9d4de5796c89ff6f7ce0039ef6": {
+      "call_id": "CAL01983c9d4de5796c89ff6f7ce0039ef6",
+      "appointment_booked": "Inconclusive",
+      "client_type": "Existing",
+      "treatment_type": "Retail \u2013 Prescriptions",
+      "reason_not_booked": null
+    },
+    "CAL01983ca233d779229650c9b90b04243e": {
+      "call_id": "CAL01983ca233d779229650c9b90b04243e",
+      "appointment_booked": "Inconclusive",
+      "client_type": "Existing",
+      "treatment_type": "Retail \u2013 Prescriptions",
+      "reason_not_booked": null
+    },
+    "CAL01983ca46dd47a23b2b6b60ce2930f00": {
+      "call_id": "CAL01983ca46dd47a23b2b6b60ce2930f00",
+      "appointment_booked": "Yes",
+      "client_type": "Existing",
+      "treatment_type": "Preventive Care",
+      "reason_not_booked": null
+    },
+    "CAL01983ca8cf2c7fb28b73d321dae08325": {
+      "call_id": "CAL01983ca8cf2c7fb28b73d321dae08325",
+      "appointment_booked": "Yes",
+      "client_type": "Existing",
+      "treatment_type": "Urgent Care \u2013 Diagnosis and Treatment of Illnesses (Vomiting, Diabetes, Infections)",
+      "reason_not_booked": null
+    },
+    "CAL01983cab17d17ad086b88f72d9b90657": {
+      "call_id": "CAL01983cab17d17ad086b88f72d9b90657",
+      "appointment_booked": "No",
+      "client_type": "New",
+      "treatment_type": "Surgical Services \u2013 Spays and Neuters",
+      "reason_not_booked": "1a. Caller Procrastination - Price Objection / Shopping / Request for Quote"
+    },
+    "CAL01983cac376972818d9cef6bb1cba1fe": {
+      "call_id": "CAL01983cac376972818d9cef6bb1cba1fe",
+      "appointment_booked": "Yes",
+      "client_type": "New",
+      "treatment_type": "Preventive Care \u2013 Vaccinations",
+      "reason_not_booked": null
+    },
+    "CAL01983cb43f7e72a89434d993eb4ed3c3": {
+      "call_id": "CAL01983cb43f7e72a89434d993eb4ed3c3",
+      "appointment_booked": "Yes",
+      "client_type": "Existing",
+      "treatment_type": "Preventive Care",
+      "reason_not_booked": null
+    },
+    "CAL01983cb934ad7b1c9dbe4fea75313ada": {
+      "call_id": "CAL01983cb934ad7b1c9dbe4fea75313ada",
+      "appointment_booked": "Inconclusive",
+      "client_type": "Existing",
+      "treatment_type": "Retail \u2013 Prescriptions",
+      "reason_not_booked": null
+    },
+    "CAL01983cbae1a6793299e3d3fad309374c": {
+      "call_id": "CAL01983cbae1a6793299e3d3fad309374c",
+      "appointment_booked": "Inconclusive",
+      "client_type": "Existing",
+      "treatment_type": "Surgical Services",
+      "reason_not_booked": null
+    },
+    "CAL01983cbd63607bf58cd9f32d6b1a77ac": {
+      "call_id": "CAL01983cbd63607bf58cd9f32d6b1a77ac",
+      "appointment_booked": "Yes",
+      "client_type": "Existing",
+      "treatment_type": "Urgent Care \u2013 Diagnosis and Treatment of Illnesses (Vomiting, Diabetes, Infections)",
+      "reason_not_booked": null
+    },
+    "CAL01983cc022317c228e60e028acc64816": {
+      "call_id": "CAL01983cc022317c228e60e028acc64816",
+      "appointment_booked": "Yes",
+      "client_type": "New",
+      "treatment_type": "Preventive Care \u2013 Annual Exams",
+      "reason_not_booked": null
+    },
+    "CAL01983cc3c8667fcd80755cae64844bb9": {
+      "call_id": "CAL01983cc3c8667fcd80755cae64844bb9",
+      "appointment_booked": "Inconclusive",
+      "client_type": "Existing",
+      "treatment_type": "Retail \u2013 Food Orders",
+      "reason_not_booked": null
+    },
+    "CAL01983cc519197d11b51db3adc8a2251c": {
+      "call_id": "CAL01983cc519197d11b51db3adc8a2251c",
+      "appointment_booked": "No",
+      "client_type": "Existing",
+      "treatment_type": "Diagnostic Services \u2013 In-House or Reference Lab Testing (Blood, Urine, Fecal, Cytology)",
+      "reason_not_booked": "1a. Caller Procrastination - Price Objection / Shopping / Request for Quote"
+    },
+    "CAL01983cc719c27f46a8b5821f88c167f3": {
+      "call_id": "CAL01983cc719c27f46a8b5821f88c167f3",
+      "appointment_booked": "No",
+      "client_type": "New",
+      "treatment_type": "Urgent Care / Sick Pet",
+      "reason_not_booked": "2b. Scheduling Issue - Full schedule"
+    },
+    "CAL01983cc93b1870e4abedb28f5c7c1b75": {
+      "call_id": "CAL01983cc93b1870e4abedb28f5c7c1b75",
+      "appointment_booked": "Inconclusive",
+      "client_type": "Existing",
+      "treatment_type": "Retail \u2013 Prescriptions",
+      "reason_not_booked": null
+    },
+    "CAL01983cc960837ff18770ceb267670c87": {
+      "call_id": "CAL01983cc960837ff18770ceb267670c87",
+      "appointment_booked": "Inconclusive",
+      "client_type": "Existing",
+      "treatment_type": "Retail \u2013 Prescriptions",
+      "reason_not_booked": null
+    },
+    "CAL01983ccb781c779e93e882092ee5b3fa": {
+      "call_id": "CAL01983ccb781c779e93e882092ee5b3fa",
+      "appointment_booked": "Yes",
+      "client_type": "Existing",
+      "treatment_type": "Emergency & Critical Care \u2013 Stabilization (Trauma, Poisoning, Seizures)",
+      "reason_not_booked": null
+    },
+    "CAL01983ccceddd7f4abe511966c66e1954": {
+      "call_id": "CAL01983ccceddd7f4abe511966c66e1954",
+      "appointment_booked": "No",
+      "client_type": "Existing",
+      "treatment_type": "Urgent Care / Sick Pet",
+      "reason_not_booked": "9. Client/appt query (non-medical)"
+    },
+    "CAL01983ccf32937298a61b354edab13ca4": {
+      "call_id": "CAL01983ccf32937298a61b354edab13ca4",
+      "appointment_booked": "Inconclusive",
+      "client_type": "Existing",
+      "treatment_type": "Preventive Care \u2013 Vaccinations",
+      "reason_not_booked": null
+    },
+    "CAL01983cd083ec7ee99f9925cfb1646fcc": {
+      "call_id": "CAL01983cd083ec7ee99f9925cfb1646fcc",
+      "appointment_booked": "Yes",
+      "client_type": "Existing",
+      "treatment_type": "Dermatology \u2013 Ear Infections",
+      "reason_not_booked": null
+    },
+    "CAL01983cd863027801aa89e3bed2c196e6": {
+      "call_id": "CAL01983cd863027801aa89e3bed2c196e6",
+      "appointment_booked": "Inconclusive",
+      "client_type": "Existing",
+      "treatment_type": "Retail \u2013 Food Orders",
+      "reason_not_booked": null
+    },
+    "CAL01983cd9b0787775b704b2948440c287": {
+      "call_id": "CAL01983cd9b0787775b704b2948440c287",
+      "appointment_booked": "No",
+      "client_type": "New",
+      "treatment_type": "Surgical Services \u2013 Spays and Neuters",
+      "reason_not_booked": "1a. Caller Procrastination - Price Objection / Shopping / Request for Quote"
+    },
+    "CAL01983cdb03697dc38868335ccdc45ff8": {
+      "call_id": "CAL01983cdb03697dc38868335ccdc45ff8",
+      "appointment_booked": "No",
+      "client_type": "Existing",
+      "treatment_type": "End of Life Care \u2013 In-Clinic Euthanasia",
+      "reason_not_booked": "2. Scheduling Issue"
+    },
+    "CAL01983ce012417e8b96aa826b5a362b67": {
+      "call_id": "CAL01983ce012417e8b96aa826b5a362b67",
+      "appointment_booked": "Inconclusive",
+      "client_type": "New",
+      "treatment_type": "Preventive Care",
+      "reason_not_booked": "1a. Caller Procrastination - Price Objection / Shopping / Request for Quote"
+    },
+    "CAL01983ce59450749db5d91f11b08af414": {
+      "call_id": "CAL01983ce59450749db5d91f11b08af414",
+      "appointment_booked": "No",
+      "client_type": "Existing",
+      "treatment_type": "Urgent Care / Sick Pet",
+      "reason_not_booked": "1. Caller Procrastination"
+    },
+    "CAL01983ce5f93f76e7912a3dafeb682926": {
+      "call_id": "CAL01983ce5f93f76e7912a3dafeb682926",
+      "appointment_booked": "Inconclusive",
+      "client_type": "Existing",
+      "treatment_type": "Retail \u2013 Prescriptions",
+      "reason_not_booked": null
+    },
+    "CAL01983ce7759d70d3aaa0ed0552675170": {
+      "call_id": "CAL01983ce7759d70d3aaa0ed0552675170",
+      "appointment_booked": "Yes",
+      "client_type": "Existing",
+      "treatment_type": "Preventive Care \u2013 Vaccinations",
+      "reason_not_booked": null
+    },
+    "CAL01983ce94ced76b8a7a8bbe416af0f65": {
+      "call_id": "CAL01983ce94ced76b8a7a8bbe416af0f65",
+      "appointment_booked": "Yes",
+      "client_type": "Existing",
+      "treatment_type": "Preventive Care",
+      "reason_not_booked": null
+    },
+    "CAL01983ced7cbc7e5a83af5831511dc016": {
+      "call_id": "CAL01983ced7cbc7e5a83af5831511dc016",
+      "appointment_booked": "Yes",
+      "client_type": "Existing",
+      "treatment_type": "Urgent Care \u2013 Diagnosis and Treatment of Illnesses (Vomiting, Diabetes, Infections)",
+      "reason_not_booked": null
+    },
+    "CAL01983cf004e27a818a944e2408dbc662": {
+      "call_id": "CAL01983cf004e27a818a944e2408dbc662",
+      "appointment_booked": "No",
+      "client_type": "New",
+      "treatment_type": "Surgical Services",
+      "reason_not_booked": "3. Service/treatment not offered"
+    },
+    "CAL01983cf65468762787908b3a76f32a18": {
+      "call_id": "CAL01983cf65468762787908b3a76f32a18",
+      "appointment_booked": "Inconclusive",
+      "client_type": "Existing",
+      "treatment_type": "Retail",
+      "reason_not_booked": null
+    }
+  }
+}

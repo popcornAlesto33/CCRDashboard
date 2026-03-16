@@ -1,0 +1,2538 @@
+{
+  "field_results": {
+    "appointment_booked": {
+      "CAL000498baa67742cb9a4fed89664cd014": {
+        "reasoning": "The caller inquired about booking an appointment for their puppy due to coughing/gagging. The agent stated they were fully booked and would need to check with the vet to see if they could squeeze the caller in, or suggested a virtual vet. The agent took the caller's number to call back, meaning no appointment was confirmed during this call.",
+        "answer": "No",
+        "call_id": "CAL000498baa67742cb9a4fed89664cd014"
+      },
+      "CAL00057325c1924ef5be1874417c20b262": {
+        "reasoning": "The caller explicitly requested to book a nail trim for their dog Charlie. The agent offered available times (12 or 3 o'clock), and the caller confirmed 3 o'clock. The agent then confirmed, 'Okay, I've got your booked in.'",
+        "answer": "Yes",
+        "call_id": "CAL00057325c1924ef5be1874417c20b262"
+      },
+      "CAL0005db904b5746e18d9c5a855f8ff8fd": {
+        "reasoning": "The caller called for advice regarding their dog eating horse feed and vomiting. The agent provided advice on monitoring the dog and suggested going to an emergency clinic if symptoms worsened or if the medication in the feed was concerning. No appointment was booked at this clinic; the caller was directed to an emergency facility for potential urgent care.",
+        "answer": "No",
+        "call_id": "CAL0005db904b5746e18d9c5a855f8ff8fd"
+      },
+      "CAL000982de28904f1aa7f072d197347693": {
+        "reasoning": "The caller was a new patient inquiring about accepting new clients and exam fees. The agent provided information on availability and pricing. However, the caller stated, 'I'm just calling around to get estimates and stuff, so I will call you back,' indicating no appointment was booked during this call.",
+        "answer": "No",
+        "call_id": "CAL000982de28904f1aa7f072d197347693"
+      },
+      "CAL0009ad7aca3748009c5fb31f51eee5ad": {
+        "reasoning": "The caller presented an emergency concern for their dog. The agent explained the emergency clinic's procedures and fees. The caller then confirmed, 'Yeah, probably. I'm probably not gonna be able to sleep,' and 'All right, thank you. We'll bring her in now,' indicating they would be coming in for an emergency visit.",
+        "answer": "Yes",
+        "call_id": "CAL0009ad7aca3748009c5fb31f51eee5ad"
+      },
+      "CAL000aeb5cceb842ff9ab94f9dc115873d": {
+        "reasoning": "The caller asked about cancellations for an appointment this afternoon. The agent explicitly stated, 'Unfortunately, we are fully booked.' The caller then asked for the Smart Vet phone number, confirming no appointment was available or booked at this clinic.",
+        "answer": "No",
+        "call_id": "CAL000aeb5cceb842ff9ab94f9dc115873d"
+      },
+      "CAL000e51384a1945a28c7af94f3657b772": {
+        "reasoning": "The caller described their cat's urgent symptoms. The agent offered an immediate appointment time: 'Are you able to come in at 9:00 this morning?' The caller confirmed, 'Yep, nine is perfect.' The agent then confirmed the booking.",
+        "answer": "Yes",
+        "call_id": "CAL000e51384a1945a28c7af94f3657b772"
+      },
+      "CAL001052c35ec84a74857f15ba89aa2183": {
+        "reasoning": "The caller requested to make an appointment for their dog's blood work. The agent offered available times on Wednesday, April 23rd (11:45 or 3:15). The caller chose 11:45, and the agent confirmed, 'I will book Buck in for 11:45 on Wednesday.'",
+        "answer": "Yes",
+        "call_id": "CAL001052c35ec84a74857f15ba89aa2183"
+      },
+      "CAL0011b20af94b4c4289cf6a51af871369": {
+        "reasoning": "The caller, a new client, wanted to book an appointment for their cat's coughing issues. Although the clinic was fully booked for the current week, the agent offered times for the following Monday (2pm or 2:30pm). The caller tentatively booked the 2:30pm slot, provided all necessary information including credit card details to hold the appointment, and the agent confirmed, 'I have you all booked. So it's Monday, which is June 2nd at 2:30 with Dr. Shelby.'",
+        "answer": "Yes",
+        "call_id": "CAL0011b20af94b4c4289cf6a51af871369"
+      },
+      "CAL001aad9b8a0947ed8ac0353348259263": {
+        "reasoning": "The caller requested to book a follow-up appointment for their dog Rico with Dr. Joe on Friday. The agent provided available times (9:30, 10:30, or 11:30), and the caller chose 9:30. The agent confirmed, 'Perfect. All right, I've got you booked in for Friday the 7th.'",
+        "answer": "Yes",
+        "call_id": "CAL001aad9b8a0947ed8ac0353348259263"
+      },
+      "CAL001b27da05104332895e8f037e981343": {
+        "reasoning": "The caller, a new patient, wanted to book a vaccination appointment for their cat on Thursday or Friday after 4pm. The agent took all new client and pet details, then offered 'Thursday at 5:40.' The caller accepted, 'Yeah, that's great,' and the agent confirmed, 'Okay, that's great. We'll see you then.'",
+        "answer": "Yes",
+        "call_id": "CAL001b27da05104332895e8f037e981343"
+      },
+      "CAL0024c5183d6641a7bab31a88e46fbc69": {
+        "reasoning": "The caller described their dog's severe symptoms and asked to bring her in. The agent, working at an emergency clinic, explained the process and fees. The caller confirmed, 'All right, thank you. We'll bring her in now,' indicating they would be coming in for an emergency visit.",
+        "answer": "Yes",
+        "call_id": "CAL0024c5183d6641a7bab31a88e46fbc69"
+      },
+      "CAL003334dc9cce46eeb1d9ddc73be4e633": {
+        "reasoning": "The caller wanted to book a rabies vaccination for their dog JD. The agent offered to book it for April 1st at 1:30, which the caller accepted. The agent confirmed, 'Okay, perfect. So I will book JD in for 1:30 on April 1st.'",
+        "answer": "Yes",
+        "call_id": "CAL003334dc9cce46eeb1d9ddc73be4e633"
+      },
+      "CAL0038d600a47946ebb1c82834efd14ec2": {
+        "reasoning": "The caller wanted to book a checkup for a stray cat they found. The agent informed them that the earliest availability for an appointment was 'mid June' (June 12th). While the agent offered to scan the cat for a microchip as a walk-in service, no actual appointment for a checkup was booked due to lack of availability. The primary purpose of booking a checkup was not fulfilled.",
+        "answer": "No",
+        "call_id": "CAL0038d600a47946ebb1c82834efd14ec2"
+      },
+      "CAL003947c6d73e405a8ff5214e6719fcbd": {
+        "reasoning": "The caller inquired about a bird's nail trim and then explicitly asked, 'Could I have an appointment?' The agent took new client and pet details, offered an appointment for '2:30 today,' and the caller accepted, 'Oh, sure.' The agent confirmed, 'I have you guys booked in for 2:30 today.'",
+        "answer": "Yes",
+        "call_id": "CAL003947c6d73e405a8ff5214e6719fcbd"
+      },
+      "CAL0039a82c50d340abaf5823d06785a4a0": {
+        "reasoning": "The transcript is an incomplete automated message or the very beginning of a call, stating office hours and options for scheduling. No actual interaction about booking an appointment takes place, and no appointment is discussed or confirmed.",
+        "answer": "Inconclusive",
+        "call_id": "CAL0039a82c50d340abaf5823d06785a4a0"
+      },
+      "CAL003a2122cd8542c481baf4ddc8e40d80": {
+        "reasoning": "The caller explicitly requested to book an appointment for their dog. The agent offered a specific date and time (tomorrow at 4pm), and the caller agreed to it. The agent then confirmed the appointment.",
+        "answer": "Yes",
+        "call_id": "CAL003a2122cd8542c481baf4ddc8e40d80"
+      },
+      "CAL00415f59577343e1aaad08431561d554": {
+        "reasoning": "The caller initiated the call to book a vaccine appointment. After discussing several options, the agent offered a specific date and time (Friday at 5pm with Dr. Cindy), which the caller accepted and confirmed. The agent then confirmed the booking.",
+        "answer": "Yes",
+        "call_id": "CAL00415f59577343e1aaad08431561d554"
+      },
+      "CAL00427bb94384468b8457c5b48be0dffa": {
+        "reasoning": "The caller explicitly asked to book an appointment for their cat. The agent offered a specific date and time (March 17th at 5pm), and the caller agreed to it. The agent then confirmed the appointment.",
+        "answer": "Yes",
+        "call_id": "CAL00427bb94384468b8457c5b48be0dffa"
+      },
+      "CAL00584c7b588f4128be84a13ff49dbe96": {
+        "reasoning": "The caller inquired about booking a spay appointment. The earliest date offered by the agent (June 17th) was too far out for the caller, who explicitly stated they would 'pass on that' and 'don't want to wait that long'. The caller was then placed on a cancellation list, meaning no confirmed appointment was made during this call.",
+        "answer": "No",
+        "call_id": "CAL00584c7b588f4128be84a13ff49dbe96"
+      },
+      "CAL0059cd46261848899dadd858b1297a7a": {
+        "reasoning": "The caller inquired about the process and fastest time to neuter her cat. The agent explained that an initial consultation was required first and that they had openings for that within two weeks. However, the caller did not book the initial consultation, stating 'So I call later.' Therefore, no appointment was booked.",
+        "answer": "No",
+        "call_id": "CAL0059cd46261848899dadd858b1297a7a"
+      },
+      "CAL005e941190aa4eeeb16b5520f59e8526": {
+        "reasoning": "The caller was trying to confirm or adjust an existing appointment request. After discussing several available times, no suitable time could be found that worked with the caller's schedule. The caller explicitly stated, 'I will just like call back because for my date available, like my classes not working. So I'll just call back and book.' No appointment was confirmed or booked during this call.",
+        "answer": "No",
+        "call_id": "CAL005e941190aa4eeeb16b5520f59e8526"
+      },
+      "CAL00644c70bf09449a835487c3ddc673b2": {
+        "reasoning": "The caller explicitly asked to book appointments for their two new puppies. After discussing availability, the agent offered a specific date and time (Tuesday, June 3rd at 11am for both), which the caller accepted and confirmed. The agent then confirmed the booking.",
+        "answer": "Yes",
+        "call_id": "CAL00644c70bf09449a835487c3ddc673b2"
+      },
+      "CAL00653e0d49dc40199c3e555625cb2117": {
+        "reasoning": "The caller was following up on a previous attempt to book an appointment for her cat. The agent informed her of a cancellation for today at 3:15pm, which the caller immediately accepted. The agent then confirmed the appointment and collected the necessary client information.",
+        "answer": "Yes",
+        "call_id": "CAL00653e0d49dc40199c3e555625cb2117"
+      },
+      "CAL0068dc66d062488fa1f4879724451050": {
+        "reasoning": "The caller asked to get her dog checked and potentially X-rayed. The agent offered a specific date and time for an exam (July 8th at 11am), which the caller accepted and asked to book. The agent then confirmed the appointment.",
+        "answer": "Yes",
+        "call_id": "CAL0068dc66d062488fa1f4879724451050"
+      },
+      "CAL006c0c3985f84e298f13d3d696ce8650": {
+        "reasoning": "The caller explicitly stated they were looking to schedule their dog for a vaccine. After discussing preferred doctors and available times, the caller chose Wednesday evening at 6:30pm. The agent confirmed the booking.",
+        "answer": "Yes",
+        "call_id": "CAL006c0c3985f84e298f13d3d696ce8650"
+      },
+      "CAL00747d7c7e454434a6fbb219ddef83b0": {
+        "reasoning": "The caller stated their dog was due for an appointment. The agent offered a specific date and time (Friday at 1pm), which the caller accepted. The agent then confirmed the appointment.",
+        "answer": "Yes",
+        "call_id": "CAL00747d7c7e454434a6fbb219ddef83b0"
+      },
+      "CAL007df41abd3e463298f55c7d7d733d9a": {
+        "reasoning": "The caller called to bring Gracie in for a shot, following up on a previous call. The agent offered a specific date and time (Tuesday, April 22nd at 3:00pm), which the caller accepted. The agent then confirmed the appointment and proceeded to create a new client file.",
+        "answer": "Yes",
+        "call_id": "CAL007df41abd3e463298f55c7d7d733d9a"
+      },
+      "CAL00803d059d424bb296f8f9916a7115fd": {
+        "reasoning": "The caller explicitly stated they were looking to make an appointment for their dog for shots. The agent offered a specific date and time (Friday at 4pm), which the caller accepted. The agent then confirmed the appointment.",
+        "answer": "Yes",
+        "call_id": "CAL00803d059d424bb296f8f9916a7115fd"
+      },
+      "CAL00817a0b30d241d39d3953af8bdffd0e": {
+        "reasoning": "The caller explicitly stated they were looking to book an appointment for both their dogs. After discussing availability and finding suitable times (May 16th at 4:30pm and 5pm for the two dogs), the caller agreed to the times. The agent then confirmed the booking.",
+        "answer": "Yes",
+        "call_id": "CAL00817a0b30d241d39d3953af8bdffd0e"
+      },
+      "CAL0081cff67cb34ae0b30d1dc0b426d15c": {
+        "reasoning": "The caller attempted to book an urgent appointment but was told the earliest availability was in May, which was too late for their immediate travel plans. They decided to handle the urgent issue (ticks) themselves and mentioned they would \"finish setting up his appointment through pet desk\" for \"everything else,\" implying a future, non-urgent booking. The immediate booking attempt failed.",
+        "answer": "No",
+        "call_id": "CAL0081cff67cb34ae0b30d1dc0b426d15c"
+      },
+      "CAL0083311f69934f448c9bbac4cb31ed5e": {
+        "reasoning": "The caller was inquiring about the cost of euthanasia for a rabbit. The agent explicitly asked if an appointment was booked, and the caller confirmed, \"No, no, no, no.\" The call ended with the caller stating they would not be proceeding with the service at this clinic due to cost and a difficult interaction with the person who owns the rabbit.",
+        "answer": "No",
+        "call_id": "CAL0083311f69934f448c9bbac4cb31ed5e"
+      },
+      "CAL00848f2fc8ea47239cff6c6c1177f95a": {
+        "reasoning": "The caller explicitly requested to make an appointment for their cat. The agent offered specific times (9 or 9:30 AM today), and the caller accepted 9:00 AM, confirming, \"9:00 would be fine.\" They also confirmed, \"We'll see you in 10 minutes.\"",
+        "answer": "Yes",
+        "call_id": "CAL00848f2fc8ea47239cff6c6c1177f95a"
+      },
+      "CAL0084da0fae0c4da6a7bfdabc646c5ba9": {
+        "reasoning": "The caller was primarily comparing costs for vet services and medication. While they expressed interest in potentially transferring to the clinic and asked about booking availability (\"around two weeks away for new clients\"), they did not book an appointment during this call. They stated they would call back tomorrow to \"confirm if we wanted to transfer over there.\"",
+        "answer": "No",
+        "call_id": "CAL0084da0fae0c4da6a7bfdabc646c5ba9"
+      },
+      "CAL008550503109471bb301dbdb52ea8453": {
+        "reasoning": "The caller explicitly requested to book a checkup for their cat. After some back and forth about dates, a specific date and time (1:30 on the 21st) was agreed upon and confirmed by both parties.",
+        "answer": "Yes",
+        "call_id": "CAL008550503109471bb301dbdb52ea8453"
+      },
+      "CAL008a74d19188416cbd3be39780335bbb": {
+        "reasoning": "The caller immediately realized they had dialed the wrong number and ended the call. The purpose of the call was not related to booking an appointment at this clinic.",
+        "answer": "Inconclusive",
+        "call_id": "CAL008a74d19188416cbd3be39780335bbb"
+      },
+      "CAL008db269e7294a62a394fecdbe852724": {
+        "reasoning": "The caller explicitly requested to reschedule an existing appointment for their pet, Leo. A new date and time (Monday at 2 o'clock) was agreed upon and confirmed by both parties.",
+        "answer": "Yes",
+        "call_id": "CAL008db269e7294a62a394fecdbe852724"
+      },
+      "CAL008f2a090e7f4d42a4488a553045d64f": {
+        "reasoning": "The caller inquired about booking annual checkups for two cats as new clients. After discussing availability and pricing, a specific appointment time (Wednesday, January 15th at 3pm) was chosen, confirmed, and secured with credit card information.",
+        "answer": "Yes",
+        "call_id": "CAL008f2a090e7f4d42a4488a553045d64f"
+      },
+      "CAL00929b7f48514a6b85c94fad4b997d9f": {
+        "reasoning": "The caller attempted to book an appointment for their pet's eye issue. The agent stated they were \"pretty booked up\" and offered to put the caller on a cancellation list and call back after checking the schedule. No appointment was confirmed or booked during this call.",
+        "answer": "No",
+        "call_id": "CAL00929b7f48514a6b85c94fad4b997d9f"
+      },
+      "CAL009fecf1e3dc43fcb124f083b4886d34": {
+        "reasoning": "The caller explicitly called to cancel an existing appointment. They stated they would call back at the end of the month to reschedule, meaning no new appointment was made during this call.",
+        "answer": "No",
+        "call_id": "CAL009fecf1e3dc43fcb124f083b4886d34"
+      },
+      "CAL00a0052f044140e2ab2535a85367c137": {
+        "reasoning": "The call was a follow-up regarding a paw print that was supposed to be mailed after a dog's cremation. The discussion was about whether to mail it or pick it up, and the caller decided to pick it up. This call was not about booking a veterinary appointment.",
+        "answer": "Inconclusive",
+        "call_id": "CAL00a0052f044140e2ab2535a85367c137"
+      },
+      "CAL00a33094c71445c3896aac927ab0c6b9": {
+        "reasoning": "The caller was inquiring about the cost of an X-ray for their dog and was not a current client. After receiving the pricing information, which they found expensive, no appointment was booked. The call ended with the caller having received the requested information.",
+        "answer": "No",
+        "call_id": "CAL00a33094c71445c3896aac927ab0c6b9"
+      },
+      "CAL00b175c88b6d4b20a8f2ecb4d226d689": {
+        "reasoning": "The caller explicitly requested to change an existing appointment for their pet. After some discussion about availability, a new date and time (Thursday, May 8th at 5 PM) was agreed upon and confirmed, and the old appointment was canceled.",
+        "answer": "Yes",
+        "call_id": "CAL00b175c88b6d4b20a8f2ecb4d226d689"
+      },
+      "CAL00bf0e33a835402c8e1ab317b17d16ce": {
+        "reasoning": "The caller explicitly requested to book an appointment for their dog due to a broken nail. A specific date and time (tomorrow at 12:20) was offered and accepted by the caller. The agent confirmed the booking.",
+        "answer": "Yes",
+        "call_id": "CAL00bf0e33a835402c8e1ab317b17d16ce"
+      },
+      "CAL00c4d944580b454fa32ba23e0a439d9f": {
+        "reasoning": "The caller was inquiring about the cost of euthanasia for their cat. After receiving the pricing information, they did not book an appointment. The agent stated they could call back \"whenever you're ready\" to get set up, indicating no booking was made during this call.",
+        "answer": "No",
+        "call_id": "CAL00c4d944580b454fa32ba23e0a439d9f"
+      },
+      "CAL00cc318557b84211830f8f9165abff38": {
+        "reasoning": "The caller explicitly requested an appointment for their pet's ear infection. The agent offered several times for Monday, and the caller ultimately agreed to an 11:40 AM appointment on Monday, February 24th. The agent confirmed the booking.",
+        "answer": "Yes",
+        "call_id": "CAL00cc318557b84211830f8f9165abff38"
+      },
+      "CAL00d3bb91c37c494dae58d1f03970cf7c": {
+        "reasoning": "The caller initiated the call to book a spay and vaccines for their dog. The agent successfully booked two separate appointments: one for vaccines on Wednesday at 3:00 PM and another for the spay on April 17th at 8:30 AM. Both appointments were confirmed by the caller.",
+        "answer": "Yes",
+        "call_id": "CAL00d3bb91c37c494dae58d1f03970cf7c"
+      },
+      "CAL00ddc5b018204683a8005f80fb0cb08d": {
+        "reasoning": "The caller called to cancel an existing appointment and inquired about rebooking for the same week. The agent stated they were booked up and the caller decided to book for the fall, but no specific date or time was set during this call. The call ended with the agent confirming the cancellation and advising the caller to let them know if anything changes.",
+        "answer": "No",
+        "call_id": "CAL00ddc5b018204683a8005f80fb0cb08d"
+      },
+      "CAL00e3726d100f45e8913c8f8dfb2fd4ce": {
+        "reasoning": "The caller was seeking advice regarding their cat's paw and was given options to either bring the cat in immediately or wait until Monday. The caller did not commit to any specific time or day for an appointment, stating they would check on the cat and would call back when they decide.",
+        "answer": "No",
+        "call_id": "CAL00e3726d100f45e8913c8f8dfb2fd4ce"
+      },
+      "CAL011c013103cb49bc84379c12992b27a6": {
+        "reasoning": "The call was primarily an inquiry about medication side effects and care instructions for a cat's paw, not about booking or adjusting an appointment. No attempt to book an appointment was made.",
+        "answer": "Inconclusive",
+        "call_id": "CAL011c013103cb49bc84379c12992b27a6"
+      },
+      "CAL011ebf53493445e7896fed44ce7c81f6": {
+        "reasoning": "The caller explicitly stated they needed to make an appointment for their dog. The agent offered a time (12:20 PM today), which the caller accepted. The agent confirmed the booking.",
+        "answer": "Yes",
+        "call_id": "CAL011ebf53493445e7896fed44ce7c81f6"
+      },
+      "CAL0123fdba3d2942b0af41e1ee7d7d3bac": {
+        "reasoning": "The caller requested an appointment for their dog due to an anal gland issue. The agent offered several times for the next day, and the caller chose 1:30 PM. The agent confirmed the booking and collected necessary information.",
+        "answer": "Yes",
+        "call_id": "CAL0123fdba3d2942b0af41e1ee7d7d3bac"
+      },
+      "CAL012c4a0f78834f90b4d5b3a24657a2d8": {
+        "reasoning": "The caller requested to make an appointment for their new kitten. The agent offered an appointment for the following Monday at 2:00 PM with Dr. Stewart, which the caller accepted. The agent confirmed the booking.",
+        "answer": "Yes",
+        "call_id": "CAL012c4a0f78834f90b4d5b3a24657a2d8"
+      },
+      "CAL01307cbeca1945d3a9201018704f109a": {
+        "reasoning": "The caller inquired about a bump on their dog. While the intention was to book an appointment, the agent encountered system issues and stated they would need to call the caller back to book. No appointment was confirmed or set during this call.",
+        "answer": "No",
+        "call_id": "CAL01307cbeca1945d3a9201018704f109a"
+      },
+      "CAL013ccba9eedc4e67a1005d99fc3fa4bb": {
+        "reasoning": "The caller requested to bring their cat in today due to a medical concern. The agent checked availability and offered an 11:00 AM appointment for the same day, which the caller accepted. The agent confirmed the booking.",
+        "answer": "Yes",
+        "call_id": "CAL013ccba9eedc4e67a1005d99fc3fa4bb"
+      },
+      "CAL014854d99d7940c1910271fee0349169": {
+        "reasoning": "The caller requested to book an appointment for their dog's overdue medication and vaccine. The agent offered an appointment for next Wednesday at 4:00 PM, which the caller accepted. The agent confirmed the booking.",
+        "answer": "Yes",
+        "call_id": "CAL014854d99d7940c1910271fee0349169"
+      },
+      "CAL014b1b4985f340e8ba39b659373275b2": {
+        "reasoning": "The caller was inquiring about prices and availability for a wellness check and vaccinations for their cats. While the agent provided information about open slots in the coming weeks, no specific date or time was agreed upon or booked by the caller. The caller was gathering information to decide.",
+        "answer": "No",
+        "call_id": "CAL014b1b4985f340e8ba39b659373275b2"
+      },
+      "CAL01568eebe6a143918c7fc238f5562f6b": {
+        "reasoning": "The caller requested to book an appointment for their dog's updated vaccines. The agent offered several times for the next day (Wednesday), and the caller chose 5:30 PM. The agent confirmed the booking.",
+        "answer": "Yes",
+        "call_id": "CAL01568eebe6a143918c7fc238f5562f6b"
+      },
+      "CAL0158a08f881a40c592c795ca67df298b": {
+        "reasoning": "The caller reported an emergency (dog convulsing) and stated they were bringing the pet in immediately. The agent acknowledged this and confirmed they would see the pet upon arrival, with an estimated arrival time provided by the caller. This constitutes an urgent, confirmed appointment.",
+        "answer": "Yes",
+        "call_id": "CAL0158a08f881a40c592c795ca67df298b"
+      },
+      "CAL017e403dd5c64398ac43ffe88d4b3cf5": {
+        "reasoning": "The caller initially requested an appointment for their two cats. After discussing immediate availability, the agent clarified that the annual exams were not due until July. The caller then decided to book for July 9th, and specific times (1:30 PM and 2:00 PM) were agreed upon and confirmed by the agent.",
+        "answer": "Yes",
+        "call_id": "CAL017e403dd5c64398ac43ffe88d4b3cf5"
+      },
+      "CAL018db6069ff2459da919dd5241e6615a": {
+        "reasoning": "The caller inquired about the cost of an allergy injection for her dog. After being informed of the price, she stated it was \"way too expensive\" and did not proceed to book an appointment.",
+        "answer": "No",
+        "call_id": "CAL018db6069ff2459da919dd5241e6615a"
+      },
+      "CAL018df2fa33fb456f8959e4287cbf5bb7": {
+        "reasoning": "The caller requested an appointment for her cat's rabies vaccination. After checking availability, the agent offered Wednesday at 9:30 AM, which the caller accepted. The agent then collected all necessary information to book the appointment and confirmed it.",
+        "answer": "Yes",
+        "call_id": "CAL018df2fa33fb456f8959e4287cbf5bb7"
+      },
+      "CAL018e04d97ba74747b033b3120bd39163": {
+        "reasoning": "The caller requested an annual checkup for her dog. The agent offered Tuesday, March 4th at 10:30 AM, which the caller confirmed as \"perfect.\" The agent then stated, \"I got you all booked in.\"",
+        "answer": "Yes",
+        "call_id": "CAL018e04d97ba74747b033b3120bd39163"
+      },
+      "CAL019837cf0ff37f4d8d1af062be24cbab": {
+        "reasoning": "The caller inquired about booking an appointment for her dog's leg issue. After an initial time was declined, the agent offered 3:30 PM today, which the caller accepted. The agent then proceeded to collect all necessary client and pet information to book the appointment and confirmed the time.",
+        "answer": "Yes",
+        "call_id": "CAL019837cf0ff37f4d8d1af062be24cbab"
+      },
+      "CAL019837cf1fe87f139b863a24117182bb": {
+        "reasoning": "The caller had an existing surgery appointment and called to see if an earlier date was available due to a worsening condition. The agent offered an earlier date (August 18th) but the caller did not explicitly accept it. Instead, the agent offered to check further and call the caller back. No new appointment was confirmed during this call.",
+        "answer": "No",
+        "call_id": "CAL019837cf1fe87f139b863a24117182bb"
+      },
+      "CAL019837e8fdaf7d31b9a87d56d518b19a": {
+        "reasoning": "The caller inquired about neutering a kitten and agreed to the process. The agent offered to create a file and book an appointment for next week. A specific time, Wednesday the 30th at 10:45 AM, was offered and accepted by the caller, and the agent confirmed the booking for vaccines.",
+        "answer": "Yes",
+        "call_id": "CAL019837e8fdaf7d31b9a87d56d518b19a"
+      },
+      "CAL019837f52c29747e9a736faff8ee96a0": {
+        "reasoning": "The caller explicitly stated she was calling to cancel an existing appointment for Luna. The agent confirmed the cancellation. No new appointment was booked.",
+        "answer": "No",
+        "call_id": "CAL019837f52c29747e9a736faff8ee96a0"
+      },
+      "CAL019837fa1ec07a778412598cf2c6c69b": {
+        "reasoning": "The caller requested a wellness checkup for her cat. The agent offered Friday at 11 AM, which the caller accepted. The agent then confirmed, \"Sounds good. Yes, we'll see then.\"",
+        "answer": "Yes",
+        "call_id": "CAL019837fa1ec07a778412598cf2c6c69b"
+      },
+      "CAL01983804e7477d2ab9762cb70d48f2e3": {
+        "reasoning": "The caller inquired if a separate appointment was needed for a rabies vaccine or if it could be added to an existing booster appointment. The agent confirmed that the rabies vaccine could be done at the already scheduled August 13th appointment. No new appointment was booked; an existing one was confirmed to include an additional service.",
+        "answer": "No",
+        "call_id": "CAL01983804e7477d2ab9762cb70d48f2e3"
+      },
+      "CAL01983809118e7b7ab76583beb15baec6": {
+        "reasoning": "The caller requested an annual checkup for her dog. The agent offered Monday the 28th at 9:30 AM, which the caller accepted. The agent confirmed, \"We'll see you Monday at 9:30.\"",
+        "answer": "Yes",
+        "call_id": "CAL01983809118e7b7ab76583beb15baec6"
+      },
+      "CAL01983809fd0870bfb1a41e0cc0148c1a": {
+        "reasoning": "This call was between two animal hospitals for the purpose of transferring client files. No appointment booking was discussed or attempted.",
+        "answer": "Inconclusive",
+        "call_id": "CAL01983809fd0870bfb1a41e0cc0148c1a"
+      },
+      "CAL0198380d24b573858f1ebc1d3174cf7c": {
+        "reasoning": "The caller requested an appointment for her dog's ears to be checked. The agent offered Friday at 8:30 AM, which the caller accepted as \"perfect.\" The agent confirmed, \"I got you put in there.\"",
+        "answer": "Yes",
+        "call_id": "CAL0198380d24b573858f1ebc1d3174cf7c"
+      },
+      "CAL0198380e825f714ba6f533c90cee0983": {
+        "reasoning": "The caller was checking on the results of a stool sample for her dog. The agent provided the results and offered to email them. No appointment booking was discussed.",
+        "answer": "Inconclusive",
+        "call_id": "CAL0198380e825f714ba6f533c90cee0983"
+      },
+      "CAL01983815a4767f56a58f01c1c70c0a18": {
+        "reasoning": "The caller requested that a prescription for her pet be faxed to a pharmacy. The agent confirmed they would do so. No appointment booking was discussed.",
+        "answer": "Inconclusive",
+        "call_id": "CAL01983815a4767f56a58f01c1c70c0a18"
+      },
+      "CAL01983817fcfd7454a63d6cdf8169a5aa": {
+        "reasoning": "The caller inquired about the cost of a checkup and euthanasia for a kitten. She explicitly stated she would \"check in with my sister and then possibly call back to book an appointment.\" No appointment was booked during this call.",
+        "answer": "No",
+        "call_id": "CAL01983817fcfd7454a63d6cdf8169a5aa"
+      },
+      "CAL0198381fff847e6d97bd58d60abcb00e": {
+        "reasoning": "The caller initiated the call to book an annual exam and vaccines for their pet, Buddy. After discussing available dates and times, the caller agreed to an appointment on Friday, August 1st at 4:30 PM, which the agent confirmed.",
+        "answer": "Yes",
+        "call_id": "CAL0198381fff847e6d97bd58d60abcb00e"
+      },
+      "CAL01983822ac26708db3b026da626a071c": {
+        "reasoning": "The caller's purpose was to inquire if the clinic is a holistic veterinary clinic. Upon learning it is not, the caller ended the call without attempting to book any services.",
+        "answer": "Inconclusive",
+        "call_id": "CAL01983822ac26708db3b026da626a071c"
+      },
+      "CAL019838234a5573079b0722f822b613f7": {
+        "reasoning": "The caller was inquiring about the availability of a specific type of pet food and confirmed they would come to pick it up. This is a product pickup, not a veterinary appointment.",
+        "answer": "Inconclusive",
+        "call_id": "CAL019838234a5573079b0722f822b613f7"
+      },
+      "CAL01983823e3fd7e76a7ec906121a17dee": {
+        "reasoning": "The caller left a voicemail requesting to have specific wet and dry food put aside for pickup. This is a request for product pickup, not a veterinary appointment.",
+        "answer": "Inconclusive",
+        "call_id": "CAL01983823e3fd7e76a7ec906121a17dee"
+      },
+      "CAL019838277cc37e93b4c1a543fa522122": {
+        "reasoning": "The caller described their cat's symptoms and asked if they needed to bring him in. The agent recommended a physical examination, and after discussing availability, an appointment was successfully booked for Saturday, July 26th at 11:30 AM.",
+        "answer": "Yes",
+        "call_id": "CAL019838277cc37e93b4c1a543fa522122"
+      },
+      "CAL01983828e7347b6281fe9fa52524f73e": {
+        "reasoning": "The caller's purpose was to obtain proof of their dog's rabies shot for grooming. The agent confirmed they would send the vaccine certificate via email. No appointment was discussed or booked.",
+        "answer": "Inconclusive",
+        "call_id": "CAL01983828e7347b6281fe9fa52524f73e"
+      },
+      "CAL0198382a648d7ea09d62d10d36e470d7": {
+        "reasoning": "The caller inquired if the clinic offers tail docking services. The agent informed them that they do not. No appointment was discussed or booked.",
+        "answer": "Inconclusive",
+        "call_id": "CAL0198382a648d7ea09d62d10d36e470d7"
+      },
+      "CAL01983837207c78339c0dc0ac40dc2540": {
+        "reasoning": "The caller initially called to cancel an existing appointment due to illness. They then requested to reschedule, and a new appointment was successfully booked for Friday, August 1st at 11 AM.",
+        "answer": "Yes",
+        "call_id": "CAL01983837207c78339c0dc0ac40dc2540"
+      },
+      "CAL0198383ba24b764186763c2357974ba3": {
+        "reasoning": "The caller inquired about the price for euthanasia services. While they asked about making an appointment, they did not proceed with booking one after receiving the price and understanding the requirements for new clients.",
+        "answer": "No",
+        "call_id": "CAL0198383ba24b764186763c2357974ba3"
+      },
+      "CAL0198383bf2cd7adaa841d36177d17bbc": {
+        "reasoning": "The caller requested to have the prices for spaying their dog emailed to them. The agent agreed to send the estimate. No appointment was discussed or booked.",
+        "answer": "Inconclusive",
+        "call_id": "CAL0198383bf2cd7adaa841d36177d17bbc"
+      },
+      "CAL019838424bff7fa7890d74af370fc6f0": {
+        "reasoning": "The caller was checking on their dog's medication schedule and whether any further veterinary care was needed for the fall. The agent provided information about medication due dates and recommendations. The caller expressed interest in picking up medication, but no veterinary appointment was booked.",
+        "answer": "Inconclusive",
+        "call_id": "CAL019838424bff7fa7890d74af370fc6f0"
+      },
+      "CAL01983845f24c74ca8e084a529e08b4d8": {
+        "reasoning": "The caller attempted to book an appointment for their dog's ear infection. The agent offered the next available slot on August 6th, but the caller stated they would be on vacation then and could not make it. The caller was placed on a waiting list for cancellations but did not leave the call with a confirmed appointment.",
+        "answer": "No",
+        "call_id": "CAL01983845f24c74ca8e084a529e08b4d8"
+      },
+      "CAL019838482da37a9f9344c2d92538c61f": {
+        "reasoning": "The caller received an email about their dog needing a yearly checkup and called to book an appointment for annual vaccines. After discussing doctor availability and preferred times, an appointment was successfully booked for Monday, July 28th at 10:30 AM.",
+        "answer": "Yes",
+        "call_id": "CAL019838482da37a9f9344c2d92538c61f"
+      },
+      "CAL0198384b51907551aab56685e09cde9c": {
+        "reasoning": "The caller was checking on the status of their dog, who was already at the clinic. This was a status update call, not an appointment booking.",
+        "answer": "Inconclusive",
+        "call_id": "CAL0198384b51907551aab56685e09cde9c"
+      },
+      "CAL019838502ce87cbdbc990b0ade416e7a": {
+        "reasoning": "The caller's purpose was to obtain their newly adopted cat's date of birth for insurance purposes. The agent provided the information. No appointment was discussed or booked.",
+        "answer": "Inconclusive",
+        "call_id": "CAL019838502ce87cbdbc990b0ade416e7a"
+      },
+      "CAL0198385255f8738ca83ae22e29e15dcc": {
+        "reasoning": "The caller was asking for recommendations for a cat boarding facility, as the clinic does not offer boarding. No appointment was booked.",
+        "answer": "No",
+        "call_id": "CAL0198385255f8738ca83ae22e29e15dcc"
+      },
+      "CAL0198385b6e3772fc89e3f22f41af0b46": {
+        "reasoning": "The caller inquired about appointment availability for their dog's rash. The agent offered a time (Friday at 2:30 PM), and the caller explicitly agreed to book it, providing their phone number and confirming pet details. The agent confirmed, 'you are all booked in'.",
+        "answer": "Yes",
+        "call_id": "CAL0198385b6e3772fc89e3f22f41af0b46"
+      },
+      "CAL01983864fd50700396fe8fb50860c0ae": {
+        "reasoning": "The caller asked if the clinic treats exotic animals like bearded dragons. The agent stated they do not. No appointment was booked.",
+        "answer": "No",
+        "call_id": "CAL01983864fd50700396fe8fb50860c0ae"
+      },
+      "CAL01983872f881791f9d0eae5c58b35de9": {
+        "reasoning": "The call was a follow-up regarding medication for a kitten's spay appointment that is happening at a different animal hospital. The caller was arranging to pick up medication, not booking an appointment at this clinic.",
+        "answer": "Inconclusive",
+        "call_id": "CAL01983872f881791f9d0eae5c58b35de9"
+      },
+      "CAL0198387534b27b21af285cf499eac523": {
+        "reasoning": "The caller had an existing appointment and requested to move it. The agent successfully rescheduled the appointment to a new date and time (Tuesday, August 5th at 3 PM), which the caller agreed to. This counts as an existing appointment being adjusted.",
+        "answer": "Yes",
+        "call_id": "CAL0198387534b27b21af285cf499eac523"
+      },
+      "CAL019838760fe97e58898d00136787ed15": {
+        "reasoning": "The caller was calling to order more tick medication for their dog. The agent placed the order for pickup. No appointment was booked.",
+        "answer": "No",
+        "call_id": "CAL019838760fe97e58898d00136787ed15"
+      },
+      "CAL0198387a31297659b98d57bb828b2c1d": {
+        "reasoning": "The caller inquired about X-rays for their dog. The agent checked availability but stated there was nothing available that week. The caller did not book an appointment.",
+        "answer": "No",
+        "call_id": "CAL0198387a31297659b98d57bb828b2c1d"
+      },
+      "CAL0198387ec66d739fb6850962fd609815": {
+        "reasoning": "The caller wanted to order medication for their cat. The agent took the order and confirmed it would be ready for pickup. No appointment was booked.",
+        "answer": "No",
+        "call_id": "CAL0198387ec66d739fb6850962fd609815"
+      },
+      "CAL01983885684f7cfeaf588dcf1f8a9e28": {
+        "reasoning": "The call was primarily administrative: confirming a credit on the account, asking for an estimate for an existing upcoming appointment, and updating pet ownership details. The caller explicitly mentioned 'before we got there on Friday for their appointment', indicating an appointment was already booked and not being created or adjusted during this call.",
+        "answer": "Inconclusive",
+        "call_id": "CAL01983885684f7cfeaf588dcf1f8a9e28"
+      },
+      "CAL019838906bb373e3b8900dfb87d1f627": {
+        "reasoning": "The call was about returning cat food and discussing different types of cat food for the caller's pets. The agent offered to do a consult with a food representative, but no appointment for a veterinary visit was booked.",
+        "answer": "No",
+        "call_id": "CAL019838906bb373e3b8900dfb87d1f627"
+      }
+    },
+    "client_type": {
+      "CAL000498baa67742cb9a4fed89664cd014": {
+        "reasoning": "The caller states, \"I got a puppy with you guys or a patient or whatever. It's Chris Fournier calling,\" indicating they believe they are an existing client. The agent then proceeds to discuss the pet's symptoms and potential appointment without asking for new client information or initiating a new file.",
+        "answer": "Existing",
+        "call_id": "CAL000498baa67742cb9a4fed89664cd014"
+      },
+      "CAL00057325c1924ef5be1874417c20b262": {
+        "reasoning": "The caller provides their name and pet's name (Dickens), and the agent immediately recognizes the pet might be under the wife's name, Linda Bennett, confirming the pet and owner are in the system. The caller then books a nail trim for another dog, Charlie, \"On this file,\" which the agent confirms.",
+        "answer": "Existing",
+        "call_id": "CAL00057325c1924ef5be1874417c20b262"
+      },
+      "CAL0005db904b5746e18d9c5a855f8ff8fd": {
+        "reasoning": "The agent and caller have a familiar tone, and the agent refers to the pet by name, Jimmy, and makes comments like \"He's being Jimmy\" and \"He just is such a big goofy. He's such a sweetheart,\" suggesting prior knowledge of the pet. The agent also refers to \"our Facebook page\" for emergency clinic information, implying the caller is a client of this clinic.",
+        "answer": "Existing",
+        "call_id": "CAL0005db904b5746e18d9c5a855f8ff8fd"
+      },
+      "CAL000982de28904f1aa7f072d197347693": {
+        "reasoning": "The caller explicitly states, \"My cat is not a current patient of yours because we're somewhat new to Calgary, so she doesn't have a Calgary vet yet.\" They also ask if the clinic is \"accepting new patients\" and for \"ballpark estimate on, like, how much your exam fees r,\" indicating unfamiliarity with the clinic's services and pricing.",
+        "answer": "New",
+        "call_id": "CAL000982de28904f1aa7f072d197347693"
+      },
+      "CAL0009ad7aca3748009c5fb31f51eee5ad": {
+        "reasoning": "The agent states, \"We're an emergency clinic. We don't take regular clients.\" The caller also mentions having \"a regular vet that you go to,\" indicating this is not their primary clinic. The interaction is for an emergency visit, not regular client services.",
+        "answer": "New",
+        "call_id": "CAL0009ad7aca3748009c5fb31f51eee5ad"
+      },
+      "CAL000aeb5cceb842ff9ab94f9dc115873d": {
+        "reasoning": "The caller asks for the \"smart vet phone number\" and the agent provides it without asking for any identifying client or pet information, nor is there any mention of file lookup or new client intake. There is no concrete evidence to classify the caller as either new or existing.",
+        "answer": "Inconclusive",
+        "call_id": "CAL000aeb5cceb842ff9ab94f9dc115873d"
+      },
+      "CAL000e51384a1945a28c7af94f3657b772": {
+        "reasoning": "The caller states, \"Our cat, Luna is a patient there?\" and the agent immediately offers an appointment time without asking for new client information or searching for a file, implying the pet is already in the system.",
+        "answer": "Existing",
+        "call_id": "CAL000e51384a1945a28c7af94f3657b772"
+      },
+      "CAL001052c35ec84a74857f15ba89aa2183": {
+        "reasoning": "The caller provides their name and pet's name (Buck) and asks for blood work. The agent immediately confirms the pet's name and proceeds to book an appointment without asking for new client information or initiating a new file, indicating the pet is already in the system.",
+        "answer": "Existing",
+        "call_id": "CAL001052c35ec84a74857f15ba89aa2183"
+      },
+      "CAL0011b20af94b4c4289cf6a51af871369": {
+        "reasoning": "The caller explicitly states, \"my name is David and I'm a new client\" and \"I haven't been here before.\" The agent then proceeds to collect full client and pet information, including credit card details to hold the appointment and mentions filling out \"new clients tab\" online forms to \"create your file for you.\"",
+        "answer": "New",
+        "call_id": "CAL0011b20af94b4c4289cf6a51af871369"
+      },
+      "CAL001aad9b8a0947ed8ac0353348259263": {
+        "reasoning": "The caller asks for a \"follow up with my dog, Rico\" with a specific doctor. The agent asks for the last name on file and then explicitly searches for and finds the pet's file after a slight spelling correction, confirming the pet is in the system.",
+        "answer": "Existing",
+        "call_id": "CAL001aad9b8a0947ed8ac0353348259263"
+      },
+      "CAL001b27da05104332895e8f037e981343": {
+        "reasoning": "The caller states, \"He will be a new patient in Pickering\" and \"This is my first time here.\" The agent confirms, \"Okay, I'm going to get some info to make you a file for the appointment,\" and proceeds to collect extensive personal and pet information to create a new client file.",
+        "answer": "New",
+        "call_id": "CAL001b27da05104332895e8f037e981343"
+      },
+      "CAL0024c5183d6641a7bab31a88e46fbc69": {
+        "reasoning": "The caller states their dog \"went to the vet yesterday\" and has \"medical history with me,\" implying they are not a regular client of this emergency clinic. The agent also states, \"We don't have access to a previous medical history or anything like that\" and \"Again we don't take appointments. We are an after hours emergency.\"",
+        "answer": "New",
+        "call_id": "CAL0024c5183d6641a7bab31a88e46fbc69"
+      },
+      "CAL003334dc9cce46eeb1d9ddc73be4e633": {
+        "reasoning": "The caller states, \"My name is Kathryn Walker. I have three dogs who come to the clinic, and I did get an email saying that JD was due for rabies for April 1.\" The agent confirms this information and discusses the vaccination history of JD and two other pets (Coda and Jax) that are in the system.",
+        "answer": "Existing",
+        "call_id": "CAL003334dc9cce46eeb1d9ddc73be4e633"
+      },
+      "CAL0038d600a47946ebb1c82834efd14ec2": {
+        "reasoning": "The caller explicitly states, \"I have a client at this vet with two cats that I have, but.\" This confirms the caller is an existing client, even though the call is about a stray cat they found.",
+        "answer": "Existing",
+        "call_id": "CAL0038d600a47946ebb1c82834efd14ec2"
+      },
+      "CAL003947c6d73e405a8ff5214e6719fcbd": {
+        "reasoning": "The agent states, \"Let me just make you a file here\" and proceeds to collect full client and pet information (name, phone number, address, pet name, age) to create a new record for the bird's nail trim.",
+        "answer": "New",
+        "call_id": "CAL003947c6d73e405a8ff5214e6719fcbd"
+      },
+      "CAL0039a82c50d340abaf5823d06785a4a0": {
+        "reasoning": "The transcript only contains an automated message or initial greeting from the agent. There is no interaction with a caller to determine client status.",
+        "answer": "Inconclusive",
+        "call_id": "CAL0039a82c50d340abaf5823d06785a4a0"
+      },
+      "CAL003a2122cd8542c481baf4ddc8e40d80": {
+        "reasoning": "The agent asks, \"Have you been here before?\" and the caller explicitly states, \"Yes.\" The agent then asks for the phone number, implying they will look up an existing file, and mentions the dog is \"due for some vaccines,\" indicating the pet's records are in the system.",
+        "answer": "Existing",
+        "call_id": "CAL003a2122cd8542c481baf4ddc8e40d80"
+      },
+      "CAL00415f59577343e1aaad08431561d554": {
+        "reasoning": "The agent asks for the phone number to \"pull up your medical records.\" The caller references having \"chatted with Cindy about doing it\" and expresses a preference to see \"Cindy,\" implying familiarity with a specific doctor at the clinic. The caller also states \"I'm good friends with Cindy.\"",
+        "answer": "Existing",
+        "call_id": "CAL00415f59577343e1aaad08431561d554"
+      },
+      "CAL00427bb94384468b8457c5b48be0dffa": {
+        "reasoning": "The caller provides the pet's name and then states, \"And I think it's under my last name. Castaneda. Shade Castaneda.\" The agent then confirms, \"Yeah, no problem,\" implying they found the record. The agent also asks, \"Is it for like, is it the yearly appointment?\" which suggests they have access to the pet's history.",
+        "answer": "Existing",
+        "call_id": "CAL00427bb94384468b8457c5b48be0dffa"
+      },
+      "CAL00584c7b588f4128be84a13ff49dbe96": {
+        "reasoning": "The agent explicitly asks, \"Have we seen her before?\" and the caller responds, \"No.\" The agent then proceeds to explain that they would need to see the cat for an exam first and asks for the caller's full information to put them on a cancellation list. The caller also mentions having to go \"out of town\" for a previous pet's care, implying this clinic is new to them.",
+        "answer": "New",
+        "call_id": "CAL00584c7b588f4128be84a13ff49dbe96"
+      },
+      "CAL0059cd46261848899dadd858b1297a7a": {
+        "reasoning": "The agent asks, \"What was the last name on file?\" and the caller responds, \"I don't think I have a file order,\" indicating they are not an existing client. The agent then explains the process for a new patient (initial consultation to get an assessment and cost). The caller also asks about the cost of a \"regular spay,\" suggesting unfamiliarity with the clinic's pricing.",
+        "answer": "New",
+        "call_id": "CAL0059cd46261848899dadd858b1297a7a"
+      },
+      "CAL005e941190aa4eeeb16b5520f59e8526": {
+        "reasoning": "The caller is calling about an appointment booked by an \"original owner\" for a dog named Mia. The agent struggles to find the file under the caller's last name or just \"Mia.\" The agent eventually finds a request under \"Marina,\" which the caller confirms is correct. This indicates the pet might have a record, but the caller is new to managing the pet's care at this clinic, as they don't know the last name on file or the booking details. The caller also asks about pricing, which is a new client signal.",
+        "answer": "New",
+        "call_id": "CAL005e941190aa4eeeb16b5520f59e8526"
+      },
+      "CAL00644c70bf09449a835487c3ddc673b2": {
+        "reasoning": "The agent asks, \"Do you have a file with your information? Already here.\" The caller responds, \"I should because I already had a dog up there. Valerie Wicks.\" The agent then asks for a phone number to look up the file, confirming the caller is an existing client.",
+        "answer": "Existing",
+        "call_id": "CAL00644c70bf09449a835487c3ddc673b2"
+      },
+      "CAL00653e0d49dc40199c3e555625cb2117": {
+        "reasoning": "The agent asks, \"Were you a client of ours? I can't remember.\" The caller explicitly states, \"No, no, we moved to the area and I didn't end up getting a vet, which I obviously need now.\" The agent then proceeds to \"grab some information quick\" to create a new file for the caller and their pet.",
+        "answer": "New",
+        "call_id": "CAL00653e0d49dc40199c3e555625cb2117"
+      },
+      "CAL0068dc66d062488fa1f4879724451050": {
+        "reasoning": "The caller identifies herself by name, \"Hi, Sarah, it's Vanessa Legu calling.\" The agent does not ask for a phone number or to look up a file, implying they recognize the name or have easy access to the file. The agent also mentions \"Inside the folder, there's a...\" when checking availability, indicating an existing client record.",
+        "answer": "Existing",
+        "call_id": "CAL0068dc66d062488fa1f4879724451050"
+      },
+      "CAL006c0c3985f84e298f13d3d696ce8650": {
+        "reasoning": "The caller asks to schedule a vaccine for \"Thor\" and immediately requests a specific doctor, \"Dr. Mac.\" This indicates familiarity with the clinic's staff and services, a strong signal for an existing client. The agent does not ask for any identifying information to look up a file, implying they already have it.",
+        "answer": "Existing",
+        "call_id": "CAL006c0c3985f84e298f13d3d696ce8650"
+      },
+      "CAL00747d7c7e454434a6fbb219ddef83b0": {
+        "reasoning": "The caller states, \"Our dog Finnegan is due for an appointment, so we got a reminder.\" This clearly indicates the pet is already in the clinic's system and the clinic has sent a reminder, a strong signal for an existing client. The agent then asks for the last name and confirms, \"There you are. And there's Finnegan,\" and proceeds to list the vaccines the dog is due for.",
+        "answer": "Existing",
+        "call_id": "CAL00747d7c7e454434a6fbb219ddef83b0"
+      },
+      "CAL007df41abd3e463298f55c7d7d733d9a": {
+        "reasoning": "The agent asks, \"Are you a client with us already?\" and the caller explicitly states, \"No, I'm. I'd be a new client. My sister was your client. She referred me to you guys.\" The agent then proceeds to \"create a file\" for the caller, asking for their full name, address, phone number, and pet details.",
+        "answer": "New",
+        "call_id": "CAL007df41abd3e463298f55c7d7d733d9a"
+      },
+      "CAL00803d059d424bb296f8f9916a7115fd": {
+        "reasoning": "The caller states, \"I think I'm overdue for some shots, but I'm not sure exactly which ones. I got a reminder, like, a couple months ago.\" This indicates the pet is in the clinic's system and the clinic has sent reminders, a strong signal for an existing client. The agent also successfully finds the pet's file after the caller provides a second possible last name.",
+        "answer": "Existing",
+        "call_id": "CAL00803d059d424bb296f8f9916a7115fd"
+      },
+      "CAL00817a0b30d241d39d3953af8bdffd0e": {
+        "reasoning": "The agent asks, \"can I get the phone number for your file?\" and the caller provides it, along with the pet names. The caller also states, \"whatever they were out of date for. I just got the email,\" indicating they received a reminder from the clinic, which means the pets are in the system and the caller is an existing client.",
+        "answer": "Existing",
+        "call_id": "CAL00817a0b30d241d39d3953af8bdffd0e"
+      },
+      "CAL0081cff67cb34ae0b30d1dc0b426d15c": {
+        "reasoning": "The caller states they have a 'new guy' who is a rescue and needs to get records from the rescue. The agent asks for records to be sent, indicating the clinic does not have the pet's history. This implies the caller is a new client with this pet, and likely new to the clinic.",
+        "answer": "New",
+        "call_id": "CAL0081cff67cb34ae0b30d1dc0b426d15c"
+      },
+      "CAL0083311f69934f448c9bbac4cb31ed5e": {
+        "reasoning": "The caller is price shopping for euthanasia and is unfamiliar with the clinic's pricing structure, specifically the exam fee. The agent states, 'we've never met the rabbit before,' confirming the pet is new to the clinic, and the caller is acting as a new client.",
+        "answer": "New",
+        "call_id": "CAL0083311f69934f448c9bbac4cb31ed5e"
+      },
+      "CAL00848f2fc8ea47239cff6c6c1177f95a": {
+        "reasoning": "The agent asks for the caller's last name to find 'the file' and then confirms finding the pet 'Halali' in the system. The agent also references a previous food order for another cat, 'Mokaro,' by asking 'Same size bag as last time.'",
+        "answer": "Existing",
+        "call_id": "CAL00848f2fc8ea47239cff6c6c1177f95a"
+      },
+      "CAL0084da0fae0c4da6a7bfdabc646c5ba9": {
+        "reasoning": "The caller explicitly states they are 'comparing some costs for a vet' and asks if the clinic 'see dogs and cats.' The agent mentions a 'two weeks away for booking in for our new clients' and the caller references their current vet 'VCA where I'm Calgary currently at.'",
+        "answer": "New",
+        "call_id": "CAL0084da0fae0c4da6a7bfdabc646c5ba9"
+      },
+      "CAL008550503109471bb301dbdb52ea8453": {
+        "reasoning": "The agent asks for the 'phone number on file' to locate the pet's information and then proceeds to find available appointment times without asking for new client details.",
+        "answer": "Existing",
+        "call_id": "CAL008550503109471bb301dbdb52ea8453"
+      },
+      "CAL008a74d19188416cbd3be39780335bbb": {
+        "reasoning": "The caller mistakenly called the wrong clinic and apologizes, indicating they are not a client of 'All about pets animal hospital.'",
+        "answer": "New",
+        "call_id": "CAL008a74d19188416cbd3be39780335bbb"
+      },
+      "CAL008db269e7294a62a394fecdbe852724": {
+        "reasoning": "The caller references an existing appointment for 'Layo' and the agent confirms the pet's last name from the file. The agent also mentions, 'I know you usually, I think, see Dr. Nilo,' indicating familiarity with the client's preferred doctor.",
+        "answer": "Existing",
+        "call_id": "CAL008db269e7294a62a394fecdbe852724"
+      },
+      "CAL008f2a090e7f4d42a4488a553045d64f": {
+        "reasoning": "The caller asks, 'Just wondering if you guys are accepting new clients.' The agent mentions requiring 'credit card information for first time clients' and directs the caller to fill out a 'new client form online' to 'create the actual file for you on our system.' The caller also mentions 'previous vet bills from our last place.'",
+        "answer": "New",
+        "call_id": "CAL008f2a090e7f4d42a4488a553045d64f"
+      },
+      "CAL00929b7f48514a6b85c94fad4b997d9f": {
+        "reasoning": "The caller asks for an appointment for 'Prince' and the agent addresses the caller by name, 'Connie,' and asks for a call back number, implying they have the client's information on file.",
+        "answer": "Existing",
+        "call_id": "CAL00929b7f48514a6b85c94fad4b997d9f"
+      },
+      "CAL009fecf1e3dc43fcb124f083b4886d34": {
+        "reasoning": "The caller references an 'appointment scheduled for my two cats' and knows that 'their vet, their doctor is off on vacation.' The agent confirms finding the pets 'Emmanuel and Simone' in the system.",
+        "answer": "Existing",
+        "call_id": "CAL009fecf1e3dc43fcb124f083b4886d34"
+      },
+      "CAL00a0052f044140e2ab2535a85367c137": {
+        "reasoning": "The caller states, 'I had my dog cremated with you guys a few weeks ago' and is following up on a paw print from that service. The agent asks for the name to locate the record and confirms they 'still have the card here.'",
+        "answer": "Existing",
+        "call_id": "CAL00a0052f044140e2ab2535a85367c137"
+      },
+      "CAL00a33094c71445c3896aac927ab0c6b9": {
+        "reasoning": "The agent asks, 'You're not a client here, right?' and the caller explicitly confirms, 'No, I've never been there before.' The caller is also price shopping, comparing costs with 'another vet.'",
+        "answer": "New",
+        "call_id": "CAL00a33094c71445c3896aac927ab0c6b9"
+      },
+      "CAL00b175c88b6d4b20a8f2ecb4d226d689": {
+        "reasoning": "The caller states, 'I have an appointment on Friday for Bella' and asks to reschedule. The agent pulls up 'the file' for 'Bella' and confirms the last name 'Chan.' The caller also asks to reschedule with 'Dr. Bruce,' indicating familiarity with the clinic's staff.",
+        "answer": "Existing",
+        "call_id": "CAL00b175c88b6d4b20a8f2ecb4d226d689"
+      },
+      "CAL00bf0e33a835402c8e1ab317b17d16ce": {
+        "reasoning": "The caller states, 'I believe we have his file transferred from a place in Scarborough,' indicating they are new to this specific clinic. The agent initially cannot find the pet in the system and notes that the clinic has not yet received records from the 'other clinic.' The agent asks for permission to call the previous clinic for records.",
+        "answer": "New",
+        "call_id": "CAL00bf0e33a835402c8e1ab317b17d16ce"
+      },
+      "CAL00c4d944580b454fa32ba23e0a439d9f": {
+        "reasoning": "The agent asks, 'Have we seen the cat here before?' and the caller explicitly states, 'No, you haven't.' The agent then explains that an exam would be required 'just because we've never seen them here before.'",
+        "answer": "New",
+        "call_id": "CAL00c4d944580b454fa32ba23e0a439d9f"
+      },
+      "CAL00cc318557b84211830f8f9165abff38": {
+        "reasoning": "The caller immediately identifies their pet by name and mentions a recurring condition (\"again\"), and the agent proceeds to book an appointment without asking for new client information or creating a file, indicating the pet and owner are already in the system.",
+        "answer": "Existing",
+        "call_id": "CAL00cc318557b84211830f8f9165abff38"
+      },
+      "CAL00d3bb91c37c494dae58d1f03970cf7c": {
+        "reasoning": "The caller explicitly states they have not been to the clinic before, and the agent proceeds to create a new file by collecting all necessary client and pet information.",
+        "answer": "New",
+        "call_id": "CAL00d3bb91c37c494dae58d1f03970cf7c"
+      },
+      "CAL00ddc5b018204683a8005f80fb0cb08d": {
+        "reasoning": "The caller identifies himself as \"coming back\" and references a previous appointment for his pet, Atticus. The agent also checks the pet's visit history to determine if a prescription refill is possible, confirming the pet is in their system.",
+        "answer": "Existing",
+        "call_id": "CAL00ddc5b018204683a8005f80fb0cb08d"
+      },
+      "CAL00e3726d100f45e8913c8f8dfb2fd4ce": {
+        "reasoning": "The caller explicitly states \"What if I don't have a vet clinic and I just got him, like he's fresh,\" indicating they are new to having a vet or new to this specific clinic. The agent also quotes prices upfront and doesn't find a file for Broome.",
+        "answer": "New",
+        "call_id": "CAL00e3726d100f45e8913c8f8dfb2fd4ce"
+      },
+      "CAL011c013103cb49bc84379c12992b27a6": {
+        "reasoning": "The caller states their cat was \"prescribed a [DRUG] [DRUG],\" implying a previous visit to this clinic where the prescription was issued. The agent does not ask for client or pet identification to look up a file, but rather immediately addresses the medication question, suggesting familiarity with the client or that the information is readily available.",
+        "answer": "Existing",
+        "call_id": "CAL011c013103cb49bc84379c12992b27a6"
+      },
+      "CAL011ebf53493445e7896fed44ce7c81f6": {
+        "reasoning": "The agent immediately identifies the caller's last name (\"Kushni\") after the caller states their dog's name (\"Charlie\"), indicating the client and pet are already in the system.",
+        "answer": "Existing",
+        "call_id": "CAL011ebf53493445e7896fed44ce7c81f6"
+      },
+      "CAL0123fdba3d2942b0af41e1ee7d7d3bac": {
+        "reasoning": "The caller explicitly states \"we haven't been to before\" and mentions their \"normal vet is closed.\" The agent then proceeds to create a new file by collecting all necessary client and pet information.",
+        "answer": "New",
+        "call_id": "CAL0123fdba3d2942b0af41e1ee7d7d3bac"
+      },
+      "CAL012c4a0f78834f90b4d5b3a24657a2d8": {
+        "reasoning": "The caller explicitly states that the clinic has seen their other pets \"over the years\" and provides a last name for the agent to find the existing file, which the agent successfully does (\"I have Eddie and Lou on the file\"). They are adding a new pet to an existing client file.",
+        "answer": "Existing",
+        "call_id": "CAL012c4a0f78834f90b4d5b3a24657a2d8"
+      },
+      "CAL01307cbeca1945d3a9201018704f109a": {
+        "reasoning": "The caller identifies herself and her dog, Little Bit, and also references \"Our puppy that we got, Coco, the black dog that I brought,\" implying previous visits with Coco. The agent attempts to access their system to find the file, confirming they are an existing client.",
+        "answer": "Existing",
+        "call_id": "CAL01307cbeca1945d3a9201018704f109a"
+      },
+      "CAL013ccba9eedc4e67a1005d99fc3fa4bb": {
+        "reasoning": "The caller confirms they are a client, stating they had an \"initial visit\" scheduled and that \"JD told me to call.\" They also mention sending in medical records and the agent confirms the pet's name (\"Lucky. Right.\"). Although the agent needs to complete the file, the client and pet are already recognized in the system.",
+        "answer": "Existing",
+        "call_id": "CAL013ccba9eedc4e67a1005d99fc3fa4bb"
+      },
+      "CAL014854d99d7940c1910271fee0349169": {
+        "reasoning": "The caller explicitly states they are a \"current client.\" The agent confirms the pet's name (\"Toby\") from the provided phone number and later asks if they can use \"the card on file,\" all strong indicators of an existing client.",
+        "answer": "Existing",
+        "call_id": "CAL014854d99d7940c1910271fee0349169"
+      },
+      "CAL014b1b4985f340e8ba39b659373275b2": {
+        "reasoning": "The caller states they \"recently moved here\" and asks about prices and mandatory vaccines, indicating unfamiliarity with the clinic's services and standard procedures. They also mention having printed records from their previous vet, confirming they are new to this clinic.",
+        "answer": "New",
+        "call_id": "CAL014b1b4985f340e8ba39b659373275b2"
+      },
+      "CAL01568eebe6a143918c7fc238f5562f6b": {
+        "reasoning": "The agent asks for a phone number to find the client's \"file\" and immediately identifies the pet as \"Lucy,\" confirming the client and pet are already in the system.",
+        "answer": "Existing",
+        "call_id": "CAL01568eebe6a143918c7fc238f5562f6b"
+      },
+      "CAL0158a08f881a40c592c795ca67df298b": {
+        "reasoning": "The caller identifies himself and his pet, Lulu, and states they need to \"bring her back,\" clearly indicating previous visits to the clinic. The agent immediately understands the situation and prepares for their arrival without asking for new client information.",
+        "answer": "Existing",
+        "call_id": "CAL0158a08f881a40c592c795ca67df298b"
+      },
+      "CAL017e403dd5c64398ac43ffe88d4b3cf5": {
+        "reasoning": "The caller explicitly confirms they have come to the clinic before and provides the names of their pets. The agent then accesses their records to confirm vaccine and exam due dates, indicating they are an existing client.",
+        "answer": "Existing",
+        "call_id": "CAL017e403dd5c64398ac43ffe88d4b3cf5"
+      },
+      "CAL018db6069ff2459da919dd5241e6615a": {
+        "reasoning": "The agent references the pet's 'previous weight' after the caller identifies their dog, indicating the pet's information is already in the system.",
+        "answer": "Existing",
+        "call_id": "CAL018db6069ff2459da919dd5241e6615a"
+      },
+      "CAL018df2fa33fb456f8959e4287cbf5bb7": {
+        "reasoning": "The agent explicitly asks, 'Have we seen your pet here before? Do you have a file with us?' and the caller responds 'No, no, she doesn't.' The agent then states, 'Let me just get you a file made up here' and proceeds to collect the caller's and pet's full information. The caller also mentions having a previous clinic.",
+        "answer": "New",
+        "call_id": "CAL018df2fa33fb456f8959e4287cbf5bb7"
+      },
+      "CAL018e04d97ba74747b033b3120bd39163": {
+        "reasoning": "The caller asks to book a 'yearly' checkup for their dog, and the agent finds the pet's file by name without needing to create a new one or ask for extensive personal details.",
+        "answer": "Existing",
+        "call_id": "CAL018e04d97ba74747b033b3120bd39163"
+      },
+      "CAL019837cf0ff37f4d8d1af062be24cbab": {
+        "reasoning": "The agent asks, 'Are you a new client?' and the caller responds, 'Yes.' The agent then proceeds to collect all necessary information to create a new file, including name, address, phone, email, and pet details. The caller also asks about the clinic's location, indicating unfamiliarity.",
+        "answer": "New",
+        "call_id": "CAL019837cf0ff37f4d8d1af062be24cbab"
+      },
+      "CAL019837cf1fe87f139b863a24117182bb": {
+        "reasoning": "The caller references an existing surgery booking for their dog 'Buddy' and the agent confirms by stating, 'I do have buddy here. Yeah, I have the file open.'",
+        "answer": "Existing",
+        "call_id": "CAL019837cf1fe87f139b863a24117182bb"
+      },
+      "CAL019837e8fdaf7d31b9a87d56d518b19a": {
+        "reasoning": "The agent states, 'We are taking new clients, so I can certainly create a file for you' and proceeds to collect the caller's and multiple pets' full information. The caller also mentions having a vet elsewhere for one of their pets.",
+        "answer": "New",
+        "call_id": "CAL019837e8fdaf7d31b9a87d56d518b19a"
+      },
+      "CAL019837f52c29747e9a736faff8ee96a0": {
+        "reasoning": "The caller references an existing appointment for 'Luna' that they wish to cancel, and the agent is able to locate and cancel it without asking for new client information.",
+        "answer": "Existing",
+        "call_id": "CAL019837f52c29747e9a736faff8ee96a0"
+      },
+      "CAL019837fa1ec07a778412598cf2c6c69b": {
+        "reasoning": "The caller explicitly states, 'I'm a client of your. My cat has come to your hospital some years ago.' The agent then finds the cat's file and confirms the last visit was in 2021, asking to verify existing contact information.",
+        "answer": "Existing",
+        "call_id": "CAL019837fa1ec07a778412598cf2c6c69b"
+      },
+      "CAL01983804e7477d2ab9762cb70d48f2e3": {
+        "reasoning": "The caller references a previous visit ('brought my kitten in, I think, last week') and the agent pulls up the pet's file ('Bee') to read notes and confirm an existing appointment for boosters.",
+        "answer": "Existing",
+        "call_id": "CAL01983804e7477d2ab9762cb70d48f2e3"
+      },
+      "CAL01983809118e7b7ab76583beb15baec6": {
+        "reasoning": "The agent finds the dog's file ('Abby') by name and confirms she is 'due for her annual and vaccine at the end of September,' indicating the pet and client are already in the system.",
+        "answer": "Existing",
+        "call_id": "CAL01983809118e7b7ab76583beb15baec6"
+      },
+      "CAL01983809fd0870bfb1a41e0cc0148c1a": {
+        "reasoning": "The caller is Nikki from Port Colburn Animal Hospital, calling to request file transfers for a client named Fiddler. The caller is a representative of another veterinary clinic, not a pet owner seeking services for their own pet at Linden Animal Clinic. Therefore, the caller is neither a new nor an existing client in the context of receiving veterinary care for a pet at this clinic.",
+        "answer": "Inconclusive",
+        "call_id": "CAL01983809fd0870bfb1a41e0cc0148c1a"
+      },
+      "CAL0198380d24b573858f1ebc1d3174cf7c": {
+        "reasoning": "The agent asks for the caller's phone number and then immediately identifies the pet 'Buzz' and finds an available appointment slot, indicating the pet and client are already in the system.",
+        "answer": "Existing",
+        "call_id": "CAL0198380d24b573858f1ebc1d3174cf7c"
+      },
+      "CAL0198380e825f714ba6f533c90cee0983": {
+        "reasoning": "The caller references a previous interaction ('dropped off a stool sample') and the agent easily finds the dog's record ('Daisy') and the results, indicating an existing client.",
+        "answer": "Existing",
+        "call_id": "CAL0198380e825f714ba6f533c90cee0983"
+      },
+      "CAL01983815a4767f56a58f01c1c70c0a18": {
+        "reasoning": "The caller references a specific pet ('Lucy'), a specific medication ('mirtazapine'), and a specific doctor ('Dr. Smith') at this clinic, and the agent immediately accesses the file to note the fax number for the prescription.",
+        "answer": "Existing",
+        "call_id": "CAL01983815a4767f56a58f01c1c70c0a18"
+      },
+      "CAL01983817fcfd7454a63d6cdf8169a5aa": {
+        "reasoning": "The caller asks about the cost of an exam and euthanasia, indicating unfamiliarity with the clinic's pricing. The caller also states they will 'check in with my sister and then possibly call back to book an appointment,' implying they are not currently a client and would be a new one if they proceed.",
+        "answer": "New",
+        "call_id": "CAL01983817fcfd7454a63d6cdf8169a5aa"
+      },
+      "CAL0198381fff847e6d97bd58d60abcb00e": {
+        "reasoning": "The caller states they have been receiving messages/emails from the clinic about their pet Buddy, and the agent confirms finding Buddy's file and also another pet (Zoro) on file, referencing past visits. This indicates an existing client relationship.",
+        "answer": "Existing",
+        "call_id": "CAL0198381fff847e6d97bd58d60abcb00e"
+      },
+      "CAL01983822ac26708db3b026da626a071c": {
+        "reasoning": "The caller is inquiring about the clinic's services (holistic veterinary clinic) and is unfamiliar with them. There is no indication of a prior relationship, and the call ends after the caller receives the information.",
+        "answer": "New",
+        "call_id": "CAL01983822ac26708db3b026da626a071c"
+      },
+      "CAL019838234a5573079b0722f822b613f7": {
+        "reasoning": "The caller is asking about a specific food order they placed through 'my vet store' and the agent is able to check the stock for them, implying an existing relationship for ordering supplies.",
+        "answer": "Existing",
+        "call_id": "CAL019838234a5573079b0722f822b613f7"
+      },
+      "CAL01983823e3fd7e76a7ec906121a17dee": {
+        "reasoning": "The caller leaves a voicemail providing their name and pet's name, requesting a specific prescription food to be put aside for pickup. This implies they are a client who regularly obtains this food from the clinic and expects their pet's information to be on file.",
+        "answer": "Existing",
+        "call_id": "CAL01983823e3fd7e76a7ec906121a17dee"
+      },
+      "CAL019838277cc37e93b4c1a543fa522122": {
+        "reasoning": "The caller explicitly states, 'No, I. I'm. I haven't come to your clinic before.' The agent then proceeds to gather all necessary information to establish a new file for the caller and their pet.",
+        "answer": "New",
+        "call_id": "CAL019838277cc37e93b4c1a543fa522122"
+      },
+      "CAL01983828e7347b6281fe9fa52524f73e": {
+        "reasoning": "The caller states their dog 'Lucy just got her shots done there' and needs proof. The agent immediately finds the file under the caller's and her husband's names, confirming the pet's name and the ability to send the vaccine certificate. This indicates an existing client.",
+        "answer": "Existing",
+        "call_id": "CAL01983828e7347b6281fe9fa52524f73e"
+      },
+      "CAL0198382a648d7ea09d62d10d36e470d7": {
+        "reasoning": "The caller is inquiring about a specific service (tail docking) and is unfamiliar with the clinic's current offerings, including the fact that the vet who performed it retired. There is no indication of a prior client relationship.",
+        "answer": "New",
+        "call_id": "CAL0198382a648d7ea09d62d10d36e470d7"
+      },
+      "CAL01983837207c78339c0dc0ac40dc2540": {
+        "reasoning": "The caller is calling to cancel and reschedule an existing appointment for their pet 'Dally'. The agent quickly finds the appointment and pet's name, indicating an existing client.",
+        "answer": "Existing",
+        "call_id": "CAL01983837207c78339c0dc0ac40dc2540"
+      },
+      "CAL0198383ba24b764186763c2357974ba3": {
+        "reasoning": "The caller explicitly states 'No' when asked if they are a client. They also mention their usual vet is 'Broadway' and the agent discusses transferring records, confirming they are a new client.",
+        "answer": "New",
+        "call_id": "CAL0198383ba24b764186763c2357974ba3"
+      },
+      "CAL0198383bf2cd7adaa841d36177d17bbc": {
+        "reasoning": "The caller states they 'went the last time' (two weeks ago) and received price information for spaying their dog. The agent confirms finding the pet's name ('Willow') and has an estimate on file for the caller, indicating a recent interaction and existing client status.",
+        "answer": "Existing",
+        "call_id": "CAL0198383bf2cd7adaa841d36177d17bbc"
+      },
+      "CAL019838424bff7fa7890d74af370fc6f0": {
+        "reasoning": "The caller explicitly states their dog 'gets care through you guys' and asks the agent to 'check our account'. The agent immediately finds the pet's file ('Maya') and provides details about upcoming services, clearly indicating an existing client.",
+        "answer": "Existing",
+        "call_id": "CAL019838424bff7fa7890d74af370fc6f0"
+      },
+      "CAL01983845f24c74ca8e084a529e08b4d8": {
+        "reasoning": "The caller is trying to book a first appointment for their dog and seems unfamiliar with the clinic's locations/scheduling for different branches ('C'est Wakefield et Chelsea?'). The agent asks for their name to add them to a waiting list, implying they are creating a new entry, not looking up an existing one.",
+        "answer": "New",
+        "call_id": "CAL01983845f24c74ca8e084a529e08b4d8"
+      },
+      "CAL019838482da37a9f9344c2d92538c61f": {
+        "reasoning": "The caller received an email reminder from the clinic for their pet's checkup. The agent recognizes the caller ('How are you, George? How are you and your wife?') and immediately pulls up the pet's file and details about due vaccines. The caller also knows the doctor's name ('Dr. Sue/Smith'). This strongly indicates an existing client.",
+        "answer": "Existing",
+        "call_id": "CAL019838482da37a9f9344c2d92538c61f"
+      },
+      "CAL0198384b51907551aab56685e09cde9c": {
+        "reasoning": "The agent recognizes the caller by name ('Oh, hi Polly') and knows their pet ('big girl') is currently at the clinic for a procedure, providing an update on its status. This is a clear indication of an existing client.",
+        "answer": "Existing",
+        "call_id": "CAL0198384b51907551aab56685e09cde9c"
+      },
+      "CAL019838502ce87cbdbc990b0ade416e7a": {
+        "reasoning": "The caller states their cat 'was fixed at your place' and provides the original name and new name. The agent is able to look up the cat's record and provide the date of birth, indicating the cat has been a patient at the clinic and the caller is an existing client.",
+        "answer": "Existing",
+        "call_id": "CAL019838502ce87cbdbc990b0ade416e7a"
+      },
+      "CAL0198385255f8738ca83ae22e29e15dcc": {
+        "reasoning": "The caller is asking for recommendations for an external boarding facility, not for services provided by this clinic. There is no indication that the caller or their pets are in the clinic's system, nor do they inquire about becoming a client.",
+        "answer": "New",
+        "call_id": "CAL0198385255f8738ca83ae22e29e15dcc"
+      },
+      "CAL0198385b6e3772fc89e3f22f41af0b46": {
+        "reasoning": "The agent asks for the caller's phone number 'for your file' and then confirms the pet's name 'for era. Correct.' The agent also references a note in the system about the pet needing medication prior to the appointment, indicating an existing record for the pet and owner.",
+        "answer": "Existing",
+        "call_id": "CAL0198385b6e3772fc89e3f22f41af0b46"
+      },
+      "CAL01983864fd50700396fe8fb50860c0ae": {
+        "reasoning": "The caller asks if the clinic treats exotic animals, specifically a bearded dragon, which suggests they are unfamiliar with the clinic's services. There is no attempt by the agent to look up a file or create one.",
+        "answer": "New",
+        "call_id": "CAL01983864fd50700396fe8fb50860c0ae"
+      },
+      "CAL01983872f881791f9d0eae5c58b35de9": {
+        "reasoning": "The caller references a previous call and a suggestion from 'Dr. Smith' at this clinic regarding medication for her kitten. The agent confirms they are 'still waiting to get an answer back on like the dosing and stuff' from Dr. Smith, indicating an ongoing relationship and the pet/caller being known to the clinic.",
+        "answer": "Existing",
+        "call_id": "CAL01983872f881791f9d0eae5c58b35de9"
+      },
+      "CAL0198387534b27b21af285cf499eac523": {
+        "reasoning": "The caller states, 'I have an appointment for Benji on Friday at 4. I was wondering if I can move that appointment.' The agent immediately confirms the appointment for Benji, indicating the pet and owner are already in the clinic's system.",
+        "answer": "Existing",
+        "call_id": "CAL0198387534b27b21af285cf499eac523"
+      },
+      "CAL019838760fe97e58898d00136787ed15": {
+        "reasoning": "The caller states, 'My dog, Cooper needs some more tick medication.' They also mention knowing the specific medication ('Simparica') and that 'they were switching over a diff to a different product,' indicating a history of prescriptions and care at this clinic.",
+        "answer": "Existing",
+        "call_id": "CAL019838760fe97e58898d00136787ed15"
+      },
+      "CAL0198387a31297659b98d57bb828b2c1d": {
+        "reasoning": "The agent explicitly asks, 'Are you a client of us?' and the caller responds, 'I am. Yes.' The agent then proceeds to look up the client's file using the last name and pet's name.",
+        "answer": "Existing",
+        "call_id": "CAL0198387a31297659b98d57bb828b2c1d"
+      },
+      "CAL0198387ec66d739fb6850962fd609815": {
+        "reasoning": "The caller wants to order medication for their cat. The agent asks for the phone number to pull up the file and then confirms details about past medication purchases, stating, 'Yes, the last time you got it was. Looks like the bigger bottle.' This indicates an existing client record.",
+        "answer": "Existing",
+        "call_id": "CAL0198387ec66d739fb6850962fd609815"
+      },
+      "CAL01983885684f7cfeaf588dcf1f8a9e28": {
+        "reasoning": "The caller calls to confirm a credit on their account and discusses an upcoming appointment for their pets, Katie and Peanut, for their 'annual [MEDICAL_PROCESS]'. The agent confirms the credit and discusses the cost for the pets. The caller also provides updated information for a previous pet, Baron, indicating a long-standing relationship with the clinic.",
+        "answer": "Existing",
+        "call_id": "CAL01983885684f7cfeaf588dcf1f8a9e28"
+      },
+      "CAL019838906bb373e3b8900dfb87d1f627": {
+        "reasoning": "The caller is calling regarding a bag of cat food purchased for their cats, Buddy and Trixie. The agent asks for the phone number to 'pull the file up' and then confirms details about past food purchases and diet changes, indicating an existing client record and ongoing care.",
+        "answer": "Existing",
+        "call_id": "CAL019838906bb373e3b8900dfb87d1f627"
+      }
+    },
+    "treatment_type": {
+      "CAL000498baa67742cb9a4fed89664cd014": {
+        "reasoning": "Puppy with coughing/gagging increasing in frequency; agent tries to squeeze in for a sick visit. Primary issue is evaluation/treatment of an illness with specific respiratory symptoms.",
+        "answer": "Urgent Care \u2013 Diagnosis and Treatment of Illnesses (Vomiting, Diabetes, Infections)",
+        "call_id": "CAL000498baa67742cb9a4fed89664cd014"
+      },
+      "CAL00057325c1924ef5be1874417c20b262": {
+        "reasoning": "Caller is ordering Cosequin and Zylkene (medications/supplements) and also booked a nail trim. The primary medical service is a medication order/refill.",
+        "answer": "Retail \u2013 Prescriptions",
+        "call_id": "CAL00057325c1924ef5be1874417c20b262"
+      },
+      "CAL0005db904b5746e18d9c5a855f8ff8fd": {
+        "reasoning": "Dog ingested horse grain possibly containing ketoconazole, is vomiting; triage advice given and referral to emergency clinic considered. This is an acute poisoning concern.",
+        "answer": "Emergency & Critical Care \u2013 Stabilization (Trauma, Poisoning, Seizures)",
+        "call_id": "CAL0005db904b5746e18d9c5a855f8ff8fd"
+      },
+      "CAL000982de28904f1aa7f072d197347693": {
+        "reasoning": "New client inquiry asking about exam fees and the cost of thyroid bloodwork for an 8-year-old cat. Primary request centers on lab testing estimates.",
+        "answer": "Diagnostic Services \u2013 In-House or Reference Lab Testing (Blood, Urine, Fecal, Cytology)",
+        "call_id": "CAL000982de28904f1aa7f072d197347693"
+      },
+      "CAL0009ad7aca3748009c5fb31f51eee5ad": {
+        "reasoning": "Caller to an emergency clinic about a bleeding, matted area near the dog\u2019s anus; advised they can come in now. This is an acute wound/bleeding issue requiring emergency triage.",
+        "answer": "Emergency & Critical Care \u2013 Stabilization (Trauma, Poisoning, Seizures)",
+        "call_id": "CAL0009ad7aca3748009c5fb31f51eee5ad"
+      },
+      "CAL000aeb5cceb842ff9ab94f9dc115873d": {
+        "reasoning": "Caller only asked about cancellations and for another phone number; no pet issue or specific service discussed.",
+        "answer": "Other",
+        "call_id": "CAL000aeb5cceb842ff9ab94f9dc115873d"
+      },
+      "CAL000e51384a1945a28c7af94f3657b772": {
+        "reasoning": "Cat has acute symptoms (vomiting foam, pain, shallow breathing) and was booked urgently for evaluation.",
+        "answer": "Urgent Care \u2013 Diagnosis and Treatment of Illnesses (Vomiting, Diabetes, Infections)",
+        "call_id": "CAL000e51384a1945a28c7af94f3657b772"
+      },
+      "CAL001052c35ec84a74857f15ba89aa2183": {
+        "reasoning": "Caller scheduled an appointment specifically for blood work for their dog.",
+        "answer": "Diagnostic Services \u2013 In-House or Reference Lab Testing (Blood, Urine, Fecal, Cytology)",
+        "call_id": "CAL001052c35ec84a74857f15ba89aa2183"
+      },
+      "CAL0011b20af94b4c4289cf6a51af871369": {
+        "reasoning": "New client booking for a cat with coughing/breathing issues worsening over two weeks; primary purpose is evaluation of illness symptoms.",
+        "answer": "Urgent Care \u2013 Diagnosis and Treatment of Illnesses (Vomiting, Diabetes, Infections)",
+        "call_id": "CAL0011b20af94b4c4289cf6a51af871369"
+      },
+      "CAL001aad9b8a0947ed8ac0353348259263": {
+        "reasoning": "Follow-up for dog with ear that is black inside, consistent with an ear problem/infection.",
+        "answer": "Dermatology \u2013 Ear Infections",
+        "call_id": "CAL001aad9b8a0947ed8ac0353348259263"
+      },
+      "CAL001b27da05104332895e8f037e981343": {
+        "reasoning": "Caller requested and booked an appointment specifically for cat vaccinations.",
+        "answer": "Preventive Care \u2013 Vaccinations",
+        "call_id": "CAL001b27da05104332895e8f037e981343"
+      },
+      "CAL0024c5183d6641a7bab31a88e46fbc69": {
+        "reasoning": "Dog with acute severe symptoms (drooling, ataxia, abdominal pain) being brought to an after-hours ER for immediate evaluation.",
+        "answer": "Emergency & Critical Care \u2013 Stabilization (Trauma, Poisoning, Seizures)",
+        "call_id": "CAL0024c5183d6641a7bab31a88e46fbc69"
+      },
+      "CAL003334dc9cce46eeb1d9ddc73be4e633": {
+        "reasoning": "Scheduling multiple vaccines (rabies, lepto, Lyme) for an existing patient.",
+        "answer": "Preventive Care \u2013 Vaccinations",
+        "call_id": "CAL003334dc9cce46eeb1d9ddc73be4e633"
+      },
+      "CAL0038d600a47946ebb1c82834efd14ec2": {
+        "reasoning": "Primary request is to scan a found cat for a microchip; this service doesn't fit listed medical categories.",
+        "answer": "Other",
+        "call_id": "CAL0038d600a47946ebb1c82834efd14ec2"
+      },
+      "CAL003947c6d73e405a8ff5214e6719fcbd": {
+        "reasoning": "Booking a bird nail trim, which is a grooming service not covered by listed categories.",
+        "answer": "Other",
+        "call_id": "CAL003947c6d73e405a8ff5214e6719fcbd"
+      },
+      "CAL0039a82c50d340abaf5823d06785a4a0": {
+        "reasoning": "Only an automated closed-office message was reached; no interaction or service request completed.",
+        "answer": "N/A (missed call)",
+        "call_id": "CAL0039a82c50d340abaf5823d06785a4a0"
+      },
+      "CAL003a2122cd8542c481baf4ddc8e40d80": {
+        "reasoning": "Primary reason was seasonal allergies/itchiness and requesting allergy meds; tick prevention and vaccines were secondary add-ons.",
+        "answer": "Dermatology \u2013 Allergies",
+        "call_id": "CAL003a2122cd8542c481baf4ddc8e40d80"
+      },
+      "CAL00415f59577343e1aaad08431561d554": {
+        "reasoning": "Caller scheduled solely for a Bordetella vaccine for daycare requirements.",
+        "answer": "Preventive Care \u2013 Vaccinations",
+        "call_id": "CAL00415f59577343e1aaad08431561d554"
+      },
+      "CAL00427bb94384468b8457c5b48be0dffa": {
+        "reasoning": "Caller requested a yearly appointment including physical and vaccines; explicitly an annual checkup.",
+        "answer": "Preventive Care \u2013 Annual Exams",
+        "call_id": "CAL00427bb94384468b8457c5b48be0dffa"
+      },
+      "CAL00584c7b588f4128be84a13ff49dbe96": {
+        "reasoning": "Caller sought to schedule a spay for a female cat; discussion centered on timing, costs, and pre-op exam.",
+        "answer": "Surgical Services \u2013 Spays and Neuters",
+        "call_id": "CAL00584c7b588f4128be84a13ff49dbe96"
+      },
+      "CAL0059cd46261848899dadd858b1297a7a": {
+        "reasoning": "Caller is seeking to have a female cat spayed (discussed mature spay process, cost, and timing).",
+        "answer": "Surgical Services \u2013 Spays and Neuters",
+        "call_id": "CAL0059cd46261848899dadd858b1297a7a"
+      },
+      "CAL005e941190aa4eeeb16b5520f59e8526": {
+        "reasoning": "Call is about a vaccination appointment and pricing for one vaccine for a dog.",
+        "answer": "Preventive Care \u2013 Vaccinations",
+        "call_id": "CAL005e941190aa4eeeb16b5520f59e8526"
+      },
+      "CAL00644c70bf09449a835487c3ddc673b2": {
+        "reasoning": "Caller wants tick and parasite prevention for two puppies and books exams to obtain it.",
+        "answer": "Preventive Care \u2013 Parasite Prevention",
+        "call_id": "CAL00644c70bf09449a835487c3ddc673b2"
+      },
+      "CAL00653e0d49dc40199c3e555625cb2117": {
+        "reasoning": "Cat with increased drinking and urinating on the floor; scheduled same-day sick visit for diagnosis/treatment of possible illness (e.g., UTI/diabetes).",
+        "answer": "Urgent Care \u2013 Diagnosis and Treatment of Illnesses (Vomiting, Diabetes, Infections)",
+        "call_id": "CAL00653e0d49dc40199c3e555625cb2117"
+      },
+      "CAL0068dc66d062488fa1f4879724451050": {
+        "reasoning": "Caller requests X-rays for a limping dog with hind-end pain; clinic explains exam first but X-rays discussed as the goal.",
+        "answer": "Diagnostic Services \u2013 X-Rays (Digital Radiography)",
+        "call_id": "CAL0068dc66d062488fa1f4879724451050"
+      },
+      "CAL006c0c3985f84e298f13d3d696ce8650": {
+        "reasoning": "Caller scheduled Thor specifically for rabies/distemper/Bordetella vaccines.",
+        "answer": "Preventive Care \u2013 Vaccinations",
+        "call_id": "CAL006c0c3985f84e298f13d3d696ce8650"
+      },
+      "CAL00747d7c7e454434a6fbb219ddef83b0": {
+        "reasoning": "Reminder for leptospirosis and kennel cough vaccines; booked vaccine appointment.",
+        "answer": "Preventive Care \u2013 Vaccinations",
+        "call_id": "CAL00747d7c7e454434a6fbb219ddef83b0"
+      },
+      "CAL007df41abd3e463298f55c7d7d733d9a": {
+        "reasoning": "New client appointment requested \u201cjust for vaccines/annual shot.\u201d",
+        "answer": "Preventive Care \u2013 Vaccinations",
+        "call_id": "CAL007df41abd3e463298f55c7d7d733d9a"
+      },
+      "CAL00803d059d424bb296f8f9916a7115fd": {
+        "reasoning": "Caller overdue for Bordetella and leptospirosis shots; booked for those vaccines.",
+        "answer": "Preventive Care \u2013 Vaccinations",
+        "call_id": "CAL00803d059d424bb296f8f9916a7115fd"
+      },
+      "CAL00817a0b30d241d39d3953af8bdffd0e": {
+        "reasoning": "Caller booked both dogs for whatever vaccines are due per reminder.",
+        "answer": "Preventive Care \u2013 Vaccinations",
+        "call_id": "CAL00817a0b30d241d39d3953af8bdffd0e"
+      },
+      "CAL0081cff67cb34ae0b30d1dc0b426d15c": {
+        "reasoning": "Caller was seeking advice/products for tick prevention before traveling; microchip mentioned but the primary concern was parasite prevention.",
+        "answer": "Preventive Care \u2013 Parasite Prevention",
+        "call_id": "CAL0081cff67cb34ae0b30d1dc0b426d15c"
+      },
+      "CAL0083311f69934f448c9bbac4cb31ed5e": {
+        "reasoning": "Inquiry about costs and arranging to euthanize a rabbit at the clinic, including cremation.",
+        "answer": "End of Life Care \u2013 In-Clinic Euthanasia",
+        "call_id": "CAL0083311f69934f448c9bbac4cb31ed5e"
+      },
+      "CAL00848f2fc8ea47239cff6c6c1177f95a": {
+        "reasoning": "Booked an immediate appointment for a suspected ear infection; food order was secondary.",
+        "answer": "Dermatology \u2013 Ear Infections",
+        "call_id": "CAL00848f2fc8ea47239cff6c6c1177f95a"
+      },
+      "CAL0084da0fae0c4da6a7bfdabc646c5ba9": {
+        "reasoning": "Caller compared exam fees and monthly cost for Apoquel for a dog, indicating ongoing allergy management needs.",
+        "answer": "Urgent Care \u2013 Chronic Disease Management (Arthritis, Allergies, Thyroid Disease)",
+        "call_id": "CAL0084da0fae0c4da6a7bfdabc646c5ba9"
+      },
+      "CAL008550503109471bb301dbdb52ea8453": {
+        "reasoning": "Scheduling a routine checkup for a cat, described as a checkup with no illness mentioned.",
+        "answer": "Preventive Care \u2013 Annual Exams",
+        "call_id": "CAL008550503109471bb301dbdb52ea8453"
+      },
+      "CAL008a74d19188416cbd3be39780335bbb": {
+        "reasoning": "Wrong number call; no veterinary service discussed.",
+        "answer": "Other",
+        "call_id": "CAL008a74d19188416cbd3be39780335bbb"
+      },
+      "CAL008db269e7294a62a394fecdbe852724": {
+        "reasoning": "Rescheduling an appointment with no details on the service type.",
+        "answer": "Other",
+        "call_id": "CAL008db269e7294a62a394fecdbe852724"
+      },
+      "CAL008f2a090e7f4d42a4488a553045d64f": {
+        "reasoning": "Caller requests appointments for two older cats due for their annual checkups (with possible vaccines). Primary purpose is yearly exam.",
+        "answer": "Preventive Care \u2013 Annual Exams",
+        "call_id": "CAL008f2a090e7f4d42a4488a553045d64f"
+      },
+      "CAL00929b7f48514a6b85c94fad4b997d9f": {
+        "reasoning": "Pet has an eye issue (keeps closing left eye) and needs to be seen; this is a specific illness symptom.",
+        "answer": "Urgent Care \u2013 Diagnosis and Treatment of Illnesses (Vomiting, Diabetes, Infections)",
+        "call_id": "CAL00929b7f48514a6b85c94fad4b997d9f"
+      },
+      "CAL009fecf1e3dc43fcb124f083b4886d34": {
+        "reasoning": "Caller cancels and plans to reschedule; no information on the underlying service.",
+        "answer": "Other",
+        "call_id": "CAL009fecf1e3dc43fcb124f083b4886d34"
+      },
+      "CAL00a0052f044140e2ab2535a85367c137": {
+        "reasoning": "Caller followed up about a missing paw print from a recent cremation and arranged pickup. This pertains to end-of-life aftercare.",
+        "answer": "End of Life Care",
+        "call_id": "CAL00a0052f044140e2ab2535a85367c137"
+      },
+      "CAL00a33094c71445c3896aac927ab0c6b9": {
+        "reasoning": "Caller requested pricing and details for kidney X-rays, including number of views and sedation. Primary service is radiography.",
+        "answer": "Diagnostic Services \u2013 X-Rays (Digital Radiography)",
+        "call_id": "CAL00a33094c71445c3896aac927ab0c6b9"
+      },
+      "CAL00b175c88b6d4b20a8f2ecb4d226d689": {
+        "reasoning": "The call is solely to reschedule an appointment with no information about the underlying medical service.",
+        "answer": "Other",
+        "call_id": "CAL00b175c88b6d4b20a8f2ecb4d226d689"
+      },
+      "CAL00bf0e33a835402c8e1ab317b17d16ce": {
+        "reasoning": "Dog broke a nail with bleeding and limping; scheduling an exam for an acute injury. Not an emergency level situation.",
+        "answer": "Urgent Care / Sick Pet",
+        "call_id": "CAL00bf0e33a835402c8e1ab317b17d16ce"
+      },
+      "CAL00c4d944580b454fa32ba23e0a439d9f": {
+        "reasoning": "Caller is arranging to put down a cat at the clinic with communal cremation. This is an in-clinic euthanasia request.",
+        "answer": "End of Life Care \u2013 In-Clinic Euthanasia",
+        "call_id": "CAL00c4d944580b454fa32ba23e0a439d9f"
+      },
+      "CAL00cc318557b84211830f8f9165abff38": {
+        "reasoning": "Caller is booking an appointment for a recurring yeast ear infection in the dog\u2019s ears.",
+        "answer": "Dermatology \u2013 Ear Infections",
+        "call_id": "CAL00cc318557b84211830f8f9165abff38"
+      },
+      "CAL00d3bb91c37c494dae58d1f03970cf7c": {
+        "reasoning": "Caller scheduled vaccines and also booked a spay; per guidelines, prioritize the surgical service.",
+        "answer": "Surgical Services \u2013 Spays and Neuters",
+        "call_id": "CAL00d3bb91c37c494dae58d1f03970cf7c"
+      },
+      "CAL00ddc5b018204683a8005f80fb0cb08d": {
+        "reasoning": "Caller canceled an appointment but primarily requested flea/tick medication for the cat, which is parasite prevention.",
+        "answer": "Preventive Care \u2013 Parasite Prevention",
+        "call_id": "CAL00ddc5b018204683a8005f80fb0cb08d"
+      },
+      "CAL00e3726d100f45e8913c8f8dfb2fd4ce": {
+        "reasoning": "Caller suspects the cat burned a paw; it\u2019s swollen and the cat is limping. Non-life-threatening injury/limping fits general sick pet urgent care.",
+        "answer": "Urgent Care / Sick Pet",
+        "call_id": "CAL00e3726d100f45e8913c8f8dfb2fd4ce"
+      },
+      "CAL011c013103cb49bc84379c12992b27a6": {
+        "reasoning": "Caller sought advice after applying chlorhexidine for a nail/paw infection; this concerns management of an infection.",
+        "answer": "Urgent Care \u2013 Diagnosis and Treatment of Illnesses (Vomiting, Diabetes, Infections)",
+        "call_id": "CAL011c013103cb49bc84379c12992b27a6"
+      },
+      "CAL011ebf53493445e7896fed44ce7c81f6": {
+        "reasoning": "Elderly dog with decreased appetite, lethargy, and difficulty with stairs needing evaluation; sick pet visit, not preventive or emergency.",
+        "answer": "Urgent Care / Sick Pet",
+        "call_id": "CAL011ebf53493445e7896fed44ce7c81f6"
+      },
+      "CAL0123fdba3d2942b0af41e1ee7d7d3bac": {
+        "reasoning": "Owner suspects a burst anal gland and wants an exam; acute illness needing diagnosis/treatment.",
+        "answer": "Urgent Care \u2013 Diagnosis and Treatment of Illnesses (Vomiting, Diabetes, Infections)",
+        "call_id": "CAL0123fdba3d2942b0af41e1ee7d7d3bac"
+      },
+      "CAL012c4a0f78834f90b4d5b3a24657a2d8": {
+        "reasoning": "New kitten\u2019s initial visit requested with a veterinarian; routine wellness without specific concern mentioned.",
+        "answer": "Preventive Care",
+        "call_id": "CAL012c4a0f78834f90b4d5b3a24657a2d8"
+      },
+      "CAL01307cbeca1945d3a9201018704f109a": {
+        "reasoning": "Dog has a new bump under the eye after rough play; booking exam for a specific symptom/injury; not emergency level.",
+        "answer": "Urgent Care / Sick Pet",
+        "call_id": "CAL01307cbeca1945d3a9201018704f109a"
+      },
+      "CAL013ccba9eedc4e67a1005d99fc3fa4bb": {
+        "reasoning": "Cat with bleeding under matted fur near tail, needs same-day care; acute wound/skin issue but not emergency stabilization.",
+        "answer": "Urgent Care / Sick Pet",
+        "call_id": "CAL013ccba9eedc4e67a1005d99fc3fa4bb"
+      },
+      "CAL014854d99d7940c1910271fee0349169": {
+        "reasoning": "Caller scheduled an appointment for overdue vaccines and annual exam; also ordered dog food but primary purpose was preventive visit.",
+        "answer": "Preventive Care",
+        "call_id": "CAL014854d99d7940c1910271fee0349169"
+      },
+      "CAL014b1b4985f340e8ba39b659373275b2": {
+        "reasoning": "Inquiry about wellness check and vaccinations for two cats, discussing pricing and availability; both preventive services.",
+        "answer": "Preventive Care",
+        "call_id": "CAL014b1b4985f340e8ba39b659373275b2"
+      },
+      "CAL01568eebe6a143918c7fc238f5562f6b": {
+        "reasoning": "Caller booked an appointment specifically to update vaccinations (rabies and Bordetella) for the dog.",
+        "answer": "Preventive Care \u2013 Vaccinations",
+        "call_id": "CAL01568eebe6a143918c7fc238f5562f6b"
+      },
+      "CAL0158a08f881a40c592c795ca67df298b": {
+        "reasoning": "Pet is convulsing (seizures) and being brought in urgently; this is an emergency stabilization scenario.",
+        "answer": "Emergency & Critical Care \u2013 Stabilization (Trauma, Poisoning, Seizures)",
+        "call_id": "CAL0158a08f881a40c592c795ca67df298b"
+      },
+      "CAL017e403dd5c64398ac43ffe88d4b3cf5": {
+        "reasoning": "Caller scheduled annual exams and vaccines for two cats; routine preventive care.",
+        "answer": "Preventive Care",
+        "call_id": "CAL017e403dd5c64398ac43ffe88d4b3cf5"
+      },
+      "CAL018db6069ff2459da919dd5241e6615a": {
+        "reasoning": "Caller reports severe itching and allergic reaction, asks about an allergy injection; primary issue is allergies causing skin trauma.",
+        "answer": "Dermatology \u2013 Allergies",
+        "call_id": "CAL018db6069ff2459da919dd5241e6615a"
+      },
+      "CAL018df2fa33fb456f8959e4287cbf5bb7": {
+        "reasoning": "Caller needs rabies shot before travel and books appointment specifically for vaccination.",
+        "answer": "Preventive Care \u2013 Vaccinations",
+        "call_id": "CAL018df2fa33fb456f8959e4287cbf5bb7"
+      },
+      "CAL018e04d97ba74747b033b3120bd39163": {
+        "reasoning": "Caller schedules annual shots (\u201cyearly\u201d vaccines) and inquires about flea/tick, but main purpose is vaccinations.",
+        "answer": "Preventive Care \u2013 Vaccinations",
+        "call_id": "CAL018e04d97ba74747b033b3120bd39163"
+      },
+      "CAL019837cf0ff37f4d8d1af062be24cbab": {
+        "reasoning": "Dog is acutely limping and not weight-bearing on a hind leg; appointment made for evaluation of illness/injury.",
+        "answer": "Urgent Care / Sick Pet",
+        "call_id": "CAL019837cf0ff37f4d8d1af062be24cbab"
+      },
+      "CAL019837cf1fe87f139b863a24117182bb": {
+        "reasoning": "Owner requests earlier date for surgery to remove a bleeding lesion/lump; this is a soft tissue surgical procedure.",
+        "answer": "Surgical Services \u2013 Soft Tissue Surgeries (Lump Removals, Bladder Stone Removal, Wound Repair)",
+        "call_id": "CAL019837cf1fe87f139b863a24117182bb"
+      },
+      "CAL019837e8fdaf7d31b9a87d56d518b19a": {
+        "reasoning": "Primary purpose was to get the kitten neutered (\u201chave him fixed\u201d); vaccines/exam were discussed as prerequisites before scheduling surgery.",
+        "answer": "Surgical Services \u2013 Spays and Neuters",
+        "call_id": "CAL019837e8fdaf7d31b9a87d56d518b19a"
+      },
+      "CAL019837f52c29747e9a736faff8ee96a0": {
+        "reasoning": "They canceled a visit that had been scheduled for sneezing; underlying appointment was for illness evaluation/treatment.",
+        "answer": "Urgent Care \u2013 Diagnosis and Treatment of Illnesses (Vomiting, Diabetes, Infections)",
+        "call_id": "CAL019837f52c29747e9a736faff8ee96a0"
+      },
+      "CAL019837fa1ec07a778412598cf2c6c69b": {
+        "reasoning": "Caller booked a general checkup/quality-of-life consultation for an older cat without acute issues\u2014routine wellness exam.",
+        "answer": "Preventive Care \u2013 Annual Exams",
+        "call_id": "CAL019837fa1ec07a778412598cf2c6c69b"
+      },
+      "CAL01983804e7477d2ab9762cb70d48f2e3": {
+        "reasoning": "Call focused on timing and scheduling of rabies and other kitten vaccines.",
+        "answer": "Preventive Care \u2013 Vaccinations",
+        "call_id": "CAL01983804e7477d2ab9762cb70d48f2e3"
+      },
+      "CAL01983809118e7b7ab76583beb15baec6": {
+        "reasoning": "Caller requested an annual checkup and likely vaccines; minor skin spot to check is secondary.",
+        "answer": "Preventive Care \u2013 Annual Exams",
+        "call_id": "CAL01983809118e7b7ab76583beb15baec6"
+      },
+      "CAL01983809fd0870bfb1a41e0cc0148c1a": {
+        "reasoning": "Caller requested medical records transfer between clinics; no specific medical service being scheduled or discussed beyond admin task.",
+        "answer": "Other",
+        "call_id": "CAL01983809fd0870bfb1a41e0cc0148c1a"
+      },
+      "CAL0198380d24b573858f1ebc1d3174cf7c": {
+        "reasoning": "Appointment requested specifically for dog\u2019s ears to be checked, indicating an ear issue likely infection.",
+        "answer": "Dermatology \u2013 Ear Infections",
+        "call_id": "CAL0198380d24b573858f1ebc1d3174cf7c"
+      },
+      "CAL0198380e825f714ba6f533c90cee0983": {
+        "reasoning": "Caller inquired about results of a fecal test and requested email proof; this is lab testing.",
+        "answer": "Diagnostic Services \u2013 In-House or Reference Lab Testing (Blood, Urine, Fecal, Cytology)",
+        "call_id": "CAL0198380e825f714ba6f533c90cee0983"
+      },
+      "CAL01983815a4767f56a58f01c1c70c0a18": {
+        "reasoning": "Caller asked to fax an existing prescription to a human pharmacy; this is a medication refill/processing request.",
+        "answer": "Retail \u2013 Prescriptions",
+        "call_id": "CAL01983815a4767f56a58f01c1c70c0a18"
+      },
+      "CAL01983817fcfd7454a63d6cdf8169a5aa": {
+        "reasoning": "Caller asked pricing for a checkup for a sick kitten without specific symptoms; euthanasia discussed only as a possibility.",
+        "answer": "Urgent Care / Sick Pet",
+        "call_id": "CAL01983817fcfd7454a63d6cdf8169a5aa"
+      },
+      "CAL0198381fff847e6d97bd58d60abcb00e": {
+        "reasoning": "Caller requested booking for Buddy's annual shots; appointment set for annual exam and vaccines. Primary motive was vaccinations.",
+        "answer": "Preventive Care \u2013 Vaccinations",
+        "call_id": "CAL0198381fff847e6d97bd58d60abcb00e"
+      },
+      "CAL01983822ac26708db3b026da626a071c": {
+        "reasoning": "Caller only asked if the clinic is holistic; no pet care service scheduled or discussed.",
+        "answer": "Other",
+        "call_id": "CAL01983822ac26708db3b026da626a071c"
+      },
+      "CAL019838234a5573079b0722f822b613f7": {
+        "reasoning": "Caller inquired about and arranged pickup of diabetic pet food from the clinic.",
+        "answer": "Retail \u2013 Food Orders",
+        "call_id": "CAL019838234a5573079b0722f822b613f7"
+      },
+      "CAL01983823e3fd7e76a7ec906121a17dee": {
+        "reasoning": "Voicemail requesting a flat of urinary wet food to be set aside for pickup.",
+        "answer": "Retail \u2013 Food Orders",
+        "call_id": "CAL01983823e3fd7e76a7ec906121a17dee"
+      },
+      "CAL019838277cc37e93b4c1a543fa522122": {
+        "reasoning": "Cat has been coughing for several days; caller sought guidance and scheduled an exam for illness evaluation.",
+        "answer": "Urgent Care \u2013 Diagnosis and Treatment of Illnesses (Vomiting, Diabetes, Infections)",
+        "call_id": "CAL019838277cc37e93b4c1a543fa522122"
+      },
+      "CAL01983828e7347b6281fe9fa52524f73e": {
+        "reasoning": "Caller requested a rabies vaccination certificate for grooming proof; underlying service is vaccination documentation.",
+        "answer": "Preventive Care \u2013 Vaccinations",
+        "call_id": "CAL01983828e7347b6281fe9fa52524f73e"
+      },
+      "CAL0198382a648d7ea09d62d10d36e470d7": {
+        "reasoning": "Caller inquired whether the clinic performs tail docking on puppies, which is a surgical procedure.",
+        "answer": "Surgical Services",
+        "call_id": "CAL0198382a648d7ea09d62d10d36e470d7"
+      },
+      "CAL01983837207c78339c0dc0ac40dc2540": {
+        "reasoning": "Caller rescheduled a general checkup appointment for their pet, indicating a routine wellness exam.",
+        "answer": "Preventive Care \u2013 Annual Exams",
+        "call_id": "CAL01983837207c78339c0dc0ac40dc2540"
+      },
+      "CAL0198383ba24b764186763c2357974ba3": {
+        "reasoning": "Caller asked about pricing and options for euthanizing their elderly dog at the clinic.",
+        "answer": "End of Life Care \u2013 In-Clinic Euthanasia",
+        "call_id": "CAL0198383ba24b764186763c2357974ba3"
+      },
+      "CAL0198383bf2cd7adaa841d36177d17bbc": {
+        "reasoning": "Caller requested email of price estimate for spaying their dog.",
+        "answer": "Surgical Services \u2013 Spays and Neuters",
+        "call_id": "CAL0198383bf2cd7adaa841d36177d17bbc"
+      },
+      "CAL019838424bff7fa7890d74af370fc6f0": {
+        "reasoning": "Caller discussed timing and need for Bravecto and Interceptor and year-round protection; no new illness or order placed, focused on parasite prevention planning.",
+        "answer": "Preventive Care \u2013 Parasite Prevention",
+        "call_id": "CAL019838424bff7fa7890d74af370fc6f0"
+      },
+      "CAL01983845f24c74ca8e084a529e08b4d8": {
+        "reasoning": "Caller sought appointment for a suspected ear infection in dog.",
+        "answer": "Dermatology \u2013 Ear Infections",
+        "call_id": "CAL01983845f24c74ca8e084a529e08b4d8"
+      },
+      "CAL019838482da37a9f9344c2d92538c61f": {
+        "reasoning": "Caller scheduled a yearly checkup with associated vaccines and fecal sample; primary purpose is the annual exam.",
+        "answer": "Preventive Care \u2013 Annual Exams",
+        "call_id": "CAL019838482da37a9f9344c2d92538c61f"
+      },
+      "CAL0198384b51907551aab56685e09cde9c": {
+        "reasoning": "Status check call without details on the underlying service; no clear category fits.",
+        "answer": "Other",
+        "call_id": "CAL0198384b51907551aab56685e09cde9c"
+      },
+      "CAL019838502ce87cbdbc990b0ade416e7a": {
+        "reasoning": "Caller requested DOB info for insurance; administrative, not a medical service.",
+        "answer": "Other",
+        "call_id": "CAL019838502ce87cbdbc990b0ade416e7a"
+      },
+      "CAL0198385255f8738ca83ae22e29e15dcc": {
+        "reasoning": "Caller requested recommendations for a boarding facility for cats; no veterinary medical service requested or provided.",
+        "answer": "Other",
+        "call_id": "CAL0198385255f8738ca83ae22e29e15dcc"
+      },
+      "CAL0198385b6e3772fc89e3f22f41af0b46": {
+        "reasoning": "Primary concern is a dog\u2019s persistent rash spreading toward the eye; this is a skin issue needing veterinary evaluation.",
+        "answer": "Dermatology",
+        "call_id": "CAL0198385b6e3772fc89e3f22f41af0b46"
+      },
+      "CAL01983864fd50700396fe8fb50860c0ae": {
+        "reasoning": "Caller asked if the clinic sees bearded dragons; no veterinary service arranged or specific medical concern addressed.",
+        "answer": "Other",
+        "call_id": "CAL01983864fd50700396fe8fb50860c0ae"
+      },
+      "CAL01983872f881791f9d0eae5c58b35de9": {
+        "reasoning": "Caller is requesting gabapentin to pick up before a spay; the call centers on obtaining a prescription medication.",
+        "answer": "Retail \u2013 Prescriptions",
+        "call_id": "CAL01983872f881791f9d0eae5c58b35de9"
+      },
+      "CAL0198387534b27b21af285cf499eac523": {
+        "reasoning": "Call is solely to reschedule an appointment with no details on the underlying service.",
+        "answer": "Other",
+        "call_id": "CAL0198387534b27b21af285cf499eac523"
+      },
+      "CAL019838760fe97e58898d00136787ed15": {
+        "reasoning": "Caller requested a refill/order of Simparica tick prevention for their dog; this is an existing prescription medication order.",
+        "answer": "Retail \u2013 Prescriptions",
+        "call_id": "CAL019838760fe97e58898d00136787ed15"
+      },
+      "CAL0198387a31297659b98d57bb828b2c1d": {
+        "reasoning": "Caller asked if the clinic performs X-rays for their dog; primary purpose was confirming imaging availability.",
+        "answer": "Diagnostic Services \u2013 X-Rays (Digital Radiography)",
+        "call_id": "CAL0198387a31297659b98d57bb828b2c1d"
+      },
+      "CAL0198387ec66d739fb6850962fd609815": {
+        "reasoning": "Caller requested a refill/order of amitriptyline liquid for their cat, specifying flavor and bottle size; this is a prescription refill.",
+        "answer": "Retail \u2013 Prescriptions",
+        "call_id": "CAL0198387ec66d739fb6850962fd609815"
+      },
+      "CAL01983885684f7cfeaf588dcf1f8a9e28": {
+        "reasoning": "Caller asked for cost estimate for upcoming appointments identified as annuals for two pets; primary service is yearly checkups.",
+        "answer": "Preventive Care \u2013 Annual Exams",
+        "call_id": "CAL01983885684f7cfeaf588dcf1f8a9e28"
+      },
+      "CAL019838906bb373e3b8900dfb87d1f627": {
+        "reasoning": "Caller discussed returning/exchanging prescription diet food and options for canned food; main topic is pet food purchase/return.",
+        "answer": "Retail \u2013 Food Orders",
+        "call_id": "CAL019838906bb373e3b8900dfb87d1f627"
+      }
+    },
+    "reason_not_booked": {
+      "CAL000498baa67742cb9a4fed89664cd014": {
+        "reasoning": "Caller reported acute coughing/gagging and was told the clinic is pretty booked; agent would check with the vet to see if they could squeeze in and might refer to Smart Vet. No appointment was secured during the call due to full schedule.",
+        "answer": "2b. Scheduling Issue - Full schedule",
+        "call_id": "CAL000498baa67742cb9a4fed89664cd014"
+      },
+      "CAL00057325c1924ef5be1874417c20b262": {
+        "call_id": "CAL00057325c1924ef5be1874417c20b262",
+        "reasoning": "appointment_booked=Yes, skipping",
+        "answer": null
+      },
+      "CAL0005db904b5746e18d9c5a855f8ff8fd": {
+        "reasoning": "Toxic ingestion concern; clinic provided triage and directed the caller to an emergency clinic (Kawartha) for appropriate urgent assessment. No appointment was made because urgent/emergency care is referred out.",
+        "answer": "6. Emergency care not offered",
+        "call_id": "CAL0005db904b5746e18d9c5a855f8ff8fd"
+      },
+      "CAL000982de28904f1aa7f072d197347693": {
+        "reasoning": "Caller was shopping for prices, requested exam and lab fee estimates, received quotes, and said they would call back. Pricing discussed and no booking made.",
+        "answer": "1a. Caller Procrastination - Price Objection / Shopping / Request for Quote",
+        "call_id": "CAL000982de28904f1aa7f072d197347693"
+      },
+      "CAL0009ad7aca3748009c5fb31f51eee5ad": {
+        "call_id": "CAL0009ad7aca3748009c5fb31f51eee5ad",
+        "reasoning": "appointment_booked=Yes, skipping",
+        "answer": null
+      },
+      "CAL000aeb5cceb842ff9ab94f9dc115873d": {
+        "reasoning": "Caller sought a same-day cancellation; clinic said they were fully booked and provided Smart Vet number. No same-day availability.",
+        "answer": "2a. Scheduling Issue - Walk ins not available / no same day appt",
+        "call_id": "CAL000aeb5cceb842ff9ab94f9dc115873d"
+      },
+      "CAL000e51384a1945a28c7af94f3657b772": {
+        "call_id": "CAL000e51384a1945a28c7af94f3657b772",
+        "reasoning": "appointment_booked=Yes, skipping",
+        "answer": null
+      },
+      "CAL001052c35ec84a74857f15ba89aa2183": {
+        "call_id": "CAL001052c35ec84a74857f15ba89aa2183",
+        "reasoning": "appointment_booked=Yes, skipping",
+        "answer": null
+      },
+      "CAL0011b20af94b4c4289cf6a51af871369": {
+        "call_id": "CAL0011b20af94b4c4289cf6a51af871369",
+        "reasoning": "appointment_booked=Yes, skipping",
+        "answer": null
+      },
+      "CAL001aad9b8a0947ed8ac0353348259263": {
+        "call_id": "CAL001aad9b8a0947ed8ac0353348259263",
+        "reasoning": "appointment_booked=Yes, skipping",
+        "answer": null
+      },
+      "CAL001b27da05104332895e8f037e981343": {
+        "call_id": "CAL001b27da05104332895e8f037e981343",
+        "reasoning": "appointment_booked=Yes, skipping",
+        "answer": null
+      },
+      "CAL0024c5183d6641a7bab31a88e46fbc69": {
+        "call_id": "CAL0024c5183d6641a7bab31a88e46fbc69",
+        "reasoning": "appointment_booked=Yes, skipping",
+        "answer": null
+      },
+      "CAL003334dc9cce46eeb1d9ddc73be4e633": {
+        "call_id": "CAL003334dc9cce46eeb1d9ddc73be4e633",
+        "reasoning": "appointment_booked=Yes, skipping",
+        "answer": null
+      },
+      "CAL0038d600a47946ebb1c82834efd14ec2": {
+        "reasoning": "Caller wanted a checkup for a found cat; clinic could only offer chip scan without appointment and stated earliest appointment was June 12. No appointment booked due to full schedule.",
+        "answer": "2b. Scheduling Issue - Full schedule",
+        "call_id": "CAL0038d600a47946ebb1c82834efd14ec2"
+      },
+      "CAL003947c6d73e405a8ff5214e6719fcbd": {
+        "call_id": "CAL003947c6d73e405a8ff5214e6719fcbd",
+        "reasoning": "appointment_booked=Yes, skipping",
+        "answer": null
+      },
+      "CAL0039a82c50d340abaf5823d06785a4a0": {
+        "call_id": "CAL0039a82c50d340abaf5823d06785a4a0",
+        "reasoning": "appointment_booked=Inconclusive, skipping",
+        "answer": null
+      },
+      "CAL003a2122cd8542c481baf4ddc8e40d80": {
+        "call_id": "CAL003a2122cd8542c481baf4ddc8e40d80",
+        "reasoning": "appointment_booked=Yes, skipping",
+        "answer": null
+      },
+      "CAL00415f59577343e1aaad08431561d554": {
+        "call_id": "CAL00415f59577343e1aaad08431561d554",
+        "reasoning": "appointment_booked=Yes, skipping",
+        "answer": null
+      },
+      "CAL00427bb94384468b8457c5b48be0dffa": {
+        "call_id": "CAL00427bb94384468b8457c5b48be0dffa",
+        "reasoning": "appointment_booked=Yes, skipping",
+        "answer": null
+      },
+      "CAL00584c7b588f4128be84a13ff49dbe96": {
+        "reasoning": "Caller wanted a spay sooner than the clinic\u2019s earliest (June 17) and declined to book; pricing for exam, spay, microchip, and in-heat fee was discussed. Per rule, any price discussion with no booking = price objection category.",
+        "answer": "1a. Caller Procrastination - Price Objection / Shopping / Request for Quote",
+        "call_id": "CAL00584c7b588f4128be84a13ff49dbe96"
+      },
+      "CAL0059cd46261848899dadd858b1297a7a": {
+        "reasoning": "Caller requested process and estimate for spay; prices were provided and they said they\u2019d call later without booking.",
+        "answer": "1a. Caller Procrastination - Price Objection / Shopping / Request for Quote",
+        "call_id": "CAL0059cd46261848899dadd858b1297a7a"
+      },
+      "CAL005e941190aa4eeeb16b5520f59e8526": {
+        "reasoning": "Scheduling conflict with available times; caller also asked for price and did not book. Price was discussed, so classify as price objection per rule.",
+        "answer": "1a. Caller Procrastination - Price Objection / Shopping / Request for Quote",
+        "call_id": "CAL005e941190aa4eeeb16b5520f59e8526"
+      },
+      "CAL00644c70bf09449a835487c3ddc673b2": {
+        "call_id": "CAL00644c70bf09449a835487c3ddc673b2",
+        "reasoning": "appointment_booked=Yes, skipping",
+        "answer": null
+      },
+      "CAL00653e0d49dc40199c3e555625cb2117": {
+        "call_id": "CAL00653e0d49dc40199c3e555625cb2117",
+        "reasoning": "appointment_booked=Yes, skipping",
+        "answer": null
+      },
+      "CAL0068dc66d062488fa1f4879724451050": {
+        "call_id": "CAL0068dc66d062488fa1f4879724451050",
+        "reasoning": "appointment_booked=Yes, skipping",
+        "answer": null
+      },
+      "CAL006c0c3985f84e298f13d3d696ce8650": {
+        "call_id": "CAL006c0c3985f84e298f13d3d696ce8650",
+        "reasoning": "appointment_booked=Yes, skipping",
+        "answer": null
+      },
+      "CAL00747d7c7e454434a6fbb219ddef83b0": {
+        "call_id": "CAL00747d7c7e454434a6fbb219ddef83b0",
+        "reasoning": "appointment_booked=Yes, skipping",
+        "answer": null
+      },
+      "CAL007df41abd3e463298f55c7d7d733d9a": {
+        "call_id": "CAL007df41abd3e463298f55c7d7d733d9a",
+        "reasoning": "appointment_booked=Yes, skipping",
+        "answer": null
+      },
+      "CAL00803d059d424bb296f8f9916a7115fd": {
+        "call_id": "CAL00803d059d424bb296f8f9916a7115fd",
+        "reasoning": "appointment_booked=Yes, skipping",
+        "answer": null
+      },
+      "CAL00817a0b30d241d39d3953af8bdffd0e": {
+        "call_id": "CAL00817a0b30d241d39d3953af8bdffd0e",
+        "reasoning": "appointment_booked=Yes, skipping",
+        "answer": null
+      },
+      "CAL0081cff67cb34ae0b30d1dc0b426d15c": {
+        "reasoning": "Caller wanted an appointment before traveling next week; clinic\u2019s earliest availability was May, so no timely slots available and no price discussion.",
+        "answer": "2b. Scheduling Issue - Full schedule",
+        "call_id": "CAL0081cff67cb34ae0b30d1dc0b426d15c"
+      },
+      "CAL0083311f69934f448c9bbac4cb31ed5e": {
+        "reasoning": "Caller was clarifying total costs for rabbit euthanasia; pricing and exam fee discussed, but no appointment booked.",
+        "answer": "1a. Caller Procrastination - Price Objection / Shopping / Request for Quote",
+        "call_id": "CAL0083311f69934f448c9bbac4cb31ed5e"
+      },
+      "CAL00848f2fc8ea47239cff6c6c1177f95a": {
+        "call_id": "CAL00848f2fc8ea47239cff6c6c1177f95a",
+        "reasoning": "appointment_booked=Yes, skipping",
+        "answer": null
+      },
+      "CAL0084da0fae0c4da6a7bfdabc646c5ba9": {
+        "reasoning": "Caller was comparing consultation and medication prices, confirmed costs, and said they would compare and call back; no appointment booked.",
+        "answer": "1a. Caller Procrastination - Price Objection / Shopping / Request for Quote",
+        "call_id": "CAL0084da0fae0c4da6a7bfdabc646c5ba9"
+      },
+      "CAL008550503109471bb301dbdb52ea8453": {
+        "call_id": "CAL008550503109471bb301dbdb52ea8453",
+        "reasoning": "appointment_booked=Yes, skipping",
+        "answer": null
+      },
+      "CAL008a74d19188416cbd3be39780335bbb": {
+        "call_id": "CAL008a74d19188416cbd3be39780335bbb",
+        "reasoning": "appointment_booked=Inconclusive, skipping",
+        "answer": null
+      },
+      "CAL008db269e7294a62a394fecdbe852724": {
+        "call_id": "CAL008db269e7294a62a394fecdbe852724",
+        "reasoning": "appointment_booked=Yes, skipping",
+        "answer": null
+      },
+      "CAL008f2a090e7f4d42a4488a553045d64f": {
+        "call_id": "CAL008f2a090e7f4d42a4488a553045d64f",
+        "reasoning": "appointment_booked=Yes, skipping",
+        "answer": null
+      },
+      "CAL00929b7f48514a6b85c94fad4b997d9f": {
+        "reasoning": "Clinic stated they are pretty booked up and would call back after checking the schedule; no appointment time secured.",
+        "answer": "2b. Scheduling Issue - Full schedule",
+        "call_id": "CAL00929b7f48514a6b85c94fad4b997d9f"
+      },
+      "CAL009fecf1e3dc43fcb124f083b4886d34": {
+        "reasoning": "Caller canceled an existing appointment and planned to call later to reschedule; this was an appointment management call, not a new booking.",
+        "answer": "9. Client/appt query (non-medical)",
+        "call_id": "CAL009fecf1e3dc43fcb124f083b4886d34"
+      },
+      "CAL00a0052f044140e2ab2535a85367c137": {
+        "call_id": "CAL00a0052f044140e2ab2535a85367c137",
+        "reasoning": "appointment_booked=Inconclusive, skipping",
+        "answer": null
+      },
+      "CAL00a33094c71445c3896aac927ab0c6b9": {
+        "reasoning": "Caller asked for X-ray pricing, compared to a cheaper clinic, stated it seemed expensive, and did not book.",
+        "answer": "1a. Caller Procrastination - Price Objection / Shopping / Request for Quote",
+        "call_id": "CAL00a33094c71445c3896aac927ab0c6b9"
+      },
+      "CAL00b175c88b6d4b20a8f2ecb4d226d689": {
+        "call_id": "CAL00b175c88b6d4b20a8f2ecb4d226d689",
+        "reasoning": "appointment_booked=Yes, skipping",
+        "answer": null
+      },
+      "CAL00bf0e33a835402c8e1ab317b17d16ce": {
+        "call_id": "CAL00bf0e33a835402c8e1ab317b17d16ce",
+        "reasoning": "appointment_booked=Yes, skipping",
+        "answer": null
+      },
+      "CAL00c4d944580b454fa32ba23e0a439d9f": {
+        "reasoning": "Caller requested euthanasia pricing, received an estimate, and said they would call when ready; no appointment booked.",
+        "answer": "1a. Caller Procrastination - Price Objection / Shopping / Request for Quote",
+        "call_id": "CAL00c4d944580b454fa32ba23e0a439d9f"
+      },
+      "CAL00cc318557b84211830f8f9165abff38": {
+        "call_id": "CAL00cc318557b84211830f8f9165abff38",
+        "reasoning": "appointment_booked=Yes, skipping",
+        "answer": null
+      },
+      "CAL00d3bb91c37c494dae58d1f03970cf7c": {
+        "call_id": "CAL00d3bb91c37c494dae58d1f03970cf7c",
+        "reasoning": "appointment_booked=Yes, skipping",
+        "answer": null
+      },
+      "CAL00ddc5b018204683a8005f80fb0cb08d": {
+        "reasoning": "Caller canceled existing appointment and asked for something this week; agent said they were pretty booked with no availability, so caller deferred to fall and did not rebook.",
+        "answer": "2b. Scheduling Issue - Full schedule",
+        "call_id": "CAL00ddc5b018204683a8005f80fb0cb08d"
+      },
+      "CAL00e3726d100f45e8913c8f8dfb2fd4ce": {
+        "reasoning": "Agent quoted the exam fee; caller chose not to book at this time. Price was discussed and no appointment booked.",
+        "answer": "1a. Caller Procrastination - Price Objection / Shopping / Request for Quote",
+        "call_id": "CAL00e3726d100f45e8913c8f8dfb2fd4ce"
+      },
+      "CAL011c013103cb49bc84379c12992b27a6": {
+        "call_id": "CAL011c013103cb49bc84379c12992b27a6",
+        "reasoning": "appointment_booked=Inconclusive, skipping",
+        "answer": null
+      },
+      "CAL011ebf53493445e7896fed44ce7c81f6": {
+        "call_id": "CAL011ebf53493445e7896fed44ce7c81f6",
+        "reasoning": "appointment_booked=Yes, skipping",
+        "answer": null
+      },
+      "CAL0123fdba3d2942b0af41e1ee7d7d3bac": {
+        "call_id": "CAL0123fdba3d2942b0af41e1ee7d7d3bac",
+        "reasoning": "appointment_booked=Yes, skipping",
+        "answer": null
+      },
+      "CAL012c4a0f78834f90b4d5b3a24657a2d8": {
+        "call_id": "CAL012c4a0f78834f90b4d5b3a24657a2d8",
+        "reasoning": "appointment_booked=Yes, skipping",
+        "answer": null
+      },
+      "CAL01307cbeca1945d3a9201018704f109a": {
+        "reasoning": "Agent\u2019s system/internet issue prevented booking and they said they would call back; no appointment was made due to a scheduling/technical barrier.",
+        "answer": "2. Scheduling Issue",
+        "call_id": "CAL01307cbeca1945d3a9201018704f109a"
+      },
+      "CAL013ccba9eedc4e67a1005d99fc3fa4bb": {
+        "call_id": "CAL013ccba9eedc4e67a1005d99fc3fa4bb",
+        "reasoning": "appointment_booked=Yes, skipping",
+        "answer": null
+      },
+      "CAL014854d99d7940c1910271fee0349169": {
+        "call_id": "CAL014854d99d7940c1910271fee0349169",
+        "reasoning": "appointment_booked=Yes, skipping",
+        "answer": null
+      },
+      "CAL014b1b4985f340e8ba39b659373275b2": {
+        "reasoning": "Caller asked about timing, prices, and availability for wellness/vaccines; costs were discussed and the caller ended the call without booking.",
+        "answer": "1a. Caller Procrastination - Price Objection / Shopping / Request for Quote",
+        "call_id": "CAL014b1b4985f340e8ba39b659373275b2"
+      },
+      "CAL01568eebe6a143918c7fc238f5562f6b": {
+        "call_id": "CAL01568eebe6a143918c7fc238f5562f6b",
+        "reasoning": "appointment_booked=Yes, skipping",
+        "answer": null
+      },
+      "CAL0158a08f881a40c592c795ca67df298b": {
+        "call_id": "CAL0158a08f881a40c592c795ca67df298b",
+        "reasoning": "appointment_booked=Yes, skipping",
+        "answer": null
+      },
+      "CAL017e403dd5c64398ac43ffe88d4b3cf5": {
+        "call_id": "CAL017e403dd5c64398ac43ffe88d4b3cf5",
+        "reasoning": "appointment_booked=Yes, skipping",
+        "answer": null
+      },
+      "CAL018db6069ff2459da919dd5241e6615a": {
+        "reasoning": "Caller asked for allergy injection price; upon hearing $125, said it was too expensive and declined to proceed.",
+        "answer": "1a. Caller Procrastination - Price Objection / Shopping / Request for Quote",
+        "call_id": "CAL018db6069ff2459da919dd5241e6615a"
+      },
+      "CAL018df2fa33fb456f8959e4287cbf5bb7": {
+        "call_id": "CAL018df2fa33fb456f8959e4287cbf5bb7",
+        "reasoning": "appointment_booked=Yes, skipping",
+        "answer": null
+      },
+      "CAL018e04d97ba74747b033b3120bd39163": {
+        "call_id": "CAL018e04d97ba74747b033b3120bd39163",
+        "reasoning": "appointment_booked=Yes, skipping",
+        "answer": null
+      },
+      "CAL019837cf0ff37f4d8d1af062be24cbab": {
+        "call_id": "CAL019837cf0ff37f4d8d1af062be24cbab",
+        "reasoning": "appointment_booked=Yes, skipping",
+        "answer": null
+      },
+      "CAL019837cf1fe87f139b863a24117182bb": {
+        "reasoning": "Caller tried to move an already scheduled surgery to an earlier date. Agent only had August 18 (limited availability) and said they\u2019d call back. No reschedule booked due to schedule constraints.",
+        "answer": "2b. Scheduling Issue - Full schedule",
+        "call_id": "CAL019837cf1fe87f139b863a24117182bb"
+      },
+      "CAL019837e8fdaf7d31b9a87d56d518b19a": {
+        "call_id": "CAL019837e8fdaf7d31b9a87d56d518b19a",
+        "reasoning": "appointment_booked=Yes, skipping",
+        "answer": null
+      },
+      "CAL019837f52c29747e9a736faff8ee96a0": {
+        "reasoning": "Caller phoned to cancel an existing appointment; no new appointment requested or booked.",
+        "answer": "9. Client/appt query (non-medical)",
+        "call_id": "CAL019837f52c29747e9a736faff8ee96a0"
+      },
+      "CAL019837fa1ec07a778412598cf2c6c69b": {
+        "call_id": "CAL019837fa1ec07a778412598cf2c6c69b",
+        "reasoning": "appointment_booked=Yes, skipping",
+        "answer": null
+      },
+      "CAL01983804e7477d2ab9762cb70d48f2e3": {
+        "reasoning": "Caller asked if a separate appointment was needed for a vaccine; they already had an upcoming booster appointment and opted to do it then. No new booking needed.",
+        "answer": "9. Client/appt query (non-medical)",
+        "call_id": "CAL01983804e7477d2ab9762cb70d48f2e3"
+      },
+      "CAL01983809118e7b7ab76583beb15baec6": {
+        "call_id": "CAL01983809118e7b7ab76583beb15baec6",
+        "reasoning": "appointment_booked=Yes, skipping",
+        "answer": null
+      },
+      "CAL01983809fd0870bfb1a41e0cc0148c1a": {
+        "call_id": "CAL01983809fd0870bfb1a41e0cc0148c1a",
+        "reasoning": "appointment_booked=Inconclusive, skipping",
+        "answer": null
+      },
+      "CAL0198380d24b573858f1ebc1d3174cf7c": {
+        "call_id": "CAL0198380d24b573858f1ebc1d3174cf7c",
+        "reasoning": "appointment_booked=Yes, skipping",
+        "answer": null
+      },
+      "CAL0198380e825f714ba6f533c90cee0983": {
+        "call_id": "CAL0198380e825f714ba6f533c90cee0983",
+        "reasoning": "appointment_booked=Inconclusive, skipping",
+        "answer": null
+      },
+      "CAL01983815a4767f56a58f01c1c70c0a18": {
+        "call_id": "CAL01983815a4767f56a58f01c1c70c0a18",
+        "reasoning": "appointment_booked=Inconclusive, skipping",
+        "answer": null
+      },
+      "CAL01983817fcfd7454a63d6cdf8169a5aa": {
+        "reasoning": "Caller requested prices for a sick check and potential euthanasia, then said they would check with their sister and possibly call back. Pricing was discussed and no appointment booked.",
+        "answer": "1a. Caller Procrastination - Price Objection / Shopping / Request for Quote",
+        "call_id": "CAL01983817fcfd7454a63d6cdf8169a5aa"
+      },
+      "CAL0198381fff847e6d97bd58d60abcb00e": {
+        "call_id": "CAL0198381fff847e6d97bd58d60abcb00e",
+        "reasoning": "appointment_booked=Yes, skipping",
+        "answer": null
+      },
+      "CAL01983822ac26708db3b026da626a071c": {
+        "call_id": "CAL01983822ac26708db3b026da626a071c",
+        "reasoning": "appointment_booked=Inconclusive, skipping",
+        "answer": null
+      },
+      "CAL019838234a5573079b0722f822b613f7": {
+        "call_id": "CAL019838234a5573079b0722f822b613f7",
+        "reasoning": "appointment_booked=Inconclusive, skipping",
+        "answer": null
+      },
+      "CAL01983823e3fd7e76a7ec906121a17dee": {
+        "call_id": "CAL01983823e3fd7e76a7ec906121a17dee",
+        "reasoning": "appointment_booked=Inconclusive, skipping",
+        "answer": null
+      },
+      "CAL019838277cc37e93b4c1a543fa522122": {
+        "call_id": "CAL019838277cc37e93b4c1a543fa522122",
+        "reasoning": "appointment_booked=Yes, skipping",
+        "answer": null
+      },
+      "CAL01983828e7347b6281fe9fa52524f73e": {
+        "call_id": "CAL01983828e7347b6281fe9fa52524f73e",
+        "reasoning": "appointment_booked=Inconclusive, skipping",
+        "answer": null
+      },
+      "CAL0198382a648d7ea09d62d10d36e470d7": {
+        "call_id": "CAL0198382a648d7ea09d62d10d36e470d7",
+        "reasoning": "appointment_booked=Inconclusive, skipping",
+        "answer": null
+      },
+      "CAL01983837207c78339c0dc0ac40dc2540": {
+        "call_id": "CAL01983837207c78339c0dc0ac40dc2540",
+        "reasoning": "appointment_booked=Yes, skipping",
+        "answer": null
+      },
+      "CAL0198383ba24b764186763c2357974ba3": {
+        "reasoning": "Caller inquired about euthanasia pricing and outdoor option; clinic does not offer outdoor service, provided in-clinic price. Caller did not book. Pricing was discussed.",
+        "answer": "1a. Caller Procrastination - Price Objection / Shopping / Request for Quote",
+        "call_id": "CAL0198383ba24b764186763c2357974ba3"
+      },
+      "CAL0198383bf2cd7adaa841d36177d17bbc": {
+        "call_id": "CAL0198383bf2cd7adaa841d36177d17bbc",
+        "reasoning": "appointment_booked=Inconclusive, skipping",
+        "answer": null
+      },
+      "CAL019838424bff7fa7890d74af370fc6f0": {
+        "call_id": "CAL019838424bff7fa7890d74af370fc6f0",
+        "reasoning": "appointment_booked=Inconclusive, skipping",
+        "answer": null
+      },
+      "CAL01983845f24c74ca8e084a529e08b4d8": {
+        "reasoning": "Caller sought an appointment for a suspected ear infection. Agent stated no availability today/tomorrow and the next available was Aug 6, which the caller could not attend due to vacation. Only a waitlist was offered.",
+        "answer": "2b. Scheduling Issue - Full schedule",
+        "call_id": "CAL01983845f24c74ca8e084a529e08b4d8"
+      },
+      "CAL019838482da37a9f9344c2d92538c61f": {
+        "call_id": "CAL019838482da37a9f9344c2d92538c61f",
+        "reasoning": "appointment_booked=Yes, skipping",
+        "answer": null
+      },
+      "CAL0198384b51907551aab56685e09cde9c": {
+        "call_id": "CAL0198384b51907551aab56685e09cde9c",
+        "reasoning": "appointment_booked=Inconclusive, skipping",
+        "answer": null
+      },
+      "CAL019838502ce87cbdbc990b0ade416e7a": {
+        "call_id": "CAL019838502ce87cbdbc990b0ade416e7a",
+        "reasoning": "appointment_booked=Inconclusive, skipping",
+        "answer": null
+      },
+      "CAL0198385255f8738ca83ae22e29e15dcc": {
+        "reasoning": "Caller requested 10 days of cat boarding; clinic does not provide boarding and only gave a recommendation.",
+        "answer": "3. Service/treatment not offered",
+        "call_id": "CAL0198385255f8738ca83ae22e29e15dcc"
+      },
+      "CAL0198385b6e3772fc89e3f22f41af0b46": {
+        "call_id": "CAL0198385b6e3772fc89e3f22f41af0b46",
+        "reasoning": "appointment_booked=Yes, skipping",
+        "answer": null
+      },
+      "CAL01983864fd50700396fe8fb50860c0ae": {
+        "reasoning": "Caller asked if the clinic sees a bearded dragon; agent said they do not treat exotics/reptiles.",
+        "answer": "3f. Service/treatment not offered - Reptiles",
+        "call_id": "CAL01983864fd50700396fe8fb50860c0ae"
+      },
+      "CAL01983872f881791f9d0eae5c58b35de9": {
+        "call_id": "CAL01983872f881791f9d0eae5c58b35de9",
+        "reasoning": "appointment_booked=Inconclusive, skipping",
+        "answer": null
+      },
+      "CAL0198387534b27b21af285cf499eac523": {
+        "call_id": "CAL0198387534b27b21af285cf499eac523",
+        "reasoning": "appointment_booked=Yes, skipping",
+        "answer": null
+      },
+      "CAL019838760fe97e58898d00136787ed15": {
+        "reasoning": "Caller placed an order for tick medication (Simparica); no appointment was needed or booked.",
+        "answer": "8. Medication/food order",
+        "call_id": "CAL019838760fe97e58898d00136787ed15"
+      },
+      "CAL0198387a31297659b98d57bb828b2c1d": {
+        "reasoning": "Caller inquired about x-rays; agent noted no availability this week (in addition to file authorization issue). Lack of availability prevented booking.",
+        "answer": "2b. Scheduling Issue - Full schedule",
+        "call_id": "CAL0198387a31297659b98d57bb828b2c1d"
+      },
+      "CAL0198387ec66d739fb6850962fd609815": {
+        "reasoning": "Caller requested a refill of amitriptyline liquid (chicken flavor) for their cat; the agent placed a medication request. No scheduling or appointment discussion occurred.",
+        "answer": "8. Medication/food order",
+        "call_id": "CAL0198387ec66d739fb6850962fd609815"
+      },
+      "CAL01983885684f7cfeaf588dcf1f8a9e28": {
+        "call_id": "CAL01983885684f7cfeaf588dcf1f8a9e28",
+        "reasoning": "appointment_booked=Inconclusive, skipping",
+        "answer": null
+      },
+      "CAL019838906bb373e3b8900dfb87d1f627": {
+        "reasoning": "Caller discussed returning/exchanging prescription diet cat food and asked about canned food options; agent explained refund process and will consult with rep. No appointment was requested or needed.",
+        "answer": "8. Medication/food order",
+        "call_id": "CAL019838906bb373e3b8900dfb87d1f627"
+      }
+    }
+  },
+  "mismatches": {
+    "appointment_booked": [
+      {
+        "call_id": "CAL0083311f69934f448c9bbac4cb31ed5e",
+        "gold": "Inconclusive",
+        "pred": "No",
+        "reasoning": "The caller was inquiring about the cost of euthanasia for a rabbit. The agent explicitly asked if an appointment was booked, and the caller confirmed, \"No, no, no, no.\" The call ended with the caller "
+      },
+      {
+        "call_id": "CAL008a74d19188416cbd3be39780335bbb",
+        "gold": "No",
+        "pred": "Inconclusive",
+        "reasoning": "The caller immediately realized they had dialed the wrong number and ended the call. The purpose of the call was not related to booking an appointment at this clinic."
+      },
+      {
+        "call_id": "CAL00a0052f044140e2ab2535a85367c137",
+        "gold": "No",
+        "pred": "Inconclusive",
+        "reasoning": "The call was a follow-up regarding a paw print that was supposed to be mailed after a dog's cremation. The discussion was about whether to mail it or pick it up, and the caller decided to pick it up. "
+      },
+      {
+        "call_id": "CAL011c013103cb49bc84379c12992b27a6",
+        "gold": "No",
+        "pred": "Inconclusive",
+        "reasoning": "The call was primarily an inquiry about medication side effects and care instructions for a cat's paw, not about booking or adjusting an appointment. No attempt to book an appointment was made."
+      },
+      {
+        "call_id": "CAL019837f52c29747e9a736faff8ee96a0",
+        "gold": "Yes",
+        "pred": "No",
+        "reasoning": "The caller explicitly stated she was calling to cancel an existing appointment for Luna. The agent confirmed the cancellation. No new appointment was booked."
+      },
+      {
+        "call_id": "CAL01983804e7477d2ab9762cb70d48f2e3",
+        "gold": "Yes",
+        "pred": "No",
+        "reasoning": "The caller inquired if a separate appointment was needed for a rabies vaccine or if it could be added to an existing booster appointment. The agent confirmed that the rabies vaccine could be done at t"
+      },
+      {
+        "call_id": "CAL01983809fd0870bfb1a41e0cc0148c1a",
+        "gold": "No",
+        "pred": "Inconclusive",
+        "reasoning": "This call was between two animal hospitals for the purpose of transferring client files. No appointment booking was discussed or attempted."
+      },
+      {
+        "call_id": "CAL01983822ac26708db3b026da626a071c",
+        "gold": "No",
+        "pred": "Inconclusive",
+        "reasoning": "The caller's purpose was to inquire if the clinic is a holistic veterinary clinic. Upon learning it is not, the caller ended the call without attempting to book any services."
+      },
+      {
+        "call_id": "CAL0198382a648d7ea09d62d10d36e470d7",
+        "gold": "No",
+        "pred": "Inconclusive",
+        "reasoning": "The caller inquired if the clinic offers tail docking services. The agent informed them that they do not. No appointment was discussed or booked."
+      },
+      {
+        "call_id": "CAL019838424bff7fa7890d74af370fc6f0",
+        "gold": "No",
+        "pred": "Inconclusive",
+        "reasoning": "The caller was checking on their dog's medication schedule and whether any further veterinary care was needed for the fall. The agent provided information about medication due dates and recommendation"
+      },
+      {
+        "call_id": "CAL0198385255f8738ca83ae22e29e15dcc",
+        "gold": "Inconclusive",
+        "pred": "No",
+        "reasoning": "The caller was asking for recommendations for a cat boarding facility, as the clinic does not offer boarding. No appointment was booked."
+      },
+      {
+        "call_id": "CAL019838760fe97e58898d00136787ed15",
+        "gold": "Inconclusive",
+        "pred": "No",
+        "reasoning": "The caller was calling to order more tick medication for their dog. The agent placed the order for pickup. No appointment was booked."
+      },
+      {
+        "call_id": "CAL0198387ec66d739fb6850962fd609815",
+        "gold": "Inconclusive",
+        "pred": "No",
+        "reasoning": "The caller wanted to order medication for their cat. The agent took the order and confirmed it would be ready for pickup. No appointment was booked."
+      },
+      {
+        "call_id": "CAL01983885684f7cfeaf588dcf1f8a9e28",
+        "gold": "Yes",
+        "pred": "Inconclusive",
+        "reasoning": "The call was primarily administrative: confirming a credit on the account, asking for an estimate for an existing upcoming appointment, and updating pet ownership details. The caller explicitly mentio"
+      },
+      {
+        "call_id": "CAL019838906bb373e3b8900dfb87d1f627",
+        "gold": "Inconclusive",
+        "pred": "No",
+        "reasoning": "The call was about returning cat food and discussing different types of cat food for the caller's pets. The agent offered to do a consult with a food representative, but no appointment for a veterinar"
+      }
+    ],
+    "client_type": [
+      {
+        "call_id": "CAL000aeb5cceb842ff9ab94f9dc115873d",
+        "gold": "Existing",
+        "pred": "Inconclusive",
+        "reasoning": "The caller asks for the \"smart vet phone number\" and the agent provides it without asking for any identifying client or pet information, nor is there any mention of file lookup or new client intake. T"
+      },
+      {
+        "call_id": "CAL0081cff67cb34ae0b30d1dc0b426d15c",
+        "gold": "Existing",
+        "pred": "New",
+        "reasoning": "The caller states they have a 'new guy' who is a rescue and needs to get records from the rescue. The agent asks for records to be sent, indicating the clinic does not have the pet's history. This imp"
+      },
+      {
+        "call_id": "CAL00bf0e33a835402c8e1ab317b17d16ce",
+        "gold": "Existing",
+        "pred": "New",
+        "reasoning": "The caller states, 'I believe we have his file transferred from a place in Scarborough,' indicating they are new to this specific clinic. The agent initially cannot find the pet in the system and note"
+      },
+      {
+        "call_id": "CAL011c013103cb49bc84379c12992b27a6",
+        "gold": "New",
+        "pred": "Existing",
+        "reasoning": "The caller states their cat was \"prescribed a [DRUG] [DRUG],\" implying a previous visit to this clinic where the prescription was issued. The agent does not ask for client or pet identification to loo"
+      },
+      {
+        "call_id": "CAL019837cf0ff37f4d8d1af062be24cbab",
+        "gold": "Existing",
+        "pred": "New",
+        "reasoning": "The agent asks, 'Are you a new client?' and the caller responds, 'Yes.' The agent then proceeds to collect all necessary information to create a new file, including name, address, phone, email, and pe"
+      },
+      {
+        "call_id": "CAL01983809fd0870bfb1a41e0cc0148c1a",
+        "gold": "Existing",
+        "pred": "Inconclusive",
+        "reasoning": "The caller is Nikki from Port Colburn Animal Hospital, calling to request file transfers for a client named Fiddler. The caller is a representative of another veterinary clinic, not a pet owner seekin"
+      },
+      {
+        "call_id": "CAL019838502ce87cbdbc990b0ade416e7a",
+        "gold": "New",
+        "pred": "Existing",
+        "reasoning": "The caller states their cat 'was fixed at your place' and provides the original name and new name. The agent is able to look up the cat's record and provide the date of birth, indicating the cat has b"
+      },
+      {
+        "call_id": "CAL0198385255f8738ca83ae22e29e15dcc",
+        "gold": "Existing",
+        "pred": "New",
+        "reasoning": "The caller is asking for recommendations for an external boarding facility, not for services provided by this clinic. There is no indication that the caller or their pets are in the clinic's system, n"
+      }
+    ],
+    "treatment_type": [
+      {
+        "call_id": "CAL000498baa67742cb9a4fed89664cd014",
+        "gold": "Urgent Care / Sick Pet",
+        "pred": "Urgent Care \u2013 Diagnosis and Treatment of Illnesses (Vomiting, Diabetes, Infections)",
+        "reasoning": "Puppy with coughing/gagging increasing in frequency; agent tries to squeeze in for a sick visit. Primary issue is evaluation/treatment of an illness with specific respiratory symptoms."
+      },
+      {
+        "call_id": "CAL00057325c1924ef5be1874417c20b262",
+        "gold": "Preventive Care",
+        "pred": "Retail \u2013 Prescriptions",
+        "reasoning": "Caller is ordering Cosequin and Zylkene (medications/supplements) and also booked a nail trim. The primary medical service is a medication order/refill."
+      },
+      {
+        "call_id": "CAL000982de28904f1aa7f072d197347693",
+        "gold": "Preventive Care \u2013 Wellness Screening (Bloodwork, Urinalysis, Fecals)",
+        "pred": "Diagnostic Services \u2013 In-House or Reference Lab Testing (Blood, Urine, Fecal, Cytology)",
+        "reasoning": "New client inquiry asking about exam fees and the cost of thyroid bloodwork for an 8-year-old cat. Primary request centers on lab testing estimates."
+      },
+      {
+        "call_id": "CAL0009ad7aca3748009c5fb31f51eee5ad",
+        "gold": "Emergency & Critical Care",
+        "pred": "Emergency & Critical Care \u2013 Stabilization (Trauma, Poisoning, Seizures)",
+        "reasoning": "Caller to an emergency clinic about a bleeding, matted area near the dog\u2019s anus; advised they can come in now. This is an acute wound/bleeding issue requiring emergency triage."
+      },
+      {
+        "call_id": "CAL000aeb5cceb842ff9ab94f9dc115873d",
+        "gold": "Urgent Care / Sick Pet",
+        "pred": "Other",
+        "reasoning": "Caller only asked about cancellations and for another phone number; no pet issue or specific service discussed."
+      },
+      {
+        "call_id": "CAL001052c35ec84a74857f15ba89aa2183",
+        "gold": "Preventive Care \u2013 Wellness Screening (Bloodwork, Urinalysis, Fecals)",
+        "pred": "Diagnostic Services \u2013 In-House or Reference Lab Testing (Blood, Urine, Fecal, Cytology)",
+        "reasoning": "Caller scheduled an appointment specifically for blood work for their dog."
+      },
+      {
+        "call_id": "CAL0024c5183d6641a7bab31a88e46fbc69",
+        "gold": "Emergency & Critical Care",
+        "pred": "Emergency & Critical Care \u2013 Stabilization (Trauma, Poisoning, Seizures)",
+        "reasoning": "Dog with acute severe symptoms (drooling, ataxia, abdominal pain) being brought to an after-hours ER for immediate evaluation."
+      },
+      {
+        "call_id": "CAL0038d600a47946ebb1c82834efd14ec2",
+        "gold": "Preventive Care",
+        "pred": "Other",
+        "reasoning": "Primary request is to scan a found cat for a microchip; this service doesn't fit listed medical categories."
+      },
+      {
+        "call_id": "CAL003947c6d73e405a8ff5214e6719fcbd",
+        "gold": "Preventive Care",
+        "pred": "Other",
+        "reasoning": "Booking a bird nail trim, which is a grooming service not covered by listed categories."
+      },
+      {
+        "call_id": "CAL00653e0d49dc40199c3e555625cb2117",
+        "gold": "Urgent Care / Sick Pet",
+        "pred": "Urgent Care \u2013 Diagnosis and Treatment of Illnesses (Vomiting, Diabetes, Infections)",
+        "reasoning": "Cat with increased drinking and urinating on the floor; scheduled same-day sick visit for diagnosis/treatment of possible illness (e.g., UTI/diabetes)."
+      },
+      {
+        "call_id": "CAL0068dc66d062488fa1f4879724451050",
+        "gold": "Urgent Care \u2013 Internal Medicine Workups (Blood Tests, Imaging, Specialist Consults)",
+        "pred": "Diagnostic Services \u2013 X-Rays (Digital Radiography)",
+        "reasoning": "Caller requests X-rays for a limping dog with hind-end pain; clinic explains exam first but X-rays discussed as the goal."
+      },
+      {
+        "call_id": "CAL0084da0fae0c4da6a7bfdabc646c5ba9",
+        "gold": "Preventive Care \u2013 Vaccinations",
+        "pred": "Urgent Care \u2013 Chronic Disease Management (Arthritis, Allergies, Thyroid Disease)",
+        "reasoning": "Caller compared exam fees and monthly cost for Apoquel for a dog, indicating ongoing allergy management needs."
+      },
+      {
+        "call_id": "CAL008a74d19188416cbd3be39780335bbb",
+        "gold": "Preventive Care",
+        "pred": "Other",
+        "reasoning": "Wrong number call; no veterinary service discussed."
+      },
+      {
+        "call_id": "CAL008db269e7294a62a394fecdbe852724",
+        "gold": "Preventive Care \u2013 Annual Exams",
+        "pred": "Other",
+        "reasoning": "Rescheduling an appointment with no details on the service type."
+      },
+      {
+        "call_id": "CAL009fecf1e3dc43fcb124f083b4886d34",
+        "gold": "Preventive Care",
+        "pred": "Other",
+        "reasoning": "Caller cancels and plans to reschedule; no information on the underlying service."
+      },
+      {
+        "call_id": "CAL00b175c88b6d4b20a8f2ecb4d226d689",
+        "gold": "Preventive Care",
+        "pred": "Other",
+        "reasoning": "The call is solely to reschedule an appointment with no information about the underlying medical service."
+      },
+      {
+        "call_id": "CAL00e3726d100f45e8913c8f8dfb2fd4ce",
+        "gold": "Emergency & Critical Care",
+        "pred": "Urgent Care / Sick Pet",
+        "reasoning": "Caller suspects the cat burned a paw; it\u2019s swollen and the cat is limping. Non-life-threatening injury/limping fits general sick pet urgent care."
+      },
+      {
+        "call_id": "CAL011c013103cb49bc84379c12992b27a6",
+        "gold": "Urgent Care / Sick Pet",
+        "pred": "Urgent Care \u2013 Diagnosis and Treatment of Illnesses (Vomiting, Diabetes, Infections)",
+        "reasoning": "Caller sought advice after applying chlorhexidine for a nail/paw infection; this concerns management of an infection."
+      },
+      {
+        "call_id": "CAL011ebf53493445e7896fed44ce7c81f6",
+        "gold": "End of Life Care",
+        "pred": "Urgent Care / Sick Pet",
+        "reasoning": "Elderly dog with decreased appetite, lethargy, and difficulty with stairs needing evaluation; sick pet visit, not preventive or emergency."
+      },
+      {
+        "call_id": "CAL0123fdba3d2942b0af41e1ee7d7d3bac",
+        "gold": "Urgent Care / Sick Pet",
+        "pred": "Urgent Care \u2013 Diagnosis and Treatment of Illnesses (Vomiting, Diabetes, Infections)",
+        "reasoning": "Owner suspects a burst anal gland and wants an exam; acute illness needing diagnosis/treatment."
+      },
+      {
+        "call_id": "CAL014854d99d7940c1910271fee0349169",
+        "gold": "Preventive Care \u2013 Vaccinations",
+        "pred": "Preventive Care",
+        "reasoning": "Caller scheduled an appointment for overdue vaccines and annual exam; also ordered dog food but primary purpose was preventive visit."
+      },
+      {
+        "call_id": "CAL014b1b4985f340e8ba39b659373275b2",
+        "gold": "Preventive Care \u2013 Vaccinations",
+        "pred": "Preventive Care",
+        "reasoning": "Inquiry about wellness check and vaccinations for two cats, discussing pricing and availability; both preventive services."
+      },
+      {
+        "call_id": "CAL0158a08f881a40c592c795ca67df298b",
+        "gold": "End of Life Care \u2013 In-Clinic Euthanasia",
+        "pred": "Emergency & Critical Care \u2013 Stabilization (Trauma, Poisoning, Seizures)",
+        "reasoning": "Pet is convulsing (seizures) and being brought in urgently; this is an emergency stabilization scenario."
+      },
+      {
+        "call_id": "CAL019837cf1fe87f139b863a24117182bb",
+        "gold": "Urgent Care / Sick Pet",
+        "pred": "Surgical Services \u2013 Soft Tissue Surgeries (Lump Removals, Bladder Stone Removal, Wound Repair)",
+        "reasoning": "Owner requests earlier date for surgery to remove a bleeding lesion/lump; this is a soft tissue surgical procedure."
+      },
+      {
+        "call_id": "CAL019837e8fdaf7d31b9a87d56d518b19a",
+        "gold": "Preventive Care",
+        "pred": "Surgical Services \u2013 Spays and Neuters",
+        "reasoning": "Primary purpose was to get the kitten neutered (\u201chave him fixed\u201d); vaccines/exam were discussed as prerequisites before scheduling surgery."
+      },
+      {
+        "call_id": "CAL019837fa1ec07a778412598cf2c6c69b",
+        "gold": "Preventive Care \u2013 Wellness Screening (Bloodwork, Urinalysis, Fecals)",
+        "pred": "Preventive Care \u2013 Annual Exams",
+        "reasoning": "Caller booked a general checkup/quality-of-life consultation for an older cat without acute issues\u2014routine wellness exam."
+      },
+      {
+        "call_id": "CAL01983809fd0870bfb1a41e0cc0148c1a",
+        "gold": "Urgent Care / Sick Pet",
+        "pred": "Other",
+        "reasoning": "Caller requested medical records transfer between clinics; no specific medical service being scheduled or discussed beyond admin task."
+      },
+      {
+        "call_id": "CAL0198380d24b573858f1ebc1d3174cf7c",
+        "gold": "Urgent Care / Sick Pet",
+        "pred": "Dermatology \u2013 Ear Infections",
+        "reasoning": "Appointment requested specifically for dog\u2019s ears to be checked, indicating an ear issue likely infection."
+      },
+      {
+        "call_id": "CAL0198380e825f714ba6f533c90cee0983",
+        "gold": "Preventive Care \u2013 Wellness Screening (Bloodwork, Urinalysis, Fecals)",
+        "pred": "Diagnostic Services \u2013 In-House or Reference Lab Testing (Blood, Urine, Fecal, Cytology)",
+        "reasoning": "Caller inquired about results of a fecal test and requested email proof; this is lab testing."
+      },
+      {
+        "call_id": "CAL01983822ac26708db3b026da626a071c",
+        "gold": "Preventive Care",
+        "pred": "Other",
+        "reasoning": "Caller only asked if the clinic is holistic; no pet care service scheduled or discussed."
+      },
+      {
+        "call_id": "CAL019838277cc37e93b4c1a543fa522122",
+        "gold": "Urgent Care / Sick Pet",
+        "pred": "Urgent Care \u2013 Diagnosis and Treatment of Illnesses (Vomiting, Diabetes, Infections)",
+        "reasoning": "Cat has been coughing for several days; caller sought guidance and scheduled an exam for illness evaluation."
+      },
+      {
+        "call_id": "CAL01983837207c78339c0dc0ac40dc2540",
+        "gold": "Preventive Care",
+        "pred": "Preventive Care \u2013 Annual Exams",
+        "reasoning": "Caller rescheduled a general checkup appointment for their pet, indicating a routine wellness exam."
+      },
+      {
+        "call_id": "CAL0198383ba24b764186763c2357974ba3",
+        "gold": "End of Life Care \u2013 In-Home Euthanasia",
+        "pred": "End of Life Care \u2013 In-Clinic Euthanasia",
+        "reasoning": "Caller asked about pricing and options for euthanizing their elderly dog at the clinic."
+      },
+      {
+        "call_id": "CAL019838424bff7fa7890d74af370fc6f0",
+        "gold": "Preventive Care",
+        "pred": "Preventive Care \u2013 Parasite Prevention",
+        "reasoning": "Caller discussed timing and need for Bravecto and Interceptor and year-round protection; no new illness or order placed, focused on parasite prevention planning."
+      },
+      {
+        "call_id": "CAL01983845f24c74ca8e084a529e08b4d8",
+        "gold": "Urgent Care \u2013 Diagnosis and Treatment of Illnesses (Vomiting, Diabetes, Infections)",
+        "pred": "Dermatology \u2013 Ear Infections",
+        "reasoning": "Caller sought appointment for a suspected ear infection in dog."
+      },
+      {
+        "call_id": "CAL019838482da37a9f9344c2d92538c61f",
+        "gold": "Preventive Care \u2013 Vaccinations",
+        "pred": "Preventive Care \u2013 Annual Exams",
+        "reasoning": "Caller scheduled a yearly checkup with associated vaccines and fecal sample; primary purpose is the annual exam."
+      },
+      {
+        "call_id": "CAL0198384b51907551aab56685e09cde9c",
+        "gold": "Surgical Services",
+        "pred": "Other",
+        "reasoning": "Status check call without details on the underlying service; no clear category fits."
+      },
+      {
+        "call_id": "CAL019838502ce87cbdbc990b0ade416e7a",
+        "gold": "Surgical Services \u2013 Spays and Neuters",
+        "pred": "Other",
+        "reasoning": "Caller requested DOB info for insurance; administrative, not a medical service."
+      },
+      {
+        "call_id": "CAL0198385255f8738ca83ae22e29e15dcc",
+        "gold": "Emergency & Critical Care \u2013 Overnight Hospitalization",
+        "pred": "Other",
+        "reasoning": "Caller requested recommendations for a boarding facility for cats; no veterinary medical service requested or provided."
+      },
+      {
+        "call_id": "CAL01983864fd50700396fe8fb50860c0ae",
+        "gold": "Preventive Care",
+        "pred": "Other",
+        "reasoning": "Caller asked if the clinic sees bearded dragons; no veterinary service arranged or specific medical concern addressed."
+      },
+      {
+        "call_id": "CAL0198387534b27b21af285cf499eac523",
+        "gold": "Preventive Care",
+        "pred": "Other",
+        "reasoning": "Call is solely to reschedule an appointment with no details on the underlying service."
+      },
+      {
+        "call_id": "CAL0198387a31297659b98d57bb828b2c1d",
+        "gold": "Urgent Care / Sick Pet",
+        "pred": "Diagnostic Services \u2013 X-Rays (Digital Radiography)",
+        "reasoning": "Caller asked if the clinic performs X-rays for their dog; primary purpose was confirming imaging availability."
+      }
+    ],
+    "reason_not_booked": [
+      {
+        "call_id": "CAL000498baa67742cb9a4fed89664cd014",
+        "gold": "2a. Scheduling Issue - Walk ins not available / no same day appt",
+        "pred": "2b. Scheduling Issue - Full schedule",
+        "reasoning": "Caller reported acute coughing/gagging and was told the clinic is pretty booked; agent would check with the vet to see if they could squeeze in and might refer to Smart Vet. No appointment was secured"
+      },
+      {
+        "call_id": "CAL00584c7b588f4128be84a13ff49dbe96",
+        "gold": "2. Scheduling Issue",
+        "pred": "1a. Caller Procrastination - Price Objection / Shopping / Request for Quote",
+        "reasoning": "Caller wanted a spay sooner than the clinic\u2019s earliest (June 17) and declined to book; pricing for exam, spay, microchip, and in-heat fee was discussed. Per rule, any price discussion with no booking "
+      },
+      {
+        "call_id": "CAL005e941190aa4eeeb16b5520f59e8526",
+        "gold": "2. Scheduling Issue",
+        "pred": "1a. Caller Procrastination - Price Objection / Shopping / Request for Quote",
+        "reasoning": "Scheduling conflict with available times; caller also asked for price and did not book. Price was discussed, so classify as price objection per rule."
+      },
+      {
+        "call_id": "CAL0081cff67cb34ae0b30d1dc0b426d15c",
+        "gold": "2. Scheduling Issue",
+        "pred": "2b. Scheduling Issue - Full schedule",
+        "reasoning": "Caller wanted an appointment before traveling next week; clinic\u2019s earliest availability was May, so no timely slots available and no price discussion."
+      },
+      {
+        "call_id": "CAL008a74d19188416cbd3be39780335bbb",
+        "gold": "4. Meant to call competitor hospital",
+        "pred": "",
+        "reasoning": "appointment_booked=Inconclusive, skipping"
+      },
+      {
+        "call_id": "CAL009fecf1e3dc43fcb124f083b4886d34",
+        "gold": "1. Caller Procrastination",
+        "pred": "9. Client/appt query (non-medical)",
+        "reasoning": "Caller canceled an existing appointment and planned to call later to reschedule; this was an appointment management call, not a new booking."
+      },
+      {
+        "call_id": "CAL00ddc5b018204683a8005f80fb0cb08d",
+        "gold": "1. Caller Procrastination",
+        "pred": "2b. Scheduling Issue - Full schedule",
+        "reasoning": "Caller canceled existing appointment and asked for something this week; agent said they were pretty booked with no availability, so caller deferred to fall and did not rebook."
+      },
+      {
+        "call_id": "CAL00e3726d100f45e8913c8f8dfb2fd4ce",
+        "gold": "1. Caller Procrastination",
+        "pred": "1a. Caller Procrastination - Price Objection / Shopping / Request for Quote",
+        "reasoning": "Agent quoted the exam fee; caller chose not to book at this time. Price was discussed and no appointment booked."
+      },
+      {
+        "call_id": "CAL011c013103cb49bc84379c12992b27a6",
+        "gold": "1. Caller Procrastination",
+        "pred": "",
+        "reasoning": "appointment_booked=Inconclusive, skipping"
+      },
+      {
+        "call_id": "CAL019837cf1fe87f139b863a24117182bb",
+        "gold": "2a. Scheduling Issue - Walk ins not available / no same day appt",
+        "pred": "2b. Scheduling Issue - Full schedule",
+        "reasoning": "Caller tried to move an already scheduled surgery to an earlier date. Agent only had August 18 (limited availability) and said they\u2019d call back. No reschedule booked due to schedule constraints."
+      },
+      {
+        "call_id": "CAL019837f52c29747e9a736faff8ee96a0",
+        "gold": "",
+        "pred": "9. Client/appt query (non-medical)",
+        "reasoning": "Caller phoned to cancel an existing appointment; no new appointment requested or booked."
+      },
+      {
+        "call_id": "CAL01983804e7477d2ab9762cb70d48f2e3",
+        "gold": "",
+        "pred": "9. Client/appt query (non-medical)",
+        "reasoning": "Caller asked if a separate appointment was needed for a vaccine; they already had an upcoming booster appointment and opted to do it then. No new booking needed."
+      },
+      {
+        "call_id": "CAL01983809fd0870bfb1a41e0cc0148c1a",
+        "gold": "1c. Caller Procrastination - Getting information for someone else",
+        "pred": "",
+        "reasoning": "appointment_booked=Inconclusive, skipping"
+      },
+      {
+        "call_id": "CAL01983822ac26708db3b026da626a071c",
+        "gold": "1a. Caller Procrastination - Price Objection / Shopping / Request for Quote",
+        "pred": "",
+        "reasoning": "appointment_booked=Inconclusive, skipping"
+      },
+      {
+        "call_id": "CAL0198382a648d7ea09d62d10d36e470d7",
+        "gold": "1a. Caller Procrastination - Price Objection / Shopping / Request for Quote",
+        "pred": "",
+        "reasoning": "appointment_booked=Inconclusive, skipping"
+      },
+      {
+        "call_id": "CAL0198383bf2cd7adaa841d36177d17bbc",
+        "gold": "1a. Caller Procrastination - Price Objection / Shopping / Request for Quote",
+        "pred": "",
+        "reasoning": "appointment_booked=Inconclusive, skipping"
+      },
+      {
+        "call_id": "CAL019838424bff7fa7890d74af370fc6f0",
+        "gold": "1. Caller Procrastination",
+        "pred": "",
+        "reasoning": "appointment_booked=Inconclusive, skipping"
+      },
+      {
+        "call_id": "CAL01983864fd50700396fe8fb50860c0ae",
+        "gold": "3. Service/treatment not offered",
+        "pred": "3f. Service/treatment not offered - Reptiles",
+        "reasoning": "Caller asked if the clinic sees a bearded dragon; agent said they do not treat exotics/reptiles."
+      },
+      {
+        "call_id": "CAL019838760fe97e58898d00136787ed15",
+        "gold": "",
+        "pred": "8. Medication/food order",
+        "reasoning": "Caller placed an order for tick medication (Simparica); no appointment was needed or booked."
+      },
+      {
+        "call_id": "CAL0198387ec66d739fb6850962fd609815",
+        "gold": "",
+        "pred": "8. Medication/food order",
+        "reasoning": "Caller requested a refill of amitriptyline liquid (chicken flavor) for their cat; the agent placed a medication request. No scheduling or appointment discussion occurred."
+      },
+      {
+        "call_id": "CAL019838906bb373e3b8900dfb87d1f627",
+        "gold": "",
+        "pred": "8. Medication/food order",
+        "reasoning": "Caller discussed returning/exchanging prescription diet cat food and asked about canned food options; agent explained refund process and will consult with rep. No appointment was requested or needed."
+      }
+    ]
+  }
+}

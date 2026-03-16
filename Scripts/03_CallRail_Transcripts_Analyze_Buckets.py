@@ -32,16 +32,36 @@ from openai import OpenAI
 # DEFAULTS (override via CLI flags or env vars)
 # ============================================================
 
+# Provider configuration
+PROVIDERS = {
+    "gemini": {
+        "api_key_env": "GEMINI_API_KEY",
+        "base_url_env": "GEMINI_BASE_URL",
+        "base_url_default": "https://generativelanguage.googleapis.com/v1beta/openai/",
+        "reasoning_model_default": "gemini-2.5-pro",
+        "classification_model_default": "gemini-2.5-flash",
+    },
+    "openai": {
+        "api_key_env": "OPENAI_API_KEY",
+        "base_url_env": "OPENAI_BASE_URL",
+        "base_url_default": "https://api.openai.com/v1",
+        "reasoning_model_default": "gpt-5",
+        "classification_model_default": "gpt-4o-mini",
+    },
+    "anthropic": {
+        "api_key_env": "ANTHROPIC_API_KEY",
+        "base_url_env": "ANTHROPIC_BASE_URL",
+        "base_url_default": "https://api.anthropic.com/v1/",
+        "reasoning_model_default": "claude-sonnet-4-5-20250514",
+        "classification_model_default": "claude-haiku-4-5-20251001",
+    },
+}
+
+DEFAULT_PROVIDER = os.getenv("LLM_PROVIDER", "gemini")
 DEFAULT_LLM_BASE_URL = os.getenv("LLM_BASE_URL", "https://generativelanguage.googleapis.com/v1beta/openai/")
 
 DEFAULT_REASONING_MODEL = os.getenv("REASONING_MODEL")
 DEFAULT_CLASSIFICATION_MODEL = os.getenv("CLASSIFICATION_MODEL")
-
-if not DEFAULT_REASONING_MODEL or not DEFAULT_CLASSIFICATION_MODEL:
-    raise RuntimeError(
-        "Missing model env vars. Set REASONING_MODEL and CLASSIFICATION_MODEL in .env "
-        "(e.g. REASONING_MODEL=gemini-2.5-pro, CLASSIFICATION_MODEL=gemini-2.5-flash)"
-    )
 
 DEFAULT_ANALYSIS_VERSION = os.getenv("ANALYSIS_VERSION", "prod_v2")
 DEFAULT_ANALYSIS_PREFIX = os.getenv("ANALYSIS_PREFIX", "v3_fast_bucketed_run_")
@@ -502,17 +522,36 @@ def parse_args():
     p.add_argument("--dry-run", action="store_true", help="Fetch and log work, but do not call OpenAI or write to SQL.")
     p.add_argument("--single-model", action="store_true",
                    help="Use single-model mode (classification model only, no reasoning step).")
+    p.add_argument("--provider", choices=["gemini", "openai", "anthropic"],
+                   help="LLM provider (reads provider-specific keys from .env). "
+                        "Overrides LLM_PROVIDER env var.")
     return p.parse_args()
 
 # ============================================================
 # LLM CLIENT (OpenAI-compatible API)
 # ============================================================
 
-def get_llm_client():
-    api_key = os.getenv("LLM_API_KEY")
-    if not api_key:
-        raise RuntimeError("LLM_API_KEY not found in environment or .env")
-    return OpenAI(api_key=api_key, base_url=DEFAULT_LLM_BASE_URL, max_retries=3)
+def get_llm_client(provider: Optional[str] = None):
+    """Create OpenAI-compatible client for the given provider."""
+    provider = provider or DEFAULT_PROVIDER
+
+    if provider in PROVIDERS:
+        prov = PROVIDERS[provider]
+        api_key = os.getenv(prov["api_key_env"])
+        if not api_key:
+            # Fallback to legacy LLM_API_KEY
+            api_key = os.getenv("LLM_API_KEY")
+        if not api_key:
+            raise RuntimeError(f"{prov['api_key_env']} (or LLM_API_KEY) not found in environment or .env")
+        base_url = os.getenv(prov["base_url_env"], prov["base_url_default"])
+    else:
+        api_key = os.getenv("LLM_API_KEY")
+        if not api_key:
+            raise RuntimeError("LLM_API_KEY not found in environment or .env")
+        base_url = DEFAULT_LLM_BASE_URL
+
+    logger.info(f"LLM provider: {provider} | base_url: {base_url}")
+    return OpenAI(api_key=api_key, base_url=base_url, max_retries=3)
 
 # ============================================================
 # DB CONNECTION & VERSIONING
@@ -935,9 +974,10 @@ def process_backlog(
     max_calls_per_run: int,
     dry_run: bool,
     single_model: bool,
+    provider: str = "gemini",
 ):
     conn = get_db_connection()
-    client = None if dry_run else get_llm_client()
+    client = None if dry_run else get_llm_client(provider)
 
     processed = 0
     started = time.time()
@@ -1022,8 +1062,16 @@ def main():
     prefix = args.prefix or DEFAULT_ANALYSIS_PREFIX
     single_model = bool(args.single_model)
 
-    reasoning_model = args.reasoning_model or DEFAULT_REASONING_MODEL
-    classification_model = args.classification_model or DEFAULT_CLASSIFICATION_MODEL
+    # Resolve provider and models
+    provider = args.provider or DEFAULT_PROVIDER
+    prov = PROVIDERS.get(provider, {})
+
+    reasoning_model = (args.reasoning_model
+                       or DEFAULT_REASONING_MODEL
+                       or prov.get("reasoning_model_default", "gemini-2.5-pro"))
+    classification_model = (args.classification_model
+                            or DEFAULT_CLASSIFICATION_MODEL
+                            or prov.get("classification_model_default", "gemini-2.5-flash"))
 
     # Batch sizes: specific flags > legacy --batch-size > env defaults
     legacy_batch = args.batch_size or DEFAULT_BATCH_SIZE
@@ -1072,6 +1120,7 @@ def main():
         max_calls_per_run=max_calls,
         dry_run=dry_run,
         single_model=single_model,
+        provider=provider,
     )
 
 

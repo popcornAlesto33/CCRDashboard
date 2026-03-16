@@ -1,0 +1,50 @@
+{
+  "n": 200,
+  "seed": 42,
+  "summary": {
+    "A1b": {
+      "appointment_booked": {
+        "accuracy": 73.5,
+        "correct": 147,
+        "total": 200
+      },
+      "client_type": {
+        "accuracy": 88.5,
+        "correct": 177,
+        "total": 200
+      },
+      "treatment_type": {
+        "accuracy": 48.0,
+        "correct": 96,
+        "total": 200
+      },
+      "reason_not_booked": {
+        "accuracy": 28.71287128712871,
+        "correct": 29,
+        "total": 101
+      }
+    },
+    "A1b+E": {
+      "appointment_booked": {
+        "accuracy": 71.0,
+        "correct": 142,
+        "total": 200
+      },
+      "client_type": {
+        "accuracy": 89.39393939393939,
+        "correct": 177,
+        "total": 198
+      },
+      "treatment_type": {
+        "accuracy": 42.92929292929293,
+        "correct": 85,
+        "total": 198
+      },
+      "reason_not_booked": {
+        "accuracy": 26.262626262626267,
+        "correct": 26,
+        "total": 99
+      }
+    }
+  }
+}
